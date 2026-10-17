@@ -1,0 +1,1112 @@
+{
+  "checked": "2026-10-08",
+  "observer": {
+    "latitude": 41.0082,
+    "longitude": 28.9784,
+    "elevation_m": 30
+  },
+  "orbit": {
+    "solution": "SAO/1910",
+    "record": "90000029",
+    "frame": "J2000 heliocentric ecliptic",
+    "epoch_jd_tdb": 2418800.5,
+    "perihelion_jd_tdb": 2418781.6785,
+    "q_au": 0.587208,
+    "e": 0.967302,
+    "i_deg": 162.2186,
+    "node_deg": 58.5629,
+    "argument_deg": 111.7371
+  },
+  "clocks": {
+    "lmt_offset_seconds": 6954.816,
+    "iana_imt_offset_seconds": 7016,
+    "utc2_offset_seconds": 7200
+  },
+  "closest_earth": {
+    "geocentric_closest_ut": "1910-05-20 12:50:50.052532",
+    "geocentric_closest_lmt": "1910-05-20 14:46:44.868532",
+    "distance_au": 0.15135715052176094,
+    "distance_km": 22642707.433274828,
+    "crosscheck_max_az_deg": 0.004786437000007027,
+    "crosscheck_max_alt_deg": 0.001454917000000222,
+    "crosscheck_max_distance_au": 3.279021160013107e-06,
+    "crosscheck_samples": 577
+  },
+  "annual": {
+    "epoch": "00:00 UT",
+    "center": "geocentric",
+    "coordinates": "apparent RA/Dec, equinox of date",
+    "rows": [
+      {
+        "date": "1910-01-01",
+        "ra_deg": 34.990039561,
+        "dec_deg": 11.622506832,
+        "r_au": 2.042592247468,
+        "delta_au": 1.40063102154164,
+        "elong_deg": 116.8486,
+        "phase_deg": 25.4373,
+        "constellation": "Ari"
+      },
+      {
+        "date": "1910-02-01",
+        "ra_deg": 16.008705465,
+        "dec_deg": 8.382050809,
+        "r_au": 1.598456879559,
+        "delta_au": 1.70719804002877,
+        "elong_deg": 66.7099,
+        "phase_deg": 34.494,
+        "constellation": "Psc"
+      },
+      {
+        "date": "1910-03-01",
+        "ra_deg": 8.584086406,
+        "dec_deg": 7.900670745,
+        "r_au": 1.172364497001,
+        "delta_au": 1.89388905797224,
+        "elong_deg": 31.6767,
+        "phase_deg": 26.36,
+        "constellation": "Psc"
+      },
+      {
+        "date": "1910-04-01",
+        "ra_deg": 2.282602663,
+        "dec_deg": 8.056733245,
+        "r_au": 0.719277057161,
+        "delta_au": 1.69405141123849,
+        "elong_deg": 8.2257,
+        "phase_deg": 11.4567,
+        "constellation": "Psc"
+      },
+      {
+        "date": "1910-04-15",
+        "ra_deg": 358.95506944,
+        "dec_deg": 7.85070463,
+        "r_au": 0.598232740308,
+        "delta_au": 1.37167348133868,
+        "elong_deg": 23.1827,
+        "phase_deg": 41.3088,
+        "constellation": "Psc"
+      },
+      {
+        "date": "1910-04-20",
+        "ra_deg": 358.033169655,
+        "dec_deg": 7.781246855,
+        "r_au": 0.587222611969,
+        "delta_au": 1.21466166654426,
+        "elong_deg": 28.7435,
+        "phase_deg": 55.3569,
+        "constellation": "Psc"
+      },
+      {
+        "date": "1910-05-01",
+        "ra_deg": 358.172276645,
+        "dec_deg": 8.135079326,
+        "r_au": 0.63330653308,
+        "delta_au": 0.81234933470753,
+        "elong_deg": 38.8902,
+        "phase_deg": 87.4511,
+        "constellation": "Psc"
+      },
+      {
+        "date": "1910-05-10",
+        "ra_deg": 4.568324559,
+        "dec_deg": 10.236131785,
+        "r_au": 0.726956809093,
+        "delta_au": 0.45906496123185,
+        "elong_deg": 40.7696,
+        "phase_deg": 114.8618,
+        "constellation": "Psc"
+      },
+      {
+        "date": "1910-05-15",
+        "ra_deg": 18.078422655,
+        "dec_deg": 13.980876002,
+        "r_au": 0.791981569753,
+        "delta_au": 0.27318408194959,
+        "elong_deg": 31.7836,
+        "phase_deg": 137.7352,
+        "constellation": "Psc"
+      },
+      {
+        "date": "1910-05-18",
+        "ra_deg": 40.119449634,
+        "dec_deg": 18.218812692,
+        "r_au": 0.833772011691,
+        "delta_au": 0.18362329267066,
+        "elong_deg": 13.0448,
+        "phase_deg": 164.093,
+        "constellation": "Ari"
+      },
+      {
+        "date": "1910-05-19",
+        "ra_deg": 52.558494568,
+        "dec_deg": 19.473800922,
+        "r_au": 0.848051902483,
+        "delta_au": 0.16390937006941,
+        "elong_deg": 2.156,
+        "phase_deg": 177.4147,
+        "constellation": "Tau"
+      },
+      {
+        "date": "1910-05-20",
+        "ra_deg": 67.700424755,
+        "dec_deg": 19.845277133,
+        "r_au": 0.86248024592,
+        "delta_au": 0.15293533950128,
+        "elong_deg": 11.1576,
+        "phase_deg": 166.8886,
+        "constellation": "Tau"
+      },
+      {
+        "date": "1910-05-22",
+        "ra_deg": 98.824785813,
+        "dec_deg": 16.627442661,
+        "r_au": 0.891726683587,
+        "delta_au": 0.16275904941933,
+        "elong_deg": 38.9593,
+        "phase_deg": 134.4632,
+        "constellation": "Gem"
+      },
+      {
+        "date": "1910-05-25",
+        "ra_deg": 127.197211891,
+        "dec_deg": 9.425896873,
+        "r_au": 0.936390777318,
+        "delta_au": 0.23657550250346,
+        "elong_deg": 64.6523,
+        "phase_deg": 102.1617,
+        "constellation": "Cnc"
+      },
+      {
+        "date": "1910-05-30",
+        "ra_deg": 144.502891039,
+        "dec_deg": 3.608195483,
+        "r_au": 1.012302036794,
+        "delta_au": 0.41182014547872,
+        "elong_deg": 78.0706,
+        "phase_deg": 78.4862,
+        "constellation": "Sex"
+      },
+      {
+        "date": "1910-06-15",
+        "ra_deg": 157.352894632,
+        "dec_deg": -1.028374428,
+        "r_au": 1.259343149862,
+        "delta_au": 1.01541551898498,
+        "elong_deg": 76.6337,
+        "phase_deg": 51.7067,
+        "constellation": "Sex"
+      },
+      {
+        "date": "1910-07-01",
+        "ra_deg": 161.716467374,
+        "dec_deg": -2.702920996,
+        "r_au": 1.503256140612,
+        "delta_au": 1.58958280530424,
+        "elong_deg": 66.2746,
+        "phase_deg": 38.2612,
+        "constellation": "Leo"
+      },
+      {
+        "date": "1910-08-01",
+        "ra_deg": 167.629589742,
+        "dec_deg": -5.317184677,
+        "r_au": 1.95373409832,
+        "delta_au": 2.55632429826234,
+        "elong_deg": 43.7602,
+        "phase_deg": 21.0634,
+        "constellation": "Leo"
+      },
+      {
+        "date": "1910-12-01",
+        "ra_deg": 181.291205558,
+        "dec_deg": -16.438428287,
+        "r_au": 3.473836867517,
+        "delta_au": 3.84116058539778,
+        "elong_deg": 61.1107,
+        "phase_deg": 14.3855,
+        "constellation": "Crv"
+      }
+    ]
+  },
+  "supplied_windows": [
+    {
+      "date": "1910-01-01",
+      "supplied_utc2": "19:45",
+      "ut": "17:45",
+      "alt_deg": 60.472362805,
+      "az_deg": 182.766275382,
+      "sun_alt_deg": -32.892811325,
+      "meets_sun_below_minus10": true
+    },
+    {
+      "date": "1910-02-01",
+      "supplied_utc2": "18:15",
+      "ut": "16:15",
+      "alt_deg": 49.003854915,
+      "az_deg": 224.998692882,
+      "sun_alt_deg": -10.689739569,
+      "meets_sun_below_minus10": true
+    },
+    {
+      "date": "1910-03-01",
+      "supplied_utc2": "19:00",
+      "ut": "17:00",
+      "alt_deg": 17.118756367,
+      "az_deg": 265.574757616,
+      "sun_alt_deg": -13.228497897,
+      "meets_sun_below_minus10": true
+    },
+    {
+      "date": "1910-04-15",
+      "supplied_utc2": "04:30",
+      "ut": "02:30",
+      "alt_deg": 5.0787982,
+      "az_deg": 84.008962094,
+      "sun_alt_deg": -11.001317502,
+      "meets_sun_below_minus10": true
+    },
+    {
+      "date": "1910-04-20",
+      "supplied_utc2": "04:30",
+      "ut": "02:30",
+      "alt_deg": 9.431511693,
+      "az_deg": 87.857431049,
+      "sun_alt_deg": -9.541121341,
+      "meets_sun_below_minus10": false
+    },
+    {
+      "date": "1910-05-01",
+      "supplied_utc2": "04:00",
+      "ut": "02:00",
+      "alt_deg": 12.039126089,
+      "az_deg": 89.631016133,
+      "sun_alt_deg": -11.598626417,
+      "meets_sun_below_minus10": true
+    },
+    {
+      "date": "1910-05-10",
+      "supplied_utc2": "04:00",
+      "ut": "02:00",
+      "alt_deg": 15.199575808,
+      "az_deg": 89.506609591,
+      "sun_alt_deg": -9.530940688,
+      "meets_sun_below_minus10": false
+    },
+    {
+      "date": "1910-05-15",
+      "supplied_utc2": "03:45",
+      "ut": "01:45",
+      "alt_deg": 8.21840639,
+      "az_deg": 78.481470841,
+      "sun_alt_deg": -10.866463544,
+      "meets_sun_below_minus10": true
+    },
+    {
+      "date": "1910-05-22",
+      "supplied_utc2": "20:30",
+      "ut": "18:30",
+      "alt_deg": 18.828179461,
+      "az_deg": 273.219890509,
+      "sun_alt_deg": -11.635256247,
+      "meets_sun_below_minus10": true
+    },
+    {
+      "date": "1910-05-25",
+      "supplied_utc2": "20:30",
+      "ut": "18:30",
+      "alt_deg": 29.548021457,
+      "az_deg": 253.811581449,
+      "sun_alt_deg": -11.149285649,
+      "meets_sun_below_minus10": true
+    },
+    {
+      "date": "1910-05-30",
+      "supplied_utc2": "20:30",
+      "ut": "18:30",
+      "alt_deg": 32.687808129,
+      "az_deg": 241.802328144,
+      "sun_alt_deg": -10.410632664,
+      "meets_sun_below_minus10": true
+    },
+    {
+      "date": "1910-06-15",
+      "supplied_utc2": "20:45",
+      "ut": "18:45",
+      "alt_deg": 24.298760677,
+      "az_deg": 245.079305877,
+      "sun_alt_deg": -10.821014834,
+      "meets_sun_below_minus10": true
+    },
+    {
+      "date": "1910-07-01",
+      "supplied_utc2": "20:45",
+      "ut": "18:45",
+      "alt_deg": 15.033319413,
+      "az_deg": 252.547943482,
+      "sun_alt_deg": -10.492575284,
+      "meets_sun_below_minus10": true
+    }
+  ],
+  "transit": {
+    "epoch_ut": "1910-05-19T03:20:00",
+    "sample_seconds": 60,
+    "method": "Apparent topocentric center separation; 1-minute Horizons samples, cubic interpolation; comet center treated as a point; no refraction",
+    "events": [
+      {
+        "kind": "ingress",
+        "ut": "1910-05-19T03:38:54.729975",
+        "lmt": "1910-05-19T05:34:49.545975",
+        "seconds": 1134.7299747665998,
+        "separation_deg": 0.2633336111111111,
+        "sun_alt_deg": 8.817630009411126
+      },
+      {
+        "kind": "closest",
+        "ut": "1910-05-19T04:08:29.764647",
+        "lmt": "1910-05-19T06:04:24.580647",
+        "seconds": 2909.764646763841,
+        "separation_deg": 0.04539120963800537,
+        "sun_alt_deg": 14.183078020516428
+      },
+      {
+        "kind": "egress",
+        "ut": "1910-05-19T04:37:58.937452",
+        "lmt": "1910-05-19T06:33:53.753452",
+        "seconds": 4678.937451981367,
+        "separation_deg": 0.26333361111111103,
+        "sun_alt_deg": 19.63503687474056
+      }
+    ],
+    "points": [
+      {
+        "seconds": 0.0,
+        "east_arcmin": -25.582256283471644,
+        "north_arcmin": 1.581426784516686,
+        "separation_deg": 0.4271769091549103,
+        "solar_radius_deg": 0.2633336111111111,
+        "sun_alt_deg": 5.458773313
+      },
+      {
+        "seconds": 60.0,
+        "east_arcmin": -25.058650609462063,
+        "north_arcmin": 1.6049151760075298,
+        "separation_deg": 0.4184924326408076,
+        "solar_radius_deg": 0.2633336111111111,
+        "sun_alt_deg": 5.634783707
+      },
+      {
+        "seconds": 120.0,
+        "east_arcmin": -24.534985856115764,
+        "north_arcmin": 1.628404043108572,
+        "separation_deg": 0.4098091052593656,
+        "solar_radius_deg": 0.2633336111111111,
+        "sun_alt_deg": 5.810980336
+      },
+      {
+        "seconds": 180.0,
+        "east_arcmin": -24.011261997591863,
+        "north_arcmin": 1.6518933382077354,
+        "separation_deg": 0.40112706710321777,
+        "solar_radius_deg": 0.2633336111111111,
+        "sun_alt_deg": 5.987361685
+      },
+      {
+        "seconds": 240.0,
+        "east_arcmin": -23.48747906424574,
+        "north_arcmin": 1.6753830138321253,
+        "separation_deg": 0.39244647159204926,
+        "solar_radius_deg": 0.2633336111111111,
+        "sun_alt_deg": 6.163926243
+      },
+      {
+        "seconds": 300.0,
+        "east_arcmin": -22.96363708655824,
+        "north_arcmin": 1.698873022498972,
+        "separation_deg": 0.3837674859359637,
+        "solar_radius_deg": 0.2633336111111111,
+        "sun_alt_deg": 6.340672509
+      },
+      {
+        "seconds": 360.0,
+        "east_arcmin": -22.439736038309952,
+        "north_arcmin": 1.7223634365853768,
+        "separation_deg": 0.3750902919326937,
+        "solar_radius_deg": 0.2633336111111111,
+        "sun_alt_deg": 6.517598984
+      },
+      {
+        "seconds": 420.0,
+        "east_arcmin": -21.915775949795226,
+        "north_arcmin": 1.7458542085977904,
+        "separation_deg": 0.36641508937355377,
+        "solar_radius_deg": 0.2633336111111111,
+        "sun_alt_deg": 6.694704175
+      },
+      {
+        "seconds": 480.0,
+        "east_arcmin": -21.391756738493825,
+        "north_arcmin": 1.7693452907805014,
+        "separation_deg": 0.35774209544100594,
+        "solar_radius_deg": 0.2633336111111111,
+        "sun_alt_deg": 6.871986598
+      },
+      {
+        "seconds": 540.0,
+        "east_arcmin": -20.86767854757698,
+        "north_arcmin": 1.7928366958843356,
+        "separation_deg": 0.3490715527992483,
+        "solar_radius_deg": 0.2633336111111111,
+        "sun_alt_deg": 7.049444768
+      },
+      {
+        "seconds": 600.0,
+        "east_arcmin": -20.34354129446862,
+        "north_arcmin": 1.8163283761448634,
+        "separation_deg": 0.34040372467364455,
+        "solar_radius_deg": 0.2633336111111111,
+        "sun_alt_deg": 7.227077212
+      },
+      {
+        "seconds": 660.0,
+        "east_arcmin": -19.819344896183825,
+        "north_arcmin": 1.8398203438151943,
+        "separation_deg": 0.33173890193155614,
+        "solar_radius_deg": 0.2633336111111111,
+        "sun_alt_deg": 7.404882459
+      },
+      {
+        "seconds": 720.0,
+        "east_arcmin": -19.295089552614606,
+        "north_arcmin": 1.8633126717262927,
+        "separation_deg": 0.3230774114717916,
+        "solar_radius_deg": 0.2633336111111111,
+        "sun_alt_deg": 7.582859043
+      },
+      {
+        "seconds": 780.0,
+        "east_arcmin": -18.77077512445222,
+        "north_arcmin": 1.8868051920017506,
+        "separation_deg": 0.3144196096896116,
+        "solar_radius_deg": 0.2633336111111111,
+        "sun_alt_deg": 7.761005504
+      },
+      {
+        "seconds": 840.0,
+        "east_arcmin": -18.246401641942903,
+        "north_arcmin": 1.910297857112825,
+        "separation_deg": 0.3057658964548782,
+        "solar_radius_deg": 0.2633336111111111,
+        "sun_alt_deg": 7.939320389
+      },
+      {
+        "seconds": 900.0,
+        "east_arcmin": -17.72196907855446,
+        "north_arcmin": 1.9337908594189426,
+        "separation_deg": 0.29711671745742385,
+        "solar_radius_deg": 0.2633336111111111,
+        "sun_alt_deg": 8.117802244
+      },
+      {
+        "seconds": 960.0,
+        "east_arcmin": -17.19747746459938,
+        "north_arcmin": 1.9572840313785145,
+        "separation_deg": 0.288472571934267,
+        "solar_radius_deg": 0.2633336111111111,
+        "sun_alt_deg": 8.296449628
+      },
+      {
+        "seconds": 1020.0,
+        "east_arcmin": -16.672926886664758,
+        "north_arcmin": 1.9807773855395336,
+        "separation_deg": 0.2798340217213184,
+        "solar_radius_deg": 0.2633336111111111,
+        "sun_alt_deg": 8.475261097
+      },
+      {
+        "seconds": 1080.0,
+        "east_arcmin": -16.148317205212642,
+        "north_arcmin": 2.004270874049321,
+        "separation_deg": 0.27120169582488063,
+        "solar_radius_deg": 0.2633336111111111,
+        "sun_alt_deg": 8.654235218
+      },
+      {
+        "seconds": 1140.0,
+        "east_arcmin": -15.623648450271816,
+        "north_arcmin": 2.0277646293559206,
+        "separation_deg": 0.262576309004602,
+        "solar_radius_deg": 0.2633336111111111,
+        "sun_alt_deg": 8.833370561
+      },
+      {
+        "seconds": 1200.0,
+        "east_arcmin": -15.098920708657245,
+        "north_arcmin": 2.0512584239841063,
+        "separation_deg": 0.2539586726233285,
+        "solar_radius_deg": 0.2633336111111111,
+        "sun_alt_deg": 9.012665698
+      },
+      {
+        "seconds": 1260.0,
+        "east_arcmin": -14.574133897099001,
+        "north_arcmin": 2.0747523901816325,
+        "separation_deg": 0.24534970911364662,
+        "solar_radius_deg": 0.2633336111111111,
+        "sun_alt_deg": 9.192119209
+      },
+      {
+        "seconds": 1320.0,
+        "east_arcmin": -14.049287989209278,
+        "north_arcmin": 2.098246480292501,
+        "separation_deg": 0.2367504748561566,
+        "solar_radius_deg": 0.2633336111111111,
+        "sun_alt_deg": 9.371729677
+      },
+      {
+        "seconds": 1380.0,
+        "east_arcmin": -13.52438307144264,
+        "north_arcmin": 2.1217405868204495,
+        "separation_deg": 0.22816218604488625,
+        "solar_radius_deg": 0.2633336111111111,
+        "sun_alt_deg": 9.551495689
+      },
+      {
+        "seconds": 1440.0,
+        "east_arcmin": -12.999419117183319,
+        "north_arcmin": 2.145234842094838,
+        "separation_deg": 0.21958624611733416,
+        "solar_radius_deg": 0.2633336111111111,
+        "sun_alt_deg": 9.731415837
+      },
+      {
+        "seconds": 1500.0,
+        "east_arcmin": -12.474396043351872,
+        "north_arcmin": 2.168729198374352,
+        "separation_deg": 0.21102428323435807,
+        "solar_radius_deg": 0.2633336111111111,
+        "sun_alt_deg": 9.911488717
+      },
+      {
+        "seconds": 1560.0,
+        "east_arcmin": -11.949313992938519,
+        "north_arcmin": 2.192223488211034,
+        "separation_deg": 0.20247820179069542,
+        "solar_radius_deg": 0.2633336111111111,
+        "sun_alt_deg": 10.09171293
+      },
+      {
+        "seconds": 1620.0,
+        "east_arcmin": -11.424172826207535,
+        "north_arcmin": 2.215717903787382,
+        "separation_deg": 0.1939502342335734,
+        "solar_radius_deg": 0.2633336111111111,
+        "sun_alt_deg": 10.272087082
+      },
+      {
+        "seconds": 1680.0,
+        "east_arcmin": -10.898972686098071,
+        "north_arcmin": 2.239212217632197,
+        "separation_deg": 0.18544302237947158,
+        "solar_radius_deg": 0.2633336111111111,
+        "sun_alt_deg": 10.452609778
+      },
+      {
+        "seconds": 1740.0,
+        "east_arcmin": -10.373713376306938,
+        "north_arcmin": 2.2627066218748424,
+        "separation_deg": 0.17695970473404846,
+        "solar_radius_deg": 0.2633336111111111,
+        "sun_alt_deg": 10.633279634
+      },
+      {
+        "seconds": 1800.0,
+        "east_arcmin": -9.848395096183495,
+        "north_arcmin": 2.286201009086972,
+        "separation_deg": 0.16850404843915598,
+        "solar_radius_deg": 0.2633336111111111,
+        "sun_alt_deg": 10.814095264
+      },
+      {
+        "seconds": 1860.0,
+        "east_arcmin": -9.323017762556232,
+        "north_arcmin": 2.309695331518805,
+        "separation_deg": 0.1600805983067956,
+        "solar_radius_deg": 0.2633336111111111,
+        "sun_alt_deg": 10.995055291
+      },
+      {
+        "seconds": 1920.0,
+        "east_arcmin": -8.797581348569409,
+        "north_arcmin": 2.333189601488801,
+        "separation_deg": 0.15169489130773942,
+        "solar_radius_deg": 0.2633336111111111,
+        "sun_alt_deg": 11.176158337
+      },
+      {
+        "seconds": 1980.0,
+        "east_arcmin": -8.272085827518465,
+        "north_arcmin": 2.3566837713150792,
+        "separation_deg": 0.14335373264551612,
+        "solar_radius_deg": 0.2633336111111111,
+        "sun_alt_deg": 11.357403031
+      },
+      {
+        "seconds": 2040.0,
+        "east_arcmin": -7.746531229082666,
+        "north_arcmin": 2.38017785336445,
+        "separation_deg": 0.13506556987321927,
+        "solar_radius_deg": 0.2633336111111111,
+        "sun_alt_deg": 11.538788004
+      },
+      {
+        "seconds": 2100.0,
+        "east_arcmin": -7.220917639400738,
+        "north_arcmin": 2.4036719200345313,
+        "separation_deg": 0.12684099956822514,
+        "solar_radius_deg": 0.2633336111111111,
+        "sun_alt_deg": 11.720311892
+      },
+      {
+        "seconds": 2160.0,
+        "east_arcmin": -6.695244918683633,
+        "north_arcmin": 2.4271658035442285,
+        "separation_deg": 0.1186934581844211,
+        "solar_radius_deg": 0.2633336111111111,
+        "sun_alt_deg": 11.901973331
+      },
+      {
+        "seconds": 2220.0,
+        "east_arcmin": -6.169513153022586,
+        "north_arcmin": 2.450659576283107,
+        "separation_deg": 0.11064020184632624,
+        "solar_radius_deg": 0.2633336111111111,
+        "sun_alt_deg": 12.083770966
+      },
+      {
+        "seconds": 2280.0,
+        "east_arcmin": -5.64372225900911,
+        "north_arcmin": 2.4741531905184004,
+        "separation_deg": 0.1027036643371449,
+        "solar_radius_deg": 0.2633336111111111,
+        "sun_alt_deg": 12.26570344
+      },
+      {
+        "seconds": 2340.0,
+        "east_arcmin": -5.117872322736143,
+        "north_arcmin": 2.497646658622517,
+        "separation_deg": 0.09491340587435253,
+        "solar_radius_deg": 0.2633336111111111,
+        "sun_alt_deg": 12.447769401
+      },
+      {
+        "seconds": 2400.0,
+        "east_arcmin": -4.591963260774661,
+        "north_arcmin": 2.5211398728636163,
+        "separation_deg": 0.08730888710857534,
+        "solar_radius_deg": 0.2633336111111111,
+        "sun_alt_deg": 12.629967503
+      },
+      {
+        "seconds": 2460.0,
+        "east_arcmin": -4.065995159112524,
+        "north_arcmin": 2.5446330255954774,
+        "separation_deg": 0.07994345920068936,
+        "solar_radius_deg": 0.2633336111111111,
+        "sun_alt_deg": 12.812296398
+      },
+      {
+        "seconds": 2520.0,
+        "east_arcmin": -3.539967934294629,
+        "north_arcmin": 2.568125829087198,
+        "separation_deg": 0.07288999057420605,
+        "solar_radius_deg": 0.2633336111111111,
+        "sun_alt_deg": 12.994754745
+      },
+      {
+        "seconds": 2580.0,
+        "east_arcmin": -3.013881615775893,
+        "north_arcmin": 2.591618475657257,
+        "separation_deg": 0.06624859460773416,
+        "solar_radius_deg": 0.2633336111111111,
+        "sun_alt_deg": 13.177341204
+      },
+      {
+        "seconds": 2640.0,
+        "east_arcmin": -2.487736176534939,
+        "north_arcmin": 2.615110797599359,
+        "separation_deg": 0.06015633843438622,
+        "solar_radius_deg": 0.2633336111111111,
+        "sun_alt_deg": 13.360054438
+      },
+      {
+        "seconds": 2700.0,
+        "east_arcmin": -1.9615316459876033,
+        "north_arcmin": 2.6386029272198095,
+        "separation_deg": 0.054797164398521496,
+        "solar_radius_deg": 0.2633336111111111,
+        "sun_alt_deg": 13.542893114
+      },
+      {
+        "seconds": 2760.0,
+        "east_arcmin": -1.4352679970461615,
+        "north_arcmin": 2.662094756807033,
+        "separation_deg": 0.050405957535047084,
+        "solar_radius_deg": 0.2633336111111111,
+        "sun_alt_deg": 13.725855899
+      },
+      {
+        "seconds": 2820.0,
+        "east_arcmin": -0.9089452591046748,
+        "north_arcmin": 2.6855863586546254,
+        "separation_deg": 0.047253900276059156,
+        "solar_radius_deg": 0.2633336111111111,
+        "sun_alt_deg": 13.908941465
+      },
+      {
+        "seconds": 2880.0,
+        "east_arcmin": -0.38256334850657986,
+        "north_arcmin": 2.7090775650446486,
+        "separation_deg": 0.04559925927836152,
+        "solar_radius_deg": 0.2633336111111111,
+        "sun_alt_deg": 14.092148488
+      },
+      {
+        "seconds": 2940.0,
+        "east_arcmin": 0.14387764888654664,
+        "north_arcmin": 2.7325684482675126,
+        "separation_deg": 0.045605883939578463,
+        "solar_radius_deg": 0.2633336111111111,
+        "sun_alt_deg": 14.27547564
+      },
+      {
+        "seconds": 3000.0,
+        "east_arcmin": 0.670377816786385,
+        "north_arcmin": 2.756059020604038,
+        "separation_deg": 0.04727362457908872,
+        "solar_radius_deg": 0.2633336111111111,
+        "sun_alt_deg": 14.458921602
+      },
+      {
+        "seconds": 3060.0,
+        "east_arcmin": 1.196937125898608,
+        "north_arcmin": 2.779549174335075,
+        "separation_deg": 0.050438486639757,
+        "solar_radius_deg": 0.2633336111111111,
+        "sun_alt_deg": 14.642485055
+      },
+      {
+        "seconds": 3120.0,
+        "east_arcmin": 1.7235554904130483,
+        "north_arcmin": 2.80303904172055,
+        "separation_deg": 0.05484236193261111,
+        "solar_radius_deg": 0.2633336111111111,
+        "sun_alt_deg": 14.82616468
+      },
+      {
+        "seconds": 3180.0,
+        "east_arcmin": 2.250233050655737,
+        "north_arcmin": 2.82652845505037,
+        "separation_deg": 0.06021443689586198,
+        "solar_radius_deg": 0.2633336111111111,
+        "sun_alt_deg": 15.009959164
+      },
+      {
+        "seconds": 3240.0,
+        "east_arcmin": 2.7769698339035984,
+        "north_arcmin": 2.8500174266082863,
+        "separation_deg": 0.0663202387558644,
+        "solar_radius_deg": 0.2633336111111111,
+        "sun_alt_deg": 15.193867193
+      },
+      {
+        "seconds": 3300.0,
+        "east_arcmin": 3.303765754419241,
+        "north_arcmin": 2.87350608864197,
+        "separation_deg": 0.07297618459919124,
+        "solar_radius_deg": 0.2633336111111111,
+        "sun_alt_deg": 15.377887455
+      },
+      {
+        "seconds": 3360.0,
+        "east_arcmin": 3.830620783049415,
+        "north_arcmin": 2.8969942133966553,
+        "separation_deg": 0.08004547499649813,
+        "solar_radius_deg": 0.2633336111111111,
+        "sun_alt_deg": 15.562018643
+      },
+      {
+        "seconds": 3420.0,
+        "east_arcmin": 4.357535060184821,
+        "north_arcmin": 2.9204818731860196,
+        "separation_deg": 0.08742819825133653,
+        "solar_radius_deg": 0.2633336111111111,
+        "sun_alt_deg": 15.746259447
+      },
+      {
+        "seconds": 3480.0,
+        "east_arcmin": 4.884508443673513,
+        "north_arcmin": 2.943969080205089,
+        "separation_deg": 0.09505161902419006,
+        "solar_radius_deg": 0.2633336111111111,
+        "sun_alt_deg": 15.930608562
+      },
+      {
+        "seconds": 3540.0,
+        "east_arcmin": 5.411541073915846,
+        "north_arcmin": 2.967455786773687,
+        "separation_deg": 0.10286248748750917,
+        "solar_radius_deg": 0.2633336111111111,
+        "sun_alt_deg": 16.115064685
+      },
+      {
+        "seconds": 3600.0,
+        "east_arcmin": 5.938632921872808,
+        "north_arcmin": 2.9909420051323528,
+        "separation_deg": 0.11082140886699013,
+        "solar_radius_deg": 0.2633336111111111,
+        "sun_alt_deg": 16.29962651
+      },
+      {
+        "seconds": 3660.0,
+        "east_arcmin": 6.465783958469014,
+        "north_arcmin": 3.014427687512483,
+        "separation_deg": 0.11889887202938754,
+        "solar_radius_deg": 0.2633336111111111,
+        "sun_alt_deg": 16.484292739
+      },
+      {
+        "seconds": 3720.0,
+        "east_arcmin": 6.992994154646694,
+        "north_arcmin": 3.0379128461331595,
+        "separation_deg": 0.12707247613245926,
+        "solar_radius_deg": 0.2633336111111111,
+        "sun_alt_deg": 16.669062069
+      },
+      {
+        "seconds": 3780.0,
+        "east_arcmin": 7.520263594446704,
+        "north_arcmin": 3.0613974932927674,
+        "separation_deg": 0.13532499354956004,
+        "solar_radius_deg": 0.2633336111111111,
+        "sun_alt_deg": 16.853933201
+      },
+      {
+        "seconds": 3840.0,
+        "east_arcmin": 8.047592305421167,
+        "north_arcmin": 3.0848815212551135,
+        "separation_deg": 0.14364300333665833,
+        "solar_radius_deg": 0.2633336111111111,
+        "sun_alt_deg": 17.03890484
+      },
+      {
+        "seconds": 3900.0,
+        "east_arcmin": 8.57498020212008,
+        "north_arcmin": 3.1083648821861227,
+        "separation_deg": 0.15201592322916094,
+        "solar_radius_deg": 0.2633336111111111,
+        "sun_alt_deg": 17.223975686
+      },
+      {
+        "seconds": 3960.0,
+        "east_arcmin": 9.102427311988023,
+        "north_arcmin": 3.1318477683356463,
+        "separation_deg": 0.16043531844341757,
+        "solar_radius_deg": 0.2633336111111111,
+        "sun_alt_deg": 17.409144443
+      },
+      {
+        "seconds": 4020.0,
+        "east_arcmin": 9.62993371927451,
+        "north_arcmin": 3.1553299520102995,
+        "separation_deg": 0.1688943914470258,
+        "solar_radius_deg": 0.2633336111111111,
+        "sun_alt_deg": 17.594409819
+      },
+      {
+        "seconds": 4080.0,
+        "east_arcmin": 10.157499451581812,
+        "north_arcmin": 3.17881150547276,
+        "separation_deg": 0.17738761216980353,
+        "solar_radius_deg": 0.2633336111111111,
+        "sun_alt_deg": 17.779770515
+      },
+      {
+        "seconds": 4140.0,
+        "east_arcmin": 10.685124366977346,
+        "north_arcmin": 3.202292380799415,
+        "separation_deg": 0.1859104368366756,
+        "solar_radius_deg": 0.2633336111111111,
+        "sun_alt_deg": 17.965225242
+      },
+      {
+        "seconds": 4200.0,
+        "east_arcmin": 11.21280854961453,
+        "north_arcmin": 3.225772650293358,
+        "separation_deg": 0.1944591069286668,
+        "solar_radius_deg": 0.2633336111111111,
+        "sun_alt_deg": 18.150772703
+      },
+      {
+        "seconds": 4260.0,
+        "east_arcmin": 11.740552083806628,
+        "north_arcmin": 3.249252206271675,
+        "separation_deg": 0.20303048544220076,
+        "solar_radius_deg": 0.2633336111111111,
+        "sun_alt_deg": 18.336411606
+      },
+      {
+        "seconds": 4320.0,
+        "east_arcmin": 12.26835488421069,
+        "north_arcmin": 3.272731000849972,
+        "separation_deg": 0.21162193326864437,
+        "solar_radius_deg": 0.2633336111111111,
+        "sun_alt_deg": 18.522140661
+      },
+      {
+        "seconds": 4380.0,
+        "east_arcmin": 12.79621697853389,
+        "north_arcmin": 3.2962091662724053,
+        "separation_deg": 0.22023121940424892,
+        "solar_radius_deg": 0.2633336111111111,
+        "sun_alt_deg": 18.707958573
+      },
+      {
+        "seconds": 4440.0,
+        "east_arcmin": 13.32413839458046,
+        "north_arcmin": 3.319686534781755,
+        "separation_deg": 0.22885644284137086,
+        "solar_radius_deg": 0.2633336111111111,
+        "sun_alt_deg": 18.893864051
+      },
+      {
+        "seconds": 4500.0,
+        "east_arcmin": 13.85211916010262,
+        "north_arcmin": 3.343163178625945,
+        "separation_deg": 0.2374959761893993,
+        "solar_radius_deg": 0.2633336111111111,
+        "sun_alt_deg": 19.079855803
+      },
+      {
+        "seconds": 4560.0,
+        "east_arcmin": 14.380159246440913,
+        "north_arcmin": 3.366639049967362,
+        "separation_deg": 0.24614841649393304,
+        "solar_radius_deg": 0.2633336111111111,
+        "sun_alt_deg": 19.265932537
+      },
+      {
+        "seconds": 4620.0,
+        "east_arcmin": 14.908258681482183,
+        "north_arcmin": 3.3901141610465504,
+        "separation_deg": 0.2548125502679288,
+        "solar_radius_deg": 0.2633336111111111,
+        "sun_alt_deg": 19.452092961
+      },
+      {
+        "seconds": 4680.0,
+        "east_arcmin": 15.436417436437136,
+        "north_arcmin": 3.4135884640149543,
+        "separation_deg": 0.2634873208435903,
+        "solar_radius_deg": 0.2633336111111111,
+        "sun_alt_deg": 19.638335783
+      },
+      {
+        "seconds": 4740.0,
+        "east_arcmin": 15.964635652361594,
+        "north_arcmin": 3.4370619112939513,
+        "separation_deg": 0.27217180759092463,
+        "solar_radius_deg": 0.2633336111111111,
+        "sun_alt_deg": 19.824659709
+      },
+      {
+        "seconds": 4800.0,
+        "east_arcmin": 16.492913131165142,
+        "north_arcmin": 3.460534514750716,
+        "separation_deg": 0.28086519758923256,
+        "solar_radius_deg": 0.2633336111111111,
+        "sun_alt_deg": 20.011063448
+      },
+      {
+        "seconds": 4860.0,
+        "east_arcmin": 17.021250013557392,
+        "north_arcmin": 3.484006346805317,
+        "separation_deg": 0.2895667799586293,
+        "solar_radius_deg": 0.2633336111111111,
+        "sun_alt_deg": 20.197545703
+      },
+      {
+        "seconds": 4920.0,
+        "east_arcmin": 17.549646384270087,
+        "north_arcmin": 3.507477239798296,
+        "separation_deg": 0.2982759246009896,
+        "solar_radius_deg": 0.2633336111111111,
+        "sun_alt_deg": 20.384105184
+      },
+      {
+        "seconds": 4980.0,
+        "east_arcmin": 18.07810210158297,
+        "north_arcmin": 3.5309472656637824,
+        "separation_deg": 0.3069920694985201,
+        "solar_radius_deg": 0.2633336111111111,
+        "sun_alt_deg": 20.570740592
+      },
+      {
+        "seconds": 5040.0,
+        "east_arcmin": 18.60661725007101,
+        "north_arcmin": 3.5544164367331956,
+        "separation_deg": 0.3157147174280037,
+        "solar_radius_deg": 0.2633336111111111,
+        "sun_alt_deg": 20.757450633
+      },
+      {
+        "seconds": 5100.0,
+        "east_arcmin": 19.135191857823006,
+        "north_arcmin": 3.5778846452414568,
+        "separation_deg": 0.324443423049256,
+        "solar_radius_deg": 0.2633336111111111,
+        "sun_alt_deg": 20.944234011
+      },
+      {
+        "seconds": 5160.0,
+        "east_arcmin": 19.663825839808272,
+        "north_arcmin": 3.601351903195218,
+        "separation_deg": 0.33317778585343744,
+        "solar_radius_deg": 0.2633336111111111,
+        "sun_alt_deg": 21.131089425
+      },
+      {
+        "seconds": 5220.0,
+        "east_arcmin": 20.19251933719624,
+        "north_arcmin": 3.6248182830502906,
+        "separation_deg": 0.3419174496694415,
+        "solar_radius_deg": 0.2633336111111111,
+        "sun_alt_deg": 21.318015577
+      },
+      {
+        "seconds": 5280.0,
+        "east_arcmin": 20.721272264999154,
+        "north_arcmin": 3.648283616803096,
+        "separation_deg": 0.3506620893827067,
+        "solar_radius_deg": 0.2633336111111111,
+        "sun_alt_deg": 21.505011169
+      },
+      {
+        "seconds": 5340.0,
+        "east_arcmin": 21.25008470792355,
+        "north_arcmin": 3.6717480368014064,
+        "separation_deg": 0.3594114147575801,
+        "solar_radius_deg": 0.2633336111111111,
+        "sun_alt_deg": 21.692074896
+      },
+      {
+        "seconds": 5400.0,
+        "east_arcmin": 21.778956637540443,
+        "north_arcmin": 3.6952114351515637,
+        "separation_deg": 0.368165160544021,
+        "solar_radius_deg": 0.2633336111111111,
+        "sun_alt_deg": 21.879205456
+      }
+    ]
+  }
+}

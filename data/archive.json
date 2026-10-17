@@ -1,0 +1,140 @@
+[
+  {
+    "id": "yeni9",
+    "paper": "Yeni Gazete",
+    "date": "9 Mayıs 1910",
+    "issue": "Sayı 612 · s. 3",
+    "title": "Halley Yıldızı",
+    "category": "Gözlem",
+    "summary": "Güneş doğmadan önce doğuya bakılmasını söyler. 20 Mayıs sonrasında akşam batı ufkuna geçileceğini, 22–30 Mayıs arasında akşam görünürlüğünü öngörür.",
+    "limit": "Adı, yeri ve saati belirtilmiş bir İstanbul gözlem tutanağı değildir. Haber içindeki saat sistemi ayrıca çözümlenmelidir.",
+    "url": "https://www.tufs.ac.jp/common/fs/asw/tur/htu/data/HTU2509-106/page0219.djvu"
+  },
+  {
+    "id": "yeni19",
+    "paper": "Yeni Gazete",
+    "date": "19 Mayıs 1910",
+    "issue": "Sayı 622 · s. 1–2",
+    "title": "Fırtına, korku ve rahatlama",
+    "category": "Gündelik hayat",
+    "summary": "Gazete, şimşek ve gök gürültüsünün kuyrukluyıldızla ilişkilendirilmesini; dükkân kapatma, evlere çekilme ve vedalaşma anlatılarını aktarır.",
+    "limit": "Gazetenin haberleştirdiği tepkilerdir; bütün şehri temsil eden bir sayım yoktur. “Dün” ifadesi fırtınayı 18 Mayıs sabahına bağlar.",
+    "url": "https://www.tufs.ac.jp/common/fs/asw/tur/htu/data/HTU2509-106/page0257.djvu",
+    "continuation": "https://www.tufs.ac.jp/common/fs/asw/tur/htu/data/HTU2509-106/page0258.djvu"
+  },
+  {
+    "id": "kalem19",
+    "paper": "Kalem",
+    "date": "19 Mayıs 1910",
+    "issue": "Sayı 87 · s. 2–3",
+    "title": "Haftalık Dedikodu",
+    "category": "Mizah",
+    "summary": "Korku ve tramvay konuşmaları mizahi bir sahneye dönüşür. Gökteki misafir, şehirdeki insan davranışlarını tartışmanın vesilesidir.",
+    "limit": "Mizah metnindeki kişiler ve sözler, bağımsız görgü tanığı ifadeleri sayılmaz.",
+    "url": "https://www.tufs.ac.jp/common/fs/asw/tur/htu/data/HTU1223-03/page0186.djvu"
+  },
+  {
+    "id": "hayal18",
+    "paper": "Hayâl-i Cedid",
+    "date": "18 Mayıs 1910",
+    "issue": "Sayı 18 · s. 1",
+    "title": "Siyasetin gökteki sureti",
+    "category": "Mizah",
+    "summary": "İnsan yüzlü kuyrukluyıldız ve Alatini göndermesi, Abdülhamid imgesini göksel bir taşlamaya dönüştürür.",
+    "limit": "Karikatür, yıldızın gerçek görünüşünü veya dakikası belli bir gözlemi belgelemiyor.",
+    "url": "https://www.tufs.ac.jp/common/fs/asw/tur/htu/data/HTU0907/page0035.djvu"
+  },
+  {
+    "id": "kitap",
+    "paper": "Tasvir-i Efkâr",
+    "date": "10 Mayıs 1910",
+    "issue": "Sayı 340 · s. 8",
+    "title": "Merakın kitap rafındaki karşılığı",
+    "category": "Gündelik hayat",
+    "summary": "Ebüzziyazâde Abdurrahman Velid’in Halley kitabını tanıtan ilan, 100 sayfa, 25 şekil ve 100 para fiyat bildirir. 17 Mayıs’ta Tanin’de de bir tanıtım yer alır.",
+    "limit": "İlan, astronomi merakının yayıncılığa yansımasını belgeler; kitabın satış miktarını göstermez.",
+    "url": "https://www.tufs.ac.jp/common/fs/asw/tur/htu/data/HTU2178-05/page0160.djvu",
+    "continuation": "https://www.tufs.ac.jp/common/fs/asw/tur/htu/data/HTU2157-08/page0252.djvu"
+  },
+  {
+    "id": "colpan",
+    "paper": "Çolpan",
+    "date": "15 Nisan 1910",
+    "issue": "Sayı 9 · s. 2",
+    "title": "Halley Kuyruklu Yıldızı Yaklaşıyor",
+    "category": "Bilim",
+    "summary": "Halley’in yaklaşmasını ve görülme beklentisini okura anlatan bir İstanbul gazetesi haberi.",
+    "limit": "Gelecek görünürlüğe ilişkin öngörüdür. Kapaktaki 2 Nisan 1326 tarihi, 15 Nisan 1910 olarak çevrildi.",
+    "url": "https://www.tufs.ac.jp/common/fs/asw/tur/htu/data/HTU0467/page0014.djvu"
+  },
+  {
+    "id": "shebab",
+    "paper": "Musavver Şebâb",
+    "date": "17 Şubat 1910",
+    "issue": "Sayı 5 · s. 7–9",
+    "title": "İki kuyrukluyıldız, bir karışıklık",
+    "category": "Bilim",
+    "summary": "Kuyrukluyıldızların yapısını anlatan yazı, Ocak ayında görülen cismin Halley olabileceğini ileri sürer.",
+    "limit": "Dönemin yanılgısıdır: Büyük Ocak Kuyrukluyıldızı C/1910 A1 ile 1P/Halley ayrı cisimlerdir.",
+    "url": "https://www.tufs.ac.jp/common/fs/asw/tur/htu/data/HTU1622/page0035.djvu",
+    "continuation": "https://www.tufs.ac.jp/common/fs/asw/tur/htu/data/HTU1622/page0036.djvu"
+  },
+  {
+    "id": "servet",
+    "paper": "Servet-i Fünûn",
+    "date": "19 Mayıs 1910",
+    "issue": "Sayı 989 · s. 14–15",
+    "title": "Halley Kuyruklu Yıldızı",
+    "category": "Bilim",
+    "summary": "Yazı, yıldızın hareketini ve Dünya ile beklenen karşılaşmayı açıklamaya çalışır; bilimsel açıklama da felaket haberleriyle aynı gün dolaşımdadır.",
+    "limit": "Dönemin bilim iletişiminin belgesidir. Bütün açıklamaları güncel fizik bilgisi olarak alınamaz.",
+    "url": "https://www.tufs.ac.jp/common/fs/asw/tur/htu/data/HTU1862-19/page0008.djvu"
+  },
+  {
+    "id": "shura",
+    "paper": "Şûrâ-yı Ümmet",
+    "date": "28 Nisan 1910",
+    "issue": "Sayı 218 · s. 3–4",
+    "title": "Payitaht",
+    "category": "Mizah",
+    "summary": "Mahmud Sâdık, kuyrukluyıldız gündemini belediye işleri ve şehir yönetimini eleştirmek için kullanır.",
+    "limit": "Toplumsal eleştiridir; gökyüzü gözlem kaydı değildir.",
+    "url": "https://www.tufs.ac.jp/common/fs/asw/tur/htu/data/HTU2130-02/page0212.djvu",
+    "continuation": "https://www.tufs.ac.jp/common/fs/asw/tur/htu/data/HTU2130-02/page0213.djvu"
+  },
+  {
+    "id": "arkadas",
+    "paper": "Arkadaş",
+    "date": "21 Nisan 1910",
+    "issue": "Sayı 7 · s. 206–208",
+    "title": "Kıyamet kopacak mı?",
+    "category": "Bilim",
+    "summary": "Dünya’nın sonu sorusuna açıklama getiren eğitici bir yazı; kuyrukluyıldız merakı genç okura da ulaşır.",
+    "limit": "Yazının varlığı okurların ne kadar korktuğunu ölçmez.",
+    "url": "https://www.tufs.ac.jp/common/fs/asw/tur/htu/data/HTU0146/page0113.djvu",
+    "continuation": "https://www.tufs.ac.jp/common/fs/asw/tur/htu/data/HTU0146/page0114.djvu"
+  },
+  {
+    "id": "darus",
+    "paper": "Darüşşafaka",
+    "date": "14 Mayıs 1910",
+    "issue": "Sayı 12 · s. 546–547, 556–557",
+    "title": "Mehmet İzzet’in bilim anlatımı",
+    "category": "Bilim",
+    "summary": "Eğitim çevresinde Halley ve gök olayları üzerine açıklama sunan bir başka süreli yayın.",
+    "limit": "Aynı ayın gazete ve dergilerindeki farklı anlatım biçimlerini karşılaştırmaya yarar.",
+    "url": "https://www.tufs.ac.jp/common/fs/asw/tur/htu/data/HTU0488/page0337.djvu",
+    "continuation": "https://www.tufs.ac.jp/common/fs/asw/tur/htu/data/HTU0488/page0342.djvu"
+  },
+  {
+    "id": "sada",
+    "paper": "Sadâ-yı Millet",
+    "date": "20 Mayıs 1910",
+    "issue": "s. 3",
+    "title": "Abdülhamid ve kuyrukluyıldız korkusu",
+    "category": "Gündelik hayat",
+    "summary": "Abdülhamid’in yıldızdan korktuğuna ilişkin Selanik kaynaklı bir haber yayımlar.",
+    "limit": "İstanbul’da yayımlanmıştır; anlattığı yer Selanik’tir. Haberdeki korku iddiası bağımsız olarak doğrulanmış değildir.",
+    "url": "https://www.tufs.ac.jp/common/fs/asw/tur/htu/data/HTU1908/page0291.djvu"
+  }
+]
