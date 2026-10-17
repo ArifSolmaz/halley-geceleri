@@ -1,6 +1,6 @@
 # Verinin yeniden üretimi
 
-Site derleme gerektirmez; bu araçlar yalnız `data/` altındaki dosyaları yeniden üretmek içindir. Hepsi proje kökünden çalıştırılır.
+Site derleme gerektirmez; bu araçlar veri, senaryo ve yöntem sayfalarını yeniden üretmek içindir. Hepsi proje kökünden çalıştırılır.
 
 | Çıktı | Üretici | Gerekenler |
 |---|---|---|
@@ -9,7 +9,7 @@ Site derleme gerektirmez; bu araçlar yalnız `data/` altındaki dosyaları yeni
 | `data/milkyway.js` | `python3 tools/mw_tex.py` (önce `build_sky.js`) | Python 3, NumPy, Pillow |
 | `data/transit.js` | `python3 tools/build_transit.py` | Python 3, NumPy, SciPy, `research/raw/audit_transit_*.txt` |
 | `assets/pano/*`, `data/pano.js` | `BERGGREN=… python3 tools/pano/build_pano.py` | Python 3, NumPy, SciPy, Pillow; Berggren panoramasının 16000 px genişliğe küçültülmüş JPEG’i |
-| `docs/02-senaryo.md`, `docs/06-son-degerlendirme.md`, `tools/yonler.md` | `node tools/build_docs.js` | Node |
+| `index.html`, `docs/02-senaryo.md` | `python3 tools/build_documentary.py` veya `node tools/build_docs.js` | Python 3; kaynak: `data/documentary.json` |
 | `yontem.html` | `python3 tools/build_yontem.py` | Python 3, `markdown` |
 
 ## Sabitlenmiş dış bağımlılıklar
@@ -31,7 +31,7 @@ D3C_DATA=package/data node tools/build_sky.js
 
 ## Güneş geçişi (`build_transit.py`)
 
-`data/transit.js` dosyasının tek üreticisidir. Eski `research/audit_claims.py` aynı hesabı yapıp `verification-data.js` yazar; bu dosya artık sitede kullanılmaz. 17 Ekim 2026’da yeniden üretilen olaylar önceki veriyle aynı çıktı: giriş 03:38:54,73 UT, en yakın 04:08:29,76 UT (0,0453912°), çıkış 04:37:58,94 UT. Kamuya dakika hassasiyetinde gösterilir.
+`data/transit.js` dosyasının tek üreticisidir. Eski `research/audit_claims.py` aynı hesabı yapıp `verification-data.js` yazar; bu dosya artık sitede kullanılmaz. 17 Ekim 2026’da yeniden üretilen olaylar önceki veriyle aynı çıktı: giriş 03:38:54,73 UT, en yakın 04:08:29,76 UT (0,0453912°), çıkış 04:37:58,94 UT. Giriş, en yakın geçiş ve çıkış düğmeleri model zamanını saniyeleri atılmış olarak gösterir; ekranda saniye bulunması tarihsel gözlem doğruluğu iddiası değildir.
 
 ## Yayın öncesi yeniden denetim — 17 Ekim 2026
 
@@ -40,6 +40,8 @@ Yayın adresi: **https://arifsolmaz.github.io/halley-geceleri/**; depo adı `hal
 Sekiz astronomi testi ve 1440 / 390 / 320 px tarayıcı denetimleri geçti. `/halley-geceleri/` alt yolunda ana sayfa ve yöntem sayfası yerel HTTP sunucusunda denetlendi; eksik yerel kaynak veya JavaScript hatası görülmedi. Sabitlenmiş bağımlılıklarla yeniden üretilen `data/sky.js` ve `tests/horizons_azel.json` bayt bayt aynı çıktı. Güneş geçişi yeniden üretiminde olay zaman damgaları aynı kaldı; sayısal zaman alanındaki en büyük fark yaklaşık 2,82 × 10⁻⁸ saniyeydi. NumPy/SciPy ve platform farkları son basamaklarda değişiklik yaratabilir; geçiş çıktısı için bayt eşitliği yerine sayısal tolerans kullanılmalıdır. Bu denetim yereldir. Site GitHub Pages üzerinde yayımlanır; `main` dalındaki değişikliklerin dağıtımı tamamlandıktan sonra canlı sürüm ayrıca denetlenir.
 
 
-## Görsel düzen denetimi
+## Yeni anlatının denetimi
 
-31 ayrı planın açılış, orta ve son kadrajları masaüstü ve portre telefonda incelendi. 320×640, 390×844, 844×390, 1024×768 ve 1440×900 boyutlarında ek arayüz kontrolleri yapıldı. `tests/layout.cjs`, planların denetim çubuğu ve altyazı sınırlarını, bilimsel çizim yazılarını, gözlem panelinin göğü örtmemesini ve arşive dönüşü denetler. `tests/browser.cjs` dallanmış anlatının uçtan uca akışını; `tests/ephemeris.test.cjs` astronomi verilerini sınar. Tarayıcı kontrolleri Playwright/Chromium ortamındadır; fiziksel telefonlarda Safari testi yerine geçmez.
+Yeni giriş noktası `js/documentary.js` ve beş bölümlü senaryodur. `tests/browser.cjs` bu akışı, arşivi, geçiş çizimini ve gözlem masasını; `tests/layout.cjs` masaüstü/telefon yerleşimini denetler. Önceki 31 planlı film için yapılan ölçümler yeni tasarımın estetik doğrulaması olarak kullanılmaz. Ekran görüntüleri ayrıca görsel olarak incelenir.
+
+Fotoğraf panoraması yeni ana sayfada kullanılmaz. `tools/pano/` ve `tools/yonler.md` eski prototipin yeniden üretim kaydıdır.

@@ -1,28 +1,19 @@
-/* Playwright ile uçtan uca duman testi: node tests/browser.cjs  (CHROMIUM_PATH isteğe bağlı) */
-const { chromium } = require('playwright'), path = require('path');
-(async () => {
-  const b = await chromium.launch(process.env.CHROMIUM_PATH ? { executablePath: process.env.CHROMIUM_PATH } : {});
-  const errs = []; let ok = true;
-  for (const vp of [{ width: 1440, height: 860 }, { width: 390, height: 844 }, { width: 320, height: 640 }]) {
-    const p = await b.newPage({ viewport: vp }); p.on('pageerror', e => errs.push(vp.width + ': ' + e.message));
-    await p.goto(process.env.SITE_URL || 'file://' + path.join(__dirname, '..', 'index.html')); await p.waitForTimeout(600);
-    await p.click('#start-silent'); await p.waitForTimeout(300);
-    const res = await p.evaluate(async () => {
-      const F = __halley.film; F.pause(); let guard = 0;
-      while (document.body.classList.contains('mode-film') && guard++ < 500) {
-        const s = F.shot; F.render();
-        if (s.wait) { F.step(0.01); const w = F.waitState;
-          if (s.wait.type === 'choice') { const o = s.wait.options.find(o => !F.done[o.id]); F.pick(o.id); continue; }
-          if (s.wait.type === 'search') { F.onPick({ type: 'planet', id: 'Venus', name: 'Zühre' }); F.onPick({ type: 'halley', name: 'Halley' }); }
-          if (s.wait.type === 'continue') F.resolveWait(true); }
-        F.t = s.dur - 0.001; F.step(0.01); }
-      return { mode: document.body.className, shots: F.queue.length, overflow: document.documentElement.scrollWidth > innerWidth };
-    });
-    if (!res.mode.includes('mode-sky') || res.overflow) ok = false;
-    console.log(vp.width, JSON.stringify(res));
-    await p.evaluate(() => openDoc('yeni9')); await p.waitForTimeout(200); await p.keyboard.press('Escape');
-    await p.close();
-  }
-  if (errs.length) { ok = false; console.log(errs.join('\n')); }
-  await b.close(); console.log(ok ? 'TAMAM' : 'HATA'); process.exit(ok ? 0 : 1);
-})();
+/* End-to-end checks for the historical reconstruction, source room and observatory. */
+const{chromium}=require('playwright'),path=require('node:path'),assert=require('node:assert/strict');
+(async()=>{const b=await chromium.launch(process.env.CHROMIUM_PATH?{executablePath:process.env.CHROMIUM_PATH}:{});const errors=[];
+try{for(const width of [1440,390,320]){const p=await b.newPage({viewport:{width,height:844}});p.on('pageerror',e=>errors.push(e.stack));p.on('requestfailed',r=>errors.push(r.url()+': '+r.failure().errorText));p.on('response',r=>{if(r.status()>=400)errors.push(r.status()+' '+r.url());});await p.goto(process.env.SITE_URL||'file://'+path.join(__dirname,'../index.html'));await p.evaluate(()=>document.fonts.ready);await p.addStyleTag({content:'html{scroll-behavior:auto!important}'});
+assert.equal(await p.locator('.chapter-heading').count(),5);assert.equal(await p.locator('[data-scene-canvas]').count(),3);await p.locator('[data-scene-labels="morning"]').click();assert.equal(await p.locator('[data-scene-labels="morning"]').getAttribute('aria-pressed'),'false');await p.locator('[data-scene-labels="morning"]').click();assert.equal(await p.locator('.archive-entry').count(),16);
+for(const cat of ['Gözlem','Bilim','Mizah','Gündelik hayat','Edebiyat','']){await p.locator(`[data-filter="${cat}"]`).click();assert.ok(await p.locator('.archive-entry').count()>0);}
+// The real story trigger returns focus after the native dialog closes.
+await p.locator('button[data-source="arkadas"]').first().click();await p.keyboard.press('Escape');assert.equal(await p.evaluate(()=>document.activeElement.dataset.source),'arkadas');
+// Every record must open; original images must decode.
+for(const id of await p.evaluate(()=>ARCHIVE.map(a=>a.id))){await p.evaluate(id=>HalleyDocumentary.openSource(id),id);assert.ok(await p.locator('#source-dialog').isVisible());await p.locator('#source-dialog img').evaluateAll(async ims=>{ims.forEach(im=>im.loading='eager');await Promise.all(ims.map(im=>im.decode()));if(ims.some(im=>!im.naturalWidth))throw Error('Broken source image');});await p.keyboard.press('Escape');assert.ok(!await p.locator('#source-dialog').isVisible());}
+await p.locator('[data-event="0"]').click();assert.match(await p.locator('#transit-time').textContent(),/05:34:49/);await p.locator('[data-event="2"]').click();assert.match(await p.locator('#transit-time').textContent(),/06:33:53/);
+const pixels=await p.evaluate(()=>{HalleyDocumentary.preset('morning');const s=HalleyDocumentary.getSky();s.resize();s.draw();const d=s.g.getImageData(0,0,s.c.width,s.c.height).data;let sum=0,n=0;for(let y=20;y<s.c.height/3;y+=10)for(let x=20;x<s.c.width;x+=10){sum+=d[(y*s.c.width+x)*4+2];n++;}return sum/n;});assert.ok(pixels>15,'Resizing must retain the rendered twilight, not a cleared black buffer');
+for(const [key,above]of [['morning',true],['below',false],['evening',true]]){await p.locator(`[data-preset="${key}"]`).click();const h=await p.evaluate(()=>HalleyDocumentary.getSky().where('Halley').alt);assert.equal(h>0,above);}
+for(const id of ['Halley','Venus','Moon']){await p.locator(`[data-find="${id}"]`).click();assert.ok(await p.locator('#selected-object').isVisible());}
+await p.locator('#observer-lines').check();await p.locator('#observer-tail').check();await p.locator('#observer-refraction').uncheck();await p.locator('#observer-city').uncheck();assert.ok(await p.locator('.sky-stage .city-drawing').isHidden());
+const before=await p.evaluate(()=>HalleyDocumentary.getSky().ut);await p.locator('#observer-play').click();await p.waitForTimeout(250);await p.locator('#observer-play').click();assert.ok(await p.evaluate(()=>HalleyDocumentary.getSky().ut)>before);
+assert.equal(await p.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);assert.equal(await p.evaluate(()=>performance.getEntriesByType('resource').some(r=>r.name.includes('/pano/'))),false);
+await p.goto(new URL('yontem.html',p.url()).href);await p.evaluate(()=>document.fonts.ready);assert.ok(await p.locator('h1').count()>1);assert.equal(await p.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);
+console.log(`${width}px: five chapters, 16 sources, three skies, transit, observer controls, method page OK`);await p.close();}assert.deepEqual(errors,[]);}finally{await b.close();}})().catch(e=>{console.error(e);process.exit(1);});

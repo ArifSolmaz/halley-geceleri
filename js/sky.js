@@ -79,6 +79,8 @@
       const step = this.opt.quality < 1 ? 7 : 4.5;
       this.bw = Math.ceil(this.W / step); this.bh = Math.ceil(this.H / step);
       this.buf.width = this.bw; this.buf.height = this.bh; this.img = this.bctx.createImageData(this.bw, this.bh);
+      // Resizing clears the backing canvas even when CSS dimensions stay equal.
+      this.bufKey = null;
     }
 
     /* ---------- kamera ---------- */

@@ -1,422 +1,84 @@
 <!doctype html>
 <html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Yöntem ve kaynaklar — Halley Geceleri</title><link rel="icon" href="favicon.svg"><link rel="stylesheet" href="css/style.css">
+<title>Yöntem ve kaynaklar — Halley Geceleri</title><link rel="icon" href="favicon.svg"><link rel="stylesheet" href="css/documentary.css">
 <style>
-body{height:auto;min-height:100%;overflow:auto;background:#080b10} .doc{max-width:880px;margin:0 auto;padding:40px 18px 90px}
-.doc section{scroll-margin-top:84px} .doc h1{font:300 clamp(2.2rem,1.6rem + 3vw,3.6rem)/1.05 var(--display);color:var(--stone);margin:.2rem 0 1rem}
-.doc h2{font:400 1.9rem/1.2 var(--display);color:var(--stone);margin:2.6rem 0 .8rem;border-top:1px solid var(--line);padding-top:1.6rem}
-.doc h1,.doc h2,.doc h3{overflow-wrap:anywhere} .doc h3{font:400 .78rem/1.4 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--brass);margin:1.8rem 0 .5rem}
-.doc p,.doc li{color:var(--text-2);line-height:1.65} .doc strong{color:var(--text);font-weight:500}
-.table-scroll{overflow-x:auto;margin:1rem 0;max-width:100%} .table-scroll.wide-table table{min-width:560px} .table-hint{display:none}
-@media(max-width:640px){.table-hint{display:block;font:400 .72rem/1.5 var(--mono);color:var(--muted)}}
-.doc table{border-collapse:collapse;width:100%;font-size:.88rem;margin:0;display:table}
-.doc th,.doc td{border-bottom:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top} .doc th{font:400 .7rem var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
-.doc blockquote{margin:.6rem 0;padding:6px 14px;border-left:2px solid var(--dawn);color:var(--dawn-2);font-family:var(--mono);font-size:.8rem}
-.doc code{font-family:var(--mono);font-size:.85em;color:var(--dawn-2)}
-.topnav{position:sticky;top:0;z-index:3;background:rgba(8,11,16,.92);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);display:flex;gap:8px 16px;flex-wrap:nowrap;overflow-x:auto;white-space:nowrap;scrollbar-width:thin;padding:6px 18px;font:400 .72rem var(--mono);letter-spacing:.08em;text-transform:uppercase}
-.topnav a{display:inline-flex;align-items:center;min-height:44px;flex:0 0 auto;color:var(--text-2);text-decoration:none} .topnav a:hover{color:var(--lamp-2)} .topnav .home{color:var(--lamp-2)}
+body{height:auto;overflow:auto;background:var(--paper);color:var(--ink)} .doc{max-width:880px;margin:auto;padding:60px 28px 100px}
+.doc section{scroll-margin-top:90px;margin-top:70px}.doc h1{font:400 clamp(38px,5vw,64px)/1.05 var(--display);margin:0 0 26px}.doc h2{font:400 36px/1.15 var(--display);margin:45px 0 20px;border-top:1px solid var(--line);padding-top:30px}.doc h3{font:400 26px/1.2 var(--display);margin:30px 0 15px}.doc p,.doc li{line-height:1.65;font-size:20px}.doc h1,.doc h2,.doc h3,.doc a{overflow-wrap:anywhere}.doc strong{font-weight:600}.doc code{font:400 .72em/1.7 var(--mono);overflow-wrap:anywhere}.doc pre{background:var(--paper-dark);padding:18px;overflow-x:auto}.doc blockquote{border-left:2px solid var(--rust);padding-left:20px;margin-inline:0;color:var(--muted)}.kicker{font:400 11px/1.6 var(--mono)!important;letter-spacing:.1em;color:var(--rust)}
+.table-scroll{overflow-x:auto;max-width:100%;margin:25px 0}.table-scroll.wide-table table{min-width:620px}.doc table{border-collapse:collapse;width:100%;font-size:17px;line-height:1.5}.doc th,.doc td{border-bottom:1px solid var(--line);padding:12px 15px;text-align:left;vertical-align:top}.doc th{font:400 10px/1.6 var(--mono);color:var(--rust)}.table-hint{font:400 10px var(--mono)!important;color:var(--muted)}
+.topnav{position:sticky;top:0;z-index:3;display:flex;align-items:center;gap:24px;overflow-x:auto;white-space:nowrap;padding:12px 28px;background:var(--paper);border-bottom:1px solid var(--line)}.topnav a{display:inline-flex;align-items:center;min-height:44px;flex:0 0 auto;font:400 10px var(--mono);text-decoration:none}.topnav .home{color:var(--rust)}
+@media(max-width:640px){.doc{padding:40px 20px 70px}.doc section{margin-top:50px}.doc h1{font-size:42px}.doc h2{font-size:32px}.topnav{padding:6px 20px;gap:20px}}
 </style></head><body>
-<nav class="topnav" aria-label="Bölümler"><a class="home" href="index.html">← Deneyime dön</a><a href="#01-hikaye">Hikâye</a><a href="#03-mekan-kaynaklari">Mekân ve kaynaklar</a><a href="#05-bilim">Bilim</a><a href="#04-kamera-ses-plani">Kamera ve ses</a><a href="#02-senaryo">Senaryo</a><a href="#06-son-degerlendirme">Son değerlendirme</a><a href="index.html#gok">Gökyüzü</a><a href="index.html#belgeler">Gazete masası</a></nav>
+<nav class="topnav" aria-label="Bölümler"><a class="home" href="index.html">← 1910’a dön</a><a href="#01-hikaye">Hikâye</a><a href="#03-mekan-kaynaklari">Mekân ve kaynaklar</a><a href="#05-bilim">Bilim</a><a href="#04-kamera-ses-plani">Görsel anlatım</a><a href="#02-senaryo">Senaryo</a><a href="#06-son-degerlendirme">Son değerlendirme</a><a href="index.html#gok">Gökyüzü</a><a href="index.html#belgeler">Kaynak odası</a></nav>
 <main class="doc"><p class="kicker">Halley Geceleri — İstanbul, 1910</p><h1>Yöntem ve kaynaklar</h1>
-<p>Bu sayfa deneyimin hikâyesini, sahne senaryosunu, mekân ve görüntü kaynaklarını, kamera ve ses planını, bilimsel sınırlarını ve her sahne için son değerlendirmeyi bir araya getirir. Kaynak dosyalar <code>docs/</code> klasöründedir.</p>
+<p>Bu sayfa tarihsel yeniden canlandırmanın senaryosunu, görsel dilini, mekân kaynaklarını ve bilimsel hesaplarının sınırlarını bir araya getirir. Mekân kaynaklarının tarihleri ve yeniden canlandırmada nasıl kullanıldıkları ayrıca açıklanır. Kaynak dosyalar <code>docs/</code> klasöründedir.</p>
 <section id="01-hikaye"><h1>Halley Geceleri — İstanbul, 1910</h1>
-<h2>Kısa hikâye özeti</h2>
-<p>Mayıs 1910’da İstanbul’un gazeteleri Halley kuyrukluyıldızını yazıyor: kimi bilimsel bir anlatımla, kimi korkuyla, kimi alayla. Galata’da bir binanın son katındaki fotoğrafhanede çıraklık yapan <strong>Rıza</strong>, kimsenin çekmediği bir görüntünün peşindedir. Aynı binanın bodrum odasında annesiyle yaşayan, gazete satan <strong>Yusuf</strong> her sabah Babıali’den aldığı sayfaları ezberler. İkinci kattaki ailenin kızı <strong>Münevver</strong>, Darülmuallimat’ı bitirmiştir; cebinde Maarif’in taşra tayinine vereceği cevabı taşır.</p>
-<p><strong>10 Mayıs şafağında</strong> üçü binanın damında doğuya bakar. Nereye bakacaklarını bilmezler; Yusuf’un ezberindeki gazete cümlesi yol gösterir: önce Zühre’yi bul, Hâle onun solundadır. Halley bulunur ve şafak onu siler. Rıza’nın cam plakasında yalnızca Zühre’nin kısa izi ve bir leke kalır.</p>
-<p><strong>18–19 Mayıs’ta</strong> söylenti şehirde dolaşır. Matbaada ertesi sabahın gazetesi “Arz yıldızın kuyruğundan geçti” diye basılmaktadır; Yusuf henüz geçmediğini söyler. Kahvehanede bir karikatür ve Kalem’in uydurma bir tramvay sohbeti korkuyu kahkahaya çevirir. Münevver’in evinde o sabahki fırtına konuşulur; babası, Ebüzziyazâde Velid’in yeni çıkan Halley kitabındaki yörünge şekliyle kuyruğun neden Güneş’in tersini gösterdiğini anlatır. 19 Mayıs gecesi yarısında herkes doğuya bakar ve hiçbir şey görmez; uzaktaki damlardan alkış sesleri gelir. Hesap da bunu söyler: Halley’in başı ufkun altındadır ve sabah Güneş’in önünden geçecektir.</p>
-<p><strong>27 Mayıs akşamı</strong> gök batıdadır; bu kez aramaya gerek yoktur. Münevver mektubunu Yusuf’a verir: sabah Postane’ye bırakılacaktır. Rıza kamerasını gökten çevirip insanlara doğrultur. Yusuf on saniye kımıldamadan duramaz; camda yarı saydam kalır. O fotoğraf gösterilmez. Yusuf yarını sorar ve bu kez cevabı bekleyebileceği bir sessizlik vardır.</p>
-<blockquote>
-<p>Dünyanın sonu gelmezse, yarın ne yapacağız?</p>
-</blockquote>
-<h2>Karakterler (kurmaca)</h2>
-<p><em>Kişiler görüntüde yer almaz; yalnız sesleri ve altyazıları vardır. Görüntü, onların baktığı gerçek fotoğraflar, belgeler ve hesaplanan göktür.</em></p>
-<p><strong>Rıza</strong> (17): Galata’daki adsız, kurmaca bir fotoğrafhanenin çırağı. Babası Kasımpaşa’da kayıkçıdır. Plakaları beklerken atölyede uyur. Başlangıçta yalnız gökle ilgilenir; hikâye boyunca göğe bakanların yüzlerini fark eder. 1909’da İstanbul’da stüdyo açan Rahmizâde Bahaeddin gibi örnekler, Müslüman bir gencin bu meslekte bulunabileceğini gösterir; Pera stüdyolarının çoğu ise gayrimüslim ya da Avrupalı sahiplerin elindeydi. Rıza’nın stüdyosu hiçbir gerçek stüdyoyla ilişkilendirilmez.</p>
-<p><strong>Münevver</strong> (20): Darülmuallimat mezunu. Burs karşılığı mecburi hizmet yükümlülüğü vardır; Maarif onu bir taşra kız rüşdiyesine muallime olarak atamıştır. Annesi Nazife Hanım uzaklıktan ve bir akraba aracılığıyla gelen evlilik teklifinden söz eder. Babası Hasan Efendi Sirkeci’deki yeni Büyük Postane’de memurdur. Münevver meraklı, çelişkili ve iradelidir. Kararını büyük bir sözle değil, mektubu bırakarak verir. Taşra tayinleri, maaşlar ve nakil itirazları arşiv çalışmalarında belgelidir (bkz. 03-mekan-kaynaklari.md, “Toplumsal bağlam”).</p>
-<p><strong>Yusuf</strong> (11): Annesi Fatma çamaşıra gider. Yusuf gazeteleri Babıali’de bir aracıdan alır, Karaköy’de ve köprü başında satar; çoğu zaman yalınayaktır. Farklı gazetelerin aynı gök olayını nasıl farklı anlattığını herkesten önce duyar. Korkuyla merakı ayırmaya çalışır ve bir yetişkinin açıklamasındaki tutarsızlığı tek bir soruyla açığa çıkarır. Çocuk gazete satıcıları 1890’lardan itibaren İstanbul’da belgelidir.</p>
-<h2>Her biri göğe neden bakıyor?</h2>
-<ul>
-<li><strong>Rıza</strong> görüntü için bakar; sonunda insanları görmek için.</li>
-<li><strong>Yusuf</strong> satacağı haberin doğru olup olmadığını anlamak için bakar.</li>
-<li><strong>Münevver</strong> kendi kararının büyüklüğünü ölçmek için bakar.</li>
-</ul>
-<h2>Küçük davranışlarla gelişim</h2>
-<p>Açılan bir kamera kapağı, katlanmış bir gazete, açılıp yeniden katlanan bir mektup ve sonunda bırakılan mektup.</p></section><section id="03-mekan-kaynaklari"><h1>Mekân, görüntü ve toplumsal bağlam kaynakları</h1>
-<p>Bu dosya, deneyimdeki her mekân için <strong>belgelenen</strong> ayrıntıyı ve <strong>olasılıklı tamamlamayı</strong> ayırır. Etiketler: <strong>[B]</strong> kaynakta açıkça var · <strong>[O]</strong> olası; yakın tarihli kaynaktan, fotoğraftan ya da çıkarımdan · <strong>[T]</strong> temsil; görsel tamamlama, kaynakla sınanmadı.</p>
-<p>Tarihi belirsiz fotoğraflar kesin kanıt sayılmadı. Kaynaklar 2026 Ekim’inde erişildi.</p>
-<h2>Seçilen mekânlar ve aralarındaki mesafe</h2>
-<p>Bu sürümde mekânlar <strong>çizilmez</strong>. Her mekân ya gerçek bir fotoğrafla, ya özgün bir belge taramasıyla, ya da hesaplanan gökyüzü ile bir panorama fotoğrafının birleşimiyle gösterilir. Kurmaca kişiler görüntüde yer almaz; yalnız sesleri ve altyazıları vardır.</p>
-<div class="table-scroll wide-table" tabindex="0" role="region" aria-label="Kaydırılabilir kaynak tablosu"><table>
-<thead>
-<tr>
-<th>Mekân</th>
-<th>Görüntü</th>
-<th>Kullanıldığı yer</th>
-<th>Not</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Galata’da bir dam (gözlem noktası)</td>
-<td>Hesaplanan gök + Berggren panoraması (Galata Kulesi’nden, 1880’ler)</td>
-<td>Açılış sonu, I, II/19 Mayıs, III, Son</td>
-<td>Gök, Kule’nin konumu (41,0256 K, 28,9741 D; göz ~87 m) için hesaplanır. Kurmaca dam Kule’nin dibindedir ve biraz daha alçaktır <strong>[O]</strong>.</td>
-</tr>
-<tr>
-<td>Fotoğrafhanenin bulunduğu sokak</td>
-<td>Kahn arşivi otokromu, Galata Kulesi’ne çıkan sokak (Haziran 1913)</td>
-<td>Açılış</td>
-<td>Gece görünümü renk düzenlemesidir <strong>[T]</strong>; stüdyo kurmacadır, içi gösterilmez.</td>
-</tr>
-<tr>
-<td>Matbaa</td>
-<td>Yeni Gazete 19 Mayıs 1910 sayfası (tarama) + Matbaa-i Ebüzziyâ tanıtım sayfası (1890, LoC)</td>
-<td>II (seçmeli)</td>
-<td>Sahnedeki matbaa kurmacadır ve görünmez; yalnız sesi vardır. Ebüzziyâ sayfası, Velid’in kitabının basıldığı matbaayı tanıtır.</td>
-</tr>
-<tr>
-<td>Kahvehane</td>
-<td>“Constantinople. Café Turc” (19. yy sonu, BPL) + Hayâl-i Cedid ve Kalem taramaları</td>
-<td>II (seçmeli)</td>
-<td>Fotoğraftaki kişiler hikâyenin kişileri değildir; bu, ekranda yazılıdır.</td>
-</tr>
-<tr>
-<td>Münevver’in evi</td>
-<td>Velid’in kitabının kapağı ve iç sayfası (1910) + Kahn, Haliç’te akşam (1913)</td>
-<td>II (seçmeli)</td>
-<td>Ev görünmez; kitap ve pencereden bakış gösterilir.</td>
-</tr>
-<tr>
-<td>Karaköy, sabah</td>
-<td>Kahn, Karaköy’de yokuş (1913) + Galata Köprüsü (Nisan 1910 öncesi, Rijksmuseum)</td>
-<td>II/19 Mayıs sabahı</td>
-<td>Köprüdeki kişiler hikâyenin kişileri değildir; Yusuf yalnız sesiyle vardır.</td>
-</tr>
-</tbody>
-</table></div><p class="table-hint">↔ Tabloyu yatay kaydırabilirsiniz.</p>
-<p>Yürüme süreleri (yaklaşık): Babıali → Galata Köprüsü ~1,2 km, ~15 dk; köprü ~480 m; Karaköy → Yüksekkaldırım → Galata ~500 m, ~10 dk yokuş. Yusuf’un sabah turu bu ölçekte kurgulandı <strong>[O]</strong>.</p>
-<h2>Bakış yönleri ve panoramanın yerleştirilmesi</h2>
-<p>Manzara, <strong>Guillaume Berggren’in 1880’lerde Galata Kulesi’nden çektiği on levhalık panoramadır</strong> (albümin baskı; kamu malı, <a href="https://commons.wikimedia.org/wiki/File:Guillaume_Berggren_-_Panorama_of_Constantinople_(1880s).jpg" target="_blank" rel="noopener">Wikimedia Commons</a>). Fotoğraf 1910’dan yaklaşık 25–30 yıl öncedir. Haydarpaşa Garı (1909) ve 1880’lerden sonraki yapılar fotoğrafta yoktur; bu farklar bilinçli olarak düzeltilmedi <strong>[B]</strong>.</p>
-<p>Yerleştirme yöntemi (<code>tools/pano/build_pano.py</code>):</p>
+<h2>Bir yılı yeniden yaşamak</h2>
+<p>Ana soru: <strong>1910 İstanbul’unda göğe baksaydık ne görürdük?</strong></p>
+<p>Bu çalışma bir arşiv kataloğu içinde dolaşmakla sınırlı kalmaz. Gazetelerden gelen olaylar ve yön tarifleri, dönem fotoğraflarının gösterdiği şehir ve astronomi hesabıyla yeniden kurulan gök, ziyaretçiyi beş sahne boyunca 1910 baharına taşır. Tarihsel yeniden canlandırma ana deneyimdir; arşiv, sahnelerin arkasından açılır.</p>
+<p>Anlatının öznesi ziyaretçidir. Önce bir haberle karşılaşır; sonra doğuya dönüp Venüs’ten Halley’i bulur. 18–19 Mayıs yayınlarında fırtına, söylenti, mizah ve açıklamayla karşılaşır. Beklenen gecede başın ufkun altında olduğunu görür. Sonunda 27 Mayıs akşamı batıya döner. Doğudan batıya değişen bakış, anlatının görsel omurgasıdır.</p>
+<h2>Beş bölüm</h2>
 <ol>
-<li>Her levha ayrı bir perspektif fotoğraftır; levhalar arasında 2–5°’lik bindirmeler vardır. Levha sınırlarındaki koyu birleşim çizgileri yatay ara değerle silindi.</li>
-<li>Her levhanın yönü, gerçek enlem/boylamdan hesaplanan yapı yönlerine göre ayarlandı: Kız Kulesi ve Selimiye (levha 2), Adalet Kulesi (3), Ayasofya ve Sultanahmet (4), Beyazıt Yangın Kulesi ve Süleymaniye (5), Fatih ve Yavuz Selim (7). Ölçek levhalar arasında 46–50 piksel/derece çıktı; aynı objektif için tutarlıdır.</li>
-<li>Ufuk satırı, tepe yükseklikleri bilinen yapılardan ve uzak tepelerden (Kayışdağı, Çamlıca) hesaplandı. Doğrulama: Nuruosmaniye iki ayrı levhada aynı yöne (191°) düştü.</li>
-<li>Doğruluk: yönlerde yaklaşık ±0,5°, ufuk yüksekliğinde levhaya göre ±0,3–0,7° <strong>[O]</strong>. Kuzeydeki 347°–39° aralığı (Pera yamacı) panoramada yoktur; orada koyu, alçak bir sırt gösterilir <strong>[T]</strong>.</li>
-<li>Gökyüzü fotoğraftan maskeyle çıkarıldı; yerine hesaplanan gök konur. Fotoğraf gündüz çekilmiştir: gece ve şafak görünümü, Güneş’in hesaplanan yüksekliğine bağlı bir karartma ve renk düzenlemesidir <strong>[T]</strong>. Pencere ve fener ışıkları temsilîdir; yerleri fotoğraftaki yapı dokusundan rastgele seçilir <strong>[T]</strong>.</li>
+<li><strong>Haber, gökten önce gelir:</strong> İstanbul’a gazete, dergi ve kitap üzerinden giriş. Beklentiyi kuran basılı soru: “Kıyamet kopacak mı?”</li>
+<li><strong>Önce Zühre’yi bul:</strong> Yeni Gazete’nin yön tarifi, 10 Mayıs 03:30 LMT için hesaplanan gökte sınanır. Ziyaretçi önce Venüs’ü, sonra solundaki Halley’i arar.</li>
+<li><strong>Aynı gök, farklı hikâyeler:</strong> Yeni Gazete’nin 18 Mayıs fırtınasına dair haberi, Hayâl-i Cedid’in karikatürü ve Kalem’in mizahı. Şehir tek bir duyguya indirgenmez.</li>
+<li><strong>Görünmeyeni çizmek:</strong> 19 Mayıs 03:00’te baş ufkun altındadır. Ardından, Güneş diski üzerindeki merkez yolu etkileşimli bilimsel çizimle gösterilir.</li>
+<li><strong>Gözün sınırı, fotoğrafın hafızası:</strong> 27 Mayıs akşamı batı göğü. 29 Mayıs Yerkes fotoğrafı, çıplak göz ile uzun poz arasındaki farkı açar.</li>
 </ol>
-<p>Galata Kulesi’nden hesaplanan yönler (tepe noktası) ve levha kalibrasyonu (<code>tools/build_docs.js</code> üretir):</p>
+<h2>Sahne, belge ve yorum</h2>
+<p>Gazetenin aktardığı bir olay sahne kurmak için kullanılabilir; bu, gazetede anlatılanı bütün şehrin ölçülmüş davranışı yapmaz. Mizah ve roman, dönemin hayal dünyasını taşır; içlerindeki konuşmalar tanık ifadesine dönüştürülmez. Şehir çizimi bir mekân yorumudur. Göğün hesaplanan geometrisiyle aynı kesinlik iddiasını taşımaz.</p>
+<p>Bu ayrımlar anlatının önüne bir uyarı duvarı olarak konmaz. Kısa sahne künyeleri, “Sahne nasıl kuruldu?” açılımı ve belge görüntüleyici üzerinden erişilir. Kaynak görüntüleri dekoratif kolaj yerine okunabilir kayıtlar olarak sunulur.</p>
+<p>Önceki prototipin Rıza, Münevver ve Yusuf karakterleri ile süreli film akışı bu ana sayfada kullanılmaz. Yeniden canlandırma için kişiler uydurmak zorunlu değildir; belgelerin tarif ettiği eylemi ziyaretçinin yapması yeterince güçlü bir dramatik hareket sağlar.</p></section><section id="03-mekan-kaynaklari"><h1>Mekân ve görsel kaynaklar</h1>
+<h2>İstanbul’u yeniden kurmak</h2>
+<p>Sahneler, Galata çevresinde yüksek bir yerden doğuya ve batıya bakma fikrini izler. Yeni Gazete’nin 9 Mayıs tarifi yüksek bir yere çıkmayı ve doğuya dönmeyi öğütler. Hesap için Galata Kulesi koordinatı (41,02562° K, 28,97414° D) kullanılır. Bu seçim, belirli bir damdan yapılmış tarihsel gözlem kaydı bulunduğu anlamına gelmez.</p>
+<p>Şehir çizimi özgün, stilize bir mekân yorumudur: yakın çatılar, uzak kıyı, su ve yelkenliler. Galata dönem fotoğraflarının yapı ve kıyı ilişkilerinden esinlenir; belirli bir yapıyı ölçülmüş geometrisiyle göstermez. Gökyüzü koordinatları bu çizimden hesaplanmaz. Arazi ve bina örtmesi modellenmez.</p>
+<h2>Ana anlatıdaki görseller</h2>
 <div class="table-scroll wide-table" tabindex="0" role="region" aria-label="Kaydırılabilir kaynak tablosu"><table>
 <thead>
 <tr>
-<th>Yapı</th>
-<th>Yön (az.)</th>
-<th>Yükseklik açısı (tepe)</th>
-<th>Uzaklık</th>
+<th>Görüntü</th>
+<th>Tarih ve yer</th>
+<th>Kullanım</th>
+<th>Kayıt</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Ayasofya</td>
-<td>165.0°</td>
-<td>0.14°</td>
-<td>1.96 km</td>
+<td>Galata Köprüsü, Eminönü yönü</td>
+<td>Yaklaşık 1900–Nisan 1910 öncesi, İstanbul</td>
+<td>Açılışın gerçek şehir fotoğrafı; kırpma ve hafif ton düzenlemesi</td>
+<td>Rijksmuseum, RP-F-F01141-CD; CC0</td>
 </tr>
 <tr>
-<td>Sultanahmet Camii</td>
-<td>174.4°</td>
-<td>0.32°</td>
-<td>2.26 km</td>
+<td>Matbaa-i Ebüzziyâ tanıtım levhası</td>
+<td>1890, İstanbul</td>
+<td>Yayıncılık ve basım sanatının görsel belgesi; iç mekân fotoğrafı değil</td>
+<td>Library of Congress, LCCN 2009631575; kamu malı</td>
 </tr>
 <tr>
-<td>Adalet Kulesi (Topkapı)</td>
-<td>154.0°</td>
-<td>0.03°</td>
-<td>1.73 km</td>
+<td>Arkadaş, Yeni Gazete, Hayâl-i Cedid, Kalem ve diğer süreli yayınlar</td>
+<td>1910, İstanbul</td>
+<td>Olay örgüsü, doğrudan alıntı, yön tarifi ve mizah</td>
+<td>Beyazıt Devlet Kütüphanesi–TUFS, Hakkı Tarık Us Koleksiyonu; her belge kendi kaydına bağlı</td>
 </tr>
 <tr>
-<td>Yeni Cami</td>
-<td>197.4°</td>
-<td>-2.32°</td>
-<td>0.99 km</td>
+<td>Velid’in kitabı: kapak ve şekiller</td>
+<td>Mayıs 1910, İstanbul</td>
+<td>Beklenti ve bilim anlatımı</td>
+<td>İBB Atatürk Kitaplığı sayısal kopyası; filigran korunur</td>
 </tr>
 <tr>
-<td>Beyazıt Yangın Kulesi</td>
-<td>207.8°</td>
-<td>1.83°</td>
-<td>1.75 km</td>
-</tr>
-<tr>
-<td>Süleymaniye</td>
-<td>219.1°</td>
-<td>1.63°</td>
-<td>1.36 km</td>
-</tr>
-<tr>
-<td>Fatih Camii</td>
-<td>251.1°</td>
-<td>0.78°</td>
-<td>2.17 km</td>
-</tr>
-<tr>
-<td>Yavuz Selim Camii</td>
-<td>275.7°</td>
-<td>0.73°</td>
-<td>2.09 km</td>
-</tr>
-<tr>
-<td>Kız Kulesi</td>
-<td>101.3°</td>
-<td>-1.44°</td>
-<td>2.56 km</td>
-</tr>
-<tr>
-<td>Üsküdar iskelesi (Mihrimah Sultan Camii)</td>
-<td>87.9°</td>
-<td>-0.73°</td>
-<td>3.44 km</td>
-</tr>
-<tr>
-<td>Büyük Çamlıca</td>
-<td>88.5°</td>
-<td>1.24°</td>
-<td>7.88 km</td>
-</tr>
-<tr>
-<td>Kayışdağı</td>
-<td>110.6°</td>
-<td>1.08°</td>
-<td>17.56 km</td>
-</tr>
-<tr>
-<td>Selimiye Kışlası</td>
-<td>121.0°</td>
-<td>-0.38°</td>
-<td>4.32 km</td>
-</tr>
-<tr>
-<td>Haydarpaşa Garı (1909)</td>
-<td>130.3°</td>
-<td>-0.58°</td>
-<td>4.97 km</td>
-</tr>
-<tr>
-<td>Nusretiye Camii (Tophane)</td>
-<td>77.8°</td>
-<td>-1.41°</td>
-<td>0.69 km</td>
+<td>Barnard’ın Halley fotoğrafı</td>
+<td>29 Mayıs 1910, Yerkes/Wisconsin</td>
+<td>Finalde gerçek astronomi fotoğrafı; İstanbul’da çekilmiş gibi gösterilmez</td>
+<td>Yerkes/E. E. Barnard, kamu malı; Wikimedia Commons</td>
 </tr>
 </tbody>
 </table></div><p class="table-hint">↔ Tabloyu yatay kaydırabilirsiniz.</p>
-<div class="table-scroll wide-table" tabindex="0" role="region" aria-label="Kaydırılabilir kaynak tablosu"><table>
-<thead>
-<tr>
-<th>Levha</th>
-<th>Yön aralığı</th>
-<th>Ölçek (px/°)</th>
-<th>Ufuk satırı</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>0</td>
-<td>39.3° – 70.2°</td>
-<td>49</td>
-<td>303</td>
-</tr>
-<tr>
-<td>1</td>
-<td>68.1° – 100.7°</td>
-<td>49.5</td>
-<td>300</td>
-</tr>
-<tr>
-<td>2</td>
-<td>100.7° – 132.9°</td>
-<td>49.5</td>
-<td>300</td>
-</tr>
-<tr>
-<td>3</td>
-<td>131.0° – 163.3°</td>
-<td>49</td>
-<td>222</td>
-</tr>
-<tr>
-<td>4</td>
-<td>160.2° – 192.6°</td>
-<td>48.9</td>
-<td>214</td>
-</tr>
-<tr>
-<td>5</td>
-<td>188.4° – 221.3°</td>
-<td>48.5</td>
-<td>176</td>
-</tr>
-<tr>
-<td>6</td>
-<td>219.2° – 252.0°</td>
-<td>48.5</td>
-<td>180</td>
-</tr>
-<tr>
-<td>7</td>
-<td>249.9° – 284.3°</td>
-<td>46.3</td>
-<td>185</td>
-</tr>
-<tr>
-<td>8</td>
-<td>282.3° – 316.1°</td>
-<td>47</td>
-<td>175</td>
-</tr>
-<tr>
-<td>9</td>
-<td>314.1° – 347.2°</td>
-<td>47</td>
-<td>170</td>
-</tr>
-</tbody>
-</table></div><p class="table-hint">↔ Tabloyu yatay kaydırabilirsiniz.</p>
-<p>Sonuçlar:</p>
-<ul>
-<li>10 Mayıs 03:30 LMT’de Halley ~85° azimutta, <strong>Üsküdar’ın ve Çamlıca sırtının üstündedir</strong>. Zühre (Venüs) aynı saatte ~89–94° azimutta, Çamlıca’nın üstünden yükselir.</li>
-<li>27 Mayıs 21:30 LMT’de Halley ~259° azimutta, tarihî yarımadada <strong>Fatih (251°) ile Yavuz Selim (276°) camilerinin arasındaki sırtın üstündedir</strong>.</li>
-<li>Birbirinden görülmeyen anıtlar aynı ufka toplanmadı: manzara tek bir noktadan çekilmiş gerçek bir fotoğraftır.</li>
-<li>Önceki sürümdeki Beyazıt Yangın Kulesi koordinatı yanlıştı (41,01225 K, 28,9633 D); doğru değer 41,0117 K, 28,9644 D’dir ve panoramayla doğrulandı.</li>
-</ul>
-<h2>Fiziki şehir, Mayıs 1910</h2>
-<ul>
-<li><strong>Galata Köprüsü:</strong> 1872–1875’te yapılan demir dubalı, ahşap kalas döşemeli köprüdür. Yaklaşık 480 m uzunluğunda, 13–14 m genişliğindedir. Ağustos 1912’de yerini Hüttenwerk Oberhausen yapımı yeni köprüye bıraktı <strong>[B]</strong>. Geçiş ücretlidir (1930’a kadar) <strong>[B]</strong>; 1910 tarifesi doğrulanamadı. Kaynaklar: <a href="https://dbc.wroc.pl//Content/18512/PDF/20683.pdf" target="_blank" rel="noopener">Prometheus, 8.2.1913 (Max Buchwald)</a>, <a href="https://en.wikipedia.org/wiki/Galata_Bridge" target="_blank" rel="noopener">Wikipedia: Galata Bridge</a>, <a href="https://www.loc.gov/pictures/item/2001699426/" target="_blank" rel="noopener">LoC fotokrom, yak. 1890–1900, tarihi kesin değil</a>.</li>
-<li><strong>Tramvay:</strong> Mayıs 1910’da yalnız <strong>atlı tramvay</strong> çalışıyordu. Elektrikli tramvay Şubat 1914’te başladı <strong>[B]</strong>. Kadınlar için perdeli bölme vardı; tramvayın önünde vardacı boru çalarak koşardı <strong>[B]</strong>. Kaynak: <a href="https://istanbultarihi.ist/assets/uploads/pdf/istanbulda-kara-ulasimi-219.pdf" target="_blank" rel="noopener">İstanbul’da kara ulaşımı (istanbultarihi.ist)</a>. Seste uzaktan nal sesi bu nedenle kullanıldı; motorlu araç sesi kullanılmadı.</li>
-<li><strong>Tünel:</strong> 1875’ten beri Karaköy–Beyoğlu arasında kablolu çekişle çalışıyordu <strong>[B]</strong> (<a href="https://en.wikipedia.org/wiki/T%C3%BCnel" target="_blank" rel="noopener">Wikipedia: Tünel</a>).</li>
-<li><strong>Aydınlatma:</strong> 1910–1914 arasında İstanbul’da 8.742 gaz feneri ve 2.316 gaz yağı lambası vardı. Galata ve Tophane 1859’dan beri gazla aydınlatılıyordu. <strong>Elektrikli sokak aydınlatması yoktu</strong>; Silahtarağa santrali 1914’te çalışmaya başladı <strong>[B]</strong>. Kaynaklar: <a href="https://istanbultarihi.ist/assets/uploads/pdf/istanbulun-gazhaneleri-358.pdf" target="_blank" rel="noopener">İstanbul’un gazhaneleri</a>, <a href="https://istanbultarihi.ist/assets/uploads/pdf/istanbulun-aydinlatilmasinda-elektrik-donemi-357.pdf" target="_blank" rel="noopener">İstanbul’un aydınlatılmasında elektrik dönemi</a>. Panoramadaki pencere ve fener ışıkları sıcak, küçük ve seyrektir <strong>[O]</strong>; yerleri <strong>[T]</strong>.</li>
-<li><strong>Galata Kulesi:</strong> 1875 fırtınasında külahını yitirdi. 1910’da taş gövdenin üstünde <strong>iki ahşap çokgen oda ve uzun bir bayrak direği</strong> vardı. Külah 1964–67’de yeniden yapıldı <strong>[B]</strong> (<a href="https://islamansiklopedisi.org.tr/galata-kulesi" target="_blank" rel="noopener">TDV İA, “Galata Kulesi”</a>). Kulenin yangın gözetleme işlevi belgelidir <strong>[B]</strong>.</li>
-<li><strong>Yapı dokusu:</strong> 1870 yangınından sonra kâgir yapı teşvik edildi; Cadde-i Kebir genişletildi; parke taşı kullanıldı <strong>[B]</strong> (<a href="https://ctad.hacettepe.edu.tr/22_44/03_CemDogan.pdf" target="_blank" rel="noopener">Cem Doğan</a>). Pera’da 1911’de hâlâ ahşap evler vardı <strong>[B]</strong>. Kat sayıları, sıva renkleri ve dam terasları için 1910’a özgü kaynak bulunamadı <strong>[T]</strong>.</li>
-<li><strong>Haydarpaşa Garı</strong> 1909’da tamamlandı <strong>[B]</strong> (<a href="https://en.wikipedia.org/wiki/Haydarpa%C5%9Fa_railway_station" target="_blank" rel="noopener">Wikipedia</a>). <strong>Sirkeci Büyük Postane</strong> 1905–1909 arasında yapıldı <strong>[B]</strong> (<a href="https://en.wikipedia.org/wiki/Grand_Post_Office" target="_blank" rel="noopener">Wikipedia</a>). <strong>Selimiye Kışlası</strong> ve <strong>Kız Kulesi</strong> bugünkü biçimlerine yakındı <strong>[B]</strong>.</li>
-<li><strong>Vapurlar:</strong> Şirket-i Hayriye (numaralı vapurlar) ve İdare-i Mahsusa çalışıyordu; İdare-i Mahsusa Eylül 1910’da adını değiştirdi <strong>[B]</strong> (<a href="https://istanbultarihi.ist/assets/uploads/pdf/osmanli-istanbulunda-deniz-ulasimi-yeni-cag-221.pdf" target="_blank" rel="noopener">Osmanlı İstanbulu’nda deniz ulaşımı</a>). Sesteki uzak vapur düdüğü bu yoğun trafiğe dayanır <strong>[O]</strong>.</li>
-<li><strong>Gece sesleri:</strong> Bekçinin yangını “Yangın var!” diye duyurması ancak popüler kaynaklarda geçer, bu yüzden kullanılmadı. Bozacı ve salepçi kış satıcılarıdır; Mayıs gecesi için kullanılmadı.</li>
-</ul>
-<h2>Fotoğraf: araçlar ve sınırlar</h2>
-<ul>
-<li>Stüdyolarda 13×18 ve 18×24 cm cam kuru plakalar, tepe camından gelen gün ışığı ve uzun poz için baş destekleri kullanılırdı <strong>[B]</strong> (<a href="https://www.cameramuseum.ch/en/discover/permanent-exhibition/the-plate-era/the-photographic-portrait/" target="_blank" rel="noopener">Musée suisse de l’appareil photographique</a>).</li>
-<li>Magnezyum flaş tozu patlayıcıydı ve gürültüyle dumana yol açardı <strong>[B]</strong> (<a href="https://photomemorabilia.co.uk/Ilford/FlashPowder_Manual_of_Photography.html" target="_blank" rel="noopener">Ilford el kitabı</a>). Damdaki gece sahnesinde kullanılmadı; poz lamba ışığıyla verildi ve bu fotoğraf gösterilmez.</li>
-<li>1910’da kuyrukluyıldız fotoğrafları gökyüzünü izleyen teleskop-kameralarla, dakikalarca ya da saatlerce poz verilerek çekildi:</li>
-<li>Johannesburg, 6 Mayıs: 60 dakika (<a href="https://collection.sciencemuseumgroup.org.uk/objects/co56888/glass-positive-halleys-comet-and-venus" target="_blank" rel="noopener">Science Museum Group</a>).</li>
-<li>Barnard, Yerkes: 12 dakika ile 1 sa 57 dakika arası (<a href="https://articles.adsabs.harvard.edu/pdf/1914ApJ....39..373B" target="_blank" rel="noopener">ApJ 39, 1914</a>).
-  Rıza’nın 30 saniyelik, izlemesiz plakasında yıldızlar kısa iz bırakır, Halley ancak bir leke olur <strong>[O]</strong>: fiziksel çıkarım, amatör belgesi yok.</li>
-<li>Pera stüdyoları (Sébah &amp; Joaillier, Phébus/Febüs, Abdullah Frères) belgelidir <strong>[B]</strong>. Rıza’nın stüdyosu <strong>adsız ve kurmacadır</strong>; hiçbirine bağlanmadı.</li>
-</ul>
-<h2>Toplumsal bağlam (Münevver ve Yusuf)</h2>
-<ul>
-<li><strong>Darülmuallimat</strong> 1870’te açıldı. 1910–11’de yatılı kısmı Fatih-Çarşamba’da açıldı. Öğrencilere harçlık verilir, karşılığında mecburi hizmet doğardı <strong>[B]</strong> (<a href="https://islamansiklopedisi.org.tr/darulmuallimat" target="_blank" rel="noopener">TDV İA, “Dârülmuallimât”</a>, <a href="https://kureansiklopedi.com/tr/detay/darulmuallimat-2" target="_blank" rel="noopener">Küre Ansiklopedi</a>).</li>
-<li><strong>Taşraya tayin</strong> gerçek bir seçenekti. Bursa Kız Rüşdiyesi örneklerinde 250–700 kuruş maaşlar ve naklen tayinler, Trabzon, Ankara, Selanik, İzmir görevleri ve itirazlar belgelidir <strong>[B]</strong> (<a href="https://www.historystudies.net/dergi/bursa-kiz-rusdiye-mektebi-1882-190920220817012453.pdf" target="_blank" rel="noopener">Bursa Kız Rüşdiye Mektebi, 1882–1909</a>). Taşrada muallime açığı vardı (<a href="https://avesis.cumhuriyet.edu.tr/yayin/66d22115-919a-43e0-aa2e-24bd14822fa0/adana-inas-kiz-rustiyesi-baglaminda-osmanlida-muallime-kadin-ogretmen-sorunlari-1892-1913" target="_blank" rel="noopener">Adana İnas Rüşdiyesi</a>). Münevver’in tayini ve mektubu kurgudur.</li>
-<li>Tramvay ve vapurlarda kadın bölmeleri vardı; tramvaydaki perde 1923’te kaldırıldı <strong>[B]</strong> (<a href="https://atamdergi.gov.tr/ozet/1149/eng" target="_blank" rel="noopener">ATAM Dergi</a>). Münevver damda annesiyle ve aynı binanın komşularıyla bulunur. Galata’da karma bir apartmanda bu <strong>[O]</strong> düzeyindedir.</li>
-<li><strong>Çocuk müvezziler:</strong> İlk çocuk gazete satıcısı 1892’de Üsküdar iskelesinde görüldü. 1910’da Babıali’den gazete alıp çocuklara dağıtan aracılar vardı. Satıcı çocuklar çoğunlukla yalınayaktı <strong>[B]</strong> (<a href="https://istanbulansiklopedisi.org/handle/rek/27780" target="_blank" rel="noopener">İstanbul Ansiklopedisi</a>, <a href="https://istanbulansiklopedisi.org/handle/rek/32537" target="_blank" rel="noopener">aracılar</a>, <a href="https://istanbulansiklopedisi.org/handle/rek/11997" target="_blank" rel="noopener">yalınayaklık</a>). 1910 gazete fiyatları doğrulanamadığı için sahnelerde fiyat söylenmez.</li>
-<li><strong>Kahvehane ve kıraathane:</strong> Gazete bulundurulan kıraathaneler belgelidir <strong>[B]</strong> (<a href="https://islamansiklopedisi.org.tr/kahvehane" target="_blank" rel="noopener">TDV İA, “Kahvehane”</a>). Sesli okuma alışkanlığı için akademik kaynak bulunamadı <strong>[O]</strong>.</li>
-</ul>
-<h2>Görsel kaynak dosyası ve kullanım hakları</h2>
-<p>Etiketler ekranda da gösterilir: <strong>arşiv fotoğrafı</strong>, <strong>belge</strong> (tarama), <strong>fotoğraf + hesap</strong> (panorama ve hesaplanan gök), <strong>kurmaca plaka</strong> (hesaplanan gökten üretilmiş benzetim).</p>
-<div class="table-scroll wide-table" tabindex="0" role="region" aria-label="Kaydırılabilir kaynak tablosu"><table>
-<thead>
-<tr>
-<th>Görsel</th>
-<th>Tarih (1910’a uzaklık)</th>
-<th>Tür</th>
-<th>Kaynak ve hak durumu</th>
-<th>İşlem</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Berggren, Galata Kulesi’nden panorama</td>
-<td>1880’ler (~25–30 yıl önce)</td>
-<td>fotoğraf + hesap</td>
-<td>Kamu malı · Wikimedia Commons (Palais Dorotheum, 2014)</td>
-<td>Gök maskesi, levha hizalama, ton eşitleme, gece tonu</td>
-</tr>
-<tr>
-<td>Auguste Léon, Galata Kulesi’ne çıkan sokak (A2306S)</td>
-<td>Haziran 1913 (+3 yıl)</td>
-<td>arşiv fotoğrafı</td>
-<td>CC0 · Albert-Kahn Müzesi</td>
-<td>Kırpma; gece görünümü renk düzenlemesi</td>
-</tr>
-<tr>
-<td>Auguste Léon, Karaköy’de yokuş (A2300)</td>
-<td>Haziran 1913 (+3)</td>
-<td>arşiv fotoğrafı</td>
-<td>CC0 · Albert-Kahn Müzesi</td>
-<td>Kırpma</td>
-</tr>
-<tr>
-<td>Auguste Léon, Haliç akşam (A2287)</td>
-<td>Haziran 1913 (+3)</td>
-<td>arşiv fotoğrafı</td>
-<td>CC0 · Albert-Kahn Müzesi</td>
-<td>Kırpma, karartma</td>
-</tr>
-<tr>
-<td>Galata Köprüsü, Eminönü yönüne (RP-F-F01141-CD)</td>
-<td>yak. 1900 – Nisan 1910 öncesi</td>
-<td>arşiv fotoğrafı</td>
-<td>CC0 · Rijksmuseum</td>
-<td>Kırpma</td>
-</tr>
-<tr>
-<td>Galata Köprüsü (LCCN 2016820955)</td>
-<td>1909–1919</td>
-<td>arşiv fotoğrafı (yedek)</td>
-<td>Kamu malı · Library of Congress</td>
-<td>—</td>
-</tr>
-<tr>
-<td>Constantinople. Café Turc</td>
-<td>19. yy sonu (tarihsiz)</td>
-<td>arşiv fotoğrafı</td>
-<td>Kamu malı · Boston Public Library / DPLA</td>
-<td>Karartma, lamba ışığı</td>
-</tr>
-<tr>
-<td>Imprimerie Eb-uz-zia (LCCN 2009631575)</td>
-<td>1890 (−20)</td>
-<td>belge</td>
-<td>Kamu malı · Library of Congress</td>
-<td>Lamba ışığı</td>
-</tr>
-<tr>
-<td>Velid, <em>Kuyruklu Yıldızlar ve Hâle Kuyruklu Yıldızı</em> — kapak ve iç sayfalar</td>
-<td>1910 (1328 Hicrî)</td>
-<td>belge</td>
-<td>Eser kamu malı; sayısal kopya ve filigran İBB Atatürk Kitaplığı</td>
-<td>Kırpma</td>
-</tr>
-<tr>
-<td>Gazete ve dergi kupürleri (<code>assets/img/*.jpg</code>)</td>
-<td>1910</td>
-<td>belge</td>
-<td>Beyazıt Devlet Kütüphanesi – TUFS, Hakkı Tarık Us Koleksiyonu</td>
-<td>Kırpma, küçültme, ton</td>
-</tr>
-<tr>
-<td>Yerkes fotoğrafları, 29 Mayıs ve 6 Haziran 1910</td>
-<td>1910</td>
-<td>belge (bilim)</td>
-<td>Kamu malı (ABD) · Wikimedia Commons</td>
-<td>Yalnız belgeler masasında; Wisconsin’de çekildi</td>
-</tr>
-<tr>
-<td>Odak camı, kontak baskı, cam negatif</td>
-<td>—</td>
-<td>kurmaca plaka</td>
-<td>Bu deneyim</td>
-<td>Hesaplanan gökten üretilir; arşiv fotoğrafı değildir</td>
-</tr>
-</tbody>
-</table></div><p class="table-hint">↔ Tabloyu yatay kaydırabilirsiniz.</p>
-<p>Fotoğraflardaki gerçek kişiler (kahvehane, köprü, sokak) hiçbir zaman kurmaca karakter olarak sunulmaz. Yerkes’in Ocak 1910 tarihli 2 ayaklık reflektör plakası Mayıs gözlemi gibi gösterilmez.</p>
-<p>İncelenip kullanılmayanlar: Sébah &amp; Joaillier’in Galata Kulesi’nden panoraması (LoC, 1890 civarı; çözünürlüğü düşük olduğu için yedek); Kahn’ın limonata satıcısı çocuk fotoğrafı (A2185; gerçek bir çocuk Yusuf sanılmasın diye kullanılmadı).</p></section><section id="05-bilim"><h1>Bilimsel yöntem ve sınırlar</h1>
+<p>Tam kaynak bağlantıları ve haklar <code>CREDITS.md</code> içindedir. Belge odasındaki 16 kayıt <code>data/archive.json</code> ve <code>data/archive.js</code> dosyalarında eşleniktir. Her kayıtta tarih, künye, açıklama, sınır ve varsa kaynak URL’si bulunur.</p>
+<h2>Bakış yönleri</h2>
+<p>10 Mayıs 03:30 LMT’de Halley Galata’dan yaklaşık 85° azimutta ve +10° yüksektedir. 27 Mayıs 21:30 LMT’de yaklaşık 259° azimutta ve +20° yüksektedir. Şafak sahnesi doğuya, akşam sahnesi batıya bakar. Kız Kulesi, camiler veya Çamlıca için yeni ana sayfada ölçülmüş bir çizim iddiası yoktur.</p>
+<h2>Çalışma geçmişi</h2>
+<p>Önceki film prototipinin Berggren panorama kalibrasyonu, mekân ve kurmaca karakter araştırmaları <code>research/legacy-mekan-kaynaklari.md</code> dosyasında korunur. Ana sayfa fotoğraf levhalarını yüklemez ve önceki film karakterlerini kullanmaz. Bu araştırmalar güncel sahneler için yeni kanıt yerine konmaz.</p></section><section id="05-bilim"><h1>Bilimsel yöntem ve sınırlar</h1>
 <h2>Ne hesaplanıyor, ne temsil ediliyor?</h2>
 <div class="table-scroll wide-table" tabindex="0" role="region" aria-label="Kaydırılabilir kaynak tablosu"><table>
 <thead>
@@ -483,9 +145,9 @@ body{height:auto;min-height:100%;overflow:auto;background:#080b10} .doc{max-widt
 <td>Sæmundsson formülü (10 °C, 1010 hPa, standart atmosfer). Horizons verisi havasızdır; gerçek 1910 havası bilinmiyor</td>
 </tr>
 <tr>
-<td>İstanbul ufku</td>
-<td><strong>Fotoğraf</strong> (Berggren, 1880’ler), yapı yönlerine göre yerleştirildi; gece tonu ve ışıklar temsilî</td>
-<td>Bkz. 03-mekan-kaynaklari.md</td>
+<td>İstanbul mekânı</td>
+<td><strong>Yorum / çizim</strong>: dönem fotoğraflarından esinlenen stilize çatılar; ölçülmüş ufuk değil</td>
+<td>Sahne künyeleri; gök sahneleri Galata, araştırma görünümü referans İstanbul konumu. Eski fotoğraf panorama yüklenmez.</td>
 </tr>
 <tr>
 <td>Hava durumu</td>
@@ -495,14 +157,14 @@ body{height:auto;min-height:100%;overflow:auto;background:#080b10} .doc{max-widt
 </tbody>
 </table></div><p class="table-hint">↔ Tabloyu yatay kaydırabilirsiniz.</p>
 <h2>Kuyruk modeli</h2>
-<p>Kuyruk, çekirdekten Güneş’in tersi yönünde uzanan, fiziksel uzunluğu <em>L</em> olan düz bir çizgi kabul edilir. Varsayılan <em>L</em> = 0,30 AU’dur; gözlem defterinden 0,05–0,60 AU arasında değiştirilebilir. Çekirdekten <em>s</em> uzaklığındaki bir noktanın başa göre görünür açısı:</p>
+<p>Kuyruk, çekirdekten Güneş’in tersi yönünde uzanan, fiziksel uzunluğu <em>L</em> olan düz bir çizgi kabul edilir. Varsayılan <em>L</em> = 0,30 AU’dur; anlatı sahnelerinde kullanılır; gözlem masasında kuyruk açılıp kapatılabilir. Çekirdekten <em>s</em> uzaklığındaki bir noktanın başa göre görünür açısı:</p>
 <p>θ(s) = atan2( s · sin β , Δ + s · cos β )</p>
 <p>Burada Δ Halley–Dünya uzaklığı, β faz açısıdır (Horizons S-T-O). Nokta, başın konum açısı yönünde θ kadar ilerletilerek göğe yerleştirilir. Horizons PsAng değerini referans sistemin (ICRF/J2000) kuzey kutbuna göre verir; görünür RA/Dec ise 1910 tarihinin gerçek ekvatoruna göredir. Bu iki “kuzey” arasındaki fark (yerel olarak en çok 0,53°) veri üretiminde giderilir: her örnekte J2000 kutbunun tarih çerçevesindeki konum açısı PsAng’a eklenir (<code>tools/build_halley.js</code>). Yüzey parlaklığı e^(−s / 0,38L) ile azalır. Görünürlüğü gök parlaklığına ve hava kütlesine göre belirlenir; genişlik 0,004 + 0,07·s AU kabul edilir. Bu bir <strong>görselleştirme modelidir</strong>: eğrilik, toz ve iyon kuyruğu ayrımı ve fotometri yoktur.</p>
-<p>Karşılaştırma için Barnard’ın Yerkes’ten (Wisconsin) çıplak gözle verdiği kuyruk uzunlukları bilgi panelinde gösterilir: 9 Mayıs ~15°, 27 Mayıs ~53° (ApJ 39, 1914). Bunlar İstanbul gözlemi değildir. İstanbul’a özgü 100–120° kuyruk ya da doğrulanmamış parlaklık zirveleri kullanılmadı.</p>
+<p>Karşılaştırma için Barnard’ın Yerkes’ten (Wisconsin) çıplak gözle verdiği kuyruk uzunlukları araştırma karşılaştırması olarak kaydedilmiştir: 9 Mayıs ~15°, 27 Mayıs ~53° (ApJ 39, 1914). Bunlar İstanbul gözlemi değildir. İstanbul’a özgü 100–120° kuyruk ya da doğrulanmamış parlaklık zirveleri kullanılmadı.</p>
 <h2>Zaman</h2>
 <ul>
 <li>Tarihler <strong>Gregoryen</strong>dir. Rumi tarihli gazeteler çevrilmiştir: Yeni Gazete’nin 9 Mayıs sayısı 26 Nisan 1326 tarihini de taşır.</li>
-<li>Saatler <strong>İstanbul yerel ortalama güneş saati (LMT)</strong> ile verilir: LMT = UT + 1 sa 55 dk 54,816 sn (28,9784° D). Bu bir <strong>seçilmiş gösterim kuralıdır</strong>; dönemin sivil saat uygulamasına dair bir iddia değildir. Osmanlı ezanî (alaturka) saat ve Avrupa saati o yıllarda birlikte kullanılıyordu; bir gazetenin verdiği saatin hangi kurala göre olduğu ayrıca yorumlanmalıdır. Ekranda LMT ile birlikte UT de gösterilir.</li>
+<li>Saatler <strong>İstanbul yerel ortalama güneş saati (LMT)</strong> ile verilir: LMT = UT + 1 sa 55 dk 54,816 sn (28,9784° D). Bu bir <strong>seçilmiş gösterim kuralıdır</strong>; dönemin sivil saat uygulamasına dair bir iddia değildir. Osmanlı ezanî (alaturka) saat ve Avrupa saati o yıllarda birlikte kullanılıyordu; bir gazetenin verdiği saatin hangi kurala göre olduğu ayrıca yorumlanmalıdır. Ana saat göstergesi LMT’dir; Güneş geçişinin UT aralığı ayrıca belirtilir.</li>
 <li>Aynı kuralı Galata’nın kendi boylamıyla uygulamak 1,02 sn fark eder; IANA saat dilimi veritabanı Mayıs 1910 için <code>Europe/Istanbul</code> = UT + 1:56:56 verir (bu sitenin kuralından 61,2 sn fazla). Bu değerler birbirinin yerine aynı an değişmeden konamaz.</li>
 <li><strong>UT</strong>, 1910 için Horizons’un yeniden kurduğu UT’dir (<strong>UT1</strong>), bugünkü UTC değildir. Kodda zaman, JavaScript’in <code>Date</code> sayısı içinde taşınır; bu yalnız bir sayı kabıdır, saat dilimi iddiası değildir.</li>
 <li>Bugünün Türkiye saatiyle (UTC+3) karşılaştırmak için LMT’ye yaklaşık 1 sa 4 dk eklenir; bu yalnız sezgi içindir.</li>
@@ -525,20 +187,20 @@ body{height:auto;min-height:100%;overflow:auto;background:#080b10} .doc{max-widt
 <tbody>
 <tr>
 <td>Giriş</td>
-<td>05:34:50</td>
-<td>03:38:55</td>
+<td>05:34:49,55</td>
+<td>03:38:54,73</td>
 <td>8,8°</td>
 </tr>
 <tr>
 <td>En yakın</td>
-<td>06:04:25</td>
-<td>04:08:30</td>
+<td>06:04:24,58</td>
+<td>04:08:29,76</td>
 <td>14,2° (merkezler arası 0,045°)</td>
 </tr>
 <tr>
 <td>Çıkış</td>
-<td>06:33:54</td>
-<td>04:37:59</td>
+<td>06:33:53,75</td>
+<td>04:37:58,94</td>
 <td>19,6°</td>
 </tr>
 </tbody>
@@ -574,1486 +236,112 @@ body{height:auto;min-height:100%;overflow:auto;background:#080b10} .doc{max-widt
 <ul>
 <li>Bulut, pus, ışık kirliliği ve gerçek hava kayıtları modelde yoktur.</li>
 <li>Ay diskinin yüzey ayrıntısı yoktur; evre ve yönü doğrudur. Güneş ve Ay diskleri uzaklıktan hesaplanan görünür yarıçapla çizilir; geniş görüş açısında görünür kalsınlar diye birkaç piksellik bir alt sınır vardır.</li>
-<li>Manzara bir fotoğraftır (1880’ler); levhaların yönü ±0,5°, ufuk yüksekliği ±0,3–0,7° doğrulukla yerleştirildi. Kuzeydeki 347°–39° aralığı panoramada yoktur.</li>
+<li>Yeni ana sayfada panorama kullanılmaz. Şehir çizimi ölçülmüş bir ufuk değildir; gökcisimlerini gerçek binaların örtüp örtmediği bu görünümden çıkarılamaz. Eski panorama kalibrasyonu araştırma geçmişi olarak korunur.</li>
 <li>Gezegen konumları ~1′ doğruluktadır (astronomy-engine). Horizons’la doğrudan karşılaştırma yalnız Güneş ve Ay için yapıldı.</li>
 <li>Gazete metinlerinin çevriyazısı bu çalışmanın okumasıdır; görüntüyle birlikte verilir ve uzman denetimi önerilir.</li>
-</ul></section><section id="04-kamera-ses-plani"><h1>Kamera, ışık ve ses planı</h1>
-<h2>Kamera: bir insanın bedeni gibi</h2>
-<ul>
-<li><strong>Kamera bir bakıştır, insanlar görünmez.</strong> Kurmaca kişiler yalnız sesleri ve altyazılarıyla vardır. Kamera çoğunlukla onların gözüdür: damdan göğe, pencereden Haliç’e, masadaki gazeteye bakar.</li>
-<li><strong>Dış planlar</strong> Galata Kulesi’nin konumunda durur. Görüş alanı ve yön, gökyüzü motorunun stereografik izdüşümüyle hesaplanır; Berggren panoraması aynı izdüşümle, her levha kendi kalibrasyonuyla yerleştirilir. Kamera döndükçe fotoğraf ve gök birlikte döner.</li>
-<li><strong>Fotoğraf planları</strong> yalnız yavaş kaydırma ve yakınlaşmayla çalışır (Ken Burns). Fotoğraf yeniden çizilmez; görüntüye eklenen tek şey ışık (lamba havuzu), elin gölgesi ve gece için renk düzenlemesidir. Her fotoğrafın tarihi ve 1910’a uzaklığı sağ üst köşede yazar.</li>
-<li><strong>Merdivenden çıkış (I · i1):</strong> kamera aşağıdan (−14°) yukarı açılır; adım ritminde hafif bir iniş çıkış görülür. Hareket azaltma açıkken bu salınım kapanır.</li>
-<li><strong>Nefes:</strong> dış planlarda ±0,06°’lik çok küçük bir sürüklenme vardır. Bazı anlarda kamera tamamen durur:</li>
-<li>arama (i3),</li>
-<li>serbest bakış (iii2),</li>
-<li>poz sayımları (i6, iii4).</li>
-<li><strong>Plan ölçekleri:</strong></li>
-<li>Geniş planlar mekânı anlatır (i1, iii1).</li>
-<li>Orta planlar yön duygusunu taşır (i2: Üsküdar ve Kız Kulesi; iii3: aşağıda Haliç).</li>
-<li>Yakın planlar karar anlarını gösterir: gazete (p2), kitap (h1), sesli mektup (h2, iii3).</li>
-<li><strong>Odak camı (i6, iii4):</strong> Rıza’nın kamerasının buzlu camı. Görüntü fizik gereği ters ve tepetaklak düşer. iii4’te kamera gökten insanlara döndüğünde camda yalnız odak dışı bir lamba ışığı kalır; yüzler gösterilmez.</li>
-<li><strong>Optik bakış:</strong> görüş alanı 30°’nin altına indiğinde sınır kadiri dürbün etkisiyle artar. 12°’nin altında dairesel bir göz merceği maskesi ve “~×N” büyütme yazısı belirir. Halley’in kadrajdaki büyüklüğü görüş açısına bağlıdır; yakınlaştırmanın bir optik bakış olduğu ekranda yazılıdır.</li>
-<li><strong>Hareketin nedeni:</strong></li>
-<li>Açılışta kamera ses yüzünden pencereye döner.</li>
-<li>I · i3’te kamerayı ziyaretçi yönetir.</li>
-<li>III · iii4’te Rıza’nın kamerası gökten insanlara döner.</li>
-<li>Finalde kamera insanlardan uzaklaşıp göğe açılır.</li>
-</ul>
-<h2>Plan sırası ve kesmeler</h2>
+</ul></section><section id="04-kamera-ses-plani"><h1>Görsel anlatım ve hareket</h1>
+<h2>Görsel dil</h2>
+<p>Koyu petrol tonlarında gök; sıcak, açık kâğıt üzerinde arşiv. Cormorant Garamond başlıklarda, EB Garamond anlatıda, IBM Plex Mono tarih, koordinat ve künyelerde kullanılır. Osmanlıca dizgi Amiri ile gösterilir. Bütün fontlar yereldir.</p>
+<p>Açılış İstanbul’un tek kare Galata Köprüsü fotoğrafıyla kurulur. Bu görüntüye Halley eklenmez. Matbaa-i Ebüzziyâ’nın 1890 tanıtım levhası, basılı sanat ve yayıncılık kaynağı olarak tarihiyle verilir. İç mekân fotoğrafı olarak tanımlanmaz. Yerkes’in gerçek Halley fotoğrafı finalde, Wisconsin bilgisiyle açılır.</p>
+<h2>Yeniden canlandırma sahneleri</h2>
+<p>Üç tarihli gökyüzü sahnesinde Galata konumu kullanılır. Göğün önündeki çatılar, dönem fotoğraflarından esinlenen özgün, stilize bir çizimdir. Tek tek binaları yeniden ölçen bir kent modeli değildir; ufuk örtmesi hesabına katılmaz. Fotoğraf levhaları birleştirilmez; bu yüzden eski prototipin görünen panorama dikişleri bu sürümde bulunmaz.</p>
+<p>Şafak sahnesi 10 Mayıs 03:30 LMT, görünmeme sahnesi 19 Mayıs 03:00 LMT, akşam sahnesi 27 Mayıs 21:30 LMT için hesaplanır. Kamera yönleri doğu, doğu ve batıdır. Kuyruk bir görselleştirme modelidir. Bulut, tarihsel hava kaydı ve ölçülmüş ışık kirliliği yoktur.</p>
+<h2>Hareket ve etkileşim</h2>
+<p>Ziyaretçi kendi okuma hızında ilerler. Üç gök sahnesi görünür alana yaklaşınca çizilir; zaman kendiliğinden akmaz. Gözlem masasında zaman yalnız ziyaretçi “Zamanı ilerlet” düğmesine bastığında akar; sekme gizlenince durur. Sesli konuşma veya otomatik müzik yoktur.</p>
+<p>Güneş geçişi çiziminin zamanı kaydırıcıyla ve üç olay düğmesiyle değişir. Bu, gökte büyük bir karanlık disk görüldüğü iddiası değil; büyütülmüş bir merkez işaretidir.</p>
+<h2>Masaüstü ve telefon</h2>
+<p>Başlık, sahne görüntüsü, anlatı ve belge aynı sırada okunur. Telefonlarda sütunlar tek sıraya döner. Tarih ve gözlem kontrolleri göğün üzerine binmez. Belge görüntüleyici kapanabilir doğal bir iletişim kutusudur; Escape ile kapanır. Telefonda önce özgün tarama, ardından açıklama gelir. Yakınlaştırma özgün sayfayı incelemek içindir.</p>
+<p>Hareket azaltma tercihi uygulanır. Renk tek başına bilgi taşımaz: hesap, belge ve mekân yorumu metinle de adlandırılır.</p></section><section id="02-senaryo"><h1>Belgesel senaryosu — Halley Geceleri</h1>
+<p>Ana soru: <strong>1910 İstanbul’unda göğe baksaydık ne görürdük?</strong></p>
+<p>Tarihsel yeniden canlandırma: ziyaretçi belgelerin yön verdiği beş sahne boyunca 1910 İstanbul’una döner. Özgün alıntı, sahne yorumu, fotoğraf ve hesap ayrılır. Okuma ve araştırma ziyaretçinin hızındadır.</p>
+<h2>01 · Haber, gökten önce gelir.</h2>
+<p><em>Şubat — Nisan 1910</em></p>
+<p>Bir gök olayı, görülmeden önce anlatılmaya başlar.</p>
+<p>İstanbul, 1910 baharı. Kuyrukluyıldız henüz görüş alanımıza girmeden haberi sokaklara ulaşır. Arkadaş dergisinin sayfasında bir soru durur: “Kıyamet kopacak mı?” Mayıs geldiğinde Halley üzerine bir kitap da satıştadır. Merakın artık bir kapağı, şekilleri ve fiyatı vardır.</p>
+<p>Bir gazete sayfasını açıp bu bahara giriyoruz. Açıklamalarla korku haberleri, bilim yazılarıyla karikatürler aynı şehrin içinde dolaşıyor. Hepsinin anlattığı gök bile aynı değil: Musavver Şebâb’ın şubat yazısında Ocak kuyrukluyıldızı ile Halley birbirine karışmış. Bugün bunların iki ayrı cisim olduğunu biliyoruz.</p>
+<p>Yolculuğumuz bir gözlem tarifiyle başlayacak. Yeni Gazete, yüksek bir yere çıkıp doğuya dönmemizi söylüyor. Tarihi 10 Mayıs’a, saati şafaktan önceye alıyoruz.</p>
+<p>Kaynak kimlikleri: <code>shebab</code>, <code>arkadas</code>, <code>kitap</code>.</p>
+<h2>02 · Önce Zühre’yi bul.</h2>
+<p><em>10 Mayıs 1910 · 03:30 LMT</em></p>
+<p>Galata çevresinde bir yüksek bakış. Şehir uyanmadan önce, doğuya dönüyoruz.</p>
+<p>10 Mayıs, 03:30. Doğu ufkunda henüz Güneş yok. Önce parlak Zühre’yi, bugünkü adıyla Venüs’ü arıyoruz. Gazetenin tarifi kısa: Hâle onun solunda.</p>
+<p>Hesaplanan gökte Halley’in başı yaklaşık 10° yüksekte. Venüs daha sağda ve aşağıda. Şafak yaklaştıkça aradaki kontrast azalıyor; kuyruk, bir gazete gravüründeki kadar kolay seçilecek bir çizgi değil. Ekrandaki göğe bakarken önce Venüs’ü, sonra solundaki Halley’i bulmayı deneyin.</p>
+<p>Bu sahnenin göğü tarih ve konumdan hesaplanıyor; şehir çizimi dönem fotoğraflarından esinlenen bir mekân yorumudur. O sabahki bulutları bilmiyoruz. Burada yaptığımız, gazetedeki tarifi yeniden deneyimlemek.</p>
+<blockquote>
+<p>Hâle’yi kolayca bulmak için evvelâ Zühre’yi aramalı. Hâle, Zühre’nin sol cihetindedir.</p>
+</blockquote>
+<p><em>Yeni Gazete, 9 Mayıs 1910, s. 3; bu çalışmanın çevriyazısı.</em></p>
+<p>Kaynak kimlikleri: <code>yeni9</code>.</p>
+<h2>03 · Aynı gök, farklı hikâyeler.</h2>
+<p><em>18 — 19 Mayıs 1910</em></p>
+<p>18 Mayıs sabahının fırtınası. Ertesi günün sayfasında, korkuyla açıklama yan yana.</p>
+<p>18 Mayıs’ta şimşek ve gök gürültüsü. Ertesi gün Yeni Gazete, fırtınayı kuyrukluyıldızla ilişkilendirenleri; dükkân kapatmayı, evlere çekilmeyi ve vedalaşmayı anlatıyor. Sayfanın başlığı: “Arz yıldızın kuyruğundan geçdi…” Bu bölümün hareket noktası, gazetenin aktardığı bu şehir sahneleri.</p>
+<p>Şimdi başka bir sayfaya geçiyoruz. Hayâl-i Cedid’de kuyrukluyıldızın bir yüzü var; gökteki misafir siyasal bir taşlamaya dönüşmüş. Kalem’deyse tramvay konuşmaları mizahın diliyle kuruluyor. Korku tek ses değil: onu açıklayan, ona gülen ve onun üzerinden siyaset konuşanlar da var.</p>
+<p>Bir kitap kapağındaki “Neler olacak?” sorusuna, içerideki yörünge şekilleriyle cevap aranıyor. Velid’in kitabını ve Servet-i Fünûn’u açtığımızda, bu baharın bilim anlatımıyla da karşılaşıyoruz. Şehri yalnız “panik” sözcüğüyle kurmak, elimizdeki malzemenin yarısını dışarıda bırakır.</p>
+<p>Kaynak kimlikleri: <code>yeni19</code>, <code>hayal18</code>, <code>kalem19</code>, <code>velid</code>, <code>servet</code>.</p>
+<h2>04 · Görünmeyeni çizmek.</h2>
+<p><em>19 Mayıs 1910 · İstanbul için hesap</em></p>
+<p>19 Mayıs, 03:00. Göğe baktığımızda, bu kez aradığımız baş ufkun altında.</p>
+<p>19 Mayıs, 03:00. Yine doğuya bakıyoruz, fakat Halley’in başı ufkun yaklaşık 15° altında. Beklenen olay, her yerden görülebilen büyük bir gök gösterisi değil. Birkaç saat sonra Halley’in merkezi, İstanbul’dan bakıldığında Güneş diskinin önünden geçecek: giriş 05:34:49, en yakın merkez geçişi 06:04:24, çıkış 06:33:53 LMT.</p>
+<p>Aşağıdaki çizimdeki işaret bilerek büyütülmüştür. Birkaç kilometrelik çekirdeğin karanlık siluetini görmüş değiliz; merkezinin hesaplanan yerini gösteriyoruz. Bu çalışma, geçişin İstanbul’dan gözlendiğine ilişkin bir kayıt sunmuyor.</p>
+<p>Gazetelerdeki “Dünya’nın kuyruktan geçmesi” ifadesi başka bir geometriye aittir. Kuyruk üç boyutlu, yaygın bir yapıdır. Buradaki Güneş diski geçişi hesabı, Dünya’nın o kuyruğu hangi anda kestiğini hesaplamaz. Aynı tarihin çevresinde anılmaları, bu olayları tek bir olaya dönüştürmez.</p>
+<p>Kaynak kimlikleri: <code>yeni19</code>, <code>servet</code>.</p>
+<h2>05 · Gözün sınırı, fotoğrafın hafızası.</h2>
+<p><em>27 Mayıs — 6 Haziran 1910</em></p>
+<p>27 Mayıs, 21:30. Aynı şehirdeyiz; bu kez yüzümüz batıya dönük.</p>
+<p>27 Mayıs saat 21:30 LMT’de İstanbul’dan batıya bakıyoruz. Halley’in başı yaklaşık 20° yükseklikte; Güneş yaklaşık 19° aşağıdadır. İlk sahnenin doğu ufkundan, karanlık bir akşam göğüne geldik. Bu konum değişimi yörüngenin ve Dünya’nın hareketinin sonucudur.</p>
+<p>İki gün sonra Barnard’ın Wisconsin’deki Yerkes Rasathanesi’nden çektiği fotoğraf, uzun kuyruğu bir plakaya kaydeder. Göğü izleyen kamera ve uzun poz, gözün bir bakışta seçebildiğinden farklı bir kayıt üretir. Bu fotoğraf İstanbul’da çekilmemiştir; onu İstanbul’dan görülmüş bir görüntü yerine koymuyoruz.</p>
+<p>Kuyrukluyıldız uzaklaşırken kâğıtlar ve plakalar kalır. Gazete ne söylendiğini, fotoğraf belirli bir aygıtın ne kaydettiğini, hesap ise seçtiğimiz yerde ve anda göğün geometrisini taşır. Bu üç kayıt birlikte okunduğunda, 1910 baharı daha anlaşılır hâle gelir.</p>
+<p>Kaynak kimlikleri: <code>yerkes29</code>, <code>yerkes6</code>, <code>yeni9</code>.</p></section><section id="06-son-degerlendirme"><h1>Sahne değerlendirmesi</h1>
 <div class="table-scroll wide-table" tabindex="0" role="region" aria-label="Kaydırılabilir kaynak tablosu"><table>
 <thead>
 <tr>
 <th>Bölüm</th>
-<th>Süre</th>
-<th>Geçiş</th>
-<th>Taşıdığı duygu</th>
+<th>Dramaturjik hareket</th>
+<th>Kaynak</th>
+<th>Yeniden kurulan</th>
+<th>Sınır</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Açılış</td>
-<td>~1 dk</td>
-<td>karanlık → ses → ayrıntı → geri çekilme → pencere → başlık</td>
-<td>merak</td>
+<td>01 — Haber</td>
+<td>Şehre basılı haberle giriş</td>
+<td>Arkadaş, Musavver Şebâb, Tasvir-i Efkâr ilanı</td>
+<td>Ziyaretçinin sayfalar arasında ilerleyişi</td>
+<td>Bir yayının sorusu bütün İstanbul’un duygusu değildir</td>
 </tr>
 <tr>
-<td>I · Beklemek</td>
-<td>~2,5 dk + arama</td>
-<td>merdivenden çıkış; arama; hızlanan şafak</td>
-<td>bekleyiş, keşif</td>
+<td>02 — Şafak</td>
+<td>Venüs’ten Halley’i bulma</td>
+<td>Yeni Gazete, 9 Mayıs</td>
+<td>10 Mayıs Galata göğü ve stilize çatı çizimi</td>
+<td>Hava ve gerçek tanık bilinmez</td>
 </tr>
 <tr>
-<td>II · Söylenti</td>
-<td>~2,5 dk</td>
-<td>seçmeli kesişen üç gece; 19 Mayıs boşluğu; bilimsel çizim; sabah</td>
-<td>tedirginlik, alay, rahatlama</td>
+<td>03 — Söylenti</td>
+<td>Aynı olayı farklı seslerden dinleme</td>
+<td>Yeni Gazete 19 Mayıs, Hayâl-i Cedid, Kalem, Velid, Servet-i Fünûn</td>
+<td>Haber, mizah ve açıklamayı birbirine bağlayan anlatı</td>
+<td>Gazete aktarımı, taşlama ve ölçüm ayrıdır</td>
 </tr>
 <tr>
-<td>III · Bakmak</td>
-<td>~2 dk + serbest bakış</td>
-<td>sakin geniş plan; karar; kameranın dönüşü; baskı</td>
-<td>sakinlik</td>
+<td>04 — Geçiş</td>
+<td>Göremeyişin nedenini anlama</td>
+<td>Horizons SAO/1910, Yeni Gazete</td>
+<td>Başın ufuk altındaki konumu ve Güneş diski üzerindeki merkez yolu</td>
+<td>Dünya’nın kuyrukla karşılaşması ayrı olaydır</td>
 </tr>
 <tr>
-<td>Son</td>
-<td>~40 sn</td>
-<td>uzaklaşma; son cümle; gökte kalış</td>
-<td>açıklık</td>
+<td>05 — İz</td>
+<td>Doğudan batıya dönmüş bakış</td>
+<td>Horizons ve Barnard/Yerkes fotoğrafı</td>
+<td>27 Mayıs akşam göğü</td>
+<td>Fotoğraf Wisconsin’de çekilmiştir; çıplak göz kaydı değildir</td>
 </tr>
 </tbody>
 </table></div><p class="table-hint">↔ Tabloyu yatay kaydırabilirsiniz.</p>
-<h2>Işık</h2>
-<p>Belgeler (gazete, kitap) karanlıkta, tek bir gaz yağı lambasının ışık havuzu içinde gösterilir: aynı tarama karartılır, lambanın çevresinde sıcak tonla yeniden açılır. Böylece kâğıdın dokusu yalnız ışık düştüğü yerde görünür.</p>
-<p>Panorama gündüz çekilmiş bir fotoğraftır. Güneş’in hesaplanan yüksekliğine göre orantılı olarak karartılır ve gece mavisine çekilir; ufka yakın kısım hesaplanan gökyüzünün rengini alır (hava perspektifi). Şafakta şehir yavaş yavaş belirir; gece seyrek, sıcak pencere ve fener ışıkları kalır. Bu bir renk düzenlemesidir ve ekranda öyle yazılır.</p>
-<p>Kahn otokromlarında (1913) gece görünümü aynı yöntemle verilir: önce fotoğrafın kendisi, sonra karartma. Haliç’te akşam fotoğrafındaki fenerler fotoğrafın kendisinde yanmaktadır.</p>
-<h2>Ses</h2>
-<p>Bütün sesler Web Audio ile bu deneyim için üretilir; kayıt kullanılmaz.</p>
-<div class="table-scroll wide-table" tabindex="0" role="region" aria-label="Kaydırılabilir kaynak tablosu"><table>
-<thead>
-<tr>
-<th>Ses</th>
-<th>Nasıl</th>
-<th>Mekân / gerekçe</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Kâğıdın masaya bırakılması, hışırtı</td>
-<td>süzgeçli gürültü patlaması + alçak darbe</td>
-<td>açılış</td>
-</tr>
-<tr>
-<td>Oda tonu, oda yankısı</td>
-<td>kahverengi gürültü + kısa yankı</td>
-<td>iç mekânlar</td>
-</tr>
-<tr>
-<td>Uzak su</td>
-<td>bant geçiren gürültü, yavaş genlik dalgalanması; pencere açılınca süzgeç açılır</td>
-<td>Galata’dan Boğaz</td>
-</tr>
-<tr>
-<td>Rüzgâr</td>
-<td>bant geçiren gürültü</td>
-<td>dam</td>
-</tr>
-<tr>
-<td>Adımlar</td>
-<td>tahta / taş vuruşları</td>
-<td>merdiven</td>
-</tr>
-<tr>
-<td>Matbaa ritmi</td>
-<td>düzenli darbe + tıkırtı (makine modeli belirtilmez)</td>
-<td>Babıali</td>
-</tr>
-<tr>
-<td>Kahvehane uğultusu, bardak sesi</td>
-<td>hece hızında dalgalanan gürültüler</td>
-<td>Galata</td>
-</tr>
-<tr>
-<td>Duvar saati</td>
-<td>iki tonlu tık</td>
-<td>ev</td>
-</tr>
-<tr>
-<td>Uzak sokak, atlı tramvay nalı</td>
-<td>seyrek nal dizileri (1910’da tramvay atlıydı)</td>
-<td>III</td>
-</tr>
-<tr>
-<td>Uzak vapur düdüğü</td>
-<td>iki testere dalgası, alçak geçiren süzgeç</td>
-<td>kıyı</td>
-</tr>
-<tr>
-<td>Şafakta serçeler</td>
-<td>seyrek frekans kaymaları</td>
-<td>I sonu</td>
-</tr>
-</tbody>
-</table></div><p class="table-hint">↔ Tabloyu yatay kaydırabilirsiniz.</p>
-<p><strong>Müzik:</strong> tek bir motif (D–F–E–A), koparma telli bir çalgıya benzeyen Karplus–Strong sentezi ve ney benzeri nefes sesiyle çalınır.</p>
-<ul>
-<li>Başta <strong>merak</strong>: motif yükselir.</li>
-<li>Ortada <strong>tedirginlik</strong>: yarım ses (D–E♭) ve uzun nefes.</li>
-<li>Sonda <strong>sakinlik</strong>: motif D’de çözülür.</li>
-</ul>
-<p><strong>Kullanım:</strong> ses kullanıcı başlatınca açılır (“Sesle başla” ya da ♪). Bütün sözler ve önemli sesler altyazıyla verilir; sessiz kullanım eksiksizdir. Konuşmalar kısa tutulur; anlatıcı yoktur, ve anlatıcının susması kasıtlıdır.</p></section><section id="02-senaryo"><h1>Sahne senaryosu</h1>
-<p><em>Bu belge <code>js/film.js</code> içindeki plan listesinden <code>tools/build_docs.js</code> ile üretilmiştir. Deneyimde görülen her söz burada türüyle birlikte yer alır.</em></p>
-<p>Türler: <strong>özgün senaryo</strong> (bu deneyim için yazıldı; tarihî alıntı değildir) · <strong>doğrudan alıntı</strong> (belgeden; çevriyazı bu çalışmanındır) · <strong>ses</strong> (ses betimi, altyazıda köşeli parantezle) · <strong>not</strong> (bilgi notu).</p>
-<p>Karakterler kurmacadır ve görüntüde yer almazlar; yalnız sesleri ve altyazıları vardır: Rıza (fotoğrafhane çırağı, 17), Münevver (Darülmuallimat mezunu, 20), Yusuf (gazete satan çocuk, 11), Nazife Hanım (Münevver’in annesi), Hasan Efendi (Münevver’in babası, posta memuru). Gerçek tarihsel kişilere söz ya da eylem verilmez.</p>
-<h2>Açılış</h2>
-<h3>p1 — black · 3.2 sn</h3>
-<p>Hiçbir şey; karanlık.</p>
-<ul>
-<li>[Kâğıt, tahta bir masaya bırakılır.] <em>(ses)</em></li>
-</ul>
-<h3>p2 — Görüntü: yeni9-acilis.jpg · 13 sn</h3>
-<p>Lamba ışığında gazete sayfası; üstünden bir elin gölgesi geçer.</p>
-<ul>
-<li>Yeni Gazete · 9 Mayıs 1910 · s. 3 · “Hâle Yıldızı” <em>(not; Yeni Gazete, 9 Mayıs 1910, s. 3)</em></li>
-</ul>
-<h3>p3 — Görüntü: galata-sokak-1913.jpg · 11 sn</h3>
-<p>Galata Kulesi’ne çıkan sokak: önce 1913’teki gündüz fotoğrafı, sonra aynı sokak gece tonunda.</p>
-<ul>
-<li>[Açık bir pencereden, çok uzaktan su sesi.] <em>(ses)</em></li>
-</ul>
-<h3>p4 — Görüntü: galata-sokak-1913.jpg · 11 sn</h3>
-<p>Karanlık sokakta Kule’ye ve yandaki cephelere yaklaşan kadraj; içerisi görünmez.</p>
-<ul>
-<li>[İçeride kâğıt hışırtısı.] <em>(ses)</em></li>
-<li><strong>Yusuf:</strong> Peki… yarın da gazete çıkacak mı? <em>(özgün senaryo)</em></li>
-</ul>
-<h3>p5 — Dış: hesaplanan gök + Berggren panoraması · 13 sn</h3>
-<p>Pencereden doğu: Boğaz’ın girişi, Üsküdar kıyısı ve Çamlıca sırtı; uzakta tek tük ışık.</p>
-<blockquote>
-<p>Hesap (1910-05-10 03:10 LMT, Galata): Halley az. 82.1°, yük. 6.6° · Güneş yük. -16.4°.</p>
-</blockquote>
-<h3>p6 — title · 7 sn</h3>
-<p>Başlık; arkada karanlık doğu göğü.</p>
-<blockquote>
-<p>Hesap (1910-05-10 03:13 LMT, Galata): Halley az. 82.6°, yük. 7.1° · Güneş yük. -16.0°.</p>
-</blockquote>
-<h2>I · Beklemek</h2>
-<h3>i1 — I · Beklemek · 10 Mayıs 1910 · 03:18 LMT · Galata, bir dam · 19 sn</h3>
-<p>Damdan güneydoğuya, sonra doğuya dönen bakış: Haliç ağzı, Sarayburnu, Boğaz, Üsküdar, Çamlıca.</p>
-<blockquote>
-<p>Hesap (1910-05-10 03:17 LMT, Galata): Halley az. 83.2°, yük. 7.9° · Güneş yük. -15.4°.</p>
-</blockquote>
-<ul>
-<li><strong>Nazife Hanım:</strong> Neresi doğu, kızım? <em>(özgün senaryo)</em></li>
-<li><strong>Münevver:</strong> Üsküdar’ın üstü, anne. <em>(özgün senaryo)</em></li>
-<li><strong>Rıza:</strong> Rasathane yerinde olsaydı, oradan bakardık. <em>(özgün senaryo)</em></li>
-</ul>
-<h3>i2 — Dış: hesaplanan gök + Berggren panoraması · 12 sn</h3>
-<p>Üsküdar kıyısı ve üstündeki gök; Kız Kulesi sağda.</p>
-<blockquote>
-<p>Hesap (1910-05-10 03:20 LMT, Galata): Halley az. 83.7°, yük. 8.4° · Güneş yük. -15.0°.</p>
-</blockquote>
-<ul>
-<li><strong>Yusuf:</strong> “Hâle’yi kolayca bulmak için evvelâ Zühre’yi aramalı.” <em>(doğrudan alıntı; Yeni Gazete, 9 Mayıs 1910, s. 3)</em></li>
-<li><strong>Rıza:</strong> Zühre nerede peki? <em>(özgün senaryo)</em></li>
-<li><strong>Yusuf:</strong> Onu yazmamışlar. <em>(özgün senaryo)</em></li>
-</ul>
-<h3>i3 — Dış: hesaplanan gök + Berggren panoraması · 60 sn</h3>
-<p>Doğu ufku; ziyaretçi Zühre’yi, sonra Halley’i arar.</p>
-<blockquote>
-<p>Hesap (1910-05-10 03:23 LMT, Galata): Halley az. 84.2°, yük. 9.0° · Güneş yük. -14.5°.</p>
-</blockquote>
-<p><strong>Etkileşim:</strong> arama — Doğu ufkunda en parlak noktayı bul: Zühre. → “Hâle, Zühre’nin sol cihetindedir.”</p>
-<h3>i4 — Dış: hesaplanan gök + Berggren panoraması · 18 sn</h3>
-<p>Optik bakış: Halley’in başı ve soluk kuyruk başlangıcı.</p>
-<blockquote>
-<p>Hesap (1910-05-10 03:30 LMT, Galata): Halley az. 85.3°, yük. 10.3° · Güneş yük. -13.5°.</p>
-</blockquote>
-<ul>
-<li><strong>Münevver:</strong> Bu kadar mı? <em>(özgün senaryo)</em></li>
-<li><strong>Rıza:</strong> Bu kadar. Ama yaklaşıyor. <em>(özgün senaryo)</em></li>
-<li><strong>Yusuf:</strong> “Günde altı milyon kilometro süratle…” <em>(doğrudan alıntı; Yeni Gazete, 9 Mayıs 1910, s. 3)</em></li>
-<li><strong>Münevver:</strong> Bir günde mi? <em>(özgün senaryo)</em></li>
-<li>Horizons: 10 Mayıs’ta Halley Dünya’ya saniyede ≈67,5 km, günde ≈5,8 milyon km yaklaşıyordu. <em>(not)</em></li>
-</ul>
-<h3>i5 — Dış: hesaplanan gök + Berggren panoraması · 11 sn</h3>
-<p>Kuzeydoğu: Boğaz’ın içleri, karşı kıyıda Kuzguncuk ve Beylerbeyi yönü; şafak ışığı başlar.</p>
-<blockquote>
-<p>Hesap (1910-05-10 03:32 LMT, Galata): Halley az. 85.6°, yük. 10.7° · Güneş yük. -13.2°.</p>
-</blockquote>
-<ul>
-<li>[Münevver cebindeki zarfı yoklar.] <em>(ses)</em></li>
-</ul>
-<h3>i6 — Odak camı: hesaplanan gök · 14 sn</h3>
-<p>Kameranın odak camı: doğu göğü ve Üsküdar sırtı, ters ve tepetaklak.</p>
-<blockquote>
-<p>Hesap (1910-05-10 03:33 LMT, Galata): Halley az. 85.8°, yük. 10.9° · Güneş yük. -13.1°.</p>
-</blockquote>
-<ul>
-<li><strong>Rıza:</strong> Kapağı açıyorum. Kimse kımıldamasın. <em>(özgün senaryo)</em></li>
-<li><strong>Rıza:</strong> Bir… iki… üç… <em>(özgün senaryo)</em></li>
-<li><strong>Rıza:</strong> Otuz. <em>(özgün senaryo)</em></li>
-</ul>
-<h3>i7 — Dış: hesaplanan gök + Berggren panoraması · 16 sn</h3>
-<p>Şafak: gök solgun yeşil-mavi, sonra açılır; Üsküdar’ın silüeti belirginleşir.</p>
-<blockquote>
-<p>Hesap (1910-05-10 03:34 LMT, Galata): Halley az. 86.0°, yük. 11.1° · Güneş yük. -12.9°.</p>
-</blockquote>
-<ul>
-<li><strong>Yusuf:</strong> Gitti mi? <em>(özgün senaryo)</em></li>
-<li><strong>Rıza:</strong> Gitmedi. Güneş örttü. <em>(özgün senaryo)</em></li>
-<li><strong>Yusuf:</strong> Yarın da gelir mi? <em>(özgün senaryo)</em></li>
-<li><strong>Rıza:</strong> Gazete öyle yazıyor. <em>(özgün senaryo)</em></li>
-</ul>
-<h3>i8 — plate · 10 sn</h3>
-<p>Kırmızı güvenlik ışığında kontak baskı: Zühre, birkaç yıldız, soluk bir leke ve Üsküdar sırtı.</p>
-<blockquote>
-<p>Hesap (1910-05-10 03:33 LMT, Galata): Halley az. 85.8°, yük. 10.9° · Güneş yük. -13.1°.</p>
-</blockquote>
-<ul>
-<li><strong>Rıza:</strong> Zühre çıkmış. Hâle… bir leke. <em>(özgün senaryo)</em></li>
-<li>Kurmaca plaka: görüntü hesaplanan gökten üretildi. 1910’da kuyrukluyıldız fotoğrafları çoğunlukla gökyüzünü izleyen teleskop-kameralarla, dakikalarca poz verilerek çekildi. <em>(not)</em></li>
-</ul>
-<h2>II · Söylenti</h2>
-<h3>ii0 — II · Söylentinin dolaşması · 18–19 Mayıs 1910 · Babıali, Galata · 24 sn</h3>
-<p>Gece; Haliç ve tarihî yarımada ay ışığında; seçim.</p>
-<blockquote>
-<p>Hesap (1910-05-18 22:30 LMT, Galata): Halley az. 341.4°, yük. -27.5° · Güneş yük. -26.3°.</p>
-</blockquote>
-<p><strong>Etkileşim:</strong> seçim — Bu gece kimin yanında olalım? (Matbaa, Kahvehane, Ev)</p>
-<h3>m1 (seçmeli: matbaa) — Babıali · 18→19 Mayıs gecesi · bir matbaa (kurgu) · 16 sn</h3>
-<p>Lamba ışığında asılı bir gazete sayfası; makine sesi.</p>
-<ul>
-<li><strong>Makineci:</strong> Yarınki sayı çıkıyor. Bak başlığa. <em>(özgün senaryo)</em></li>
-<li><strong>Yusuf:</strong> “Arz yıldızın kuyruğundan geçdi…” <em>(doğrudan alıntı; Yeni Gazete, 19 Mayıs 1910, s. 1–2)</em></li>
-<li><strong>Yusuf:</strong> Ama daha geçmedi ki? <em>(özgün senaryo)</em></li>
-<li><strong>Mürettip:</strong> Gazete sabah okunur, oğlum. Sabaha geçmiş olur. <em>(özgün senaryo)</em></li>
-</ul>
-<h3>m2 (seçmeli: matbaa) — Görüntü: ebuzziya-matbaasi-1890.jpg · 9 sn</h3>
-<p>Matbaa-i Ebüzziyâ’nın 1890 tarihli tanıtım sayfası, lamba ışığında.</p>
-<ul>
-<li>[Harfler kasaya bir bir düşer.] <em>(ses)</em></li>
-<li>Dizgi elle yapılırdı: her harf ayrı bir kurşun döküm. <em>(not)</em></li>
-</ul>
-<h3>k1 (seçmeli: kahve) — Galata · 18 Mayıs akşamı · bir kahvehane (kurgu) · 21 sn</h3>
-<p>Önce 19. yüzyıl sonundan bir İstanbul kahvehanesi fotoğrafı; sonra masada açılan mizah gazetesi.</p>
-<ul>
-<li><strong>Kahvehanede biri:</strong> “Kıyamet kopacak mı?” diye çocuk mecmuası bile yazmış. <em>(doğrudan alıntı; Arkadaş, 21 Nisan 1910 — başlık)</em></li>
-<li><strong>Yaşlı bir müşteri:</strong> Kopsa haber verirler mi? <em>(özgün senaryo)</em></li>
-<li><strong>Bir başkası:</strong> Bakın, yıldızın yüzü kime benziyor! <em>(özgün senaryo)</em></li>
-<li><strong>Yaşlı bir müşteri:</strong> Fotoğrafçı, söyle: makinen zehri görür mü? <em>(özgün senaryo)</em></li>
-<li><strong>Rıza:</strong> Makine zehir görmez. Işık görür. <em>(özgün senaryo)</em></li>
-<li>[Gülüşmeler.] <em>(ses)</em></li>
-</ul>
-<h3>k2 (seçmeli: kahve) — Görüntü: kalem19.jpg · 12 sn</h3>
-<p>Kalem’in sayfası lamba ışığında.</p>
-<ul>
-<li><strong>Bir başkası:</strong> Kalem’de tramvay muhabbeti var: “Hocamız diyor ki kuyruktan geçince insanlar akıllarını kaybedecekmiş.” <em>(özgün senaryo)</em></li>
-<li><strong>Kahvehanede biri:</strong> “Öyleyse bizim kaybedecek bir şeyimiz yok.” <em>(özgün senaryo)</em></li>
-<li>Kalem’deki uydurma sohbetin aktarımı (Fettahoğlu, Kadim 10 (2025) özetinden); özgün metnin çevriyazısı değildir. <em>(not; Kalem, 19 Mayıs 1910)</em></li>
-</ul>
-<h3>h1 (seçmeli: ev) — Galata · 18 Mayıs gecesi · Münevver’in evi (kurgu) · 24 sn</h3>
-<p>Lamba ışığında Ebüzziyazâde Velid’in Halley kitabının kapağı (İstanbul silüeti üstünde kuyrukluyıldız), sonra kitaptaki yörünge şekli.</p>
-<ul>
-<li>Kapak: “Kuyruklu Yıldızlar ve Hâle Kuyruklu Yıldızı — Neler olacak?” (çevriyazı: bu çalışma) <em>(not; Ebüzziyazâde Velid, 1910)</em></li>
-<li><strong>Nazife Hanım:</strong> Bu sabahki fırtınada herkes kuyruk çarptı sandı. <em>(özgün senaryo)</em></li>
-<li><strong>Hasan Efendi:</strong> Dükkânlar kapandı, Galata boşaldı. <em>(özgün senaryo)</em></li>
-<li><strong>Hasan Efendi:</strong> Bak, kitapta çizmiş: yıldızın yolu bu, Güneş burada. <em>(özgün senaryo)</em></li>
-<li><strong>Münevver:</strong> Sabah biz o kuyruğun içinden mi geçeceğiz? <em>(özgün senaryo)</em></li>
-<li><strong>Hasan Efendi:</strong> Geçecek diyorlar. Bu odadaki havadan çok daha ince bir şeyden. <em>(özgün senaryo)</em></li>
-</ul>
-<h3>h2 (seçmeli: ev) — Görüntü: halic-aksam-1913.jpg · 13 sn</h3>
-<p>Pencereden Haliç: akşam karanlığında fenerler ve karşı kıyı.</p>
-<ul>
-<li><strong>Nazife Hanım:</strong> Mektubu bu gece mi yazacaksın? <em>(özgün senaryo)</em></li>
-<li>“Maarif Nezâret-i Celîlesine…” — mektup açılır, yeniden katlanır. (Özgün senaryo) <em>(not)</em></li>
-<li>[Uzakta bir vapur düdüğü.] <em>(ses)</em></li>
-</ul>
-<h3>ii4 — 19 Mayıs 1910 · 03:00 LMT · aynı dam · 24 sn</h3>
-<p>Doğu; orada bir şey yoktur. Uzaktan alkış sesleri.</p>
-<blockquote>
-<p>Hesap (1910-05-19 02:58 LMT, Galata): Halley az. 45.8°, yük. -15.3° · Güneş yük. -16.2°.</p>
-</blockquote>
-<ul>
-<li><strong>Yusuf:</strong> Gazete buradaydı diyordu. <em>(özgün senaryo)</em></li>
-<li><strong>Rıza:</strong> “…iki gün gözden nihan olacak…” Onu da yazıyordu. <em>(doğrudan alıntı; Yeni Gazete, 9 Mayıs 1910, s. 3)</em></li>
-<li><strong>Münevver:</strong> Yani şimdi Güneş’le aynı yerde. <em>(özgün senaryo)</em></li>
-<li>Hesap: Halley’in başı ufkun ~15° altında. <em>(not)</em></li>
-<li>The Times’ın İstanbul muhabiri: o gece damlarda ve taraçalarda kalabalıklar vardı; amatör gözlemcilerin alkışı şehirde yankılandı (20 ve 25 Mayıs 1910; aktaran Fettahoğlu). <em>(not)</em></li>
-</ul>
-<h3>ii5 — Bilimsel çizim · 19 Mayıs 1910 · İstanbul için hesaplanan Güneş diski geçişi · 16 sn</h3>
-<p>Bilimsel çizim: Güneş diski ve hesaplanan merkez yolu.</p>
-<ul>
-<li>İstanbul için hesaplanan geçiş: yaklaşık 05:35–06:34 LMT. Halley’in çekirdeği birkaç kilometredir; Güneş diskine karşı görülemez. <em>(not)</em></li>
-<li>Bu geçişin İstanbul’dan gözlendiğine dair kayıt bilinmiyor; şehirde işleyen bir rasathane de yoktu. <em>(not)</em></li>
-</ul>
-<h3>ii6 — 19 Mayıs 1910 · sabah · Karaköy ve köprü · 18 sn</h3>
-<p>Önce Karaköy’de yokuşlu bir sokak (1913), sonra Galata Köprüsü’nde kalabalık (1910 öncesi).</p>
-<ul>
-<li>[Yokuştan aşağı koşan adımlar; gazete tomarı.] <em>(ses)</em></li>
-<li><strong>Yusuf:</strong> Yeni Gazete! Arz kuyruktan geçti! Herkes sağ! <em>(özgün senaryo)</em></li>
-<li>Yeni Gazete’nin 19 Mayıs sayısı korkuyu ve ardından gelen rahatlamayı haberleştirdi: “Ne Arz’ın haberi oldu, ne kuyruğun.” (aktaran Fettahoğlu) <em>(not; Yeni Gazete, 19 Mayıs 1910, s. 1–2)</em></li>
-</ul>
-<h3>ii7 — card · 15 sn</h3>
-<p>Edebî araoyun kartı.</p>
-<h2>III · Bakmak</h2>
-<h3>iii1 — III · Bakmak · 27 Mayıs 1910 · 21:30 LMT · aynı dam, batı · 18 sn</h3>
-<p>Batı: Haliç’in ötesinde tarihî yarımada; Süleymaniye’den Fatih’e ve Yavuz Selim’e uzanan sırt; şehirde dağınık ışıklar.</p>
-<blockquote>
-<p>Hesap (1910-05-27 21:26 LMT, Galata): Halley az. 258.5°, yük. 21.0° · Güneş yük. -18.6°.</p>
-</blockquote>
-<ul>
-<li><strong>Yusuf:</strong> Bu sefer kendisi geldi. Aramadık. <em>(özgün senaryo)</em></li>
-</ul>
-<h3>iii2 — Dış: hesaplanan gök + Berggren panoraması · 26 sn</h3>
-<p>Ziyaretçi göğe bakar.</p>
-<blockquote>
-<p>Hesap (1910-05-27 21:29 LMT, Galata): Halley az. 259.0°, yük. 20.5° · Güneş yük. -18.9°.</p>
-</blockquote>
-<p><strong>Etkileşim:</strong> serbest bakış — Göğe bak.</p>
-<h3>iii3 — Dış: hesaplanan gök + Berggren panoraması · 16 sn</h3>
-<p>Aşağıda Haliç ve karşı kıyı; Sirkeci yönüne inen ışıklar. Kişiler görünmez.</p>
-<blockquote>
-<p>Hesap (1910-05-27 21:31 LMT, Galata): Halley az. 259.4°, yük. 20.1° · Güneş yük. -19.1°.</p>
-</blockquote>
-<ul>
-<li><strong>Münevver:</strong> Sabah Postane’ye uğrar mısın? <em>(özgün senaryo)</em></li>
-<li><strong>Yusuf:</strong> Gazeteleri aldıktan sonra. <em>(özgün senaryo)</em></li>
-<li>[Münevver mektubu Yusuf’un gazetelerinin arasına bırakır.] <em>(ses)</em></li>
-</ul>
-<h3>iii4 — Odak camı: hesaplanan gök · 18 sn</h3>
-<p>Odak camında önce gök; sonra kamera döner ve camda yalnız odak dışı bir lamba ışığı kalır.</p>
-<blockquote>
-<p>Hesap (1910-05-27 21:32 LMT, Galata): Halley az. 259.5°, yük. 19.9° · Güneş yük. -19.2°.</p>
-</blockquote>
-<ul>
-<li><strong>Rıza:</strong> Gökyüzünü bırak. Siz durun orada. <em>(özgün senaryo)</em></li>
-<li><strong>Rıza:</strong> Kımıldamayın. On saniye. <em>(özgün senaryo)</em></li>
-<li>[Yusuf gülmemek için dudağını ısırır; dayanamaz.] <em>(ses)</em></li>
-</ul>
-<h3>iii5 — plate · 11 sn</h3>
-<p>Banyo edilmiş cam negatif: lambanın kararmış lekesi ve yarı saydam izler; kişiler seçilmez.</p>
-<ul>
-<li>Kurmaca plaka. Bu fotoğraf hiç çekilmedi; yüzleri göstermiyoruz. <em>(not)</em></li>
-<li>[On saniyede kımıldayan biri camda yarı saydam bir iz olarak kalır.] <em>(ses)</em></li>
-</ul>
-<h2>Son</h2>
-<h3>iii6 — finale · 40 sn</h3>
-<p>Kıyıdan yükselen kamera; şehir, ışıklar ve gök.</p>
-<blockquote>
-<p>Hesap (1910-05-27 21:34 LMT, Galata): Halley az. 259.9°, yük. 19.6° · Güneş yük. -19.4°.</p>
-</blockquote>
-<ul>
-<li>[Bir gazete katlanır.] <em>(ses)</em></li>
-<li>[Rıza yeni bir plaka yerleştirir.] <em>(ses)</em></li>
-<li><strong>Yusuf:</strong> Yarın…? <em>(özgün senaryo)</em></li>
-<li><strong>Son cümle:</strong> Gökyüzü geçer. Hikâyesi kalır. <em>(özgün senaryo)</em></li>
-</ul></section><section id="06-son-degerlendirme"><h1>Son değerlendirme: her plan için altı soru</h1>
-<p><em>Bu tablo <code>js/film.js</code> içindeki “eval” alanlarından üretilmiştir; deneyimdeki her plan için aynı altı soru cevaplanır.</em></p>
-<h2>p1 · Açılış</h2>
-<div class="table-scroll" tabindex="0" role="region" aria-label="Kaydırılabilir kaynak tablosu"><table>
-<thead>
-<tr>
-<th>Soru</th>
-<th>Cevap</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Bu bakış noktasından ne görünür?</td>
-<td>Hiçbir şey; karanlık.</td>
-</tr>
-<tr>
-<td>Bu saatte gökyüzü nasıl olur?</td>
-<td>—</td>
-</tr>
-<tr>
-<td>Bu nesne 1910’a ait olabilir mi?</td>
-<td>Gazete kâğıdı ve ahşap masa: 1910’a uygundur.</td>
-</tr>
-<tr>
-<td>Bu söz belge mi, uyarlama mı?</td>
-<td>Söz yok.</td>
-</tr>
-<tr>
-<td>Bu insan burada neden bulunuyor?</td>
-<td>—</td>
-</tr>
-<tr>
-<td>Bu kesme hangi duyguyu taşıyor?</td>
-<td>Merak: önce ses, sonra görüntü.</td>
-</tr>
-</tbody>
-</table></div>
-<h2>p2 · Açılış</h2>
-<div class="table-scroll" tabindex="0" role="region" aria-label="Kaydırılabilir kaynak tablosu"><table>
-<thead>
-<tr>
-<th>Soru</th>
-<th>Cevap</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Bu bakış noktasından ne görünür?</td>
-<td>Lamba ışığında gazete sayfası; üstünden bir elin gölgesi geçer.</td>
-</tr>
-<tr>
-<td>Bu saatte gökyüzü nasıl olur?</td>
-<td>Kadrajda gök yok.</td>
-</tr>
-<tr>
-<td>Bu nesne 1910’a ait olabilir mi?</td>
-<td>Özgün tarama (Yeni Gazete, 9 Mayıs 1910, s. 3). El çizilmez; yalnız gölgesi.</td>
-</tr>
-<tr>
-<td>Bu söz belge mi, uyarlama mı?</td>
-<td>Gazete başlığı belgedir.</td>
-</tr>
-<tr>
-<td>Bu insan burada neden bulunuyor?</td>
-<td>Yusuf, sabah görülebilecek gök olayını yazan gazeteyi Rıza’ya getirir (kurgu).</td>
-</tr>
-<tr>
-<td>Bu kesme hangi duyguyu taşıyor?</td>
-<td>Ayrıntıdan bütüne: okuma isteği.</td>
-</tr>
-</tbody>
-</table></div>
-<h2>p3 · Açılış</h2>
-<div class="table-scroll" tabindex="0" role="region" aria-label="Kaydırılabilir kaynak tablosu"><table>
-<thead>
-<tr>
-<th>Soru</th>
-<th>Cevap</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Bu bakış noktasından ne görünür?</td>
-<td>Galata Kulesi’ne çıkan sokak: önce 1913’teki gündüz fotoğrafı, sonra aynı sokak gece tonunda.</td>
-</tr>
-<tr>
-<td>Bu saatte gökyüzü nasıl olur?</td>
-<td>Gök kadrajın üst köşesinde; 03:06 LMT’de Güneş −17°, gök karanlık.</td>
-</tr>
-<tr>
-<td>Bu nesne 1910’a ait olabilir mi?</td>
-<td>Fotoğraf 1913 tarihlidir (1910’dan 3 yıl sonra). Bu sokağın 1910’daki görünümü büyük ölçüde aynıdır; kesinlik iddiası yoktur.</td>
-</tr>
-<tr>
-<td>Bu söz belge mi, uyarlama mı?</td>
-<td>—</td>
-</tr>
-<tr>
-<td>Bu insan burada neden bulunuyor?</td>
-<td>Fotoğrafhane bu yokuşta bir binanın son katındadır (kurgu).</td>
-</tr>
-<tr>
-<td>Bu kesme hangi duyguyu taşıyor?</td>
-<td>Arşivden geceye: belgeyle yeniden kurgunun sınırı görünür kalır.</td>
-</tr>
-</tbody>
-</table></div>
-<h2>p4 · Açılış</h2>
-<div class="table-scroll" tabindex="0" role="region" aria-label="Kaydırılabilir kaynak tablosu"><table>
-<thead>
-<tr>
-<th>Soru</th>
-<th>Cevap</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Bu bakış noktasından ne görünür?</td>
-<td>Karanlık sokakta Kule’ye ve yandaki cephelere yaklaşan kadraj; içerisi görünmez.</td>
-</tr>
-<tr>
-<td>Bu saatte gökyüzü nasıl olur?</td>
-<td>—</td>
-</tr>
-<tr>
-<td>Bu nesne 1910’a ait olabilir mi?</td>
-<td>Fotoğraf 1913; gece tonu düzenlemedir.</td>
-</tr>
-<tr>
-<td>Bu söz belge mi, uyarlama mı?</td>
-<td>Özgün senaryo; tarihî alıntı değildir.</td>
-</tr>
-<tr>
-<td>Bu insan burada neden bulunuyor?</td>
-<td>Yusuf’un geçimi ertesi günün gazetesine bağlıdır (kurgu; çocuk müvezziler belgelidir).</td>
-</tr>
-<tr>
-<td>Bu kesme hangi duyguyu taşıyor?</td>
-<td>Cevapsızlık: soru odada asılı kalır.</td>
-</tr>
-</tbody>
-</table></div>
-<h2>p5 · Açılış</h2>
-<div class="table-scroll" tabindex="0" role="region" aria-label="Kaydırılabilir kaynak tablosu"><table>
-<thead>
-<tr>
-<th>Soru</th>
-<th>Cevap</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Bu bakış noktasından ne görünür?</td>
-<td>Pencereden doğu: Boğaz’ın girişi, Üsküdar kıyısı ve Çamlıca sırtı; uzakta tek tük ışık.</td>
-</tr>
-<tr>
-<td>Bu saatte gökyüzü nasıl olur?</td>
-<td>Doğu: Halley’in başı 03:10’da ufkun yaklaşık 6–7° üstünde; ufuk yakınında sönük. Hesap (1910-05-10 03:10 LMT, Galata): Halley az. 82.1°, yük. 6.6° · Güneş yük. -16.4°.</td>
-</tr>
-<tr>
-<td>Bu nesne 1910’a ait olabilir mi?</td>
-<td>Manzara Berggren’in 1880’lerde Galata Kulesi’nden çektiği panoramadır; gök aynı nokta için hesaplanır. 1910’a dek Üsküdar kıyısında büyük değişiklik yoktur; Haydarpaşa Garı (1909) fotoğrafta yoktur.</td>
-</tr>
-<tr>
-<td>Bu söz belge mi, uyarlama mı?</td>
-<td>—</td>
-</tr>
-<tr>
-<td>Bu insan burada neden bulunuyor?</td>
-<td>Rıza cevap vermek yerine pencereye döner.</td>
-</tr>
-<tr>
-<td>Bu kesme hangi duyguyu taşıyor?</td>
-<td>Şehrin parça parça belirmesi; başlık sessizlikten sonra.</td>
-</tr>
-</tbody>
-</table></div>
-<h2>p6 · Açılış</h2>
-<div class="table-scroll" tabindex="0" role="region" aria-label="Kaydırılabilir kaynak tablosu"><table>
-<thead>
-<tr>
-<th>Soru</th>
-<th>Cevap</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Bu bakış noktasından ne görünür?</td>
-<td>Başlık; arkada karanlık doğu göğü.</td>
-</tr>
-<tr>
-<td>Bu saatte gökyüzü nasıl olur?</td>
-<td>Hesaplanan gök. Hesap (1910-05-10 03:13 LMT, Galata): Halley az. 82.6°, yük. 7.1° · Güneş yük. -16.0°.</td>
-</tr>
-<tr>
-<td>Bu nesne 1910’a ait olabilir mi?</td>
-<td>—</td>
-</tr>
-<tr>
-<td>Bu söz belge mi, uyarlama mı?</td>
-<td>—</td>
-</tr>
-<tr>
-<td>Bu insan burada neden bulunuyor?</td>
-<td>—</td>
-</tr>
-<tr>
-<td>Bu kesme hangi duyguyu taşıyor?</td>
-<td>Sessizlikten başlığa.</td>
-</tr>
-</tbody>
-</table></div>
-<h2>i1 · I · Beklemek · I · Beklemek</h2>
-<div class="table-scroll" tabindex="0" role="region" aria-label="Kaydırılabilir kaynak tablosu"><table>
-<thead>
-<tr>
-<th>Soru</th>
-<th>Cevap</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Bu bakış noktasından ne görünür?</td>
-<td>Damdan güneydoğuya, sonra doğuya dönen bakış: Haliç ağzı, Sarayburnu, Boğaz, Üsküdar, Çamlıca.</td>
-</tr>
-<tr>
-<td>Bu saatte gökyüzü nasıl olur?</td>
-<td>03:17–03:20 LMT: Güneş −15°, gök hâlâ karanlık; Halley ~83° azimutta, ~8° yükseklikte. Ay yeni (görünmez). Hesap (1910-05-10 03:17 LMT, Galata): Halley az. 83.2°, yük. 7.9° · Güneş yük. -15.4°.</td>
-</tr>
-<tr>
-<td>Bu nesne 1910’a ait olabilir mi?</td>
-<td>Manzara: Berggren panoraması (1880’ler), 1910’dan ~25–30 yıl önce. Beyoğlu’ndaki Rasathane-i Âmire 31 Mart olaylarında (13 Nisan 1909) tahrip edilmişti (Günergün; Fettahoğlu).</td>
-</tr>
-<tr>
-<td>Bu söz belge mi, uyarlama mı?</td>
-<td>Özgün senaryo. Rasathane bilgisi belgeye dayanır.</td>
-</tr>
-<tr>
-<td>Bu insan burada neden bulunuyor?</td>
-<td>Yeni Gazete yüksek bir yere çıkmayı öğütler; aile ve çırak aynı binanın damındadır (kurgu).</td>
-</tr>
-<tr>
-<td>Bu kesme hangi duyguyu taşıyor?</td>
-<td>Merdivenden çıkış: bedenin yükselmesiyle görüşün açılması.</td>
-</tr>
-</tbody>
-</table></div>
-<h2>i2 · I · Beklemek</h2>
-<div class="table-scroll" tabindex="0" role="region" aria-label="Kaydırılabilir kaynak tablosu"><table>
-<thead>
-<tr>
-<th>Soru</th>
-<th>Cevap</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Bu bakış noktasından ne görünür?</td>
-<td>Üsküdar kıyısı ve üstündeki gök; Kız Kulesi sağda.</td>
-</tr>
-<tr>
-<td>Bu saatte gökyüzü nasıl olur?</td>
-<td>Zühre (Venüs) 03:20’de ufka çok yakın, henüz pusun içinde. Hesap (1910-05-10 03:20 LMT, Galata): Halley az. 83.7°, yük. 8.4° · Güneş yük. -15.0°.</td>
-</tr>
-<tr>
-<td>Bu nesne 1910’a ait olabilir mi?</td>
-<td>—</td>
-</tr>
-<tr>
-<td>Bu söz belge mi, uyarlama mı?</td>
-<td>Yusuf’un ezbere söylediği cümle Yeni Gazete’den doğrudan alıntıdır (çevriyazı: bu çalışma).</td>
-</tr>
-<tr>
-<td>Bu insan burada neden bulunuyor?</td>
-<td>Yusuf gazeteleri satmadan önce okur, sözcükleri ezberler.</td>
-</tr>
-<tr>
-<td>Bu kesme hangi duyguyu taşıyor?</td>
-<td>Sözün yöne dönüşmesi.</td>
-</tr>
-</tbody>
-</table></div>
-<h2>i3 · I · Beklemek</h2>
-<div class="table-scroll" tabindex="0" role="region" aria-label="Kaydırılabilir kaynak tablosu"><table>
-<thead>
-<tr>
-<th>Soru</th>
-<th>Cevap</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Bu bakış noktasından ne görünür?</td>
-<td>Doğu ufku; ziyaretçi Zühre’yi, sonra Halley’i arar.</td>
-</tr>
-<tr>
-<td>Bu saatte gökyüzü nasıl olur?</td>
-<td>03:23–03:30 LMT: Zühre 89–94° azimutta, Çamlıca sırtının üstünden yükselir (−4,3 kadir); Halley 85° azimutta, 9–10° yükseklikte, Zühre’nin solunda. Güneş −14,5°…−13,5°. Hesap (1910-05-10 03:23 LMT, Galata): Halley az. 84.2°, yük. 9.0° · Güneş yük. -14.5°.</td>
-</tr>
-<tr>
-<td>Bu nesne 1910’a ait olabilir mi?</td>
-<td>—</td>
-</tr>
-<tr>
-<td>Bu söz belge mi, uyarlama mı?</td>
-<td>Yönerge Yeni Gazete’nin cümlesidir (doğrudan alıntı).</td>
-</tr>
-<tr>
-<td>Bu insan burada neden bulunuyor?</td>
-<td>Gazete okuru nereye bakacağını bilmez; önce parlak bir işaret arar.</td>
-</tr>
-<tr>
-<td>Bu kesme hangi duyguyu taşıyor?</td>
-<td>Kamera durur; arama ziyaretçiye bırakılır.</td>
-</tr>
-</tbody>
-</table></div>
-<h2>i4 · I · Beklemek</h2>
-<div class="table-scroll" tabindex="0" role="region" aria-label="Kaydırılabilir kaynak tablosu"><table>
-<thead>
-<tr>
-<th>Soru</th>
-<th>Cevap</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Bu bakış noktasından ne görünür?</td>
-<td>Optik bakış: Halley’in başı ve soluk kuyruk başlangıcı.</td>
-</tr>
-<tr>
-<td>Bu saatte gökyüzü nasıl olur?</td>
-<td>Halley ~10° yükseklikte, Horizons modeline göre toplam ~2,7 kadir; alacakaranlıkta kuyruğun yalnız bir kısmı seçilir. Hesap (1910-05-10 03:30 LMT, Galata): Halley az. 85.3°, yük. 10.3° · Güneş yük. -13.5°.</td>
-</tr>
-<tr>
-<td>Bu nesne 1910’a ait olabilir mi?</td>
-<td>Dürbün/teleskop görünümü işaretlidir; büyütme gösterilir.</td>
-</tr>
-<tr>
-<td>Bu söz belge mi, uyarlama mı?</td>
-<td>Hız cümlesi gazeteden; karşılaştırma notu Horizons hesabındandır.</td>
-</tr>
-<tr>
-<td>Bu insan burada neden bulunuyor?</td>
-<td>Münevver’in sorusu bilimsel açıklamayı doğal biçimde başlatır.</td>
-</tr>
-<tr>
-<td>Bu kesme hangi duyguyu taşıyor?</td>
-<td>Yakınlaşma: aranan noktanın bulunması.</td>
-</tr>
-</tbody>
-</table></div>
-<h2>i5 · I · Beklemek</h2>
-<div class="table-scroll" tabindex="0" role="region" aria-label="Kaydırılabilir kaynak tablosu"><table>
-<thead>
-<tr>
-<th>Soru</th>
-<th>Cevap</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Bu bakış noktasından ne görünür?</td>
-<td>Kuzeydoğu: Boğaz’ın içleri, karşı kıyıda Kuzguncuk ve Beylerbeyi yönü; şafak ışığı başlar.</td>
-</tr>
-<tr>
-<td>Bu saatte gökyüzü nasıl olur?</td>
-<td>Gök kuzeydoğuda açılmaya başlar (Güneş −13°). Hesap (1910-05-10 03:32 LMT, Galata): Halley az. 85.6°, yük. 10.7° · Güneş yük. -13.2°.</td>
-</tr>
-<tr>
-<td>Bu nesne 1910’a ait olabilir mi?</td>
-<td>—</td>
-</tr>
-<tr>
-<td>Bu söz belge mi, uyarlama mı?</td>
-<td>Ses betimi; Münevver görünmez.</td>
-</tr>
-<tr>
-<td>Bu insan burada neden bulunuyor?</td>
-<td>Münevver, Maarif’in tayin yazısına vereceği cevabı taşır (kurgu; taşra tayinleri belgelidir).</td>
-</tr>
-<tr>
-<td>Bu kesme hangi duyguyu taşıyor?</td>
-<td>Gökyüzünden bir kararın eşiğine.</td>
-</tr>
-</tbody>
-</table></div>
-<h2>i6 · I · Beklemek</h2>
-<div class="table-scroll" tabindex="0" role="region" aria-label="Kaydırılabilir kaynak tablosu"><table>
-<thead>
-<tr>
-<th>Soru</th>
-<th>Cevap</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Bu bakış noktasından ne görünür?</td>
-<td>Kameranın odak camı: doğu göğü ve Üsküdar sırtı, ters ve tepetaklak.</td>
-</tr>
-<tr>
-<td>Bu saatte gökyüzü nasıl olur?</td>
-<td>Kamera gökyüzünü izlemez: 30 saniyede yıldızlar kısa iz bırakır. Hesap (1910-05-10 03:33 LMT, Galata): Halley az. 85.8°, yük. 10.9° · Güneş yük. -13.1°.</td>
-</tr>
-<tr>
-<td>Bu nesne 1910’a ait olabilir mi?</td>
-<td>Körüklü kamera ve cam kuru plaka (13×18 cm): 1910 için olağan. Odak camında görüntünün ters düşmesi fiziktir.</td>
-</tr>
-<tr>
-<td>Bu söz belge mi, uyarlama mı?</td>
-<td>Özgün senaryo.</td>
-</tr>
-<tr>
-<td>Bu insan burada neden bulunuyor?</td>
-<td>Rıza “kimsenin çekmediği” bir görüntü ister.</td>
-</tr>
-<tr>
-<td>Bu kesme hangi duyguyu taşıyor?</td>
-<td>Sayım: zamanın bedende hissedilmesi.</td>
-</tr>
-</tbody>
-</table></div>
-<h2>i7 · I · Beklemek</h2>
-<div class="table-scroll" tabindex="0" role="region" aria-label="Kaydırılabilir kaynak tablosu"><table>
-<thead>
-<tr>
-<th>Soru</th>
-<th>Cevap</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Bu bakış noktasından ne görünür?</td>
-<td>Şafak: gök solgun yeşil-mavi, sonra açılır; Üsküdar’ın silüeti belirginleşir.</td>
-</tr>
-<tr>
-<td>Bu saatte gökyüzü nasıl olur?</td>
-<td>03:34→03:58: Güneş −13°’ten −9°’a; Halley ufkun üstünde kalır ama gök parlaklığı onu siler. Hesap yerini değiştirmez. Hesap (1910-05-10 03:34 LMT, Galata): Halley az. 86.0°, yük. 11.1° · Güneş yük. -12.9°.</td>
-</tr>
-<tr>
-<td>Bu nesne 1910’a ait olabilir mi?</td>
-<td>—</td>
-</tr>
-<tr>
-<td>Bu söz belge mi, uyarlama mı?</td>
-<td>Özgün senaryo.</td>
-</tr>
-<tr>
-<td>Bu insan burada neden bulunuyor?</td>
-<td>Bilimsel açıklama tek cümlede: görünmemek yok olmak değildir.</td>
-</tr>
-<tr>
-<td>Bu kesme hangi duyguyu taşıyor?</td>
-<td>Zaman hızlanır: bekleyişin sonu.</td>
-</tr>
-</tbody>
-</table></div>
-<h2>i8 · I · Beklemek</h2>
-<div class="table-scroll" tabindex="0" role="region" aria-label="Kaydırılabilir kaynak tablosu"><table>
-<thead>
-<tr>
-<th>Soru</th>
-<th>Cevap</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Bu bakış noktasından ne görünür?</td>
-<td>Kırmızı güvenlik ışığında kontak baskı: Zühre, birkaç yıldız, soluk bir leke ve Üsküdar sırtı.</td>
-</tr>
-<tr>
-<td>Bu saatte gökyüzü nasıl olur?</td>
-<td>30 saniyelik izlemesiz poz: Zühre ~0,1° iz bırakır; Halley’in başı ancak bir leke. Hesap (1910-05-10 03:33 LMT, Galata): Halley az. 85.8°, yük. 10.9° · Güneş yük. -13.1°.</td>
-</tr>
-<tr>
-<td>Bu nesne 1910’a ait olabilir mi?</td>
-<td>Baskı, hesaplanan gökten ve panoramadan üretilmiş bir benzetimdir; arşiv fotoğrafı değildir.</td>
-</tr>
-<tr>
-<td>Bu söz belge mi, uyarlama mı?</td>
-<td>Özgün senaryo; not bilimsel bağlamdır.</td>
-</tr>
-<tr>
-<td>Bu insan burada neden bulunuyor?</td>
-<td>Rıza’nın tutkusu ile fiziğin sınırı karşılaşır.</td>
-</tr>
-<tr>
-<td>Bu kesme hangi duyguyu taşıyor?</td>
-<td>Sonuç: istenen görüntü ile çekilebilen görüntü.</td>
-</tr>
-</tbody>
-</table></div>
-<h2>ii0 · II · Söylenti · II · Söylentinin dolaşması</h2>
-<div class="table-scroll" tabindex="0" role="region" aria-label="Kaydırılabilir kaynak tablosu"><table>
-<thead>
-<tr>
-<th>Soru</th>
-<th>Cevap</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Bu bakış noktasından ne görünür?</td>
-<td>Gece; Haliç ve tarihî yarımada ay ışığında; seçim.</td>
-</tr>
-<tr>
-<td>Bu saatte gökyüzü nasıl olur?</td>
-<td>18 Mayıs 22:30: Halley ufkun ~27° altında; Ay (%76) güneybatıda, ~43° yükseklikte. Hesap (1910-05-18 22:30 LMT, Galata): Halley az. 341.4°, yük. -27.5° · Güneş yük. -26.3°.</td>
-</tr>
-<tr>
-<td>Bu nesne 1910’a ait olabilir mi?</td>
-<td>—</td>
-</tr>
-<tr>
-<td>Bu söz belge mi, uyarlama mı?</td>
-<td>—</td>
-</tr>
-<tr>
-<td>Bu insan burada neden bulunuyor?</td>
-<td>Ziyaretçi bakış açısını seçer; olaylar değişmez.</td>
-</tr>
-<tr>
-<td>Bu kesme hangi duyguyu taşıyor?</td>
-<td>Kesişen anlatıların eşiği.</td>
-</tr>
-</tbody>
-</table></div>
-<h2>m1 · II · Söylenti · Babıali</h2>
-<div class="table-scroll" tabindex="0" role="region" aria-label="Kaydırılabilir kaynak tablosu"><table>
-<thead>
-<tr>
-<th>Soru</th>
-<th>Cevap</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Bu bakış noktasından ne görünür?</td>
-<td>Lamba ışığında asılı bir gazete sayfası; makine sesi.</td>
-</tr>
-<tr>
-<td>Bu saatte gökyüzü nasıl olur?</td>
-<td>—</td>
-</tr>
-<tr>
-<td>Bu nesne 1910’a ait olabilir mi?</td>
-<td>Sayfa özgün taramadır (Yeni Gazete, 19 Mayıs 1910). Matbaa görünmez; yalnız sesi duyulur (basım makinesi sesi temsilîdir).</td>
-</tr>
-<tr>
-<td>Bu söz belge mi, uyarlama mı?</td>
-<td>Başlık belgeden; diğer sözler özgün senaryo.</td>
-</tr>
-<tr>
-<td>Bu insan burada neden bulunuyor?</td>
-<td>Yusuf sabah satacağı gazeteleri matbaa önünde bekler (çocuk müvezziler belgeli).</td>
-</tr>
-<tr>
-<td>Bu kesme hangi duyguyu taşıyor?</td>
-<td>Haber ile gök arasındaki zaman farkı: çocuğun sorusu tutarsızlığı açar.</td>
-</tr>
-</tbody>
-</table></div>
-<h2>m2 · II · Söylenti</h2>
-<div class="table-scroll" tabindex="0" role="region" aria-label="Kaydırılabilir kaynak tablosu"><table>
-<thead>
-<tr>
-<th>Soru</th>
-<th>Cevap</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Bu bakış noktasından ne görünür?</td>
-<td>Matbaa-i Ebüzziyâ’nın 1890 tarihli tanıtım sayfası, lamba ışığında.</td>
-</tr>
-<tr>
-<td>Bu saatte gökyüzü nasıl olur?</td>
-<td>—</td>
-</tr>
-<tr>
-<td>Bu nesne 1910’a ait olabilir mi?</td>
-<td>Özgün baskı (Library of Congress). Elle dizgi (mürettiplik) 1910 basınında olağandır.</td>
-</tr>
-<tr>
-<td>Bu söz belge mi, uyarlama mı?</td>
-<td>Ses betimi ve bilgi notu.</td>
-</tr>
-<tr>
-<td>Bu insan burada neden bulunuyor?</td>
-<td>Haberin bir el işi olduğu.</td>
-</tr>
-<tr>
-<td>Bu kesme hangi duyguyu taşıyor?</td>
-<td>Yakın plan: emeğin dokusu.</td>
-</tr>
-</tbody>
-</table></div>
-<h2>k1 · II · Söylenti · Galata</h2>
-<div class="table-scroll" tabindex="0" role="region" aria-label="Kaydırılabilir kaynak tablosu"><table>
-<thead>
-<tr>
-<th>Soru</th>
-<th>Cevap</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Bu bakış noktasından ne görünür?</td>
-<td>Önce 19. yüzyıl sonundan bir İstanbul kahvehanesi fotoğrafı; sonra masada açılan mizah gazetesi.</td>
-</tr>
-<tr>
-<td>Bu saatte gökyüzü nasıl olur?</td>
-<td>—</td>
-</tr>
-<tr>
-<td>Bu nesne 1910’a ait olabilir mi?</td>
-<td>Kahvehane fotoğrafı tarihsizdir (19. yy sonu); fotoğraftaki kişiler hikâyenin kişileri değildir, ekranda belirtilir. Karikatür özgün taramadır (Hayâl-i Cedid, 18 Mayıs 1910).</td>
-</tr>
-<tr>
-<td>Bu söz belge mi, uyarlama mı?</td>
-<td>“Kıyamet kopacak mı?” Arkadaş dergisinin başlığıdır; diğerleri özgün senaryo.</td>
-</tr>
-<tr>
-<td>Bu insan burada neden bulunuyor?</td>
-<td>Rıza müşterilere teslim ettiği portreler için dolaşır (kurgu).</td>
-</tr>
-<tr>
-<td>Bu kesme hangi duyguyu taşıyor?</td>
-<td>Korkudan alaya, alaydan soruya.</td>
-</tr>
-</tbody>
-</table></div>
-<h2>k2 · II · Söylenti</h2>
-<div class="table-scroll" tabindex="0" role="region" aria-label="Kaydırılabilir kaynak tablosu"><table>
-<thead>
-<tr>
-<th>Soru</th>
-<th>Cevap</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Bu bakış noktasından ne görünür?</td>
-<td>Kalem’in sayfası lamba ışığında.</td>
-</tr>
-<tr>
-<td>Bu saatte gökyüzü nasıl olur?</td>
-<td>—</td>
-</tr>
-<tr>
-<td>Bu nesne 1910’a ait olabilir mi?</td>
-<td>Özgün tarama.</td>
-</tr>
-<tr>
-<td>Bu söz belge mi, uyarlama mı?</td>
-<td>Fıkra, Kalem’deki kurmaca tramvay sohbetinin Fettahoğlu’nun özetine dayalı aktarımıdır; doğrudan alıntı olarak sunulmaz.</td>
-</tr>
-<tr>
-<td>Bu insan burada neden bulunuyor?</td>
-<td>Kahvehanede gazete yüksek sesle okunur.</td>
-</tr>
-<tr>
-<td>Bu kesme hangi duyguyu taşıyor?</td>
-<td>Kahkaha: korkunun dağılması.</td>
-</tr>
-</tbody>
-</table></div>
-<h2>h1 · II · Söylenti · Galata</h2>
-<div class="table-scroll" tabindex="0" role="region" aria-label="Kaydırılabilir kaynak tablosu"><table>
-<thead>
-<tr>
-<th>Soru</th>
-<th>Cevap</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Bu bakış noktasından ne görünür?</td>
-<td>Lamba ışığında Ebüzziyazâde Velid’in Halley kitabının kapağı (İstanbul silüeti üstünde kuyrukluyıldız), sonra kitaptaki yörünge şekli.</td>
-</tr>
-<tr>
-<td>Bu saatte gökyüzü nasıl olur?</td>
-<td>—</td>
-</tr>
-<tr>
-<td>Bu nesne 1910’a ait olabilir mi?</td>
-<td>Kitap 1910 baskısıdır (Matbaa-i Ebüzziyâ, 1328 Hicrî); Tasvir-i Efkâr’daki 10 Mayıs ilanı belgelidir. 18 Mayıs sabahı İstanbul’da şafaktan önce çıkan fırtına ve paniği Yeni Gazete 19 Mayıs’ta yazar (Fettahoğlu).</td>
-</tr>
-<tr>
-<td>Bu söz belge mi, uyarlama mı?</td>
-<td>Özgün senaryo; fırtına ve dükkânların kapanması belgeye dayanır.</td>
-</tr>
-<tr>
-<td>Bu insan burada neden bulunuyor?</td>
-<td>Hasan Efendi (posta memuru, kurgu) kızının sorusuna kitaptaki şekille cevap verir.</td>
-</tr>
-<tr>
-<td>Bu kesme hangi duyguyu taşıyor?</td>
-<td>Ev içi bekleyiş; soru bilgiye dönüşür.</td>
-</tr>
-</tbody>
-</table></div>
-<h2>h2 · II · Söylenti</h2>
-<div class="table-scroll" tabindex="0" role="region" aria-label="Kaydırılabilir kaynak tablosu"><table>
-<thead>
-<tr>
-<th>Soru</th>
-<th>Cevap</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Bu bakış noktasından ne görünür?</td>
-<td>Pencereden Haliç: akşam karanlığında fenerler ve karşı kıyı.</td>
-</tr>
-<tr>
-<td>Bu saatte gökyüzü nasıl olur?</td>
-<td>Fotoğrafın göğü (1913, alacakaranlık).</td>
-</tr>
-<tr>
-<td>Bu nesne 1910’a ait olabilir mi?</td>
-<td>Otokrom, Haziran 1913; fenerler fotoğrafın kendisinde yanıyor. Mektup kurgusaldır ve gösterilmez.</td>
-</tr>
-<tr>
-<td>Bu söz belge mi, uyarlama mı?</td>
-<td>Özgün senaryo.</td>
-</tr>
-<tr>
-<td>Bu insan burada neden bulunuyor?</td>
-<td>Darülmuallimat mezunlarının taşraya tayini ve mecburi hizmet belgelidir; Münevver’in kararı kurgudur.</td>
-</tr>
-<tr>
-<td>Bu kesme hangi duyguyu taşıyor?</td>
-<td>Karar ertelenir: geri alınan bir söz gibi.</td>
-</tr>
-</tbody>
-</table></div>
-<h2>ii4 · II · Söylenti · 19 Mayıs 1910</h2>
-<div class="table-scroll" tabindex="0" role="region" aria-label="Kaydırılabilir kaynak tablosu"><table>
-<thead>
-<tr>
-<th>Soru</th>
-<th>Cevap</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Bu bakış noktasından ne görünür?</td>
-<td>Doğu; orada bir şey yoktur. Uzaktan alkış sesleri.</td>
-</tr>
-<tr>
-<td>Bu saatte gökyüzü nasıl olur?</td>
-<td>19 Mayıs 03:00 LMT: Halley’in başı ufkun ~15° altında (Horizons); Zühre ufukta; Ay (%78) batıda yeni batmış. Görmemek hesapla uyumludur. Hesap (1910-05-19 02:58 LMT, Galata): Halley az. 45.8°, yük. -15.3° · Güneş yük. -16.2°.</td>
-</tr>
-<tr>
-<td>Bu nesne 1910’a ait olabilir mi?</td>
-<td>Alkış sesi The Times muhabirinin aktarımına dayanır; sesin kendisi temsilîdir.</td>
-</tr>
-<tr>
-<td>Bu söz belge mi, uyarlama mı?</td>
-<td>Gazetenin “iki gün görünmeyecek” öngörüsü doğrudan alıntıdır; diğerleri özgün senaryo ve bilgi notu.</td>
-</tr>
-<tr>
-<td>Bu insan burada neden bulunuyor?</td>
-<td>Söylentinin doruğunda gök sessizdir; şehir yine de damlardadır.</td>
-</tr>
-<tr>
-<td>Bu kesme hangi duyguyu taşıyor?</td>
-<td>Beklenen şeyin yokluğu.</td>
-</tr>
-</tbody>
-</table></div>
-<h2>ii5 · II · Söylenti · Bilimsel çizim</h2>
-<div class="table-scroll" tabindex="0" role="region" aria-label="Kaydırılabilir kaynak tablosu"><table>
-<thead>
-<tr>
-<th>Soru</th>
-<th>Cevap</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Bu bakış noktasından ne görünür?</td>
-<td>Bilimsel çizim: Güneş diski ve hesaplanan merkez yolu.</td>
-</tr>
-<tr>
-<td>Bu saatte gökyüzü nasıl olur?</td>
-<td>Giriş ~05:35, en yakın 06:04, çıkış ~06:34 LMT (Horizons, 1 dk örnek, kırılmasız).</td>
-</tr>
-<tr>
-<td>Bu nesne 1910’a ait olabilir mi?</td>
-<td>—</td>
-</tr>
-<tr>
-<td>Bu söz belge mi, uyarlama mı?</td>
-<td>Bilgi notu.</td>
-</tr>
-<tr>
-<td>Bu insan burada neden bulunuyor?</td>
-<td>Görülemeyeni hesapla göstermek.</td>
-</tr>
-<tr>
-<td>Bu kesme hangi duyguyu taşıyor?</td>
-<td>Anlatıdan çizime: ölçek değişimi.</td>
-</tr>
-</tbody>
-</table></div>
-<h2>ii6 · II · Söylenti · 19 Mayıs 1910</h2>
-<div class="table-scroll" tabindex="0" role="region" aria-label="Kaydırılabilir kaynak tablosu"><table>
-<thead>
-<tr>
-<th>Soru</th>
-<th>Cevap</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Bu bakış noktasından ne görünür?</td>
-<td>Önce Karaköy’de yokuşlu bir sokak (1913), sonra Galata Köprüsü’nde kalabalık (1910 öncesi).</td>
-</tr>
-<tr>
-<td>Bu saatte gökyüzü nasıl olur?</td>
-<td>Sabah: Güneş ~26° yükseklikte; Halley’in başı ufkun üstünde ama gündüz göğünde görünmez.</td>
-</tr>
-<tr>
-<td>Bu nesne 1910’a ait olabilir mi?</td>
-<td>Köprü fotoğrafı Nisan 1910’dan öncedir (Rijksmuseum); 1875 tarihli duba köprü 1912’de değiştirildi. Fotoğraftaki kişiler hikâyenin kişileri değildir; Yusuf yalnız sesiyle vardır.</td>
-</tr>
-<tr>
-<td>Bu söz belge mi, uyarlama mı?</td>
-<td>Satıcı bağırışı özgün senaryo; haber içeriği belgeye dayanır.</td>
-</tr>
-<tr>
-<td>Bu insan burada neden bulunuyor?</td>
-<td>Yusuf’un işi: kıyamet beklenen sabahın ertesinde gazete satmak.</td>
-</tr>
-<tr>
-<td>Bu kesme hangi duyguyu taşıyor?</td>
-<td>Gece biter; şehir işine döner.</td>
-</tr>
-</tbody>
-</table></div>
-<h2>ii7 · II · Söylenti</h2>
-<div class="table-scroll" tabindex="0" role="region" aria-label="Kaydırılabilir kaynak tablosu"><table>
-<thead>
-<tr>
-<th>Soru</th>
-<th>Cevap</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Bu bakış noktasından ne görünür?</td>
-<td>Edebî araoyun kartı.</td>
-</tr>
-<tr>
-<td>Bu saatte gökyüzü nasıl olur?</td>
-<td>—</td>
-</tr>
-<tr>
-<td>Bu nesne 1910’a ait olabilir mi?</td>
-<td>—</td>
-</tr>
-<tr>
-<td>Bu söz belge mi, uyarlama mı?</td>
-<td>Roman özeti ve önsözden kısa alıntı; konuşmalar röportaj olarak sunulmaz.</td>
-</tr>
-<tr>
-<td>Bu insan burada neden bulunuyor?</td>
-<td>Dönemin edebiyatında Halley korkusunun hicvi.</td>
-</tr>
-<tr>
-<td>Bu kesme hangi duyguyu taşıyor?</td>
-<td>Nefes alma: belgeden edebiyata.</td>
-</tr>
-</tbody>
-</table></div>
-<h2>iii1 · III · Bakmak · III · Bakmak</h2>
-<div class="table-scroll" tabindex="0" role="region" aria-label="Kaydırılabilir kaynak tablosu"><table>
-<thead>
-<tr>
-<th>Soru</th>
-<th>Cevap</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Bu bakış noktasından ne görünür?</td>
-<td>Batı: Haliç’in ötesinde tarihî yarımada; Süleymaniye’den Fatih’e ve Yavuz Selim’e uzanan sırt; şehirde dağınık ışıklar.</td>
-</tr>
-<tr>
-<td>Bu saatte gökyüzü nasıl olur?</td>
-<td>21:30 LMT: Güneş −19° (karanlık); Halley 259° azimutta ~20° yükseklikte, Fatih ile Yavuz Selim arasının üstünde; Merih batıda alçakta, Müşteri güneybatıda yüksekte. Ay henüz doğmadı. Hesap (1910-05-27 21:26 LMT, Galata): Halley az. 258.5°, yük. 21.0° · Güneş yük. -18.6°.</td>
-</tr>
-<tr>
-<td>Bu nesne 1910’a ait olabilir mi?</td>
-<td>Manzara Berggren panoraması (1880’ler); gece tonu ve pencere ışıkları temsilîdir (konumları fotoğraftaki yapı dokusundan seçildi).</td>
-</tr>
-<tr>
-<td>Bu söz belge mi, uyarlama mı?</td>
-<td>Özgün senaryo.</td>
-</tr>
-<tr>
-<td>Bu insan burada neden bulunuyor?</td>
-<td>Akşam görünürlüğü Yeni Gazete’nin öngördüğü 22–30 Mayıs aralığındadır.</td>
-</tr>
-<tr>
-<td>Bu kesme hangi duyguyu taşıyor?</td>
-<td>Aramak yerine bakmak.</td>
-</tr>
-</tbody>
-</table></div>
-<h2>iii2 · III · Bakmak</h2>
-<div class="table-scroll" tabindex="0" role="region" aria-label="Kaydırılabilir kaynak tablosu"><table>
-<thead>
-<tr>
-<th>Soru</th>
-<th>Cevap</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Bu bakış noktasından ne görünür?</td>
-<td>Ziyaretçi göğe bakar.</td>
-</tr>
-<tr>
-<td>Bu saatte gökyüzü nasıl olur?</td>
-<td>Hesaplanan gök; kuyruk tanımlı modeldir. Hesap (1910-05-27 21:29 LMT, Galata): Halley az. 259.0°, yük. 20.5° · Güneş yük. -18.9°.</td>
-</tr>
-<tr>
-<td>Bu nesne 1910’a ait olabilir mi?</td>
-<td>—</td>
-</tr>
-<tr>
-<td>Bu söz belge mi, uyarlama mı?</td>
-<td>—</td>
-</tr>
-<tr>
-<td>Bu insan burada neden bulunuyor?</td>
-<td>—</td>
-</tr>
-<tr>
-<td>Bu kesme hangi duyguyu taşıyor?</td>
-<td>Kamera durur; zaman ziyaretçinin.</td>
-</tr>
-</tbody>
-</table></div>
-<h2>iii3 · III · Bakmak</h2>
-<div class="table-scroll" tabindex="0" role="region" aria-label="Kaydırılabilir kaynak tablosu"><table>
-<thead>
-<tr>
-<th>Soru</th>
-<th>Cevap</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Bu bakış noktasından ne görünür?</td>
-<td>Aşağıda Haliç ve karşı kıyı; Sirkeci yönüne inen ışıklar. Kişiler görünmez.</td>
-</tr>
-<tr>
-<td>Bu saatte gökyüzü nasıl olur?</td>
-<td>Arkada batı göğü. Hesap (1910-05-27 21:31 LMT, Galata): Halley az. 259.4°, yük. 20.1° · Güneş yük. -19.1°.</td>
-</tr>
-<tr>
-<td>Bu nesne 1910’a ait olabilir mi?</td>
-<td>Sirkeci’deki Büyük Postane 1909’da tamamlanmıştır.</td>
-</tr>
-<tr>
-<td>Bu söz belge mi, uyarlama mı?</td>
-<td>Özgün senaryo.</td>
-</tr>
-<tr>
-<td>Bu insan burada neden bulunuyor?</td>
-<td>Münevver kararını küçük bir hareketle verir (kurgu). Yusuf ertesi günün işini düşünür.</td>
-</tr>
-<tr>
-<td>Bu kesme hangi duyguyu taşıyor?</td>
-<td>Karar anı: söz az, görüntü uzak.</td>
-</tr>
-</tbody>
-</table></div>
-<h2>iii4 · III · Bakmak</h2>
-<div class="table-scroll" tabindex="0" role="region" aria-label="Kaydırılabilir kaynak tablosu"><table>
-<thead>
-<tr>
-<th>Soru</th>
-<th>Cevap</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Bu bakış noktasından ne görünür?</td>
-<td>Odak camında önce gök; sonra kamera döner ve camda yalnız odak dışı bir lamba ışığı kalır.</td>
-</tr>
-<tr>
-<td>Bu saatte gökyüzü nasıl olur?</td>
-<td>Lamba ışığında 10 saniyelik poz. Hesap (1910-05-27 21:32 LMT, Galata): Halley az. 259.5°, yük. 19.9° · Güneş yük. -19.2°.</td>
-</tr>
-<tr>
-<td>Bu nesne 1910’a ait olabilir mi?</td>
-<td>Gaz yağı lambası; cam plaka; poz süresi dönem plakalarının duyarlılığına uygundur (gece, lamba ışığı: saniyeler).</td>
-</tr>
-<tr>
-<td>Bu söz belge mi, uyarlama mı?</td>
-<td>Özgün senaryo.</td>
-</tr>
-<tr>
-<td>Bu insan burada neden bulunuyor?</td>
-<td>Gökyüzünü kaydetme tutkusu, o göğün altındakileri hatırlama isteğine dönüşür.</td>
-</tr>
-<tr>
-<td>Bu kesme hangi duyguyu taşıyor?</td>
-<td>Kameranın dönüşü: hikâyenin dönüşü.</td>
-</tr>
-</tbody>
-</table></div>
-<h2>iii5 · III · Bakmak</h2>
-<div class="table-scroll" tabindex="0" role="region" aria-label="Kaydırılabilir kaynak tablosu"><table>
-<thead>
-<tr>
-<th>Soru</th>
-<th>Cevap</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Bu bakış noktasından ne görünür?</td>
-<td>Banyo edilmiş cam negatif: lambanın kararmış lekesi ve yarı saydam izler; kişiler seçilmez.</td>
-</tr>
-<tr>
-<td>Bu saatte gökyüzü nasıl olur?</td>
-<td>Gök plakada boştur: lamba ışığı pozu belirler.</td>
-</tr>
-<tr>
-<td>Bu nesne 1910’a ait olabilir mi?</td>
-<td>Soyut bir benzetimdir; arşiv fotoğrafı değildir.</td>
-</tr>
-<tr>
-<td>Bu söz belge mi, uyarlama mı?</td>
-<td>Bilgi notu ve ses betimi.</td>
-</tr>
-<tr>
-<td>Bu insan burada neden bulunuyor?</td>
-<td>Rıza’nın fotoğrafı: hatırlanacak olan.</td>
-</tr>
-<tr>
-<td>Bu kesme hangi duyguyu taşıyor?</td>
-<td>Zamanın camda bıraktığı iz.</td>
-</tr>
-</tbody>
-</table></div>
-<h2>iii6 · Son</h2>
-<div class="table-scroll" tabindex="0" role="region" aria-label="Kaydırılabilir kaynak tablosu"><table>
-<thead>
-<tr>
-<th>Soru</th>
-<th>Cevap</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Bu bakış noktasından ne görünür?</td>
-<td>Kıyıdan yükselen kamera; şehir, ışıklar ve gök.</td>
-</tr>
-<tr>
-<td>Bu saatte gökyüzü nasıl olur?</td>
-<td>21:34–21:40: Halley batıda ~19°; hesaplanan yerindedir. Hesap (1910-05-27 21:34 LMT, Galata): Halley az. 259.9°, yük. 19.6° · Güneş yük. -19.4°.</td>
-</tr>
-<tr>
-<td>Bu nesne 1910’a ait olabilir mi?</td>
-<td>—</td>
-</tr>
-<tr>
-<td>Bu söz belge mi, uyarlama mı?</td>
-<td>Son cümle özgün senaryodur.</td>
-</tr>
-<tr>
-<td>Bu insan burada neden bulunuyor?</td>
-<td>Yusuf yarını sorar; bu kez sessizlik bir cevaptır.</td>
-</tr>
-<tr>
-<td>Bu kesme hangi duyguyu taşıyor?</td>
-<td>Uzaklaşma; deneyim kapanmaz, gökte kalınır.</td>
-</tr>
-</tbody>
-</table></div></section>
+<p>Her sahnede tarih, bakış yönü ve görüntünün niteliği görünür. Mekân çizimi ile hesaplanan göğün doğruluk iddiaları ayrı tutulur. Hesap motorundaki ephemeris, yıldız zamanı, konum açısı ve olay zamanları görsel yenileme sırasında değiştirilmez.</p>
+<p>Otomatik kontroller yerleşim, etkileşim ve hesap gerilemelerini saptar. Estetik yeterlilik otomatik test sayısıyla kanıtlanamaz; gerçek ekran görüntüleri ayrıca incelenmelidir. Chromium denetimi fiziksel iPhone/Safari denetimi yerine geçmez.</p></section>
 <h2>Kaynak dosyalar ve haklar</h2><p>Ayrıntılı künye ve lisanslar: <a href="CREDITS.md">CREDITS.md</a>, ham Horizons yanıtları: <code>research/raw/</code>.</p>
 </main></body></html>

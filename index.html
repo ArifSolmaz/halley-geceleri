@@ -1,197 +1,26 @@
 <!doctype html>
-<html lang="tr">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Halley Geceleri — İstanbul, 1910</title>
-<meta name="description" content="1910 baharında İstanbul’da Halley kuyrukluyıldızı: tarihsel kaynaklara ve NASA/JPL Horizons hesabına dayalı, içinde dolaşılabilen sinematik bir deneyim.">
-<meta name="theme-color" content="#070b11">
-<meta property="og:title" content="Halley Geceleri — İstanbul, 1910">
-<meta property="og:description" content="Dünyanın sonu gelmezse, yarın ne yapacağız?">
-<meta property="og:image" content="docs/preview.jpg">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="css/style.css">
-</head>
-<body class="mode-gate">
-<a class="skip" href="#sky-panel">Doğrudan gökyüzü gözlemine geç</a>
-
-<main id="stage" aria-label="Halley Geceleri sahnesi">
-  <canvas id="sky" tabindex="0" aria-label="Hesaplanan gökyüzü"></canvas>
-  <canvas id="set" aria-hidden="true"></canvas>
-  <div id="grain" aria-hidden="true"></div>
-  <div id="vignette" aria-hidden="true"></div>
-  <div class="bar top" aria-hidden="true"></div><div class="bar bottom" aria-hidden="true"></div>
-  <div id="hotspots"></div>
-  <div id="scene-meta">
-    <div id="slate" aria-live="polite"></div>
-    <div id="photo-cap"></div>
-  </div>
-  <div id="title-card" aria-hidden="true">
-    <h1><span>Halley Geceleri</span><small>İstanbul, 1910</small></h1>
-  </div>
-  <div id="subs" aria-live="polite" aria-atomic="true"></div>
-  <div id="final-line" aria-live="polite"></div>
-</main>
-
-<!-- Başlangıç -->
-<section id="gate" aria-labelledby="gate-h">
-  <div class="gate-inner">
-    <p class="kicker">Tarihsel kaynaklara dayalı sinematik bir deneyim</p>
-    <h2 id="gate-h" class="gate-title">Halley Geceleri<small>İstanbul, 1910</small></h2>
-    <p class="gate-q">“Dünyanın sonu gelmezse, yarın ne yapacağız?”</p>
-    <div class="gate-actions">
-      <button id="start-sound" class="btn primary" type="button"><span aria-hidden="true">◐</span> Sesle başla</button>
-      <button id="start-silent" class="btn" type="button">Sessiz başla <span class="dim">· altyazılı</span></button>
-    </div>
-    <div class="gate-links">
-      <button id="go-sky" class="link" type="button">Doğrudan gökyüzüne in</button>
-      <button id="go-archive" class="link" type="button">Gazete masası</button>
-      <a class="link" href="yontem.html">Yöntem ve kaynaklar</a>
-    </div>
-    <div class="gate-prefs" role="group" aria-label="Görüntü tercihleri">
-      <label><input type="checkbox" id="pref-motion"> Hareketi azalt</label>
-      <label><input type="checkbox" id="pref-large"> Büyük yazı</label>
-      <label><input type="checkbox" id="pref-lite"> Hafif çizim (düşük donanım)</label>
-    </div>
-    <p class="gate-note">Rıza, Münevver ve Yusuf <strong>kurmaca</strong> karakterlerdir; yüzleri gösterilmez, yalnız sesleri duyulur. Görüntüler gerçek fotoğraflar (Berggren, Albert Kahn arşivi, Library of Congress, Rijksmuseum) ve özgün gazete taramalarıdır; her birinin tarihi ekranda yazar. Gökyüzü NASA/JPL Horizons ve astronomy-engine ile hesaplanmıştır. Yaklaşık 11 dakika.</p>
-  </div>
-</section>
-
-<!-- Film denetimleri -->
-<nav id="player" aria-label="Anlatı denetimleri">
-  <button id="p-prev" class="icon" type="button" aria-label="Önceki plan" title="Önceki plan (←)">⟨</button>
-  <button id="p-play" class="icon" type="button" aria-label="Duraklat" title="Duraklat / sürdür (boşluk)">❚❚</button>
-  <button id="p-next" class="icon" type="button" aria-label="Sonraki plan" title="Sonraki plan (→)">⟩</button>
-  <div id="p-progress" role="progressbar" aria-label="Anlatıdaki ilerleme" aria-valuemin="0" aria-valuemax="100"><span></span></div>
-  <label class="p-chapter"><span class="sr">Bölüm</span><select id="p-chapters"></select></label>
-  <button id="p-sound" class="icon" type="button" aria-pressed="false" title="Ses">♪</button>
-  <button id="p-docs" class="txt" type="button">Belgeler</button>
-  <button id="p-sky" class="txt" type="button" title="Bu anın gökyüzüne in">Göğe bak</button>
-</nav>
-
-<!-- Serbest gözlem paneli -->
-<aside id="sky-panel" aria-label="Gökyüzü gözlem defteri" tabindex="-1">
-  <header class="sp-head">
-    <div>
-      <p class="kicker">Gözlem defteri</p>
-      <p id="sp-date" class="sp-date">10 Mayıs 1910</p>
-      <p id="sp-time" class="sp-time"><span id="sp-lmt">03:30</span> <abbr title="Yerel ortalama güneş saati: UT + 1 sa 55 dk 54,816 sn">LMT</abbr> <span class="dim" id="sp-ut">· 01:34 UT</span></p>
-    </div>
-    <button id="sp-collapse" class="icon" type="button" aria-expanded="true" aria-controls="sp-body" aria-label="Gözlem ayarlarını daralt" title="Paneli daralt">–</button>
-  </header>
-  <div id="sp-body">
-    <div class="sp-row presets" role="group" aria-label="Üç gece">
-      <button type="button" data-preset="1910-05-10T03:30" data-az="88" data-alt="10">10 Mayıs · 03:30</button>
-      <button type="button" data-preset="1910-05-19T03:00" data-az="70" data-alt="8">19 Mayıs · 03:00</button>
-      <button type="button" data-preset="1910-05-27T21:30" data-az="262" data-alt="16">27 Mayıs · 21:30</button>
-    </div>
-    <label class="sp-field">Tarih (Gregoryen)
-      <input type="date" id="sp-dateinput" min="1910-04-20" max="1910-06-10" value="1910-05-10">
-    </label>
-    <label class="sp-field">Saat (LMT) <output id="sp-timeout">03:30</output>
-      <input type="range" id="sp-timeinput" min="0" max="1439" step="1" value="210">
-    </label>
-    <div class="sp-row">
-      <button id="sp-play" type="button" class="btn small" aria-pressed="false">▷ Zamanı akıt</button>
-      <label class="sp-inline">Hız <select id="sp-speed"><option value="60">1 dk/sn</option><option value="300" selected>5 dk/sn</option><option value="1800">30 dk/sn</option><option value="14400">4 sa/sn</option></select></label>
-    </div>
-    <label class="sp-field">Bakış noktası
-      <select id="sp-vp"></select>
-    </label>
-    <p id="sp-vpnote" class="sp-note"></p>
-    <div class="sp-row find" role="group" aria-label="Gökte bul">
-      <span class="dim">Bul:</span>
-      <button type="button" data-find="Halley">Halley</button><button type="button" data-find="Venus">Zühre</button><button type="button" data-find="Moon">Ay</button><button type="button" data-find="Jupiter">Müşteri</button><button type="button" data-find="Mars">Merih</button>
-    </div>
-    <fieldset class="sp-layers"><legend>Katmanlar</legend>
-      <label><input type="checkbox" data-opt="lines" checked> Takımyıldız çizgileri</label>
-      <label><input type="checkbox" data-opt="labels" checked> Adlar</label>
-      <label><input type="checkbox" data-opt="landmarks" checked> Yapı adları</label>
-      <label><input type="checkbox" data-opt="grid"> Yükseklik–azimut ızgarası</label>
-      <label><input type="checkbox" data-opt="refraction" checked> Atmosferik kırılma</label>
-      <label><input type="checkbox" data-opt="mw" checked> Samanyolu</label>
-      <label><input type="checkbox" data-opt="tail" checked> Kuyruk modeli <span class="tag model">model</span></label>
-    </fieldset>
-    <label class="sp-field">Kuyruğun fiziksel uzunluk varsayımı <output id="sp-tailout">0,30 AU</output>
-      <input type="range" id="sp-tail" min="0.05" max="0.6" step="0.01" value="0.3">
-    </label>
-    <p class="sp-note">Kuyruk, Güneş’ten dışa doğru düz bir çizgi olarak modellenir; görünür uzunluk bu varsayım, Halley–Dünya uzaklığı ve faz açısından hesaplanır. Parlaklık ve genişlik sanatsal temsildir.</p>
-    <div class="sp-row">
-      <button id="sp-transit" type="button" class="btn small">19 Mayıs Güneş geçişi</button>
-      <button id="sp-story" type="button" class="btn small">Anlatıya dön</button>
-    </div>
-  </div>
-  <div id="sp-info" aria-live="polite"></div>
-  <p class="sp-foot">Sürükle: bak · Tekerlek/iki parmak: yakınlaş · Ok tuşları ve + / − · Bir cisme dokun: bilgi</p>
-</aside>
-<div id="sky-readout" aria-live="off"></div>
-
-<!-- Belge görüntüleyici -->
-<dialog id="doc-dialog" aria-labelledby="doc-title">
-  <div class="dialog-toolbar">
-    <button id="doc-back" type="button" class="link" hidden>← Gazete masası</button>
-    <form method="dialog" class="dlg-close"><button class="icon" aria-label="Belgeyi kapat">×</button></form>
-  </div>
-  <header class="doc-heading">
-    <p class="kicker" id="doc-kicker"></p>
-    <h2 id="doc-title"></h2>
-    <p id="doc-issue" class="mono"></p>
-  </header>
-  <div class="doc-grid">
-    <figure class="doc-figure"><div class="doc-zoom" id="doc-zoom"><img id="doc-img" alt=""></div><figcaption id="doc-cap"></figcaption></figure>
-    <div class="doc-meta">
-      <div id="doc-body"></div>
-      <p id="doc-links"></p>
-    </div>
-  </div>
-</dialog>
-
-<!-- Gazete masası -->
-<dialog id="archive-dialog" aria-labelledby="archive-h" class="wide">
-  <form method="dialog" class="dlg-close"><button class="icon" aria-label="Kapat">×</button></form>
-  <header class="arch-head">
-    <p class="kicker">Hakkı Tarık Us Koleksiyonu · özgün taramalar</p>
-    <h2 id="archive-h">Gazete masası</h2>
-    <p>Aynı gök olayının farklı seslerle yazılışı. Bir belgeye dokunun: özgün görüntü, yayın, tarih, sayfa, bugünkü Türkçe açıklama ve kaynağı birlikte açılır.</p>
-    <div class="arch-filter" role="group" aria-label="Konuya göre süz">
-      <button type="button" data-cat="" aria-pressed="true">Tümü</button><button type="button" data-cat="Gözlem" aria-pressed="false">Gözlem</button><button type="button" data-cat="Bilim" aria-pressed="false">Bilim</button><button type="button" data-cat="Mizah" aria-pressed="false">Mizah</button><button type="button" data-cat="Gündelik hayat" aria-pressed="false">Gündelik hayat</button><button type="button" data-cat="Edebiyat" aria-pressed="false">Edebiyat</button>
-    </div>
-  </header>
-  <div id="arch-desk"></div>
-  <p class="arch-legend"><span class="tag quote">Doğrudan alıntı</span> özgün metnin bu çalışmadaki çevriyazısı · <span class="tag simple">Sadeleştirme</span> anlamın bugünkü Türkçesi · <span class="tag fiction">Özgün senaryo</span> bu deneyim için yazıldı</p>
-</dialog>
-
-<!-- Güneş geçişi -->
-<dialog id="transit-dialog" aria-labelledby="transit-h" class="wide">
-  <form method="dialog" class="dlg-close"><button class="icon" aria-label="Kapat">×</button></form>
-  <p class="kicker">Bilimsel çizim · İstanbul için hesap</p>
-  <h2 id="transit-h">19 Mayıs 1910: Halley Güneş diskinin önünden geçiyor</h2>
-  <div class="transit-wrap"><canvas id="transit-canvas" width="720" height="720" aria-label="Güneş diski ve Halley merkezinin hesaplanan yolu"></canvas>
-    <div class="transit-side">
-      <p id="transit-clock" class="mono big">05:34 LMT</p>
-      <input type="range" id="transit-range" min="0" max="5400" step="10" value="1100" aria-label="Geçiş zamanı">
-      <div class="transit-events" id="transit-events"></div>
-      <p class="sp-note">Eşit açısal ölçekli teğet düzlem; gök kuzeyi yukarı, doğu soldadır. Halley’in konum işareti <strong>büyütülmüştür</strong>; görülebilir bir çekirdek silueti değildir. Bu geçişin İstanbul’dan gözlendiğine dair bir kayıt bilinmiyor; Helwan’dan da çekirdek görülmediği bildirilmiştir (Nature 83, 1910). Hesap: NASA/JPL Horizons, 1 dakikalık örnekler, kırılma kapalı.</p>
-    </div>
-  </div>
-</dialog>
-
-<div id="toast" role="status" aria-live="polite"></div>
-
-<noscript><div class="noscript"><h1>Halley Geceleri — İstanbul, 1910</h1><p>Bu deneyim JavaScript gerektirir. Yöntem ve kaynaklar için <a href="yontem.html">yontem.html</a>.</p></div></noscript>
-
-<script src="data/sky.js"></script>
-<script src="data/milkyway.js"></script>
-<script src="data/archive.js"></script>
-<script src="data/transit.js"></script>
-<script src="data/pano.js"></script>
-<script src="data/photos.js"></script>
-<script src="js/astro.js"></script>
-<script src="js/landscape.js"></script>
-<script src="js/sky.js"></script>
-<script src="js/audio.js"></script>
-<script src="js/sets.js"></script>
-<script src="js/film.js"></script>
-<script src="js/app.js"></script>
-</body>
-</html>
+<html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Halley Geceleri — İstanbul, 1910</title>
+<meta name="description" content="1910 İstanbul’unda Halley’i aramak. Gazete, fotoğraf ve astronomik hesabı birlikte okuyan etkileşimli bir bilim belgeseli.">
+<meta name="theme-color" content="#101b20"><meta property="og:title" content="Halley Geceleri — İstanbul, 1910"><meta property="og:description" content="Bir gökyüzü. Gazete, fotoğraf ve hesapta kalan izleri."><meta property="og:image" content="https://arifsolmaz.github.io/halley-geceleri/assets/img/yerkes-29mayis.jpg">
+<link rel="icon" href="favicon.svg"><link rel="stylesheet" href="css/documentary.css"></head>
+<body><a class="skip-link" href="#belgesel">Anlatıya geç</a>
+<header class="site-header"><a class="brand" href="#baslangic" aria-label="Halley Geceleri, başlangıç"><svg viewBox="0 0 48 32" aria-hidden="true"><path d="M3 5 32 20M11 3 32 20M4 13 32 20"/><circle cx="34" cy="21" r="4"/></svg><span>HALLEY GECELERİ</span></a>
+<nav aria-label="Ana bölümler"><a href="#belgesel">Belgesel</a><a href="#gok">Gözlem masası</a><a href="#belgeler">Arşiv <span>16</span></a><a href="yontem.html">Yöntem ↗</a></nav><span class="header-date">İSTANBUL · 1910</span><div class="reading-progress" aria-hidden="true"></div></header>
+<main>
+<section class="hero" id="baslangic" aria-labelledby="main-title"><div class="hero-copy"><p class="eyebrow">1910 İSTANBUL’UNA BİR YOLCULUK</p><h1 id="main-title">Halley<br><em>Geceleri</em></h1><p class="hero-place">İstanbul, 1910</p><p class="hero-question">Bir şehir bekliyor.<br>Gökte ne değişiyor?</p><a class="read-link" href="#belgesel">1910’a gir <span aria-hidden="true">↓</span></a></div>
+<figure class="hero-plate"><img src="assets/photo/kopru-1910.jpg" alt="Galata Köprüsü’nde insanlar; Eminönü ve camiler, 1910 ya da hemen öncesine ait bir İstanbul fotoğrafı" fetchpriority="high"><figcaption><span>GALATA KÖPRÜSÜ / RİJKSMUSEUM</span><p>Yaklaşık 1900–Nisan 1910 öncesi.<br>Yolculuğun mekânı, arşivin içinden.</p><a href="CREDITS.md" class="source-link">Fotoğrafın künyesi ↗</a></figcaption></figure><div class="hero-bottom"><span>GAZETE · FOTOĞRAF · HESAP</span><p>Beş sahnede, haberden gökyüzüne.</p><span class="hero-year" aria-hidden="true">1910</span></div></section>
+<section class="prologue page-width" id="belgesel"><p class="section-marker">BAŞLAMADAN ÖNCE</p><div><h2>Gökte bir iz.<br>Kâğıtta birçok ihtimal.</h2><p class="lead">1910 baharında İstanbul’un gazeteleri gökteki misafiri tartışıyor. Kimi açıklıyor, kimi korkuyu haberleştiriyor, kimi gülüyor.</p><p>Bir gazetenin yön tarifiyle doğuya dönüyor, fırtına haberlerinin ve karikatürlerin arasından geçiyor, sonra batıda yeni bir akşam göğüne bakıyoruz. Belgeler bu yolculuğun dekoru değil; olaylarını, yerlerini ve sorularını kuran malzeme.</p><p class="reading-note">Tarihsel yeniden canlandırma · Gazeteden aktarılan olaylar, arşiv görüntüleri ve hesaplanan gök. Mekân yorumlarının kaynağını her sahnede açabilirsiniz.</p></div></section>
+<figure class="city-plate imprint-plate page-width"><img src="assets/photo/ebuzziya-matbaasi-1890.jpg" alt="Matbaa-i Ebüzziyâ’nın 1890 tarihli, süslü renkli tanıtım levhası" loading="lazy"><figcaption><span>KÂĞIDIN ARKASINDAKİ ŞEHİR / 1890</span><h2>Bir kitabın ardında,<br><em>bir matbaa.</em></h2><p>Matbaa-i Ebüzziyâ’nın tanıtım levhası. Yirmi yıl sonra Velid’in Halley kitabını basacak matbaanın görsel dünyası.</p><p>Bu bir iç mekân fotoğrafı değil; basım sanatını da gösteren bir tanıtım belgesi. Library of Congress · LCCN 2009631575.</p><a class="source-link" href="https://www.loc.gov/pictures/item/2009631575/" target="_blank" rel="noopener">Özgün kaydı aç ↗</a></figcaption></figure>
+<section class="chapter page-width" id="beklenti"><div class="chapter-heading"><p class="eyebrow"><span>01 /</span> Şubat — Nisan 1910</p><h2>Haber, gökten önce gelir.</h2><p class="deck">Bir gök olayı, görülmeden önce anlatılmaya başlar.</p></div><div class="editorial-grid"><div class="prose"><p>İstanbul, 1910 baharı. Kuyrukluyıldız henüz görüş alanımıza girmeden haberi sokaklara ulaşır. Arkadaş dergisinin sayfasında bir soru durur: “Kıyamet kopacak mı?” Mayıs geldiğinde Halley üzerine bir kitap da satıştadır. Merakın artık bir kapağı, şekilleri ve fiyatı vardır.</p><p>Bir gazete sayfasını açıp bu bahara giriyoruz. Açıklamalarla korku haberleri, bilim yazılarıyla karikatürler aynı şehrin içinde dolaşıyor. Hepsinin anlattığı gök bile aynı değil: Musavver Şebâb’ın şubat yazısında Ocak kuyrukluyıldızı ile Halley birbirine karışmış. Bugün bunların iki ayrı cisim olduğunu biliyoruz.</p><p>Yolculuğumuz bir gözlem tarifiyle başlayacak. Yeni Gazete, yüksek bir yere çıkıp doğuya dönmemizi söylüyor. Tarihi 10 Mayıs’a, saati şafaktan önceye alıyoruz.</p></div><aside class="evidence-stack"><figure class="paper-figure"><button data-source="arkadas" aria-label="Arkadaş dergisinin Kıyamet kopacak mı yazısını aç"><img src="assets/img/arkadas.jpg" alt="Arkadaş dergisindeki kuyrukluyıldız yazısının özgün sayfası" loading="lazy"></button><figcaption><span>ARKADAŞ / 21 NİSAN 1910</span><strong>Kıyamet kopacak mı?</strong>Bir sorunun basılı hâli.</figcaption></figure><div class="evidence-footnote"><button class="source-link" data-source="shebab">Birbirine karışan iki kuyrukluyıldız <span aria-hidden="true">↗</span></button><button class="source-link" data-source="kitap">10 Mayıs tarihli kitap ilanı <span aria-hidden="true">↗</span></button></div></aside></div></section>
+<section class="night chapter-night" id="safak"><div class="page-width"><div class="chapter-heading"><p class="eyebrow"><span>02 /</span> 10 Mayıs 1910 · 03:30 LMT</p><h2>Önce Zühre’yi bul.</h2><p class="deck">Galata çevresinde bir yüksek bakış. Şehir uyanmadan önce, doğuya dönüyoruz.</p></div><figure class="reconstruction" data-scene="morning"><div class="scene-topline"><span>İSTANBUL · YENİDEN CANLANDIRMA</span><span>10 MAYIS · 03:30 LMT</span></div><div class="scene-stage"><canvas data-scene-canvas="morning" aria-label="Doğu · Önce Zühre, sonra onun solunda Halley."></canvas><svg class="city-drawing" viewBox="0 0 1440 270" preserveAspectRatio="none" aria-hidden="true"><path class="far-shore" d="M0 151Q160 139 245 151T470 145T720 156T970 145T1220 151T1440 145V270H0Z"/><path class="waterline" d="M385 187H1010m-580 10h290m70 9h250m-600 4h170m175 13h180"/><g class="boats"><path d="M545 178h45l-9 7h-28Zm21 0v-45l17 36h-17m254 15h54l-12 8h-29Zm24 0v-59m-1 7-18 43h18m4-40 13 40h-13"/></g><g class="roof-mass"><path d="M0 270V132l73-28 102 34v18h24v-44l88-27 98 43v142Zm1044 0v-86l58-23 95 30v-71l92-33 120 40v143Z"/><path d="M39 123v-45h18v-10h32v10h16v35m144-16V49h17V37h24v12h18v45m940 13V63h17V52h25v11h17v37"/></g><g class="roof-light"><path d="m0 132 73-28 102 34m24-26 88-27 98 43m812-8 92-33 120 40M73 107v62m214-80v92m1002-91v82M2 183l172 20m25-39 183 22m817-18 210 26M39 78h66m144-29h59m940 14h59"/><path d="M25 224v24h17v-22m72 2v22h18v-19m98-27v30h18v-28m62 15v30h20v-27m899-17v30h19v-27m51 17v27h20v-25"/></g><path class="foreground-edge" d="M0 256q110-11 203 1t194-2 187 2 239-1 211 0 206 1 200-3v16H0Z"/></svg></div><figcaption><div><span>Doğu · Önce Zühre, sonra onun solunda Halley.</span><button class="scene-label-toggle" data-scene-labels="morning" aria-pressed="true">Gökteki adları gizle</button></div><details><summary>Sahne nasıl kuruldu?</summary><p>Gökyüzü: belirtilen an için Galata (41,02562° K, 28,97414° D); yıldızlar ve Halley’in başı hesaplanır. Çatı çizgisi: dönem Galata fotoğraflarından esinlenen özgün, stilize çizim; bina ölçümü veya gerçek görüş engeli modeli değildir. Kuyruğun uzunluğu ve parlaklığı temsilîdir. Hava açık kabul edilmiştir.</p></details></figcaption></figure><div class="editorial-grid"><div><div class="prose"><p>10 Mayıs, 03:30. Doğu ufkunda henüz Güneş yok. Önce parlak Zühre’yi, bugünkü adıyla Venüs’ü arıyoruz. Gazetenin tarifi kısa: Hâle onun solunda.</p><p>Hesaplanan gökte Halley’in başı yaklaşık 10° yüksekte. Venüs daha sağda ve aşağıda. Şafak yaklaştıkça aradaki kontrast azalıyor; kuyruk, bir gazete gravüründeki kadar kolay seçilecek bir çizgi değil. Ekrandaki göğe bakarken önce Venüs’ü, sonra solundaki Halley’i bulmayı deneyin.</p><p>Bu sahnenin göğü tarih ve konumdan hesaplanıyor; şehir çizimi dönem fotoğraflarından esinlenen bir mekân yorumudur. O sabahki bulutları bilmiyoruz. Burada yaptığımız, gazetedeki tarifi yeniden deneyimlemek.</p></div><a class="text-link" href="#gok" data-observe="morning">Bu anın göğünü araştır ↓</a></div><div class="direction-evidence"><blockquote>“Hâle’yi kolayca bulmak için evvelâ Zühre’yi aramalı. Hâle, Zühre’nin sol cihetindedir.”</blockquote><p class="quote-credit">YENİ GAZETE · 9 MAYIS 1910, S. 3<br>Doğrudan alıntı · bu çalışmanın çevriyazısı</p><button class="scan-strip" data-source="yeni9" aria-label="Yön tarifinin özgün taramasını aç"><img src="assets/img/yeni9-zuhre.jpg" alt="Halley’i bulmak için Venüs’ü aramayı söyleyen gazete satırları" loading="lazy"><span>Özgün satırları aç ↗</span></button><div class="direction-chart"><p class="micro-label">10 MAYIS · 03:30 LMT / İSTANBUL</p><svg id="direction-svg" viewBox="0 0 520 300" role="img" aria-label="10 Mayıs sabahı hesaplanan azimut ve yükseklik diyagramı; Halley Venüs’ün solunda ve daha yüksekte"></svg><p>Azimut–yükseklik diyagramı. Cisim işaretleri büyütülmüştür; manzara fotoğrafı kullanılmaz.</p></div></div></div></div></section>
+<section class="chapter page-width" id="soylenti"><div class="chapter-heading"><p class="eyebrow"><span>03 /</span> 18 — 19 Mayıs 1910</p><h2>Aynı gök, farklı hikâyeler.</h2><p class="deck">18 Mayıs sabahının fırtınası. Ertesi günün sayfasında, korkuyla açıklama yan yana.</p></div><div class="editorial-grid"><div class="prose"><p>18 Mayıs’ta şimşek ve gök gürültüsü. Ertesi gün Yeni Gazete, fırtınayı kuyrukluyıldızla ilişkilendirenleri; dükkân kapatmayı, evlere çekilmeyi ve vedalaşmayı anlatıyor. Sayfanın başlığı: “Arz yıldızın kuyruğundan geçdi…” Bu bölümün hareket noktası, gazetenin aktardığı bu şehir sahneleri.</p><p>Şimdi başka bir sayfaya geçiyoruz. Hayâl-i Cedid’de kuyrukluyıldızın bir yüzü var; gökteki misafir siyasal bir taşlamaya dönüşmüş. Kalem’deyse tramvay konuşmaları mizahın diliyle kuruluyor. Korku tek ses değil: onu açıklayan, ona gülen ve onun üzerinden siyaset konuşanlar da var.</p><p>Bir kitap kapağındaki “Neler olacak?” sorusuna, içerideki yörünge şekilleriyle cevap aranıyor. Velid’in kitabını ve Servet-i Fünûn’u açtığımızda, bu baharın bilim anlatımıyla da karşılaşıyoruz. Şehri yalnız “panik” sözcüğüyle kurmak, elimizdeki malzemenin yarısını dışarıda bırakır.</p></div><aside class="headline-exhibit"><p class="micro-label">BİR GAZETE BAŞLIĞI</p><blockquote>“Arz yıldızın<br>kuyruğundan<br><em>geçdi…”</em></blockquote><p>Yeni Gazete · 19 Mayıs 1910</p><button class="source-link" data-source="yeni19">Haberi ve sınırını oku <span aria-hidden="true">↗</span></button></aside></div><div class="document-pair"><figure><button data-source="hayal18" aria-label="Hayâl-i Cedid karikatürünü aç"><img src="assets/img/hayal18.jpg" alt="Hayâl-i Cedid’de insan yüzlü kuyrukluyıldız karikatürü" loading="lazy"></button><figcaption><span>18 MAYIS / HAYÂL-İ CEDİD</span><h3>Göğe çizilen bir yüz.</h3><p>Karikatür, dönemin siyasal imalarını taşır. Gökteki cismin görünüşü için kanıt değildir.</p></figcaption></figure><figure><button data-source="kalem19" aria-label="Kalem’in Haftalık Dedikodu yazısını aç"><img src="assets/img/kalem19.jpg" alt="Kalem dergisinin kuyrukluyıldız hakkındaki mizah yazısı" loading="lazy"></button><figcaption><span>19 MAYIS / KALEM</span><h3>Korkunun gülünç tarafı.</h3><p>Mizahi konuşmalar birer edebî sahnedir; tanık ifadeleri gibi okunamaz.</p></figcaption></figure></div></section>
+<section class="transit-chapter night" id="gecis"><div class="page-width"><div class="chapter-heading"><p class="eyebrow"><span>04 /</span> 19 Mayıs 1910 · İstanbul için hesap</p><h2>Görünmeyeni çizmek.</h2><p class="deck">19 Mayıs, 03:00. Göğe baktığımızda, bu kez aradığımız baş ufkun altında.</p></div><figure class="reconstruction" data-scene="below"><div class="scene-topline"><span>İSTANBUL · YENİDEN CANLANDIRMA</span><span>19 MAYIS · 03:00 LMT</span></div><div class="scene-stage"><canvas data-scene-canvas="below" aria-label="Doğu · Halley’in başı ufkun altında; gökte bir baş işareti yok."></canvas><svg class="city-drawing" viewBox="0 0 1440 270" preserveAspectRatio="none" aria-hidden="true"><path class="far-shore" d="M0 151Q160 139 245 151T470 145T720 156T970 145T1220 151T1440 145V270H0Z"/><path class="waterline" d="M385 187H1010m-580 10h290m70 9h250m-600 4h170m175 13h180"/><g class="boats"><path d="M545 178h45l-9 7h-28Zm21 0v-45l17 36h-17m254 15h54l-12 8h-29Zm24 0v-59m-1 7-18 43h18m4-40 13 40h-13"/></g><g class="roof-mass"><path d="M0 270V132l73-28 102 34v18h24v-44l88-27 98 43v142Zm1044 0v-86l58-23 95 30v-71l92-33 120 40v143Z"/><path d="M39 123v-45h18v-10h32v10h16v35m144-16V49h17V37h24v12h18v45m940 13V63h17V52h25v11h17v37"/></g><g class="roof-light"><path d="m0 132 73-28 102 34m24-26 88-27 98 43m812-8 92-33 120 40M73 107v62m214-80v92m1002-91v82M2 183l172 20m25-39 183 22m817-18 210 26M39 78h66m144-29h59m940 14h59"/><path d="M25 224v24h17v-22m72 2v22h18v-19m98-27v30h18v-28m62 15v30h20v-27m899-17v30h19v-27m51 17v27h20v-25"/></g><path class="foreground-edge" d="M0 256q110-11 203 1t194-2 187 2 239-1 211 0 206 1 200-3v16H0Z"/></svg></div><figcaption><div><span>Doğu · Halley’in başı ufkun altında; gökte bir baş işareti yok.</span><button class="scene-label-toggle" data-scene-labels="below" aria-pressed="true">Gökteki adları gizle</button></div><details><summary>Sahne nasıl kuruldu?</summary><p>Gökyüzü: belirtilen an için Galata (41,02562° K, 28,97414° D); yıldızlar ve Halley’in başı hesaplanır. Çatı çizgisi: dönem Galata fotoğraflarından esinlenen özgün, stilize çizim; bina ölçümü veya gerçek görüş engeli modeli değildir. Kuyruğun uzunluğu ve parlaklığı temsilîdir. Hava açık kabul edilmiştir.</p></details></figcaption></figure><div class="transit-layout"><div class="transit-instrument"><div class="instrument-head"><span>GÜNEŞ DİSKİ GEÇİŞİ</span><span>19 MAYIS 1910</span></div><svg id="transit-svg" viewBox="0 0 720 500" role="img" aria-label="Halley merkezinin Güneş diski üzerindeki hesaplanan yolu"><defs><radialGradient id="sun-wash"><stop stop-color="#f2dfac"/><stop offset="1" stop-color="#d8b878"/></radialGradient></defs><circle cx="360" cy="235" r="165" fill="url(#sun-wash)"/><path d="M140 235H580M360 20V450" stroke="#929d9b" stroke-opacity=".2"/><text x="360" y="36" text-anchor="middle">K</text><text x="132" y="242">D</text><text x="578" y="242">B</text><path id="transit-path" fill="none" stroke="#18232a" stroke-width="2" stroke-dasharray="5 6"/><circle id="transit-point" r="6" fill="#a34f38" stroke="#f7ebcd" stroke-width="3"/></svg><div class="transit-readout"><span>YEREL ORTALAMA GÜNEŞ SAATİ</span><output id="transit-time">06:04 LMT</output></div><label class="range-label" for="transit-slider">Geçişte ilerle <span>03:20–04:50 UT</span></label><input id="transit-slider" type="range" min="0" max="5400" step="1" value="2910"><div class="event-buttons" id="event-buttons"></div><p class="instrument-note">Konum işareti büyütülmüştür. Kuzey yukarı, doğu solda. Yol: Horizons; İstanbul, 41,0082° K / 28,9784° D / 30 m; atmosfer kırılması kapalı.</p></div><div><div class="prose"><p>19 Mayıs, 03:00. Yine doğuya bakıyoruz, fakat Halley’in başı ufkun yaklaşık 15° altında. Beklenen olay, her yerden görülebilen büyük bir gök gösterisi değil. Birkaç saat sonra Halley’in merkezi, İstanbul’dan bakıldığında Güneş diskinin önünden geçecek: giriş 05:34:49, en yakın merkez geçişi 06:04:24, çıkış 06:33:53 LMT.</p><p>Aşağıdaki çizimdeki işaret bilerek büyütülmüştür. Birkaç kilometrelik çekirdeğin karanlık siluetini görmüş değiliz; merkezinin hesaplanan yerini gösteriyoruz. Bu çalışma, geçişin İstanbul’dan gözlendiğine ilişkin bir kayıt sunmuyor.</p><p>Gazetelerdeki “Dünya’nın kuyruktan geçmesi” ifadesi başka bir geometriye aittir. Kuyruk üç boyutlu, yaygın bir yapıdır. Buradaki Güneş diski geçişi hesabı, Dünya’nın o kuyruğu hangi anda kestiğini hesaplamaz. Aynı tarihin çevresinde anılmaları, bu olayları tek bir olaya dönüştürmez.</p></div><div class="science-aside"><span>AYRI TUTULMASI GEREKEN İKİ OLAY</span><p><b>Güneş diski geçişi</b><br>Halley merkezinin, gözlemcinin bakışında Güneş diskinin önüne gelmesi.</p><p><b>Dünya’nın kuyrukla karşılaşması</b><br>Kuyruğun uzaydaki yaygın yapısıyla ilgili başka bir hesap. Buradaki çizim bunu çözmez.</p></div></div></div></div></section>
+<section class="chapter page-width" id="iz"><div class="chapter-heading"><p class="eyebrow"><span>05 /</span> 27 Mayıs — 6 Haziran 1910</p><h2>Gözün sınırı, fotoğrafın hafızası.</h2><p class="deck">27 Mayıs, 21:30. Aynı şehirdeyiz; bu kez yüzümüz batıya dönük.</p></div><figure class="reconstruction" data-scene="evening"><div class="scene-topline"><span>İSTANBUL · YENİDEN CANLANDIRMA</span><span>27 MAYIS · 21:30 LMT</span></div><div class="scene-stage"><canvas data-scene-canvas="evening" aria-label="Batı · Halley, akşam göğünde yeniden."></canvas><svg class="city-drawing" viewBox="0 0 1440 270" preserveAspectRatio="none" aria-hidden="true"><path class="far-shore" d="M0 151Q160 139 245 151T470 145T720 156T970 145T1220 151T1440 145V270H0Z"/><path class="waterline" d="M385 187H1010m-580 10h290m70 9h250m-600 4h170m175 13h180"/><g class="boats"><path d="M545 178h45l-9 7h-28Zm21 0v-45l17 36h-17m254 15h54l-12 8h-29Zm24 0v-59m-1 7-18 43h18m4-40 13 40h-13"/></g><g class="roof-mass"><path d="M0 270V132l73-28 102 34v18h24v-44l88-27 98 43v142Zm1044 0v-86l58-23 95 30v-71l92-33 120 40v143Z"/><path d="M39 123v-45h18v-10h32v10h16v35m144-16V49h17V37h24v12h18v45m940 13V63h17V52h25v11h17v37"/></g><g class="roof-light"><path d="m0 132 73-28 102 34m24-26 88-27 98 43m812-8 92-33 120 40M73 107v62m214-80v92m1002-91v82M2 183l172 20m25-39 183 22m817-18 210 26M39 78h66m144-29h59m940 14h59"/><path d="M25 224v24h17v-22m72 2v22h18v-19m98-27v30h18v-28m62 15v30h20v-27m899-17v30h19v-27m51 17v27h20v-25"/></g><path class="foreground-edge" d="M0 256q110-11 203 1t194-2 187 2 239-1 211 0 206 1 200-3v16H0Z"/></svg></div><figcaption><div><span>Batı · Halley, akşam göğünde yeniden.</span><button class="scene-label-toggle" data-scene-labels="evening" aria-pressed="true">Gökteki adları gizle</button></div><details><summary>Sahne nasıl kuruldu?</summary><p>Gökyüzü: belirtilen an için Galata (41,02562° K, 28,97414° D); yıldızlar ve Halley’in başı hesaplanır. Çatı çizgisi: dönem Galata fotoğraflarından esinlenen özgün, stilize çizim; bina ölçümü veya gerçek görüş engeli modeli değildir. Kuyruğun uzunluğu ve parlaklığı temsilîdir. Hava açık kabul edilmiştir.</p></details></figcaption></figure><div class="editorial-grid"><div class="prose"><p>27 Mayıs saat 21:30 LMT’de İstanbul’dan batıya bakıyoruz. Halley’in başı yaklaşık 20° yükseklikte; Güneş yaklaşık 19° aşağıdadır. İlk sahnenin doğu ufkundan, karanlık bir akşam göğüne geldik. Bu konum değişimi yörüngenin ve Dünya’nın hareketinin sonucudur.</p><p>İki gün sonra Barnard’ın Wisconsin’deki Yerkes Rasathanesi’nden çektiği fotoğraf, uzun kuyruğu bir plakaya kaydeder. Göğü izleyen kamera ve uzun poz, gözün bir bakışta seçebildiğinden farklı bir kayıt üretir. Bu fotoğraf İstanbul’da çekilmemiştir; onu İstanbul’dan görülmüş bir görüntü yerine koymuyoruz.</p><p>Kuyrukluyıldız uzaklaşırken kâğıtlar ve plakalar kalır. Gazete ne söylendiğini, fotoğraf belirli bir aygıtın ne kaydettiğini, hesap ise seçtiğimiz yerde ve anda göğün geometrisini taşır. Bu üç kayıt birlikte okunduğunda, 1910 baharı daha anlaşılır hâle gelir.</p></div><aside class="evening-note"><span>İSTANBUL / 27 MAYIS / 21:30 LMT</span><div><strong id="evening-alt">20,3°</strong><p>Halley’in hesaplanan yüksekliği</p></div><p>Batı göğü · Güneş ufkun yaklaşık 19° altında.</p><a class="text-link" href="#gok" data-observe="evening">Akşam göğünü aç ↓</a></aside></div><figure class="afterlight"><img src="assets/img/yerkes-29mayis.jpg" alt="Barnard’ın 29 Mayıs 1910’da Wisconsin’den çektiği Halley fotoğrafı" loading="lazy"><figcaption><span>FOTOĞRAF / 29 MAYIS 1910 / WISCONSIN</span><p>E. E. Barnard · Yerkes Rasathanesi. Uzun pozlu kayıt; İstanbul göğünün yeniden canlandırmasından sonra, başka bir yerde çekilmiş gerçek bir 1910 fotoğrafı.</p><button class="source-link" data-source="yerkes29">Plakanın kaydı ↗</button></figcaption></figure><p class="closing-line">Kâğıt kalır.<br><em>Işık yoluna devam eder.</em></p><p class="closing-note">Şimdi anlatının dışına çıkıp tarihler, saatler ve yönlerle kendiniz çalışabilirsiniz.</p></section>
+<section class="observation-section" id="gok"><div class="page-width"><div class="section-topline"><p class="section-marker">GÖZLEM MASASI</p><span>20 NİSAN — 10 HAZİRAN 1910</span></div><div class="observation-intro"><h2>Aynı göğe<br><em>yeniden bak.</em></h2><p>Hesaplanan gökyüzünü araştırın. Sahnelerin hesaplanan göğünü burada serbestçe araştırın. Şehir çizimini kapatıp yalnız göğe ve ufka bakabilirsiniz. Arazi örtmesi ve tarihsel hava durumu bu modelin dışında kalır.</p></div><div class="observatory"><div class="observation-presets" role="group" aria-label="Anlatıdaki üç an"><button data-preset="morning" aria-pressed="true"><span>10 MAYIS</span>Şafak · 03:30</button><button data-preset="below" aria-pressed="false"><span>19 MAYIS</span>Ufkun altında · 03:00</button><button data-preset="evening" aria-pressed="false"><span>27 MAYIS</span>Akşam · 21:30</button></div><div class="sky-topline"><span id="sky-moment">10 MAYIS 1910 · 03:30 LMT</span><span id="sky-direction">DOĞU</span></div><div class="sky-stage"><canvas id="documentary-sky" tabindex="0" aria-label="İstanbul için hesaplanan etkileşimli gökyüzü; sürükleyerek yönü, yakınlaştırarak görüş alanını değiştirin"></canvas></div><div class="sky-status" id="sky-status" aria-live="polite"></div><div class="observation-controls"><div class="date-controls"><label>TARİH<input id="observer-date" type="date" min="1910-04-20" max="1910-06-10" value="1910-05-10"></label><label>SAAT / LMT<input id="observer-time" type="time" value="03:30"></label><button id="observer-play" class="plain-button" aria-pressed="false">Zamanı ilerlet ▷</button></div><div class="layer-controls"><label><input id="observer-city" type="checkbox" checked> Şehir çizimi</label><label><input id="observer-lines" type="checkbox"> Takımyıldızlar</label><label><input id="observer-tail" type="checkbox"> Kuyruk modeli</label><label><input id="observer-refraction" type="checkbox" checked> Kırılma</label><div class="find-buttons" role="group" aria-label="Cisme yönel"><button data-find="Halley">Halley</button><button data-find="Venus">Venüs</button><button data-find="Moon">Ay</button></div></div></div><p class="sky-help">Göğü sürükleyin · Kaydırarak / iki parmakla yakınlaşın · Bir cisme dokunun</p><div class="selected-object" id="selected-object" aria-live="polite" hidden></div></div><div class="observation-footnotes"><p><b>Saatin anlamı.</b> Tarihler Gregoryen; LMT = UT + 1 sa 55 dk 54,816 sn. Bu tercih, her Osmanlı gazetesindeki saatin aynı anlama geldiği iddiası değildir. 1910 için UT, tarihsel UT1’dir.</p><p><b>Görüntünün sınırı.</b> Baş konumu Horizons SAO/1910 çözümünden gelir. İşaretlerin görsel büyüklüğü temsilîdir. Kuyruk seçeneği açılırsa uzunluk ve parlaklık sanatsal modeldir; ölçülmüş bir 1910 kuyruğu değildir.</p></div></div></section>
+<section class="archive-section page-width" id="belgeler"><div class="section-topline"><p class="section-marker">KAYNAK ODASI</p><span>16 BELGE / AÇIK KÜNYELER</span></div><div class="archive-intro"><h2>Anlatının<br><em>dayandığı sayfalar.</em></h2><p>Her belge, neyi söylediği ve neyi kanıtlayamadığıyla birlikte. Özgün görüntüyü, çevriyazıyı ve kaynak bağlantısını açın.</p></div><div class="archive-filters" role="group" aria-label="Belge türüne göre süz"><button data-filter="" aria-pressed="true">Tümü <span>16</span></button><button data-filter="Gözlem">Gözlem</button><button data-filter="Bilim">Bilim</button><button data-filter="Mizah">Mizah</button><button data-filter="Gündelik hayat">Gündelik hayat</button><button data-filter="Edebiyat">Edebiyat</button></div><div id="archive-list" class="archive-list"></div></section>
+<section class="method-summary page-width"><p class="section-marker">BU ANLATI NASIL KURULDU?</p><div><h2>Belgeye yakın.<br><em>Kesinliğe mesafeli.</em></h2><p>Konum hesabının doğruluğu, geçmişte ne görüldüğünü tek başına kanıtlamaz. Arşiv fotoğraflarının yeri ve tarihi, gazete metinlerinin türü ve gökyüzü modelinin sınırları bu nedenle açık tutulur.</p><a class="text-link" href="yontem.html">Bilimsel yöntem ve senaryonun tamamı ↗</a><a class="text-link" href="CREDITS.md">Künyeler ve haklar ↗</a></div></section>
+</main><footer class="site-footer"><span>HALLEY GECELERİ</span><p>İstanbul, 1910 · Bir bilim, belge ve görsel anlatı çalışması.</p><a href="#baslangic">Başa dön ↑</a></footer>
+<dialog id="source-dialog" aria-labelledby="source-title"><div class="sheet-toolbar"><span>ARŞİV / ÖZGÜN KAYIT</span><form method="dialog"><button aria-label="Belgeyi kapat">Kapat ×</button></form></div><header class="source-heading"><p id="source-kicker" class="eyebrow"></p><h2 id="source-title"></h2><p id="source-issue"></p></header><div id="source-content"></div></dialog>
+<noscript><p class="no-js">Anlatıyı okuyabilirsiniz. Etkileşimli çizimler ve arşiv görüntüleyici için JavaScript gerekir; tüm künyeler <a href="CREDITS.md">buradadır</a>.</p></noscript>
+<script src="data/sky.js"></script><script src="data/milkyway.js"></script><script src="data/archive.js"></script><script src="data/transit.js"></script><script src="js/astro.js"></script><script src="js/landscape.js"></script><script src="js/sky.js"></script><script src="js/documentary.js"></script>
+</body></html>

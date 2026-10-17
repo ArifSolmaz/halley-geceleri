@@ -15,23 +15,23 @@
 | Kuyruk yönü | **Hesaplanan** | Güneş’in tersi yönündeki konum açısı: Horizons PsAng, ICRF kuzeyinden tarihin gerçek kuzeyine döndürülmüş (−0,53°…+0,02°), 10 dk |
 | Kuyruk uzunluğu, genişliği, parlaklığı | **Tanımlı model, sanatsal** | Aşağıya bakın |
 | Atmosferik kırılma | Seçilebilir | Sæmundsson formülü (10 °C, 1010 hPa, standart atmosfer). Horizons verisi havasızdır; gerçek 1910 havası bilinmiyor |
-| İstanbul ufku | **Fotoğraf** (Berggren, 1880’ler), yapı yönlerine göre yerleştirildi; gece tonu ve ışıklar temsilî | Bkz. 03-mekan-kaynaklari.md |
+| İstanbul mekânı | **Yorum / çizim**: dönem fotoğraflarından esinlenen stilize çatılar; ölçülmüş ufuk değil | Sahne künyeleri; gök sahneleri Galata, araştırma görünümü referans İstanbul konumu. Eski fotoğraf panorama yüklenmez. |
 | Hava durumu | **Varsayım** | Bütün geceler açık hava ile sahnelendi. Hesaplanan görünürlük tarihsel hava raporu yerine konmaz. Belgelenen tek hava olayı: 18 Mayıs sabahı şafaktan önce İstanbul’da çıkan fırtına ve gün boyu süren yağmur (Yeni Gazete, 19 Mayıs 1910; aktaran Fettahoğlu 2025); yalnız sözle anılır. |
 
 ## Kuyruk modeli
 
-Kuyruk, çekirdekten Güneş’in tersi yönünde uzanan, fiziksel uzunluğu *L* olan düz bir çizgi kabul edilir. Varsayılan *L* = 0,30 AU’dur; gözlem defterinden 0,05–0,60 AU arasında değiştirilebilir. Çekirdekten *s* uzaklığındaki bir noktanın başa göre görünür açısı:
+Kuyruk, çekirdekten Güneş’in tersi yönünde uzanan, fiziksel uzunluğu *L* olan düz bir çizgi kabul edilir. Varsayılan *L* = 0,30 AU’dur; anlatı sahnelerinde kullanılır; gözlem masasında kuyruk açılıp kapatılabilir. Çekirdekten *s* uzaklığındaki bir noktanın başa göre görünür açısı:
 
 θ(s) = atan2( s · sin β , Δ + s · cos β )
 
 Burada Δ Halley–Dünya uzaklığı, β faz açısıdır (Horizons S-T-O). Nokta, başın konum açısı yönünde θ kadar ilerletilerek göğe yerleştirilir. Horizons PsAng değerini referans sistemin (ICRF/J2000) kuzey kutbuna göre verir; görünür RA/Dec ise 1910 tarihinin gerçek ekvatoruna göredir. Bu iki “kuzey” arasındaki fark (yerel olarak en çok 0,53°) veri üretiminde giderilir: her örnekte J2000 kutbunun tarih çerçevesindeki konum açısı PsAng’a eklenir (`tools/build_halley.js`). Yüzey parlaklığı e^(−s / 0,38L) ile azalır. Görünürlüğü gök parlaklığına ve hava kütlesine göre belirlenir; genişlik 0,004 + 0,07·s AU kabul edilir. Bu bir **görselleştirme modelidir**: eğrilik, toz ve iyon kuyruğu ayrımı ve fotometri yoktur.
 
-Karşılaştırma için Barnard’ın Yerkes’ten (Wisconsin) çıplak gözle verdiği kuyruk uzunlukları bilgi panelinde gösterilir: 9 Mayıs ~15°, 27 Mayıs ~53° (ApJ 39, 1914). Bunlar İstanbul gözlemi değildir. İstanbul’a özgü 100–120° kuyruk ya da doğrulanmamış parlaklık zirveleri kullanılmadı.
+Karşılaştırma için Barnard’ın Yerkes’ten (Wisconsin) çıplak gözle verdiği kuyruk uzunlukları araştırma karşılaştırması olarak kaydedilmiştir: 9 Mayıs ~15°, 27 Mayıs ~53° (ApJ 39, 1914). Bunlar İstanbul gözlemi değildir. İstanbul’a özgü 100–120° kuyruk ya da doğrulanmamış parlaklık zirveleri kullanılmadı.
 
 ## Zaman
 
 - Tarihler **Gregoryen**dir. Rumi tarihli gazeteler çevrilmiştir: Yeni Gazete’nin 9 Mayıs sayısı 26 Nisan 1326 tarihini de taşır.
-- Saatler **İstanbul yerel ortalama güneş saati (LMT)** ile verilir: LMT = UT + 1 sa 55 dk 54,816 sn (28,9784° D). Bu bir **seçilmiş gösterim kuralıdır**; dönemin sivil saat uygulamasına dair bir iddia değildir. Osmanlı ezanî (alaturka) saat ve Avrupa saati o yıllarda birlikte kullanılıyordu; bir gazetenin verdiği saatin hangi kurala göre olduğu ayrıca yorumlanmalıdır. Ekranda LMT ile birlikte UT de gösterilir.
+- Saatler **İstanbul yerel ortalama güneş saati (LMT)** ile verilir: LMT = UT + 1 sa 55 dk 54,816 sn (28,9784° D). Bu bir **seçilmiş gösterim kuralıdır**; dönemin sivil saat uygulamasına dair bir iddia değildir. Osmanlı ezanî (alaturka) saat ve Avrupa saati o yıllarda birlikte kullanılıyordu; bir gazetenin verdiği saatin hangi kurala göre olduğu ayrıca yorumlanmalıdır. Ana saat göstergesi LMT’dir; Güneş geçişinin UT aralığı ayrıca belirtilir.
 - Aynı kuralı Galata’nın kendi boylamıyla uygulamak 1,02 sn fark eder; IANA saat dilimi veritabanı Mayıs 1910 için `Europe/Istanbul` = UT + 1:56:56 verir (bu sitenin kuralından 61,2 sn fazla). Bu değerler birbirinin yerine aynı an değişmeden konamaz.
 - **UT**, 1910 için Horizons’un yeniden kurduğu UT’dir (**UT1**), bugünkü UTC değildir. Kodda zaman, JavaScript’in `Date` sayısı içinde taşınır; bu yalnız bir sayı kabıdır, saat dilimi iddiası değildir.
 - Bugünün Türkiye saatiyle (UTC+3) karşılaştırmak için LMT’ye yaklaşık 1 sa 4 dk eklenir; bu yalnız sezgi içindir.
@@ -44,9 +44,9 @@ Karşılaştırma için Barnard’ın Yerkes’ten (Wisconsin) çıplak gözle v
 
   | Olay | LMT | UT | Güneş yüksekliği |
   |---|---|---|---|
-  | Giriş | 05:34:50 | 03:38:55 | 8,8° |
-  | En yakın | 06:04:25 | 04:08:30 | 14,2° (merkezler arası 0,045°) |
-  | Çıkış | 06:33:54 | 04:37:59 | 19,6° |
+  | Giriş | 05:34:49,55 | 03:38:54,73 | 8,8° |
+  | En yakın | 06:04:24,58 | 04:08:29,76 | 14,2° (merkezler arası 0,045°) |
+  | Çıkış | 06:33:53,75 | 04:37:58,94 | 19,6° |
 
   Geçiş ayrı bir bilimsel çizimde gösterilir; konum işareti **büyütülmüştür**. İstanbul’dan görülmüş bir çekirdek silueti ya da gözlem kaydı varmış izlenimi verilmez.
 
@@ -83,6 +83,6 @@ Bu sürüm için `tests/` altında yeniden çalıştırılabilen denetimler bulu
 
 - Bulut, pus, ışık kirliliği ve gerçek hava kayıtları modelde yoktur.
 - Ay diskinin yüzey ayrıntısı yoktur; evre ve yönü doğrudur. Güneş ve Ay diskleri uzaklıktan hesaplanan görünür yarıçapla çizilir; geniş görüş açısında görünür kalsınlar diye birkaç piksellik bir alt sınır vardır.
-- Manzara bir fotoğraftır (1880’ler); levhaların yönü ±0,5°, ufuk yüksekliği ±0,3–0,7° doğrulukla yerleştirildi. Kuzeydeki 347°–39° aralığı panoramada yoktur.
+- Yeni ana sayfada panorama kullanılmaz. Şehir çizimi ölçülmüş bir ufuk değildir; gökcisimlerini gerçek binaların örtüp örtmediği bu görünümden çıkarılamaz. Eski panorama kalibrasyonu araştırma geçmişi olarak korunur.
 - Gezegen konumları ~1′ doğruluktadır (astronomy-engine). Horizons’la doğrudan karşılaştırma yalnız Güneş ve Ay için yapıldı.
 - Gazete metinlerinin çevriyazısı bu çalışmanın okumasıdır; görüntüyle birlikte verilir ve uzman denetimi önerilir.
