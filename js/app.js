@@ -19,7 +19,7 @@
   try { $('grain').style.backgroundImage = `url(${F.grainPNG()})`; } catch (e) { }
 
   let mode = 'gate';
-  function setMode(m) { mode = m; body.classList.remove('mode-gate', 'mode-film', 'mode-sky'); body.classList.add('mode-' + m); if (m === 'sky') { sky.opt.interactive = true; Object.assign(sky.opt, panelOpts()); sky.selected = null; stage.clear(); updatePanel(); requestSkyFrame(); } }
+  function setMode(m) { mode = m; sky.viewport = null; $('gate').inert = m !== 'gate'; body.classList.remove('mode-gate', 'mode-film', 'mode-sky'); body.classList.add('mode-' + m); if (m === 'sky') { sky.opt.interactive = true; Object.assign(sky.opt, panelOpts()); sky.selected = null; stage.clear(); updatePanel(); syncSkyViewport(); requestSkyFrame(); } }
 
   /* ---------- altyazı ---------- */
   const subsBox = $('subs'); let subTimer = null, currentSub = null;
@@ -59,8 +59,15 @@
     const el = $('photo-cap'); el.innerHTML = capHTML(c); el.classList.toggle('on', !!c);
   }
 
+  // Keep text out of the image and clear of the controls at every viewport size.
+  function syncSceneLayout() {
+    html.style.setProperty('--meta-bottom', Math.ceil($('scene-meta').getBoundingClientRect().bottom) + 'px');
+    html.style.setProperty('--player-height', Math.ceil($('player').getBoundingClientRect().height) + 'px');
+  }
+  new ResizeObserver(syncSceneLayout).observe($('scene-meta'));
+  new ResizeObserver(syncSceneLayout).observe($('player'));
   const ui = {
-    onPlay(on) { $('p-play').textContent = on ? '❚❚' : '▶'; $('p-play').setAttribute('aria-label', on ? 'Duraklat' : 'Sürdür'); },
+    onPlay(on) { body.classList.toggle('is-playing', on); $('p-play').textContent = on ? '❚❚' : '▶'; $('p-play').setAttribute('aria-label', on ? 'Duraklat' : 'Sürdür'); },
     onShot(s, f) {
       clearHot(); adhoc = null; showSub(null);
       body.classList.toggle('letterbox', !!s.letterbox);
@@ -75,7 +82,7 @@
       const sel = $('p-chapters'), chs = f.chapters(); sel.innerHTML = chs.map(c => `<option value="${c.i}">${c.ch}</option>`).join('');
       const cur = chs.filter(c => c.i <= f.i).pop(); if (cur) sel.value = cur.i;
       if (s.in === 'fade') fadeIn();
-      capKey = undefined; setCap(s, 0);
+      capKey = undefined; setCap(s, 0); requestAnimationFrame(syncSceneLayout);
     },
     onFrame(s, t, p, f) {
       setCap(s, p);
@@ -106,11 +113,11 @@
     hideInteract, say,
     card(name, p) {
       if (!ui._card) {
-        const d = document.createElement('div'); d.className = 'interlude'; d.style.cssText = 'position:absolute;inset:0;display:grid;place-items:center;z-index:5;padding:24px;pointer-events:auto';
+        const d = document.createElement('div'); d.className = 'interlude'; d.setAttribute('aria-label', 'Edebî araoyun');
         d.innerHTML = `<div style="max-width:640px;text-align:center"><p class="kicker">Edebî araoyun</p>
           <h2 style="font:400 clamp(1.6rem,1.2rem + 2vw,2.6rem)/1.15 var(--display);color:var(--stone);margin:.2rem 0 1rem">Kuyruklu Yıldız Altında Bir İzdivaç</h2>
           <p style="color:var(--text-2)">Hüseyin Rahmi Gürpınar’ın romanı, Halley korkusu sürerken <i>Sabah</i> gazetesinde tefrika edildi (12 Nisan – 26 Mayıs 1326 Rumî; 25 Nisan – 8 Haziran 1910). Korkuyu bir İstanbul mahallesinin evlilik telaşı ve dedikodusu içinde hicveder.</p>
-          <blockquote style="margin:1rem auto;max-width:520px;font:italic 1.15rem/1.5 var(--body);color:var(--stone)">“Ne baş ağrısı ne nezle hemen hiçbir şey hissetmeyeceğiz.”<span style="display:block;font:400 .72rem var(--mono);letter-spacing:.08em;color:var(--text-2);margin-top:.4rem">ROMANIN GİRİŞİNDEN · TDK BASKISI, s. 34</span></blockquote>
+          <blockquote style="margin:1rem auto;max-width:520px;font:italic 1.15rem/1.5 var(--serif);color:var(--stone)">“Ne baş ağrısı ne nezle hemen hiçbir şey hissetmeyeceğiz.”<span style="display:block;font:400 .72rem var(--mono);letter-spacing:.08em;color:var(--text-2);margin-top:.4rem">ROMANIN GİRİŞİNDEN · TDK BASKISI, s. 34</span></blockquote>
           <p class="limit" style="text-align:left">Bu bir romandır. Konuşmaları İstanbul halkından alınmış röportajlar ya da tanıklıklar değildir.</p>
           <p><button type="button" class="link" data-doc="gurpinar">Künyeyi ve kaynağı aç</button></p></div>`;
         d.addEventListener('click', e => { const b = e.target.closest('[data-doc]'); if (b) openDoc(b.dataset.doc, true); });
@@ -124,7 +131,7 @@
     if (act.startsWith('doc:')) openDoc(act.slice(4), true);
     else if (act === 'say:letter') say({ kind: 'not', text: 'Mektup kurmacadır. 1910’da Darülmuallimat mezunlarının taşra kız rüşdiyelerine atanması ve burs karşılığı mecburi hizmet belgelidir (bkz. Yöntem).' }, 6);
   }
-  function fadeIn() { const f = document.createElement('div'); f.style.cssText = 'position:absolute;inset:0;background:#000;z-index:4;pointer-events:none;transition:opacity 1.6s'; $('stage').appendChild(f); requestAnimationFrame(() => requestAnimationFrame(() => { f.style.opacity = 0; setTimeout(() => f.remove(), 1800); })); }
+  function fadeIn() { if (prefs.motion) return; const f = document.createElement('div'); f.className = 'scene-fade'; f.style.cssText = 'position:absolute;inset:0;background:#000;z-index:4;pointer-events:none;transition:opacity 1.6s'; $('stage').appendChild(f); requestAnimationFrame(() => requestAnimationFrame(() => { f.style.opacity = 0; setTimeout(() => f.remove(), 1800); })); }
 
   const film = new window.Film({ sky, stage, ui });
   film.reduced = prefs.motion;
@@ -138,6 +145,7 @@
   $('start-sound').addEventListener('click', () => startFilm(true));
   $('start-silent').addEventListener('click', () => startFilm(false));
   $('go-sky').addEventListener('click', () => enterSky(false));
+  document.querySelector('.skip').addEventListener('click', e => { e.preventDefault(); enterSky(false); $('sky-panel').focus({ preventScroll: true }); });
   $('go-archive').addEventListener('click', () => openArchive());
 
   /* ---------- oynatıcı ---------- */
@@ -174,6 +182,16 @@
     setMode('sky'); $('sky').style.pointerEvents = 'auto'; $('sky').focus({ preventScroll: true });
   }
   $('sp-story').addEventListener('click', () => { setMode('film'); if (film._returnTo != null) film.goto(film._returnTo); film.play(); });
+  function syncSkyViewport() {
+    if (mode !== 'sky') return;
+    const r = $('sky-panel').getBoundingClientRect();
+    sky.viewport = matchMedia('(max-width: 760px)').matches
+      ? { width: sky.W, height: Math.max(120, r.top - 16), left: 0, top: 0 }
+      : { width: Math.max(160, r.left - 12), height: sky.H, left: 0, top: 0 };
+    requestSkyFrame();
+  }
+  new ResizeObserver(syncSkyViewport).observe($('sky-panel'));
+  window.addEventListener('resize', syncSkyViewport);
   function panelOpts() { const o = {}; document.querySelectorAll('[data-opt]').forEach(i => o[i.dataset.opt] = i.checked); o.hideHalleyLabel = false; o.showBelow = true; o.cnames = false; o.compass = true; return o; }
   document.querySelectorAll('[data-opt]').forEach(i => i.addEventListener('change', () => { Object.assign(sky.opt, panelOpts()); requestSkyFrame(); }));
   const vpSel = $('sp-vp'); for (const k in window.Landscape.VIEWPOINTS) { const o = document.createElement('option'); o.value = k; o.textContent = window.Landscape.VIEWPOINTS[k].name; vpSel.appendChild(o); }
@@ -190,8 +208,8 @@
     const pk = sky.find(b.dataset.find === 'Moon' ? 'Ay' : b.dataset.find === 'Halley' ? 'Halley' : null) || sky.picks.find(p => p.id === b.dataset.find); sky.selected = pk || null; showInfo(pk); requestSkyFrame();
   }));
   $('sp-tail').addEventListener('input', e => { sky.opt.tailL = +e.target.value; $('sp-tailout').textContent = fmt(+e.target.value, 2) + ' AU'; requestSkyFrame(); });
-  $('sp-collapse').addEventListener('click', () => { const p = $('sky-panel'), c = p.classList.toggle('collapsed'); $('sp-collapse').setAttribute('aria-expanded', !c); $('sp-collapse').textContent = c ? '+' : '–'; });
-  if (matchMedia('(max-width: 760px)').matches) { $('sky-panel').classList.add('collapsed'); $('sp-collapse').textContent = '+'; $('sp-collapse').setAttribute('aria-expanded', 'false'); }
+  $('sp-collapse').addEventListener('click', () => { const p = $('sky-panel'), c = p.classList.toggle('collapsed'); $('sp-collapse').setAttribute('aria-expanded', !c); $('sp-collapse').setAttribute('aria-label', c ? 'Gözlem ayarlarını aç' : 'Gözlem ayarlarını daralt'); $('sp-collapse').textContent = c ? '+' : '–'; });
+  if (matchMedia('(max-width: 760px)').matches) { $('sky-panel').classList.add('collapsed'); $('sp-collapse').textContent = '+'; $('sp-collapse').setAttribute('aria-expanded', 'false'); $('sp-collapse').setAttribute('aria-label', 'Gözlem ayarlarını aç'); }
   function updatePanel() {
     const p = A.utToLMTParts(sky.ut);
     $('sp-date').textContent = A.fmtDate(sky.ut); $('sp-lmt').textContent = A.fmtLMT(sky.ut); $('sp-ut').textContent = '· ' + A.fmtUT(sky.ut) + ' UT';
@@ -220,10 +238,10 @@
     else if (o.type === 'sun') h = `<h3>Güneş</h3><dl>${pos}</dl>`;
     else if (o.type === 'star') h = `<h3>${o.name}${o.latin && o.latin !== o.name ? ` <span class="dim">· ${o.latin}</span>` : ''}</h3><dl>${pos}<dt>Kadir</dt><dd>${fmt(o.mag, 2)}</dd></dl><p>Hipparcos kataloğu; 1910 ekinoksuna taşındı (presesyon, nütasyon, yıllık sapınç).</p>`;
     else if (o.type === 'place') h = `<h3>${o.name} <span class="tag repr">yön hesaplı · görüntü fotoğraf</span></h3><dl><dt>Yön</dt><dd>${fmt(o.az)}°</dd><dt>Uzaklık</dt><dd>${fmt(o.dist / 1000, 2)} km</dd></dl>${o.note ? `<p>${o.note}</p>` : ''}<p>Yön ve uzaklık gerçek koordinatlardan hesaplanır. Manzara Berggren’in 1880’lerde Galata Kulesi’nden çektiği panoramadır; levhalar bu yapılara göre yerleştirildi (yaklaşık ±0,5°).</p>`;
-    box.innerHTML = h;
+    box.innerHTML = '<button type="button" class="icon info-close" data-clear-selection aria-label="Cisim bilgisini kapat">×</button>' + h;
   }
   showInfo(null);
-  $('sp-info').addEventListener('click', e => { const b = e.target.closest('[data-doc]'); if (b) openDoc(b.dataset.doc); });
+  $('sp-info').addEventListener('click', e => { if (e.target.closest('[data-clear-selection]')) { sky.selected = null; showInfo(null); requestSkyFrame(); return; } const b = e.target.closest('[data-doc]'); if (b) openDoc(b.dataset.doc); });
 
   /* ---------- belgeler ---------- */
   const ARCH = window.ARCHIVE || [];
@@ -237,9 +255,11 @@
     }
     $('archive-dialog').showModal();
   }
-  let resumeAfterDoc = false;
+  let resumeAfterDoc = false, returnToArchive = false;
   function openDoc(id, fromFilm) {
     const a = ARCH.find(x => x.id === id); if (!a) return;
+    returnToArchive = $('archive-dialog').open; $('doc-back').hidden = !returnToArchive;
+    $('doc-dialog').querySelector('.doc-grid').classList.toggle('no-image', !a.img);
     if (fromFilm && mode === 'film' && film.playing) { film.pause(); resumeAfterDoc = true; }
     $('doc-kicker').textContent = `${a.category} · Kanıt düzeyi ${a.level}`;
     $('doc-title').textContent = a.title; $('doc-issue').textContent = `${a.paper} · ${a.date} · ${a.issue}`;
@@ -254,10 +274,11 @@
     $('doc-links').innerHTML = `${a.url ? `<a href="${a.url}" target="_blank" rel="noopener">Özgün kaynağı aç ↗</a>` : (a.where || '')}${a.continuation ? ` · <a href="${a.continuation}" target="_blank" rel="noopener">devam sayfası ↗</a>` : ''}${a.full ? ` · <a href="${a.full}" target="_blank" rel="noopener">tam sayfa görüntüsü</a>` : ''}`;
     $('doc-zoom').classList.remove('zoomed');
     if ($('archive-dialog').open) $('archive-dialog').close();
-    $('doc-dialog').showModal();
+    $('doc-dialog').showModal(); $('doc-dialog').scrollTop = 0;
   }
   $('doc-zoom').addEventListener('click', () => $('doc-zoom').classList.toggle('zoomed'));
-  $('doc-dialog').addEventListener('close', () => { if (resumeAfterDoc) { resumeAfterDoc = false; film.play(); } });
+  $('doc-back').addEventListener('click', () => $('doc-dialog').close());
+  $('doc-dialog').addEventListener('close', () => { if (returnToArchive) { returnToArchive = false; openArchive(); } if (resumeAfterDoc) { resumeAfterDoc = false; film.play(); } });
   window.openDoc = openDoc;
 
   /* ---------- Güneş geçişi diyaloğu ---------- */
@@ -267,10 +288,10 @@
     const ut = F.drawTransit(g, 360, 360, 260, at, {}); $('transit-clock').textContent = A.fmtLMT(ut, true) + ' LMT';
   }
   $('sp-transit').addEventListener('click', () => {
-    const ev = $('transit-events'); if (!ev.childElementCount) window.TRANSIT.events.forEach(e => { const b = document.createElement('button'); b.type = 'button'; const n = { ingress: 'Giriş', closest: 'En yakın', egress: 'Çıkış' }[e.kind]; b.textContent = `${n} · ${e.lmt.slice(11, 19)} LMT · ${e.ut.slice(11, 19)} UT · Güneş ${fmt(e.sun_alt_deg)}°`; b.addEventListener('click', () => { $('transit-range').value = Math.round(e.seconds); drawTransitDialog(); }); ev.appendChild(b); });
+    const ev = $('transit-events'); if (!ev.childElementCount) window.TRANSIT.events.forEach(e => { const b = document.createElement('button'); b.type = 'button'; const n = { ingress: 'Giriş', closest: 'En yakın', egress: 'Çıkış' }[e.kind]; b.textContent = `${n} · ${e.lmt.slice(11, 19)} LMT · ${e.ut.slice(11, 19)} UT · Güneş ${fmt(e.sun_alt_deg)}°`; b.addEventListener('click', () => { $('transit-range').value = Math.round(e.seconds); drawTransitDialog(); ev.querySelectorAll('button').forEach(x => x.setAttribute('aria-pressed', x === b)); }); ev.appendChild(b); });
     $('transit-dialog').showModal(); drawTransitDialog();
   });
-  $('transit-range').addEventListener('input', drawTransitDialog);
+  $('transit-range').addEventListener('input', () => { $('transit-events').querySelectorAll('button').forEach(x => x.setAttribute('aria-pressed', 'false')); drawTransitDialog(); });
 
   /* ---------- bildirim ---------- */
   let tt; function toast(m, ms = 4200) { const t = $('toast'); t.textContent = m; t.classList.add('on'); clearTimeout(tt); tt = setTimeout(() => t.classList.remove('on'), ms); }

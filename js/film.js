@@ -282,6 +282,7 @@
       const o = Object.assign({ labels: false, lines: false, landmarks: false, grid: false, hideHalleyLabel: true, showBelow: false, compass: false, tail: true }, (s.sky && s.sky.opts) || {});
       Object.assign(this.sky.opt, o); this.sky.selected = null;
       this.sky.revealLights = null; this.autoAim = null; this.holdView = null;
+      if (s.live && s.sky && s.sky.view) this.sky.setView(s.sky.view[0]);
       this.prefetch();
     }
     loop(now) {
@@ -368,7 +369,7 @@
             this.autoAim.t += 1 / 60; const k = ease(clamp(this.autoAim.t / 3, 0, 1)), h = sky.where('Halley') || { az: 86, alt: 10 };
             v = { az: A.wrap360(this.autoAim.from.az + A.wrap180(h.az - this.autoAim.from.az) * k), alt: mix(this.autoAim.from.alt, h.alt, k), fov: mix(this.autoAim.from.fov, 18, k) };
           }
-          if (v) { if (s.sky.bob && !this.reduced && p >= s.sky.bob[0] && p <= s.sky.bob[1]) v.alt += Math.sin(this.t * 7.5) * 0.35; else if (!this.reduced && !s.glass) { v.az += Math.sin(tsec * 0.31) * 0.06; v.alt += Math.sin(tsec * 0.43) * 0.04; } sky.setView(v); }
+          if (v) { if (sky.W < sky.H && !s.glass && v.fov > 30) v.alt = Math.max(v.alt, v.fov * 0.2); if (s.sky.bob && !this.reduced && p >= s.sky.bob[0] && p <= s.sky.bob[1]) v.alt += Math.sin(this.t * 7.5) * 0.35; else if (!this.reduced && !s.glass) { v.az += Math.sin(tsec * 0.31) * 0.06; v.alt += Math.sin(tsec * 0.43) * 0.04; } sky.setView(v); }
         }
         if (s.sky.reveal) sky.revealLights = clamp((p - s.sky.reveal[0]) / (s.sky.reveal[1] - s.sky.reveal[0]), 0, 1);
         sky.draw();
@@ -382,8 +383,9 @@
     }
     /* kurmaca cam plaka / kontak baskı */
     drawPlate(kind, p, tsec) {
-      const st = this.stage, g = st.g, W = st.c.width, H = st.c.height, k = Math.min(W / 1600, H / 1000);
-      g.save(); g.translate(W / 2, H / 2 - 60 * k); g.scale(k, k);
+      const st = this.stage, g = st.g, W = st.c.width, H = st.c.height, k = Math.min(W / (W < H ? 1100 : 1600), H / (H / st.dpr < 500 ? 1500 : 1200));
+      const centerY = H * (H / st.dpr < 500 ? 0.34 : W < H && H / st.dpr < 720 ? 0.36 : 0.5);
+      g.save(); g.translate(W / 2, centerY - 60 * k); g.scale(k, k);
       if (kind === 'dawn') {
         // karanlık oda: kırmızı güvenlik ışığı; plakanın kontak baskısı, HESAPLANAN gökten üretilir
         g.fillStyle = '#120403'; g.fillRect(-900, -600, 1800, 1200);
@@ -402,7 +404,6 @@
         for (let i = 0; i < 40; i++) { g.fillStyle = `rgba(30,20,12,${0.06 + 0.1 * F.R(i * 3.3)})`; g.beginPath(); g.arc(-420 + F.R(i * 1.7) * 840, -290 + F.R(i * 2.9) * 580, 1 + F.R(i) * 3, 0, 7); g.fill(); }
         const vg = g.createRadialGradient(0, 0, 200, 0, 0, 560); vg.addColorStop(0, 'rgba(0,0,0,0)'); vg.addColorStop(1, 'rgba(40,20,10,.5)'); g.fillStyle = vg; g.fillRect(-420, -290, 840, 580);
         g.restore();
-        g.font = '400 20px "IBM Plex Mono", monospace'; g.fillStyle = 'rgba(230,160,140,.85)'; g.textAlign = 'center'; g.fillText('KURMACA PLAKA · HESAPLANAN GÖKTEN ÜRETİLDİ · 13×18 cm · 30 sn, izlemesiz', 0, 350);
       } else {
         // cam negatif: lamba bir karartı, kımıldayan beden yarı saydam bir iz. Kişi seçilmez.
         g.fillStyle = '#0b0a09'; g.fillRect(-900, -600, 1800, 1200);
@@ -416,9 +417,11 @@
           const gr = g.createRadialGradient(x, y, 0, x, y, r); gr.addColorStop(0, `rgba(48,52,44,${0.05 + 0.05 * F.R(i)})`); gr.addColorStop(1, 'rgba(48,52,44,0)'); g.fillStyle = gr; g.fillRect(x - r, y - r, r * 2, r * 2); }
         for (let i = 0; i < 60; i++) { g.fillStyle = `rgba(60,64,56,${0.05 + 0.12 * F.R(i * 5.1)})`; g.fillRect(-420 + F.R(i * 1.3) * 840, -290 + F.R(i * 2.1) * 580, 1 + F.R(i) * 2, 1 + F.R(i * 7) * 2); }
         g.restore();
-        g.font = '400 18px "IBM Plex Mono", monospace'; g.fillStyle = 'rgba(232,206,150,.7)'; g.textAlign = 'center'; g.fillText('KURMACA CAM NEGATİF · BU FOTOĞRAF HİÇ ÇEKİLMEDİ · KİŞİLER GÖSTERİLMEZ', 0, 352);
       }
       g.restore();
+      const d = st.dpr;
+      g.font = `${11 * d}px "IBM Plex Mono", monospace`; g.textAlign = 'center'; g.fillStyle = 'rgba(232,206,180,.9)';
+      F.wrapText(g, kind === 'dawn' ? 'KURMACA PLAKA · HESAPLANAN GÖKTEN ÜRETİLDİ · 13×18 cm · 30 sn, izlemesiz' : 'KURMACA CAM NEGATİF · BU FOTOĞRAF HİÇ ÇEKİLMEDİ · KİŞİLER GÖSTERİLMEZ', W / 2, centerY + 310 * k, W - 40 * d, 17 * d);
     }
   }
   window.Film = Film; window.FilmWho = WHO;

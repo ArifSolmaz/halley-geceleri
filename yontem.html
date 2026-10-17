@@ -2,17 +2,19 @@
 <html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Yöntem ve kaynaklar — Halley Geceleri</title><link rel="icon" href="favicon.svg"><link rel="stylesheet" href="css/style.css">
 <style>
-body{overflow:auto;background:#080b10} .doc{max-width:880px;margin:0 auto;padding:40px 18px 90px}
-.doc h1{font:300 clamp(2.2rem,1.6rem + 3vw,3.6rem)/1.05 var(--display);color:var(--stone);margin:.2rem 0 1rem}
+body{height:auto;min-height:100%;overflow:auto;background:#080b10} .doc{max-width:880px;margin:0 auto;padding:40px 18px 90px}
+.doc section{scroll-margin-top:84px} .doc h1{font:300 clamp(2.2rem,1.6rem + 3vw,3.6rem)/1.05 var(--display);color:var(--stone);margin:.2rem 0 1rem}
 .doc h2{font:400 1.9rem/1.2 var(--display);color:var(--stone);margin:2.6rem 0 .8rem;border-top:1px solid var(--line);padding-top:1.6rem}
-.doc h3{font:400 .78rem/1.4 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--brass);margin:1.8rem 0 .5rem}
+.doc h1,.doc h2,.doc h3{overflow-wrap:anywhere} .doc h3{font:400 .78rem/1.4 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--brass);margin:1.8rem 0 .5rem}
 .doc p,.doc li{color:var(--text-2);line-height:1.65} .doc strong{color:var(--text);font-weight:500}
-.doc table{border-collapse:collapse;width:100%;font-size:.88rem;margin:1rem 0;display:block;overflow-x:auto}
+.table-scroll{overflow-x:auto;margin:1rem 0;max-width:100%} .table-scroll.wide-table table{min-width:560px} .table-hint{display:none}
+@media(max-width:640px){.table-hint{display:block;font:400 .72rem/1.5 var(--mono);color:var(--muted)}}
+.doc table{border-collapse:collapse;width:100%;font-size:.88rem;margin:0;display:table}
 .doc th,.doc td{border-bottom:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top} .doc th{font:400 .7rem var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
 .doc blockquote{margin:.6rem 0;padding:6px 14px;border-left:2px solid var(--dawn);color:var(--dawn-2);font-family:var(--mono);font-size:.8rem}
 .doc code{font-family:var(--mono);font-size:.85em;color:var(--dawn-2)}
-.topnav{position:sticky;top:0;z-index:3;background:rgba(8,11,16,.92);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);display:flex;gap:16px;flex-wrap:wrap;padding:10px 18px;font:400 .72rem var(--mono);letter-spacing:.08em;text-transform:uppercase}
-.topnav a{color:var(--text-2);text-decoration:none} .topnav a:hover{color:var(--lamp-2)} .topnav .home{color:var(--lamp-2)}
+.topnav{position:sticky;top:0;z-index:3;background:rgba(8,11,16,.92);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);display:flex;gap:8px 16px;flex-wrap:nowrap;overflow-x:auto;white-space:nowrap;scrollbar-width:thin;padding:6px 18px;font:400 .72rem var(--mono);letter-spacing:.08em;text-transform:uppercase}
+.topnav a{display:inline-flex;align-items:center;min-height:44px;flex:0 0 auto;color:var(--text-2);text-decoration:none} .topnav a:hover{color:var(--lamp-2)} .topnav .home{color:var(--lamp-2)}
 </style></head><body>
 <nav class="topnav" aria-label="Bölümler"><a class="home" href="index.html">← Deneyime dön</a><a href="#01-hikaye">Hikâye</a><a href="#03-mekan-kaynaklari">Mekân ve kaynaklar</a><a href="#05-bilim">Bilim</a><a href="#04-kamera-ses-plani">Kamera ve ses</a><a href="#02-senaryo">Senaryo</a><a href="#06-son-degerlendirme">Son değerlendirme</a><a href="index.html#gok">Gökyüzü</a><a href="index.html#belgeler">Gazete masası</a></nav>
 <main class="doc"><p class="kicker">Halley Geceleri — İstanbul, 1910</p><h1>Yöntem ve kaynaklar</h1>
@@ -43,7 +45,7 @@ body{overflow:auto;background:#080b10} .doc{max-width:880px;margin:0 auto;paddin
 <p>Tarihi belirsiz fotoğraflar kesin kanıt sayılmadı. Kaynaklar 2026 Ekim’inde erişildi.</p>
 <h2>Seçilen mekânlar ve aralarındaki mesafe</h2>
 <p>Bu sürümde mekânlar <strong>çizilmez</strong>. Her mekân ya gerçek bir fotoğrafla, ya özgün bir belge taramasıyla, ya da hesaplanan gökyüzü ile bir panorama fotoğrafının birleşimiyle gösterilir. Kurmaca kişiler görüntüde yer almaz; yalnız sesleri ve altyazıları vardır.</p>
-<table>
+<div class="table-scroll wide-table" tabindex="0" role="region" aria-label="Kaydırılabilir kaynak tablosu"><table>
 <thead>
 <tr>
 <th>Mekân</th>
@@ -90,7 +92,7 @@ body{overflow:auto;background:#080b10} .doc{max-width:880px;margin:0 auto;paddin
 <td>Köprüdeki kişiler hikâyenin kişileri değildir; Yusuf yalnız sesiyle vardır.</td>
 </tr>
 </tbody>
-</table>
+</table></div><p class="table-hint">↔ Tabloyu yatay kaydırabilirsiniz.</p>
 <p>Yürüme süreleri (yaklaşık): Babıali → Galata Köprüsü ~1,2 km, ~15 dk; köprü ~480 m; Karaköy → Yüksekkaldırım → Galata ~500 m, ~10 dk yokuş. Yusuf’un sabah turu bu ölçekte kurgulandı <strong>[O]</strong>.</p>
 <h2>Bakış yönleri ve panoramanın yerleştirilmesi</h2>
 <p>Manzara, <strong>Guillaume Berggren’in 1880’lerde Galata Kulesi’nden çektiği on levhalık panoramadır</strong> (albümin baskı; kamu malı, <a href="https://commons.wikimedia.org/wiki/File:Guillaume_Berggren_-_Panorama_of_Constantinople_(1880s).jpg" target="_blank" rel="noopener">Wikimedia Commons</a>). Fotoğraf 1910’dan yaklaşık 25–30 yıl öncedir. Haydarpaşa Garı (1909) ve 1880’lerden sonraki yapılar fotoğrafta yoktur; bu farklar bilinçli olarak düzeltilmedi <strong>[B]</strong>.</p>
@@ -103,7 +105,7 @@ body{overflow:auto;background:#080b10} .doc{max-width:880px;margin:0 auto;paddin
 <li>Gökyüzü fotoğraftan maskeyle çıkarıldı; yerine hesaplanan gök konur. Fotoğraf gündüz çekilmiştir: gece ve şafak görünümü, Güneş’in hesaplanan yüksekliğine bağlı bir karartma ve renk düzenlemesidir <strong>[T]</strong>. Pencere ve fener ışıkları temsilîdir; yerleri fotoğraftaki yapı dokusundan rastgele seçilir <strong>[T]</strong>.</li>
 </ol>
 <p>Galata Kulesi’nden hesaplanan yönler (tepe noktası) ve levha kalibrasyonu (<code>tools/build_docs.js</code> üretir):</p>
-<table>
+<div class="table-scroll wide-table" tabindex="0" role="region" aria-label="Kaydırılabilir kaynak tablosu"><table>
 <thead>
 <tr>
 <th>Yapı</th>
@@ -204,8 +206,8 @@ body{overflow:auto;background:#080b10} .doc{max-width:880px;margin:0 auto;paddin
 <td>0.69 km</td>
 </tr>
 </tbody>
-</table>
-<table>
+</table></div><p class="table-hint">↔ Tabloyu yatay kaydırabilirsiniz.</p>
+<div class="table-scroll wide-table" tabindex="0" role="region" aria-label="Kaydırılabilir kaynak tablosu"><table>
 <thead>
 <tr>
 <th>Levha</th>
@@ -276,7 +278,7 @@ body{overflow:auto;background:#080b10} .doc{max-width:880px;margin:0 auto;paddin
 <td>170</td>
 </tr>
 </tbody>
-</table>
+</table></div><p class="table-hint">↔ Tabloyu yatay kaydırabilirsiniz.</p>
 <p>Sonuçlar:</p>
 <ul>
 <li>10 Mayıs 03:30 LMT’de Halley ~85° azimutta, <strong>Üsküdar’ın ve Çamlıca sırtının üstündedir</strong>. Zühre (Venüs) aynı saatte ~89–94° azimutta, Çamlıca’nın üstünden yükselir.</li>
@@ -316,7 +318,7 @@ body{overflow:auto;background:#080b10} .doc{max-width:880px;margin:0 auto;paddin
 </ul>
 <h2>Görsel kaynak dosyası ve kullanım hakları</h2>
 <p>Etiketler ekranda da gösterilir: <strong>arşiv fotoğrafı</strong>, <strong>belge</strong> (tarama), <strong>fotoğraf + hesap</strong> (panorama ve hesaplanan gök), <strong>kurmaca plaka</strong> (hesaplanan gökten üretilmiş benzetim).</p>
-<table>
+<div class="table-scroll wide-table" tabindex="0" role="region" aria-label="Kaydırılabilir kaynak tablosu"><table>
 <thead>
 <tr>
 <th>Görsel</th>
@@ -412,11 +414,11 @@ body{overflow:auto;background:#080b10} .doc{max-width:880px;margin:0 auto;paddin
 <td>Hesaplanan gökten üretilir; arşiv fotoğrafı değildir</td>
 </tr>
 </tbody>
-</table>
+</table></div><p class="table-hint">↔ Tabloyu yatay kaydırabilirsiniz.</p>
 <p>Fotoğraflardaki gerçek kişiler (kahvehane, köprü, sokak) hiçbir zaman kurmaca karakter olarak sunulmaz. Yerkes’in Ocak 1910 tarihli 2 ayaklık reflektör plakası Mayıs gözlemi gibi gösterilmez.</p>
 <p>İncelenip kullanılmayanlar: Sébah &amp; Joaillier’in Galata Kulesi’nden panoraması (LoC, 1890 civarı; çözünürlüğü düşük olduğu için yedek); Kahn’ın limonata satıcısı çocuk fotoğrafı (A2185; gerçek bir çocuk Yusuf sanılmasın diye kullanılmadı).</p></section><section id="05-bilim"><h1>Bilimsel yöntem ve sınırlar</h1>
 <h2>Ne hesaplanıyor, ne temsil ediliyor?</h2>
-<table>
+<div class="table-scroll wide-table" tabindex="0" role="region" aria-label="Kaydırılabilir kaynak tablosu"><table>
 <thead>
 <tr>
 <th>Öğe</th>
@@ -491,7 +493,7 @@ body{overflow:auto;background:#080b10} .doc{max-width:880px;margin:0 auto;paddin
 <td>Bütün geceler açık hava ile sahnelendi. Hesaplanan görünürlük tarihsel hava raporu yerine konmaz. Belgelenen tek hava olayı: 18 Mayıs sabahı şafaktan önce İstanbul’da çıkan fırtına ve gün boyu süren yağmur (Yeni Gazete, 19 Mayıs 1910; aktaran Fettahoğlu 2025); yalnız sözle anılır.</td>
 </tr>
 </tbody>
-</table>
+</table></div><p class="table-hint">↔ Tabloyu yatay kaydırabilirsiniz.</p>
 <h2>Kuyruk modeli</h2>
 <p>Kuyruk, çekirdekten Güneş’in tersi yönünde uzanan, fiziksel uzunluğu <em>L</em> olan düz bir çizgi kabul edilir. Varsayılan <em>L</em> = 0,30 AU’dur; gözlem defterinden 0,05–0,60 AU arasında değiştirilebilir. Çekirdekten <em>s</em> uzaklığındaki bir noktanın başa göre görünür açısı:</p>
 <p>θ(s) = atan2( s · sin β , Δ + s · cos β )</p>
@@ -511,7 +513,7 @@ body{overflow:auto;background:#080b10} .doc{max-width:880px;margin:0 auto;paddin
 <li><strong>Dünya’ya en yakın geçiş:</strong> 20 Mayıs 1910, 12:51 UT; 0,151357 AU = 22,64 milyon km. Kullanılan çözümde <strong>ışık-zamanı düzeltilmiş yer merkezli gözlemci uzaklığının</strong> en küçük değeridir (bağımsız denetim: 12:50:50,09 UT, 0,1513571505 AU). Eşzamanlı geometrik en yakın yaklaşım ayrı bir tanımdır ve burada hesaplanmadı.</li>
 <li><strong>İstanbul’dan Güneş diski geçişi:</strong> 19 Mayıs 1910.</li>
 </ul>
-<table>
+<div class="table-scroll wide-table" tabindex="0" role="region" aria-label="Kaydırılabilir kaynak tablosu"><table>
 <thead>
 <tr>
 <th>Olay</th>
@@ -540,7 +542,7 @@ body{overflow:auto;background:#080b10} .doc{max-width:880px;margin:0 auto;paddin
 <td>19,6°</td>
 </tr>
 </tbody>
-</table>
+</table></div><p class="table-hint">↔ Tabloyu yatay kaydırabilirsiniz.</p>
 <p>Geçiş ayrı bir bilimsel çizimde gösterilir; konum işareti <strong>büyütülmüştür</strong>. İstanbul’dan görülmüş bir çekirdek silueti ya da gözlem kaydı varmış izlenimi verilmez.</p>
 <h2>Doğrulama</h2>
 <p>Bu sürüm için <code>tests/</code> altında yeniden çalıştırılabilen denetimler bulunur (<code>node --test tests/ephemeris.test.cjs</code>, 8 test).</p>
@@ -599,7 +601,7 @@ body{overflow:auto;background:#080b10} .doc{max-width:880px;margin:0 auto;paddin
 <li>Finalde kamera insanlardan uzaklaşıp göğe açılır.</li>
 </ul>
 <h2>Plan sırası ve kesmeler</h2>
-<table>
+<div class="table-scroll wide-table" tabindex="0" role="region" aria-label="Kaydırılabilir kaynak tablosu"><table>
 <thead>
 <tr>
 <th>Bölüm</th>
@@ -640,14 +642,14 @@ body{overflow:auto;background:#080b10} .doc{max-width:880px;margin:0 auto;paddin
 <td>açıklık</td>
 </tr>
 </tbody>
-</table>
+</table></div><p class="table-hint">↔ Tabloyu yatay kaydırabilirsiniz.</p>
 <h2>Işık</h2>
 <p>Belgeler (gazete, kitap) karanlıkta, tek bir gaz yağı lambasının ışık havuzu içinde gösterilir: aynı tarama karartılır, lambanın çevresinde sıcak tonla yeniden açılır. Böylece kâğıdın dokusu yalnız ışık düştüğü yerde görünür.</p>
 <p>Panorama gündüz çekilmiş bir fotoğraftır. Güneş’in hesaplanan yüksekliğine göre orantılı olarak karartılır ve gece mavisine çekilir; ufka yakın kısım hesaplanan gökyüzünün rengini alır (hava perspektifi). Şafakta şehir yavaş yavaş belirir; gece seyrek, sıcak pencere ve fener ışıkları kalır. Bu bir renk düzenlemesidir ve ekranda öyle yazılır.</p>
 <p>Kahn otokromlarında (1913) gece görünümü aynı yöntemle verilir: önce fotoğrafın kendisi, sonra karartma. Haliç’te akşam fotoğrafındaki fenerler fotoğrafın kendisinde yanmaktadır.</p>
 <h2>Ses</h2>
 <p>Bütün sesler Web Audio ile bu deneyim için üretilir; kayıt kullanılmaz.</p>
-<table>
+<div class="table-scroll wide-table" tabindex="0" role="region" aria-label="Kaydırılabilir kaynak tablosu"><table>
 <thead>
 <tr>
 <th>Ses</th>
@@ -712,7 +714,7 @@ body{overflow:auto;background:#080b10} .doc{max-width:880px;margin:0 auto;paddin
 <td>I sonu</td>
 </tr>
 </tbody>
-</table>
+</table></div><p class="table-hint">↔ Tabloyu yatay kaydırabilirsiniz.</p>
 <p><strong>Müzik:</strong> tek bir motif (D–F–E–A), koparma telli bir çalgıya benzeyen Karplus–Strong sentezi ve ney benzeri nefes sesiyle çalınır.</p>
 <ul>
 <li>Başta <strong>merak</strong>: motif yükselir.</li>
@@ -969,7 +971,7 @@ body{overflow:auto;background:#080b10} .doc{max-width:880px;margin:0 auto;paddin
 </ul></section><section id="06-son-degerlendirme"><h1>Son değerlendirme: her plan için altı soru</h1>
 <p><em>Bu tablo <code>js/film.js</code> içindeki “eval” alanlarından üretilmiştir; deneyimdeki her plan için aynı altı soru cevaplanır.</em></p>
 <h2>p1 · Açılış</h2>
-<table>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Kaydırılabilir kaynak tablosu"><table>
 <thead>
 <tr>
 <th>Soru</th>
@@ -1002,9 +1004,9 @@ body{overflow:auto;background:#080b10} .doc{max-width:880px;margin:0 auto;paddin
 <td>Merak: önce ses, sonra görüntü.</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2>p2 · Açılış</h2>
-<table>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Kaydırılabilir kaynak tablosu"><table>
 <thead>
 <tr>
 <th>Soru</th>
@@ -1037,9 +1039,9 @@ body{overflow:auto;background:#080b10} .doc{max-width:880px;margin:0 auto;paddin
 <td>Ayrıntıdan bütüne: okuma isteği.</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2>p3 · Açılış</h2>
-<table>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Kaydırılabilir kaynak tablosu"><table>
 <thead>
 <tr>
 <th>Soru</th>
@@ -1072,9 +1074,9 @@ body{overflow:auto;background:#080b10} .doc{max-width:880px;margin:0 auto;paddin
 <td>Arşivden geceye: belgeyle yeniden kurgunun sınırı görünür kalır.</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2>p4 · Açılış</h2>
-<table>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Kaydırılabilir kaynak tablosu"><table>
 <thead>
 <tr>
 <th>Soru</th>
@@ -1107,9 +1109,9 @@ body{overflow:auto;background:#080b10} .doc{max-width:880px;margin:0 auto;paddin
 <td>Cevapsızlık: soru odada asılı kalır.</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2>p5 · Açılış</h2>
-<table>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Kaydırılabilir kaynak tablosu"><table>
 <thead>
 <tr>
 <th>Soru</th>
@@ -1142,9 +1144,9 @@ body{overflow:auto;background:#080b10} .doc{max-width:880px;margin:0 auto;paddin
 <td>Şehrin parça parça belirmesi; başlık sessizlikten sonra.</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2>p6 · Açılış</h2>
-<table>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Kaydırılabilir kaynak tablosu"><table>
 <thead>
 <tr>
 <th>Soru</th>
@@ -1177,9 +1179,9 @@ body{overflow:auto;background:#080b10} .doc{max-width:880px;margin:0 auto;paddin
 <td>Sessizlikten başlığa.</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2>i1 · I · Beklemek · I · Beklemek</h2>
-<table>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Kaydırılabilir kaynak tablosu"><table>
 <thead>
 <tr>
 <th>Soru</th>
@@ -1212,9 +1214,9 @@ body{overflow:auto;background:#080b10} .doc{max-width:880px;margin:0 auto;paddin
 <td>Merdivenden çıkış: bedenin yükselmesiyle görüşün açılması.</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2>i2 · I · Beklemek</h2>
-<table>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Kaydırılabilir kaynak tablosu"><table>
 <thead>
 <tr>
 <th>Soru</th>
@@ -1247,9 +1249,9 @@ body{overflow:auto;background:#080b10} .doc{max-width:880px;margin:0 auto;paddin
 <td>Sözün yöne dönüşmesi.</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2>i3 · I · Beklemek</h2>
-<table>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Kaydırılabilir kaynak tablosu"><table>
 <thead>
 <tr>
 <th>Soru</th>
@@ -1282,9 +1284,9 @@ body{overflow:auto;background:#080b10} .doc{max-width:880px;margin:0 auto;paddin
 <td>Kamera durur; arama ziyaretçiye bırakılır.</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2>i4 · I · Beklemek</h2>
-<table>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Kaydırılabilir kaynak tablosu"><table>
 <thead>
 <tr>
 <th>Soru</th>
@@ -1317,9 +1319,9 @@ body{overflow:auto;background:#080b10} .doc{max-width:880px;margin:0 auto;paddin
 <td>Yakınlaşma: aranan noktanın bulunması.</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2>i5 · I · Beklemek</h2>
-<table>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Kaydırılabilir kaynak tablosu"><table>
 <thead>
 <tr>
 <th>Soru</th>
@@ -1352,9 +1354,9 @@ body{overflow:auto;background:#080b10} .doc{max-width:880px;margin:0 auto;paddin
 <td>Gökyüzünden bir kararın eşiğine.</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2>i6 · I · Beklemek</h2>
-<table>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Kaydırılabilir kaynak tablosu"><table>
 <thead>
 <tr>
 <th>Soru</th>
@@ -1387,9 +1389,9 @@ body{overflow:auto;background:#080b10} .doc{max-width:880px;margin:0 auto;paddin
 <td>Sayım: zamanın bedende hissedilmesi.</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2>i7 · I · Beklemek</h2>
-<table>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Kaydırılabilir kaynak tablosu"><table>
 <thead>
 <tr>
 <th>Soru</th>
@@ -1422,9 +1424,9 @@ body{overflow:auto;background:#080b10} .doc{max-width:880px;margin:0 auto;paddin
 <td>Zaman hızlanır: bekleyişin sonu.</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2>i8 · I · Beklemek</h2>
-<table>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Kaydırılabilir kaynak tablosu"><table>
 <thead>
 <tr>
 <th>Soru</th>
@@ -1457,9 +1459,9 @@ body{overflow:auto;background:#080b10} .doc{max-width:880px;margin:0 auto;paddin
 <td>Sonuç: istenen görüntü ile çekilebilen görüntü.</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2>ii0 · II · Söylenti · II · Söylentinin dolaşması</h2>
-<table>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Kaydırılabilir kaynak tablosu"><table>
 <thead>
 <tr>
 <th>Soru</th>
@@ -1492,9 +1494,9 @@ body{overflow:auto;background:#080b10} .doc{max-width:880px;margin:0 auto;paddin
 <td>Kesişen anlatıların eşiği.</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2>m1 · II · Söylenti · Babıali</h2>
-<table>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Kaydırılabilir kaynak tablosu"><table>
 <thead>
 <tr>
 <th>Soru</th>
@@ -1527,9 +1529,9 @@ body{overflow:auto;background:#080b10} .doc{max-width:880px;margin:0 auto;paddin
 <td>Haber ile gök arasındaki zaman farkı: çocuğun sorusu tutarsızlığı açar.</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2>m2 · II · Söylenti</h2>
-<table>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Kaydırılabilir kaynak tablosu"><table>
 <thead>
 <tr>
 <th>Soru</th>
@@ -1562,9 +1564,9 @@ body{overflow:auto;background:#080b10} .doc{max-width:880px;margin:0 auto;paddin
 <td>Yakın plan: emeğin dokusu.</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2>k1 · II · Söylenti · Galata</h2>
-<table>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Kaydırılabilir kaynak tablosu"><table>
 <thead>
 <tr>
 <th>Soru</th>
@@ -1597,9 +1599,9 @@ body{overflow:auto;background:#080b10} .doc{max-width:880px;margin:0 auto;paddin
 <td>Korkudan alaya, alaydan soruya.</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2>k2 · II · Söylenti</h2>
-<table>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Kaydırılabilir kaynak tablosu"><table>
 <thead>
 <tr>
 <th>Soru</th>
@@ -1632,9 +1634,9 @@ body{overflow:auto;background:#080b10} .doc{max-width:880px;margin:0 auto;paddin
 <td>Kahkaha: korkunun dağılması.</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2>h1 · II · Söylenti · Galata</h2>
-<table>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Kaydırılabilir kaynak tablosu"><table>
 <thead>
 <tr>
 <th>Soru</th>
@@ -1667,9 +1669,9 @@ body{overflow:auto;background:#080b10} .doc{max-width:880px;margin:0 auto;paddin
 <td>Ev içi bekleyiş; soru bilgiye dönüşür.</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2>h2 · II · Söylenti</h2>
-<table>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Kaydırılabilir kaynak tablosu"><table>
 <thead>
 <tr>
 <th>Soru</th>
@@ -1702,9 +1704,9 @@ body{overflow:auto;background:#080b10} .doc{max-width:880px;margin:0 auto;paddin
 <td>Karar ertelenir: geri alınan bir söz gibi.</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2>ii4 · II · Söylenti · 19 Mayıs 1910</h2>
-<table>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Kaydırılabilir kaynak tablosu"><table>
 <thead>
 <tr>
 <th>Soru</th>
@@ -1737,9 +1739,9 @@ body{overflow:auto;background:#080b10} .doc{max-width:880px;margin:0 auto;paddin
 <td>Beklenen şeyin yokluğu.</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2>ii5 · II · Söylenti · Bilimsel çizim</h2>
-<table>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Kaydırılabilir kaynak tablosu"><table>
 <thead>
 <tr>
 <th>Soru</th>
@@ -1772,9 +1774,9 @@ body{overflow:auto;background:#080b10} .doc{max-width:880px;margin:0 auto;paddin
 <td>Anlatıdan çizime: ölçek değişimi.</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2>ii6 · II · Söylenti · 19 Mayıs 1910</h2>
-<table>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Kaydırılabilir kaynak tablosu"><table>
 <thead>
 <tr>
 <th>Soru</th>
@@ -1807,9 +1809,9 @@ body{overflow:auto;background:#080b10} .doc{max-width:880px;margin:0 auto;paddin
 <td>Gece biter; şehir işine döner.</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2>ii7 · II · Söylenti</h2>
-<table>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Kaydırılabilir kaynak tablosu"><table>
 <thead>
 <tr>
 <th>Soru</th>
@@ -1842,9 +1844,9 @@ body{overflow:auto;background:#080b10} .doc{max-width:880px;margin:0 auto;paddin
 <td>Nefes alma: belgeden edebiyata.</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2>iii1 · III · Bakmak · III · Bakmak</h2>
-<table>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Kaydırılabilir kaynak tablosu"><table>
 <thead>
 <tr>
 <th>Soru</th>
@@ -1877,9 +1879,9 @@ body{overflow:auto;background:#080b10} .doc{max-width:880px;margin:0 auto;paddin
 <td>Aramak yerine bakmak.</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2>iii2 · III · Bakmak</h2>
-<table>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Kaydırılabilir kaynak tablosu"><table>
 <thead>
 <tr>
 <th>Soru</th>
@@ -1912,9 +1914,9 @@ body{overflow:auto;background:#080b10} .doc{max-width:880px;margin:0 auto;paddin
 <td>Kamera durur; zaman ziyaretçinin.</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2>iii3 · III · Bakmak</h2>
-<table>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Kaydırılabilir kaynak tablosu"><table>
 <thead>
 <tr>
 <th>Soru</th>
@@ -1947,9 +1949,9 @@ body{overflow:auto;background:#080b10} .doc{max-width:880px;margin:0 auto;paddin
 <td>Karar anı: söz az, görüntü uzak.</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2>iii4 · III · Bakmak</h2>
-<table>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Kaydırılabilir kaynak tablosu"><table>
 <thead>
 <tr>
 <th>Soru</th>
@@ -1982,9 +1984,9 @@ body{overflow:auto;background:#080b10} .doc{max-width:880px;margin:0 auto;paddin
 <td>Kameranın dönüşü: hikâyenin dönüşü.</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2>iii5 · III · Bakmak</h2>
-<table>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Kaydırılabilir kaynak tablosu"><table>
 <thead>
 <tr>
 <th>Soru</th>
@@ -2017,9 +2019,9 @@ body{overflow:auto;background:#080b10} .doc{max-width:880px;margin:0 auto;paddin
 <td>Zamanın camda bıraktığı iz.</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2>iii6 · Son</h2>
-<table>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Kaydırılabilir kaynak tablosu"><table>
 <thead>
 <tr>
 <th>Soru</th>
@@ -2052,6 +2054,6 @@ body{overflow:auto;background:#080b10} .doc{max-width:880px;margin:0 auto;paddin
 <td>Uzaklaşma; deneyim kapanmaz, gökte kalınır.</td>
 </tr>
 </tbody>
-</table></section>
+</table></div></section>
 <h2>Kaynak dosyalar ve haklar</h2><p>Ayrıntılı künye ve lisanslar: <a href="CREDITS.md">CREDITS.md</a>, ham Horizons yanıtları: <code>research/raw/</code>.</p>
 </main></body></html>

@@ -5,7 +5,7 @@ const { chromium } = require('playwright'), path = require('path');
   const errs = []; let ok = true;
   for (const vp of [{ width: 1440, height: 860 }, { width: 390, height: 844 }, { width: 320, height: 640 }]) {
     const p = await b.newPage({ viewport: vp }); p.on('pageerror', e => errs.push(vp.width + ': ' + e.message));
-    await p.goto('file://' + path.join(__dirname, '..', 'index.html')); await p.waitForTimeout(600);
+    await p.goto(process.env.SITE_URL || 'file://' + path.join(__dirname, '..', 'index.html')); await p.waitForTimeout(600);
     await p.click('#start-silent'); await p.waitForTimeout(300);
     const res = await p.evaluate(async () => {
       const F = __halley.film; F.pause(); let guard = 0;

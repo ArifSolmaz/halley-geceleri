@@ -90,8 +90,9 @@
       const R = [Math.cos(a), -Math.sin(a), 0];
       const U = [R[1] * F[2] - R[2] * F[1], R[2] * F[0] - R[0] * F[2], R[0] * F[1] - R[1] * F[0]];
       this.F = F; this.R = R; this.U = U;
-      this.cx = this.W / 2; this.cy = this.H / 2;
-      this.s = (Math.max(this.W, this.H) / 2) / (2 * Math.tan(this.fov * RAD / 4));
+      const viewport = this.viewport || { width: this.W, height: this.H, left: 0, top: 0 };
+      this.cx = viewport.left + viewport.width / 2; this.cy = viewport.top + viewport.height / 2;
+      this.s = (Math.max(viewport.width, viewport.height) / 2) / (2 * Math.tan(this.fov * RAD / 4));
     }
     /* yatay birim vektör -> ekran */
     projH(h) {
@@ -251,7 +252,7 @@
         }
       }
       g.stroke();
-      if (this.opt.cnames || this.fov < 100) {
+      if (this.opt.cnames || (this.opt.labels && this.fov < 100)) {
         g.font = '500 10px "IBM Plex Mono", monospace'; g.fillStyle = `rgba(150,175,195,${a * 1.2})`; g.textAlign = 'center';
         for (const n of S.cnames) {
           if (n.rank > (this.fov > 90 ? 1 : 2)) continue;
@@ -532,25 +533,44 @@
     }
     drawLabels() {
       if (!this.opt.labels && !this.opt.showBelow) return;
-      const g = this.g; g.textAlign = 'left';
-      for (const p of this.picks) {
+      const g = this.g, boxes = [], v = this.viewport || { left: 0, top: 0, width: this.W, height: this.H };
+      const bounds = { left: v.left + 12, right: v.left + v.width - 12,
+        top: this.viewport && this.W <= 760 ? 76 : 16, bottom: v.top + v.height - (this.viewport && this.W > 760 ? 64 : 12) };
+      const text = (value, x, y, align = 'left') => {
+        const w = g.measureText(value).width; if (w > bounds.right - bounds.left) return null;
+        let left = align === 'center' ? x - w / 2 : x;
+        left = clamp(left, bounds.left, bounds.right - w);
+        for (const shift of [0, -18, 18, -36, 36]) {
+          const baseline = clamp(y + shift, bounds.top + 14, bounds.bottom);
+          const box = { x: left - 4, y: baseline - 15, w: w + 8, h: 20 };
+          if (boxes.some(b => box.x < b.x + b.w && box.x + box.w > b.x && box.y < b.y + b.h && box.y + box.h > b.y)) continue;
+          boxes.push(box); g.textAlign = 'left'; g.fillText(value, left, baseline); return { x: left, y: baseline };
+        }
+        return null;
+      };
+      const priority = p => p.type === 'halley' ? 0 : p.type === 'planet' ? 1 : p.type === 'place' ? 3 : 2;
+      for (const p of this.picks.slice().sort((a, b) => priority(a) - priority(b))) {
         if (!this.opt.labels && p.type !== 'halley') continue;
         if (p.x < 0 || p.y < 0 || p.x > this.W || p.y > this.H) continue;
-        if (p.type === 'star' && (this.fov > 120 || p.mag > (this.fov > 60 ? 1.4 : 2.3))) continue;
-        if (p.type === 'star' && p.alt < 1) continue;
-        if (p.type === 'planet' && !p.label) continue;
-        if (p.type === 'place' && !p.label) continue;
-        if (p.type === 'halley' && p.below && this.opt.showBelow) { const q = this.projAA(p.az, -0.6); if (q) { g.font = '500 11px "IBM Plex Mono", monospace'; g.fillStyle = 'rgba(234,214,170,0.85)'; g.textAlign = 'center'; g.fillText('↓ HALLEY · UFKUN ' + Math.abs(p.alt).toFixed(0) + '° ALTINDA (HESAP)', q.x, q.y + 30); g.textAlign = 'left'; } continue; }
+        if (this.viewport && (p.x < v.left || p.x > v.left + v.width || p.y < v.top || p.y > v.top + v.height)) continue;
+        if (p.type === 'star' && (this.fov > 120 || p.mag > (this.fov > 60 ? 1.4 : 2.3) || p.alt < 1)) continue;
+        if ((p.type === 'planet' || p.type === 'place') && !p.label) continue;
+        if (p.type === 'halley' && p.below && this.opt.showBelow) {
+          const q = this.projAA(p.az, -0.6); if (q) { g.font = '400 11px "IBM Plex Mono", monospace'; g.fillStyle = 'rgba(234,214,170,.9)'; text('↓ HALLEY · UFKUN ' + Math.abs(p.alt).toFixed(0) + '° ALTINDA (HESAP)', q.x, q.y + 30, 'center'); } continue;
+        }
         if (p.type === 'halley' && (p.below || this.opt.hideHalleyLabel)) continue;
         const sel = this.selected && this.selected.name === p.name;
-        if (p.type === 'halley') { g.font = '500 11px "IBM Plex Mono", monospace'; g.fillStyle = 'rgba(234,214,170,0.9)'; g.strokeStyle = 'rgba(234,214,170,0.5)'; g.lineWidth = 0.8;
-          g.beginPath(); g.moveTo(p.x + 9, p.y + 9); g.lineTo(p.x + 30, p.y + 30); g.lineTo(p.x + 70, p.y + 30); g.stroke(); g.fillText('1P/HALLEY', p.x + 34, p.y + 26); continue; }
-        if (p.type === 'place') { g.font = 'italic 12px "EB Garamond", serif'; g.fillStyle = 'rgba(214,200,170,0.62)'; g.textAlign = 'center'; g.fillText(p.name, p.x, p.y - 4); g.textAlign = 'left'; continue; }
-        g.font = (p.type === 'planet' ? 'italic 14px "EB Garamond", serif' : 'italic 12px "EB Garamond", serif');
-        g.fillStyle = sel ? 'rgba(255,230,180,0.95)' : (p.type === 'planet' ? 'rgba(236,220,186,0.78)' : 'rgba(190,200,215,0.55)');
-        g.fillText(p.type === 'planet' ? `${p.name} · ${p.modern}` : p.name, p.x + 8, p.y - 6);
+        if (p.type === 'halley') {
+          g.font = '400 11px "IBM Plex Mono", monospace'; g.fillStyle = 'rgba(234,214,170,.95)';
+          const q = text('1P/HALLEY', p.x + 34, p.y + 26);
+          if (q) { g.strokeStyle = 'rgba(234,214,170,.5)'; g.lineWidth = .8; g.beginPath(); g.moveTo(p.x + 9, p.y + 9); g.lineTo(q.x - 6, q.y + 4); g.lineTo(q.x + 36, q.y + 4); g.stroke(); } continue;
+        }
+        if (p.type === 'place') { g.font = 'italic 13px "EB Garamond", serif'; g.fillStyle = 'rgba(214,200,170,.8)'; text(p.name, p.x, p.y - 4, 'center'); continue; }
+        g.font = p.type === 'planet' ? 'italic 15px "EB Garamond", serif' : 'italic 13px "EB Garamond", serif';
+        g.fillStyle = sel ? 'rgba(255,230,180,.95)' : p.type === 'planet' ? 'rgba(236,220,186,.9)' : 'rgba(190,200,215,.75)';
+        text(p.type === 'planet' ? `${p.name} · ${p.modern}` : p.name, p.x + 8, p.y - 6);
       }
-      if (this.selected) { const s = this.picks.find(p => p.name === this.selected.name); if (s) { g.strokeStyle = 'rgba(234,204,140,0.85)'; g.lineWidth = 1; g.beginPath(); g.arc(s.x, s.y, 13, 0, Math.PI * 2); g.stroke(); } }
+      if (this.selected) { const s = this.picks.find(p => p.name === this.selected.name); if (s) { g.strokeStyle = 'rgba(234,204,140,.85)'; g.lineWidth = 1; g.beginPath(); g.arc(s.x, s.y, 13, 0, Math.PI * 2); g.stroke(); } }
     }
     drawOptics() {
       const g = this.g, r = Math.min(this.W, this.H) * 0.46;

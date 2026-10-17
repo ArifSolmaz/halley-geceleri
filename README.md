@@ -63,6 +63,7 @@ Sabitlenmiş sürümler (astronomy-engine 2.1.19, d3-celestial 0.7.35) ve üreti
 node --test tests/ephemeris.test.cjs        # Horizons karşılaştırması, kuyruk yönü, aralık uçları, geçiş (8 test)
 npm i --no-save playwright && npx playwright install chromium
 node tests/browser.cjs                        # uçtan uca: 1440 / 390 / 320 px
+node tests/layout.cjs                         # 31 plan, 4 ekran boyutu, çizim yazıları ve gözlem paneli
 ```
 
 Belgeleri yeniden üretmek için:

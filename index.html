@@ -22,12 +22,14 @@
   <div id="vignette" aria-hidden="true"></div>
   <div class="bar top" aria-hidden="true"></div><div class="bar bottom" aria-hidden="true"></div>
   <div id="hotspots"></div>
-  <div id="slate" aria-live="polite"></div>
+  <div id="scene-meta">
+    <div id="slate" aria-live="polite"></div>
+    <div id="photo-cap"></div>
+  </div>
   <div id="title-card" aria-hidden="true">
     <h1><span>Halley Geceleri</span><small>İstanbul, 1910</small></h1>
   </div>
   <div id="subs" aria-live="polite" aria-atomic="true"></div>
-  <div id="photo-cap"></div>
   <div id="final-line" aria-live="polite"></div>
 </main>
 
@@ -75,7 +77,7 @@
       <p id="sp-date" class="sp-date">10 Mayıs 1910</p>
       <p id="sp-time" class="sp-time"><span id="sp-lmt">03:30</span> <abbr title="Yerel ortalama güneş saati: UT + 1 sa 55 dk 54,816 sn">LMT</abbr> <span class="dim" id="sp-ut">· 01:34 UT</span></p>
     </div>
-    <button id="sp-collapse" class="icon" type="button" aria-expanded="true" aria-controls="sp-body" title="Paneli daralt">–</button>
+    <button id="sp-collapse" class="icon" type="button" aria-expanded="true" aria-controls="sp-body" aria-label="Gözlem ayarlarını daralt" title="Paneli daralt">–</button>
   </header>
   <div id="sp-body">
     <div class="sp-row presets" role="group" aria-label="Üç gece">
@@ -126,13 +128,18 @@
 
 <!-- Belge görüntüleyici -->
 <dialog id="doc-dialog" aria-labelledby="doc-title">
-  <form method="dialog" class="dlg-close"><button class="icon" aria-label="Kapat">×</button></form>
+  <div class="dialog-toolbar">
+    <button id="doc-back" type="button" class="link" hidden>← Gazete masası</button>
+    <form method="dialog" class="dlg-close"><button class="icon" aria-label="Belgeyi kapat">×</button></form>
+  </div>
+  <header class="doc-heading">
+    <p class="kicker" id="doc-kicker"></p>
+    <h2 id="doc-title"></h2>
+    <p id="doc-issue" class="mono"></p>
+  </header>
   <div class="doc-grid">
     <figure class="doc-figure"><div class="doc-zoom" id="doc-zoom"><img id="doc-img" alt=""></div><figcaption id="doc-cap"></figcaption></figure>
     <div class="doc-meta">
-      <p class="kicker" id="doc-kicker"></p>
-      <h2 id="doc-title"></h2>
-      <p id="doc-issue" class="mono"></p>
       <div id="doc-body"></div>
       <p id="doc-links"></p>
     </div>

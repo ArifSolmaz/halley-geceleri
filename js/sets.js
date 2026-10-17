@@ -121,11 +121,22 @@
     if (!ok) { g.setTransform(1, 0, 0, 1, 0, 0); g.font = `${12 * st.dpr}px "IBM Plex Mono", monospace`; g.fillStyle = 'rgba(232,206,150,.6)'; g.textAlign = 'center'; g.fillText('görüntü yükleniyor…', st.c.width / 2, st.c.height / 2); }
   }
 
+  // Canvas captions retain a readable pixel size on portrait screens.
+  function wrapText(g, text, x, y, width, lineHeight) {
+    const lines = []; let line = '';
+    for (const word of text.split(/\s+/)) {
+      const next = line ? line + ' ' + word : word;
+      if (line && g.measureText(next).width > width) { lines.push(line); line = word; } else line = next;
+    }
+    if (line) lines.push(line);
+    lines.forEach((value, i) => g.fillText(value, x, y + i * lineHeight));
+    return lines.length * lineHeight;
+  }
   /* ---------- buzlu cam (kameranın odak camı): görüntü ters ve tepetaklak ---------- */
   function drawGroundGlass(st, source, o = {}) {
     const g = st.g, W = st.c.width, H = st.c.height; st.clear(); st.anchor = null;
     g.fillStyle = '#020302'; g.fillRect(0, 0, W, H);
-    const gw = Math.min(W * 0.84, H * 0.72 * 1.39), gh = gw / 1.39, x0 = (W - gw) / 2, y0 = (H - gh) / 2 - H * 0.05;
+    const gw = Math.min(W * 0.84, H * (H / st.dpr < 500 ? 0.5 : 0.72) * 1.39), gh = gw / 1.39, x0 = (W - gw) / 2, y0 = (H - gh) / 2 - H * 0.05;
     g.save(); g.beginPath(); g.rect(x0, y0, gw, gh); g.clip();
     g.fillStyle = '#060806'; g.fillRect(x0, y0, gw, gh);
     if (source && o.sky !== false) { g.save(); g.translate(x0 + gw / 2, y0 + gh / 2); g.scale(-1, -1); const sw = source.width, sh = source.height, s = Math.max(gw / sw, gh / sh); g.globalAlpha = o.skyA ?? 1; g.drawImage(source, -sw * s / 2, -sh * s / 2, sw * s, sh * s); g.restore(); g.globalAlpha = 1; }
@@ -141,15 +152,19 @@
     g.restore();
     g.strokeStyle = 'rgba(160,140,110,.35)'; g.lineWidth = 2 * st.dpr; g.strokeRect(x0, y0, gw, gh);
     g.font = `${11 * st.dpr}px "IBM Plex Mono", monospace`; g.fillStyle = 'rgba(232,206,150,.7)'; g.textAlign = 'center';
-    g.fillText(o.label || 'ODAK CAMI · GÖRÜNTÜ TERS VE TEPETAKLAK DÜŞER', W / 2, y0 - 12 * st.dpr);
+    wrapText(g, o.label || 'ODAK CAMI · GÖRÜNTÜ TERS VE TEPETAKLAK DÜŞER', W / 2, y0 - 44 * st.dpr, W - 40 * st.dpr, 17 * st.dpr);
   }
 
   /* ---------- Güneş geçişi — bilimsel çizim ---------- */
   const SETS = {};
   SETS.transit = {
     draw(st, t, p) {
-      const g = st.g; g.fillStyle = '#05080b'; g.fillRect(0, 0, VW, VH);
-      drawTransit(g, 960, 540, 420, p.at ?? 0.5, { film: true });
+      const g = st.g, d = st.dpr, W = st.c.width / d, H = st.c.height / d;
+      g.setTransform(d, 0, 0, d, 0, 0); g.fillStyle = '#05080b'; g.fillRect(0, 0, W, H);
+      const portrait = W < H, shortPortrait = portrait && H < 720;
+      const radius = Math.min(W * (shortPortrait ? 0.25 : portrait ? 0.34 : 0.21), H * (shortPortrait ? 0.125 : portrait ? 0.22 : H < 500 ? 0.22 : 0.30));
+      const cx = portrait ? W / 2 : W * 0.39, cy = H * (shortPortrait ? 0.29 : portrait ? 0.42 : 0.50);
+      drawTransit(g, cx, cy, radius, p.at ?? 0.5, { film: true, width: W, height: H, portrait });
     }
   };
   function drawTransit(g, cx, cy, R, at, o = {}) {
@@ -163,15 +178,22 @@
     const idx = Math.min(pts.length - 1, Math.max(0, at * (pts.length - 1))), i0 = Math.floor(idx), f = idx - i0, q0 = pts[i0], q1 = pts[Math.min(pts.length - 1, i0 + 1)];
     const ex = q0.east_arcmin + (q1.east_arcmin - q0.east_arcmin) * f, ny = q0.north_arcmin + (q1.north_arcmin - q0.north_arcmin) * f;
     const x = cx - ex * sc, y = cy - ny * sc;
-    g.fillStyle = '#0a1420'; g.beginPath(); g.arc(x, y, 9, 0, 7); g.fill(); g.strokeStyle = '#0a1420'; g.lineWidth = 1.5; g.beginPath(); g.arc(x, y, 18, 0, 7); g.stroke();
-    g.font = '500 18px "IBM Plex Mono", monospace'; g.fillStyle = 'rgba(232,210,170,.85)'; g.textAlign = 'center';
+    g.fillStyle = '#0a1420'; g.beginPath(); g.arc(x, y, o.film ? Math.max(3, R * 0.014) : 9, 0, 7); g.fill(); g.strokeStyle = '#0a1420'; g.lineWidth = 1.5; g.beginPath(); g.arc(x, y, o.film ? Math.max(7, R * 0.03) : 18, 0, 7); g.stroke();
+    g.font = `400 ${o.film ? 12 : 18}px "IBM Plex Mono", monospace`; g.fillStyle = 'rgba(232,210,170,.85)'; g.textAlign = 'center';
     g.fillText('K', cx, cy - R * 1.3); g.fillText('D', cx - R * 1.3, cy + 6); g.fillText('B', cx + R * 1.3, cy + 6);
     const sec = q0.seconds + (q1.seconds - q0.seconds) * f; const ut = Date.parse(T.epoch_ut + 'Z') + sec * 1000;
-    if (o.film) { g.textAlign = 'left'; g.font = '400 22px "IBM Plex Mono", monospace'; g.fillStyle = '#e8c88a'; g.fillText(window.Astro.fmtLMT(ut) + ' LMT · ' + window.Astro.fmtUT(ut) + ' UT', cx + R + 70, cy - 60);
-      g.font = 'italic 24px "EB Garamond", serif'; g.fillStyle = 'rgba(235,227,209,.8)'; g.fillText('Hesaplanan merkez yolu · işaret büyütülmüştür', cx + R + 70, cy - 20); g.fillText('Güneş diski: 0,263° yarıçap', cx + R + 70, cy + 14); }
+    if (o.film) {
+      const tx = o.portrait ? cx : cx + R + 54, ty = o.portrait ? cy + R * 1.3 + 30 : cy - (o.height < 500 ? 60 : 28);
+      const width = o.portrait ? o.width - 40 : o.width - tx - 28;
+      g.textAlign = o.portrait ? 'center' : 'left'; g.font = '400 13px "IBM Plex Mono", monospace'; g.fillStyle = '#e8c88a';
+      const used = wrapText(g, window.Astro.fmtLMT(ut) + ' LMT · ' + window.Astro.fmtUT(ut) + ' UT', tx, ty, width, 20);
+      g.font = 'italic 17px "EB Garamond", serif'; g.fillStyle = 'rgba(235,227,209,.88)';
+      const more = wrapText(g, 'Hesaplanan merkez yolu · işaret büyütülmüştür', tx, ty + used + 12, width, 22);
+      wrapText(g, 'Güneş diski: 0,263° yarıçap', tx, ty + used + more + 16, width, 22);
+    }
     return ut;
   }
 
   window.Stage = Stage; window.SETS = SETS;
-  window.Figures = { drawPhoto, drawGroundGlass, drawTransit, img, ready, preload, grainPNG, keys, VW, VH, ease, clamp, mix, R };
+  window.Figures = { drawPhoto, drawGroundGlass, drawTransit, img, ready, preload, grainPNG, keys, wrapText, VW, VH, ease, clamp, mix, R };
 })();
