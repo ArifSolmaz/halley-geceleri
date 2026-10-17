@@ -14,16 +14,19 @@
     const svg = $('.city-drawing').cloneNode(true); parent.append(svg); return svg;
   }
   const sceneSkies = new Map();
-  const sceneObserver = new IntersectionObserver(entries => entries.forEach(en => {
-    if (!en.isIntersecting) return;
-    const c = en.target, p = presets[c.dataset.sceneCanvas];
+  function initScene(c) {
+    if (sceneSkies.has(c.dataset.sceneCanvas)) return sceneSkies.get(c.dataset.sceneCanvas);
+    const p = presets[c.dataset.sceneCanvas];
     const sky = new window.Sky(c, { landscape:false, interactive:false, lines:false, labels:true, tail:true, tailL:.3, optics:false, twinkle:false, quality:1, landmarks:false });
     sceneSkies.set(c.dataset.sceneCanvas,sky);
     sky.setViewpoint('teras'); sky.setTime(A.lmtToUT(p.t)); sky.setView(p); sky.draw();
-    sceneObserver.unobserve(c);
+    sceneObserver.unobserve(c); return sky;
+  }
+  const sceneObserver = new IntersectionObserver(entries => entries.forEach(en => {
+    if (en.isIntersecting) initScene(en.target);
   }), {rootMargin:'150px'});
   $$('[data-scene-canvas]').forEach(c => sceneObserver.observe(c));
-  $$('[data-scene-labels]').forEach(b=>b.addEventListener('click',()=>{const sky=sceneSkies.get(b.dataset.sceneLabels);if(!sky)return;sky.opt.labels=!sky.opt.labels;b.setAttribute('aria-pressed',String(sky.opt.labels));b.textContent=sky.opt.labels?'Gökteki adları gizle':'Gökteki adları göster';sky.draw();}));
+  $$('[data-scene-labels]').forEach(b=>b.addEventListener('click',()=>{const sky=initScene($(`[data-scene-canvas="${b.dataset.sceneLabels}"]`));sky.opt.labels=!sky.opt.labels;b.setAttribute('aria-pressed',String(sky.opt.labels));b.textContent=sky.opt.labels?'Gökteki adları gizle':'Gökteki adları göster';sky.draw();}));
   let ticking = false;
   addEventListener('scroll', () => { if (ticking) return; ticking=true; requestAnimationFrame(() => {
     const den = document.documentElement.scrollHeight-innerHeight;
