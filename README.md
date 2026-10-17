@@ -1,56 +1,36 @@
-# Halley Geceleri — İstanbul, 1910
+# Halley Geceleri
 
-1910 İstanbul’unu eldeki gazeteler, fotoğraflar ve hesaplanan gökyüzüyle yeniden canlandıran etkileşimli bir bilim-belgesel-sanat çalışması.
+1910 İstanbul’una ait bir görsel düş. Üç gece; bir gazete, bir mektup, henüz çekilmemiş bir fotoğraf.
 
-**Yayın:** https://arifsolmaz.github.io/halley-geceleri/
+**Deneyim:** https://arifsolmaz.github.io/halley-geceleri/
 
-**Depo:** https://github.com/ArifSolmaz/halley-geceleri
+Ana ürün süreli bir film ve aynı gökte serbest bakıştır. Araştırma bir ders olarak görüntünün üstüne yerleştirilmez. Kaynak ve yöntem isteyenler için bu depo, sahne içindeki küçük “İzler” girişi ve ikincil yöntem sayfası vardır.
 
-## Anlatı
+Film 28 plan, 388,5 saniyedir. Atmosfer sesi ve altyazı kullanır; oyuncu seslendirmesi yoktur. Yusuf, Rıza ve Münevver kurmacadır. Görsel fotoğraflar gerçek arşiv görüntüleridir; gök NASA/JPL Horizons ve yardımcı astronomi verileriyle hesaplanır.
 
-Beş bölümde haberin gelişinden doğu ufkundaki arayışa, fırtına ve mizah yayınlarından görünmeyen Güneş geçişine, oradan batıdaki akşam göğüne ilerler. Ziyaretçi, Yeni Gazete’nin “Önce Zühre’yi bul” tarifini hesaplanan gökte deneyebilir.
+## İzler
 
-Üç tarihli sahnede gök Galata için hesaplanır; çatılar dönem fotoğraflarından esinlenen stilize bir mekân yorumudur. Bunlar ölçülmüş 3B bina modelleri değildir. Eski prototipin dikişleri görünen fotoğraf panoraması yeni ana sayfada kullanılmaz. Arşiv fotoğraflarının gerçek yeri ve tarihi belirtilir. 16 kaynak kaydı anlatının içinden ve kaynak odasından açılır.
+- [Film yaklaşımı](docs/film-tretman.md)
+- [Tam süreli senaryo](docs/film-senaryo.md)
+- [Bilimsel yöntem ve sınırlar](docs/05-bilim.md)
+- [Mekân ve görüntü kaynakları](docs/03-mekan-kaynaklari.md)
+- [Künyeler ve haklar](CREDITS.md)
+- [Veriyi yeniden üretmek](tools/README.md)
 
-Gözlem masasında 20 Nisan–10 Haziran 1910 arasında tarih ve LMT saati, bakış yönü, takımyıldızlar, atmosferik kırılma ve kuyruk modeli seçilebilir. Bu araştırma görünümü referans İstanbul noktasını (41,0082° K, 28,9784° D) kullanır. Şehir çizimi kapatılabilir.
-
-## Yerel çalıştırma ve yayın
-
-Statik dosyalar; çalışma sırasında dış servis veya derleme gerekmez:
+## Yerel çalıştırma
 
 ```sh
 python3 -m http.server 8000
 ```
 
-`http://localhost:8000/`, `index.html#gok`, `index.html#belgeler`; yöntem sayfası `yontem.html`.
+`index.html` ana film; `film.html` aynı filmin çalışma şablonudur. `#gok` serbest bakış; `#belgeler` isteğe bağlı arşiv.
 
-GitHub Pages, `main` dalının kökünü yayımlar. Bütün kaynak yolları göreli; `.nojekyll` dahildir.
-
-## Senaryo ve belgeler
-
-`data/documentary.json` anlatıcı metninin kaynağıdır. `tools/build_documentary.py` bu metinden `index.html` ve `docs/02-senaryo.md` üretir. Görsel sahne şablonları aynı Python dosyasındadır; etkileşim `js/documentary.js`, tasarım `css/documentary.css` içindedir.
+Senaryo kaynağı `js/cinema-cut.js`, sanat yönetimi `css/cinema.css`, düşük profilli arayüz `js/cinema-ui.js` içindedir. Başlangıçtaki film motoru ve hesaplar korunur. Şablonu ve süreli senaryoyu güncellemek için:
 
 ```sh
 node tools/build_docs.js
-python3 tools/build_yontem.py  # Markdown==3.9 gerekir
-```
-
-Eski `js/film.js`, `js/app.js`, panorama araçları ve ilgili araştırmalar çalışma geçmişi olarak korunur; yeni ana sayfanın giriş noktası değildir.
-
-## Verinin yeniden üretimi
-
-Sabitlenmiş sürümler (astronomy-engine 2.1.19, d3-celestial 0.7.35) ve üretici sırası `tools/README.md` içindedir. Bağımsız astronomi denetiminin (17 Ekim 2026) sonuçları ve yapılan düzeltmeler `docs/05-bilim.md` → Doğrulama bölümündedir.
-
-## Kontroller
-
-```sh
+python3 tools/build_yontem.py  # Markdown==3.9
 node --test tests/ephemeris.test.cjs
-node tests/browser.cjs
-node tests/layout.cjs
 ```
 
-Tarayıcı kontrolleri Playwright ister. `SITE_URL` ile hedef URL, `CHROMIUM_PATH` ile yerel Chromium/Chrome yolu belirtilebilir. Fiziksel telefon/Safari denetimi yapılmış sayılmaz.
-
-## Bilimsel sınırlar
-
-Baş konumu Horizons SAO/1910, gezegenler astronomy-engine, yıldızlar Hipparcos verisinden gelir. Kuyruğun uzunluğu ve parlaklığı, göğün parlaklığı ve şehir çizimi model/yorumdur. Tarihler Gregoryen, saatler LMT = UT + 1:55:54,816. Tarihsel bulut ve hava durumu hesaplanmaz. Kaynaklar `CREDITS.md`, ayrıntılı yöntem `docs/05-bilim.md` içindedir.
+Eski bilgi ağırlıklı okuma prototipinin üreticisi `tools/build_documentary.py` araştırma geçmişi olarak tutulur; ana sayfayı üretmez. GitHub Pages `main` dalının kökünü yayımlar; yollar göreli ve `.nojekyll` dahildir.

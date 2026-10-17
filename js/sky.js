@@ -405,7 +405,14 @@
     loadPano() {
       const P = window.PANO; if (!P || this.pano) return;
       this.pano = { tiles: P.panels.map(() => null), full: P.panels.map(() => false) };
-      const load = (k, full) => { const im = new Image(); im.decoding = 'async'; im.onload = () => { this.pano.tiles[k] = im; this.pano.full[k] = full; this.dirty = true; this.bufKey = null; if (!full && this.opt.quality >= 1) load(k, true); this.emit('pano', k); }; im.src = (full ? P.src : P.lite).replace('{k}', P.panels[k].k); };
+      const load = (k, full) => { const im = new Image(); im.decoding = 'async'; im.onload = () => { let tile = im;
+        if (this.opt.seamlessPano) {
+          const p=P.panels[k], sc=im.width/p.w, c=document.createElement('canvas');c.width=im.width;c.height=im.height;const g=c.getContext('2d');g.drawImage(im,0,0);g.globalCompositeOperation='destination-in';
+          const prev=P.panels[k-1], overlap=prev?Math.max(0,prev.az0+prev.w/prev.s-p.az0)*p.s*sc:0;
+          if(overlap>1){const gr=g.createLinearGradient(0,0,overlap,0);gr.addColorStop(0,'transparent');gr.addColorStop(1,'#000');g.fillStyle=gr;g.fillRect(0,0,c.width,c.height);}
+          const fade=Math.min(c.height*.25,90*sc), gr=g.createLinearGradient(0,c.height-fade,0,c.height);gr.addColorStop(0,'#000');gr.addColorStop(1,'transparent');g.fillStyle=gr;g.fillRect(0,0,c.width,c.height);tile=c;
+        }
+        this.pano.tiles[k] = tile; this.pano.full[k] = full; this.dirty = true; this.bufKey = null; if (!full && this.opt.quality >= 1) load(k, true); this.emit('pano', k); }; im.src = (full ? P.src : P.lite).replace('{k}', P.panels[k].k); };
       // önce bakılan yöndeki levhalar
       const order = P.panels.map((p, k) => [k, Math.abs(A.wrap180(p.az0 + p.w / p.s / 2 - this.az))]).sort((a, b) => a[1] - b[1]).map(x => x[0]);
       order.forEach(k => load(k, false));

@@ -9,7 +9,7 @@ Site derleme gerektirmez; bu araçlar veri, senaryo ve yöntem sayfalarını yen
 | `data/milkyway.js` | `python3 tools/mw_tex.py` (önce `build_sky.js`) | Python 3, NumPy, Pillow |
 | `data/transit.js` | `python3 tools/build_transit.py` | Python 3, NumPy, SciPy, `research/raw/audit_transit_*.txt` |
 | `assets/pano/*`, `data/pano.js` | `BERGGREN=… python3 tools/pano/build_pano.py` | Python 3, NumPy, SciPy, Pillow; Berggren panoramasının 16000 px genişliğe küçültülmüş JPEG’i |
-| `index.html`, `docs/02-senaryo.md` | `python3 tools/build_documentary.py` veya `node tools/build_docs.js` | Python 3; kaynak: `data/documentary.json` |
+| `index.html`, `docs/02-senaryo.md`, `docs/film-senaryo.md`, `data/cinema.json` | `node tools/build_docs.js` | Node; şablon: `film.html`, kurgu: `js/cinema-cut.js` |
 | `yontem.html` | `python3 tools/build_yontem.py` | Python 3, `markdown` |
 
 ## Sabitlenmiş dış bağımlılıklar
@@ -40,8 +40,8 @@ Yayın adresi: **https://arifsolmaz.github.io/halley-geceleri/**; depo adı `hal
 Sekiz astronomi testi ve 1440 / 390 / 320 px tarayıcı denetimleri geçti. `/halley-geceleri/` alt yolunda ana sayfa ve yöntem sayfası yerel HTTP sunucusunda denetlendi; eksik yerel kaynak veya JavaScript hatası görülmedi. Sabitlenmiş bağımlılıklarla yeniden üretilen `data/sky.js` ve `tests/horizons_azel.json` bayt bayt aynı çıktı. Güneş geçişi yeniden üretiminde olay zaman damgaları aynı kaldı; sayısal zaman alanındaki en büyük fark yaklaşık 2,82 × 10⁻⁸ saniyeydi. NumPy/SciPy ve platform farkları son basamaklarda değişiklik yaratabilir; geçiş çıktısı için bayt eşitliği yerine sayısal tolerans kullanılmalıdır. Bu denetim yereldir. Site GitHub Pages üzerinde yayımlanır; `main` dalındaki değişikliklerin dağıtımı tamamlandıktan sonra canlı sürüm ayrıca denetlenir.
 
 
-## Yeni anlatının denetimi
+## Film ve tipografi denetimi
 
-Yeni giriş noktası `js/documentary.js` ve beş bölümlü senaryodur. `tests/browser.cjs` bu akışı, arşivi, geçiş çizimini ve gözlem masasını; `tests/layout.cjs` masaüstü/telefon yerleşimini denetler. Önceki 31 planlı film için yapılan ölçümler yeni tasarımın estetik doğrulaması olarak kullanılmaz. Ekran görüntüleri ayrıca görsel olarak incelenir.
+Ana ürün süreli film ve serbest bakıştır. `tests/browser.cjs` oynatma, kaynak çekmecesi, sessiz serbest bakış ve Türkçe font kullanımını; `tests/layout.cjs` her planın üç anını farklı ekran boyutlarında kontrol eder. Astronomi denetimi `tests/ephemeris.test.cjs` içindedir.
 
-Fotoğraf panoraması yeni ana sayfada kullanılmaz. `tools/pano/` ve `tools/yonler.md` eski prototipin yeniden üretim kaydıdır.
+`tools/build_documentary.py`, önceki okuma prototipinin araştırma aracı olarak tutulur; `index.html` dosyasını üretmez. Panorama kalibrasyonu eski araçlarla aynı veri tabanına dayanır. Yeni filmde levha bindirmeleri ve alt sınır yumuşatılır; bu görsel işlem geometrik doğruluk iddiasını artırmaz.

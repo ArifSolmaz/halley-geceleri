@@ -41,11 +41,11 @@ page='''<!doctype html>
 <noscript><p class="no-js">Anlatıyı okuyabilirsiniz. Etkileşimli çizimler ve arşiv görüntüleyici için JavaScript gerekir; tüm künyeler <a href="CREDITS.md">buradadır</a>.</p></noscript>
 <script src="data/sky.js"></script><script src="data/milkyway.js"></script><script src="data/archive.js"></script><script src="data/transit.js"></script><script src="js/astro.js"></script><script src="js/landscape.js"></script><script src="js/sky.js"></script><script src="js/documentary.js"></script>
 </body></html>'''
-(R/'index.html').write_text(page)
+(R/'research/reading-prototype.html').write_text(page)
 script='# Belgesel senaryosu — Halley Geceleri\n\nAna soru: **'+D['question']+'**\n\nTarihsel yeniden canlandırma: ziyaretçi belgelerin yön verdiği beş sahne boyunca 1910 İstanbul’una döner. Özgün alıntı, sahne yorumu, fotoğraf ve hesap ayrılır. Okuma ve araştırma ziyaretçinin hızındadır.\n\n'
 for c in D['chapters']:
  script+=f'## {c["number"]} · {c["title"]}\n\n_{c["date"]}_\n\n'+c['deck']+'\n\n'+'\n\n'.join(c['paragraphs'])+'\n\n'
  if c.get('quote'):script+='> '+c['quote']+'\n\n_Yeni Gazete, 9 Mayıs 1910, s. 3; bu çalışmanın çevriyazısı._\n\n'
  script+='Kaynak kimlikleri: '+', '.join('`'+x+'`' for x in c['sources'])+'.\n\n'
-(R/'docs/02-senaryo.md').write_text(script)
+(R/'research/reading-scenario.md').write_text(script)
 print('Built documentary index and five-chapter script.')

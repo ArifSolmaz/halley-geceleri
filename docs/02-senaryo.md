@@ -1,80 +1,198 @@
-# Belgesel senaryosu — Halley Geceleri
+# Halley Geceleri — süreli film senaryosu
 
-Ana soru: **1910 İstanbul’unda göğe baksaydık ne görürdük?**
+Kaynak: `js/cinema-cut.js`. 28 plan; 388.5 saniye. Konuşmalar, belgeden alıntı diye açıkça belirtilmedikçe özgün kurmacadır. Atmosfer sesi ve altyazı; oyuncu seslendirmesi yoktur.
 
-Tarihsel yeniden canlandırma: ziyaretçi belgelerin yön verdiği beş sahne boyunca 1910 İstanbul’una döner. Özgün alıntı, sahne yorumu, fotoğraf ve hesap ayrılır. Okuma ve araştırma ziyaretçinin hızındadır.
+## p1 · Açılış · 0.0–2.5 sn
 
-## 01 · Haber, gökten önce gelir.
+Görüntü: black.
 
-_Şubat — Nisan 1910_
 
-Bir gök olayı, görülmeden önce anlatılmaya başlar.
+## p2 · Açılış · 2.5–12.5 sn
 
-İstanbul, 1910 baharı. Kuyrukluyıldız henüz görüş alanımıza girmeden haberi sokaklara ulaşır. Arkadaş dergisinin sayfasında bir soru durur: “Kıyamet kopacak mı?” Mayıs geldiğinde Halley üzerine bir kitap da satıştadır. Merakın artık bir kapağı, şekilleri ve fiyatı vardır.
+Görüntü: photo · assets/img/yeni9-acilis.jpg.
 
-Bir gazete sayfasını açıp bu bahara giriyoruz. Açıklamalarla korku haberleri, bilim yazılarıyla karikatürler aynı şehrin içinde dolaşıyor. Hepsinin anlattığı gök bile aynı değil: Musavver Şebâb’ın şubat yazısında Ocak kuyrukluyıldızı ile Halley birbirine karışmış. Bugün bunların iki ayrı cisim olduğunu biliyoruz.
 
-Yolculuğumuz bir gözlem tarifiyle başlayacak. Yeni Gazete, yüksek bir yere çıkıp doğuya dönmemizi söylüyor. Tarihi 10 Mayıs’a, saati şafaktan önceye alıyoruz.
+## p3 · Açılış · 12.5–23.5 sn
 
-Kaynak kimlikleri: `shebab`, `arkadas`, `kitap`.
+Görüntü: photo · assets/photo/galata-sokak-1913.jpg.
 
-## 02 · Önce Zühre’yi bul.
 
-_10 Mayıs 1910 · 03:30 LMT_
+## p4 · Açılış · 23.5–34.5 sn
 
-Galata çevresinde bir yüksek bakış. Şehir uyanmadan önce, doğuya dönüyoruz.
+Görüntü: photo · assets/photo/galata-sokak-1913.jpg.
 
-10 Mayıs, 03:30. Doğu ufkunda henüz Güneş yok. Önce parlak Zühre’yi, bugünkü adıyla Venüs’ü arıyoruz. Gazetenin tarifi kısa: Hâle onun solunda.
+- 1–5 sn: Yusuf: Yarın da gazete çıkacak mı?
+- 6–10 sn: Rıza: Çıkarsa bana bir tane ayır.
 
-Hesaplanan gökte Halley’in başı yaklaşık 10° yüksekte. Venüs daha sağda ve aşağıda. Şafak yaklaştıkça aradaki kontrast azalıyor; kuyruk, bir gazete gravüründeki kadar kolay seçilecek bir çizgi değil. Ekrandaki göğe bakarken önce Venüs’ü, sonra solundaki Halley’i bulmayı deneyin.
+## p5 · Açılış · 34.5–46.5 sn
 
-Bu sahnenin göğü tarih ve konumdan hesaplanıyor; şehir çizimi dönem fotoğraflarından esinlenen bir mekân yorumudur. O sabahki bulutları bilmiyoruz. Burada yaptığımız, gazetedeki tarifi yeniden deneyimlemek.
+Görüntü: sky · 1910-05-10T03:10 LMT.
 
-> Hâle’yi kolayca bulmak için evvelâ Zühre’yi aramalı. Hâle, Zühre’nin sol cihetindedir.
 
-_Yeni Gazete, 9 Mayıs 1910, s. 3; bu çalışmanın çevriyazısı._
+## p6 · Açılış · 46.5–52.5 sn
 
-Kaynak kimlikleri: `yeni9`.
+Görüntü: title · 1910-05-10T03:13 LMT.
 
-## 03 · Aynı gök, farklı hikâyeler.
 
-_18 — 19 Mayıs 1910_
+## i1 · I · Beklemek · 52.5–68.5 sn
 
-18 Mayıs sabahının fırtınası. Ertesi günün sayfasında, korkuyla açıklama yan yana.
+Görüntü: sky · 1910-05-10T03:17 LMT.
 
-18 Mayıs’ta şimşek ve gök gürültüsü. Ertesi gün Yeni Gazete, fırtınayı kuyrukluyıldızla ilişkilendirenleri; dükkân kapatmayı, evlere çekilmeyi ve vedalaşmayı anlatıyor. Sayfanın başlığı: “Arz yıldızın kuyruğundan geçdi…” Bu bölümün hareket noktası, gazetenin aktardığı bu şehir sahneleri.
+- 4–7 sn: Nazife Hanım: Neresi doğu, kızım?
+- 8–11 sn: Münevver: Üsküdar’ın üstü, anne.
 
-Şimdi başka bir sayfaya geçiyoruz. Hayâl-i Cedid’de kuyrukluyıldızın bir yüzü var; gökteki misafir siyasal bir taşlamaya dönüşmüş. Kalem’deyse tramvay konuşmaları mizahın diliyle kuruluyor. Korku tek ses değil: onu açıklayan, ona gülen ve onun üzerinden siyaset konuşanlar da var.
+## i2 · I · Beklemek · 68.5–81.5 sn
 
-Bir kitap kapağındaki “Neler olacak?” sorusuna, içerideki yörünge şekilleriyle cevap aranıyor. Velid’in kitabını ve Servet-i Fünûn’u açtığımızda, bu baharın bilim anlatımıyla da karşılaşıyoruz. Şehri yalnız “panik” sözcüğüyle kurmak, elimizdeki malzemenin yarısını dışarıda bırakır.
+Görüntü: sky · 1910-05-10T03:20 LMT.
 
-Kaynak kimlikleri: `yeni19`, `hayal18`, `kalem19`, `velid`, `servet`.
+- 1–6 sn: Yusuf: “Hâle’yi kolayca bulmak için evvelâ Zühre’yi aramalı.” _(belgeden alıntı; çevriyazı)_
+- 7–9.5 sn: Rıza: Zühre nerede peki?
+- 10–12.5 sn: Yusuf: Onu yazmamışlar.
 
-## 04 · Görünmeyeni çizmek.
+## i3 · I · Beklemek · 81.5–96.5 sn
 
-_19 Mayıs 1910 · İstanbul için hesap_
+Görüntü: sky · 1910-05-10T03:23 LMT.
 
-19 Mayıs, 03:00. Göğe baktığımızda, bu kez aradığımız baş ufkun altında.
+- 4–9 sn: Yusuf: “Hâle, Zühre’nin sol cihetindedir.” _(belgeden alıntı; çevriyazı)_
+- 11–13.5 sn: Rıza: İşte. Orada.
 
-19 Mayıs, 03:00. Yine doğuya bakıyoruz, fakat Halley’in başı ufkun yaklaşık 15° altında. Beklenen olay, her yerden görülebilen büyük bir gök gösterisi değil. Birkaç saat sonra Halley’in merkezi, İstanbul’dan bakıldığında Güneş diskinin önünden geçecek: giriş 05:34:49, en yakın merkez geçişi 06:04:24, çıkış 06:33:53 LMT.
+## i4 · I · Beklemek · 96.5–109.5 sn
 
-Aşağıdaki çizimdeki işaret bilerek büyütülmüştür. Birkaç kilometrelik çekirdeğin karanlık siluetini görmüş değiliz; merkezinin hesaplanan yerini gösteriyoruz. Bu çalışma, geçişin İstanbul’dan gözlendiğine ilişkin bir kayıt sunmuyor.
+Görüntü: sky · 1910-05-10T03:30 LMT.
 
-Gazetelerdeki “Dünya’nın kuyruktan geçmesi” ifadesi başka bir geometriye aittir. Kuyruk üç boyutlu, yaygın bir yapıdır. Buradaki Güneş diski geçişi hesabı, Dünya’nın o kuyruğu hangi anda kestiğini hesaplamaz. Aynı tarihin çevresinde anılmaları, bu olayları tek bir olaya dönüştürmez.
+- 1–3.5 sn: Münevver: Bu kadar mı?
+- 4–7 sn: Rıza: Bu kadar. Ama yaklaşıyor.
+- 8–11 sn: Yusuf: Ya buraya kadar gelirse?
 
-Kaynak kimlikleri: `yeni19`, `servet`.
+## i5 · I · Beklemek · 109.5–122.5 sn
 
-## 05 · Gözün sınırı, fotoğrafın hafızası.
+Görüntü: sky · 1910-05-10T03:32 LMT.
 
-_27 Mayıs — 6 Haziran 1910_
+- 1–4 sn: Yusuf: Gidiyor musunuz?
+- 5–8 sn: Münevver: Daha mektubu vermedim.
+- 9–12 sn: Yusuf: Nereye?
 
-27 Mayıs, 21:30. Aynı şehirdeyiz; bu kez yüzümüz batıya dönük.
+## i6 · I · Beklemek · 122.5–136.5 sn
 
-27 Mayıs saat 21:30 LMT’de İstanbul’dan batıya bakıyoruz. Halley’in başı yaklaşık 20° yükseklikte; Güneş yaklaşık 19° aşağıdadır. İlk sahnenin doğu ufkundan, karanlık bir akşam göğüne geldik. Bu konum değişimi yörüngenin ve Dünya’nın hareketinin sonucudur.
+Görüntü: sky · 1910-05-10T03:33 LMT.
 
-İki gün sonra Barnard’ın Wisconsin’deki Yerkes Rasathanesi’nden çektiği fotoğraf, uzun kuyruğu bir plakaya kaydeder. Göğü izleyen kamera ve uzun poz, gözün bir bakışta seçebildiğinden farklı bir kayıt üretir. Bu fotoğraf İstanbul’da çekilmemiştir; onu İstanbul’dan görülmüş bir görüntü yerine koymuyoruz.
+- 1–3.5 sn: Rıza: Kapağı açıyorum. Kimse kımıldamasın.
+- 4–10 sn: Rıza: Bir… iki… üç…
+- 10.6–13.6 sn: Rıza: Otuz.
 
-Kuyrukluyıldız uzaklaşırken kâğıtlar ve plakalar kalır. Gazete ne söylendiğini, fotoğraf belirli bir aygıtın ne kaydettiğini, hesap ise seçtiğimiz yerde ve anda göğün geometrisini taşır. Bu üç kayıt birlikte okunduğunda, 1910 baharı daha anlaşılır hâle gelir.
+## i7 · I · Beklemek · 136.5–150.5 sn
 
-Kaynak kimlikleri: `yerkes29`, `yerkes6`, `yeni9`.
+Görüntü: sky · 1910-05-10T03:34 LMT.
+
+- 4–6.6 sn: Yusuf: Gitti mi?
+- 7–10.4 sn: Rıza: Gitmedi. Güneş örttü.
+- 11–13.4 sn: Yusuf: Yarın da gelir mi?
+- 13.6–16 sn: Rıza: Gazete öyle yazıyor.
+
+## i8 · I · Beklemek · 150.5–159.5 sn
+
+Görüntü: plate · 1910-05-10T03:33 LMT.
+
+- 1–4.4 sn: Rıza: Zühre çıkmış. Hâle… bir leke.
+
+## m1 · II · Söylenti · 159.5–175.5 sn
+
+Görüntü: photo · assets/img/yeni19.jpg.
+
+- 1.5–4.9 sn: Makineci: Yarınki sayı çıkıyor. Bak başlığa.
+- 5.4–9.4 sn: Yusuf: “Arz yıldızın kuyruğundan geçdi…” _(belgeden alıntı; çevriyazı)_
+- 9.8–12.4 sn: Yusuf: Ama daha geçmedi ki?
+- 12.6–16 sn: Mürettip: Gazete sabah okunur, oğlum. Sabaha geçmiş olur.
+
+## m2 · II · Söylenti · 175.5–184.5 sn
+
+Görüntü: photo · assets/photo/ebuzziya-matbaasi-1890.jpg.
+
+
+## k1 · II · Söylenti · 184.5–205.5 sn
+
+Görüntü: photo · assets/photo/kahvehane.jpg, assets/img/hayal18.jpg.
+
+- 1.2–5.2 sn: Kahvehanede biri: “Kıyamet kopacak mı?” diye çocuk mecmuası bile yazmış. _(belgeden alıntı; çevriyazı)_
+- 5.4–8.2 sn: Yaşlı bir müşteri: Kopsa haber verirler mi?
+- 8.6–12.6 sn: Bir başkası: Bakın, yıldızın yüzü kime benziyor!
+- 12.8–15.8 sn: Yaşlı bir müşteri: Fotoğrafçı, söyle: makinen zehri görür mü?
+- 16–19 sn: Rıza: Makine zehir görmez. Işık görür.
+
+## k2 · II · Söylenti · 205.5–217.5 sn
+
+Görüntü: photo · assets/img/kalem19.jpg.
+
+- 0.8–5.8 sn: Bir başkası: Kalem’de tramvay muhabbeti var: “Hocamız diyor ki kuyruktan geçince insanlar akıllarını kaybedecekmiş.”
+- 6–9.4 sn: Kahvehanede biri: “Öyleyse bizim kaybedecek bir şeyimiz yok.”
+
+## h1 · II · Söylenti · 217.5–241.5 sn
+
+Görüntü: photo · assets/photo/velid-kapak.jpg, assets/photo/velid-yorunge.jpg.
+
+- 5.6–9.2 sn: Nazife Hanım: Bu sabahki fırtınada herkes kuyruk çarptı sandı.
+- 9.4–12.4 sn: Hasan Efendi: Dükkânlar kapandı, Galata boşaldı.
+- 12.6–16.2 sn: Hasan Efendi: Bak, kitapta çizmiş: yıldızın yolu bu, Güneş burada.
+- 16.4–20 sn: Münevver: Sabah biz o kuyruğun içinden mi geçeceğiz?
+- 20.2–24 sn: Hasan Efendi: Geçecek diyorlar. Bu odadaki havadan çok daha ince bir şeyden.
+
+## h2 · II · Söylenti · 241.5–254.5 sn
+
+Görüntü: photo · assets/photo/halic-aksam-1913.jpg.
+
+- 1–4 sn: Nazife Hanım: Mektubu bu gece mi yazacaksın?
+- 5–8 sn: Münevver: Yazdım.
+- 9–12 sn: Nazife Hanım: O hâlde neden hâlâ cebinde?
+
+## ii4 · II · Söylenti · 254.5–273.5 sn
+
+Görüntü: sky · 1910-05-19T02:58 LMT.
+
+- 2–5 sn: Yusuf: Gazete buradaydı diyordu.
+- 6–11 sn: Rıza: “…iki gün gözden nihan olacak…” Onu da yazıyordu. _(belgeden alıntı; çevriyazı)_
+- 13–17 sn: Münevver: Görünmemesi de bir şey söylüyor.
+
+## ii5 · II · Söylenti · 273.5–284.5 sn
+
+Görüntü: sky · 1910-05-19T05:55 LMT.
+
+
+## ii6 · II · Söylenti · 284.5–301.5 sn
+
+Görüntü: photo · assets/photo/karakoy-yokus-1913.jpg, assets/photo/kopru-1910.jpg.
+
+- 5–10 sn: Yusuf: Yeni Gazete! Arz kuyruktan geçti! Herkes sağ!
+
+## iii1 · III · Bakmak · 301.5–317.5 sn
+
+Görüntü: sky · 1910-05-27T21:26 LMT.
+
+- 9–12.6 sn: Yusuf: Bu sefer kendisi geldi. Aramadık.
+
+## iii2 · III · Bakmak · 317.5–333.5 sn
+
+Görüntü: sky · 1910-05-27T21:29 LMT.
+
+
+## iii3 · III · Bakmak · 333.5–348.5 sn
+
+Görüntü: sky · 1910-05-27T21:31 LMT.
+
+- 1.5–4.9 sn: Münevver: Sabah Postane’ye uğrar mısın?
+- 5.3–8.5 sn: Yusuf: Gazeteleri aldıktan sonra.
+
+## iii4 · III · Bakmak · 348.5–363.5 sn
+
+Görüntü: sky · 1910-05-27T21:32 LMT.
+
+- 1–4 sn: Rıza: Bu kez sizi çekeceğim.
+- 6–9 sn: Rıza: On saniye. Kımıldamayın.
+- 11–13 sn: Yusuf: Ben duramam ki.
+
+## iii6 · Son · 363.5–388.5 sn
+
+Görüntü: finale · 1910-05-27T21:34 LMT.
+
+- 8–11 sn: Yusuf: Yarın…?
+- 12–16 sn: Rıza: Bir tane ayır.
 

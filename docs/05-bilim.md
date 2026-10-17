@@ -15,7 +15,7 @@
 | Kuyruk yönü | **Hesaplanan** | Güneş’in tersi yönündeki konum açısı: Horizons PsAng, ICRF kuzeyinden tarihin gerçek kuzeyine döndürülmüş (−0,53°…+0,02°), 10 dk |
 | Kuyruk uzunluğu, genişliği, parlaklığı | **Tanımlı model, sanatsal** | Aşağıya bakın |
 | Atmosferik kırılma | Seçilebilir | Sæmundsson formülü (10 °C, 1010 hPa, standart atmosfer). Horizons verisi havasızdır; gerçek 1910 havası bilinmiyor |
-| İstanbul mekânı | **Yorum / çizim**: dönem fotoğraflarından esinlenen stilize çatılar; ölçülmüş ufuk değil | Sahne künyeleri; gök sahneleri Galata, araştırma görünümü referans İstanbul konumu. Eski fotoğraf panorama yüklenmez. |
+| İstanbul mekânı | **Fotoğraf + yorum**: Berggren’in 1880’ler Galata panoraması; gece tonu ve ışıklar temsilî | Galata göğü, kalibre edilmiş fotoğraf yönleri. Fotoğraf 1910’dan öncedir; kaynak çekmecesinde tarihi korunur. |
 | Hava durumu | **Varsayım** | Bütün geceler açık hava ile sahnelendi. Hesaplanan görünürlük tarihsel hava raporu yerine konmaz. Belgelenen tek hava olayı: 18 Mayıs sabahı şafaktan önce İstanbul’da çıkan fırtına ve gün boyu süren yağmur (Yeni Gazete, 19 Mayıs 1910; aktaran Fettahoğlu 2025); yalnız sözle anılır. |
 
 ## Kuyruk modeli
@@ -48,7 +48,7 @@ Karşılaştırma için Barnard’ın Yerkes’ten (Wisconsin) çıplak gözle v
   | En yakın | 06:04:24,58 | 04:08:29,76 | 14,2° (merkezler arası 0,045°) |
   | Çıkış | 06:33:53,75 | 04:37:58,94 | 19,6° |
 
-  Geçiş ayrı bir bilimsel çizimde gösterilir; konum işareti **büyütülmüştür**. İstanbul’dan görülmüş bir çekirdek silueti ya da gözlem kaydı varmış izlenimi verilmez.
+  Geçiş yalnız isteğe bağlı araştırma görünümünde bilimsel çizimle gösterilir; ana filmde açıklama şeması yoktur. Bu çizimde konum işareti **büyütülmüştür**. İstanbul’dan görülmüş bir çekirdek silueti ya da gözlem kaydı varmış izlenimi verilmez.
 
 ## Doğrulama
 
@@ -83,6 +83,6 @@ Bu sürüm için `tests/` altında yeniden çalıştırılabilen denetimler bulu
 
 - Bulut, pus, ışık kirliliği ve gerçek hava kayıtları modelde yoktur.
 - Ay diskinin yüzey ayrıntısı yoktur; evre ve yönü doğrudur. Güneş ve Ay diskleri uzaklıktan hesaplanan görünür yarıçapla çizilir; geniş görüş açısında görünür kalsınlar diye birkaç piksellik bir alt sınır vardır.
-- Yeni ana sayfada panorama kullanılmaz. Şehir çizimi ölçülmüş bir ufuk değildir; gökcisimlerini gerçek binaların örtüp örtmediği bu görünümden çıkarılamaz. Eski panorama kalibrasyonu araştırma geçmişi olarak korunur.
+- Manzara, 1880’ler fotoğrafıdır. Önceki kalibrasyonda yönler yaklaşık ±0,5°, ufuk yüksekliği levhaya göre ±0,3–0,7° belirsizlik taşır. Görsel birleşimleri yumuşatmak bu geometrik belirsizliği azaltmaz. 347°–39° arası fotoğrafta yoktur.
 - Gezegen konumları ~1′ doğruluktadır (astronomy-engine). Horizons’la doğrudan karşılaştırma yalnız Güneş ve Ay için yapıldı.
 - Gazete metinlerinin çevriyazısı bu çalışmanın okumasıdır; görüntüyle birlikte verilir ve uzman denetimi önerilir.

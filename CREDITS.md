@@ -44,16 +44,16 @@ Ek araştırma kaynakları: Feza Günergün, Salih Zeki ve Rasathane-i Âmire ü
 
 Cormorant Garamond, EB Garamond, IBM Plex Mono, Amiri. Fontsource paketlerinden alındı.
 
-## Güncel yeniden canlandırma için üretilenler
+## Güncel görsel film için üretilenler
 
-- Beş bölümlü anlatı: `data/documentary.json`.
-- Galata dönem fotoğraflarından esinlenen özgün stilize çatı, kıyı ve tekne çizimi. Ölçülmüş bina modeli değildir.
-- Üç tarihli hesaplanan gök sahnesi, Güneş geçişi çizimi ve yeni arşiv arayüzü.
-- Tasarım ve uygulama: `tools/build_documentary.py`, `css/documentary.css`, `js/documentary.js`.
+- Süreli film kurgusu: `js/cinema-cut.js`; 28 plan, üç bölüm.
+- Berggren fotoğraf levhalarında yumuşak bindirme ve alt sınır maskesi; gece tonu ve pencere ışıkları temsilîdir.
+- Hareketli arşiv kadrajları, hesaplanan gök ve serbest bakış. Bilimsel çizim ve ayrıntılar yalnız isteğe bağlı araştırma görünümünde.
+- Sanat ve arayüz: `css/cinema.css`, `js/cinema-ui.js`; hesaplanan gök ve eski film motoru korunur.
 
 İstanbul Time Machine, tarihsel kaynaklardan hareketle yeniden canlandırma yaklaşımı için kullanıcı tarafından önerilen örnektir (https://www.istanbultimemachine.org/project). Bu siteden görsel veya kod alınmadı.
 
-## Önceki film prototipi için üretilenler (yeni ana sayfada kullanılmaz)
+## Film motorunun görsel ve ses malzemeleri
 
 - HTML, CSS ve JavaScript.
 - Odak camı görünümü, kurmaca kontak baskı ve cam negatif (hesaplanan gökten üretilir).

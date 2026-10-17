@@ -1,25 +1,37 @@
-# Görsel anlatım ve hareket
+# Halley Geceleri — görsel film yaklaşımı
 
-## Görsel dil
+## Niyet
 
-Koyu petrol tonlarında gök; sıcak, açık kâğıt üzerinde arşiv. Cormorant Garamond başlıklarda, EB Garamond anlatıda, IBM Plex Mono tarih, koordinat ve künyelerde kullanılır. Osmanlıca dizgi Amiri ile gösterilir. Bütün fontlar yereldir.
+Bir tarih dersi veya sergi kataloğu değil: 1910 İstanbul’una ait görsel bir düş. Araştırma görüntüyü ayakta tutar; görüntü araştırmayı anlatmak zorunda değildir.
 
-Açılış İstanbul’un tek kare Galata Köprüsü fotoğrafıyla kurulur. Bu görüntüye Halley eklenmez. Matbaa-i Ebüzziyâ’nın 1890 tanıtım levhası, basılı sanat ve yayıncılık kaynağı olarak tarihiyle verilir. İç mekân fotoğrafı olarak tanımlanmaz. Yerkes’in gerçek Halley fotoğrafı finalde, Wisconsin bilgisiyle açılır.
+İlk ekranda yalnız ad, şehir, bir cümle ve izleme eylemi vardır. Ana deneyim, kendi süresinde akan altyazılı kısa filmdir. Arşiv ve yöntem, alçak sesli “İzler” girişiyle ve depo bağlantısıyla açılır. Serbest bakışa geçildiğinde gökyüzünün üstüne ölçüm panelleri çıkmaz. İsteyen küçük menüden zamanla ve bakışla oynar.
 
-## Yeniden canlandırma sahneleri
+## Üç gece, bir soru
 
-Üç tarihli gökyüzü sahnesinde Galata konumu kullanılır. Göğün önündeki çatılar, dönem fotoğraflarından esinlenen özgün, stilize bir çizimdir. Tek tek binaları yeniden ölçen bir kent modeli değildir; ufuk örtmesi hesabına katılmaz. Fotoğraf levhaları birleştirilmez; bu yüzden eski prototipin görünen panorama dikişleri bu sürümde bulunmaz.
+Yusuf’un işi sabah çıkacak gazeteye bağlıdır. Rıza, gökten bir görüntü almak ister. Münevver’in cebindeki mektup henüz postaya verilmemiştir. Bunlar kurmaca kişilerdir; gazetelerdeki kişiler veya fotoğraflardaki insanlar gibi sunulmazlar.
 
-Şafak sahnesi 10 Mayıs 03:30 LMT, görünmeme sahnesi 19 Mayıs 03:00 LMT, akşam sahnesi 27 Mayıs 21:30 LMT için hesaplanır. Kamera yönleri doğu, doğu ve batıdır. Kuyruk bir görselleştirme modelidir. Bulut, tarihsel hava kaydı ve ölçülmüş ışık kirliliği yoktur.
+**Beklemek:** bir kâğıt sesi, lamba ışığı, Galata’ya çıkan sokak, sonra doğu göğü. Yusuf’un sorusu gündeliğin içinden gelir: “Yarın da gazete çıkacak mı?” Rıza cevap yerine bir gazete ister. Venüs’ü ararlar; Halley onun solundadır. İlk fotoğraf bir başarı görüntüsü değil, belirsiz bir iz bırakır. Münevver’in mektubu da henüz bir karara dönüşmemiştir.
 
-## Hareket ve etkileşim
+**Söylenti:** kâğıt el değiştirir. Matbaa, kahvehane, ev; başlık, şaka, beklenen cevap. Gecenin göğü ise boş görünür: aradıkları baş ufkun altındadır. Teknik bir açıklama levhası açılmaz. Güneşin sessiz yakın planından sabahın sokağına geçilir. Beklenen son gerçekleşmemiştir.
 
-Ziyaretçi kendi okuma hızında ilerler. Üç gök sahnesi görünür alana yaklaşınca çizilir; zaman kendiliğinden akmaz. Gözlem masasında zaman yalnız ziyaretçi “Zamanı ilerlet” düğmesine bastığında akar; sekme gizlenince durur. Sesli konuşma veya otomatik müzik yoktur.
+**Bakmak:** yüzler batıya dönmüştür. Rıza’nın aradığı şey artık yalnız gökte değildir. Münevver mektubu Yusuf’a verir; Rıza arkadaşlarını fotoğraflamak ister. O fotoğrafı tarihsel bir kayıt gibi göstermeyiz. Açılıştaki soru döner: “Yarın…?” Cevap küçüktür: “Bir tane ayır.”
 
-Güneş geçişi çiziminin zamanı kaydırıcıyla ve üç olay düğmesiyle değişir. Bu, gökte büyük bir karanlık disk görüldüğü iddiası değil; büyütülmüş bir merkez işaretidir.
+## Görüntü ve zaman
 
-## Masaüstü ve telefon
+Kamera, arşiv fotoğrafının yüzeyinde ağır hareket eder; bir sayfadan sokağa, sokaktan göğe çıkar. Belge taramaları okunacak uzun metin blokları değil, kâğıt, mürekkep ve ışık olarak kadrajda bulunur. Gündüz fotoğraflarının geceye dönüşmesi sanatsal bir renk düzenlemesidir. Tarih ve künye isteyen için saklanır; gerçek tarih sessizce değiştirilmez.
 
-Başlık, sahne görüntüsü, anlatı ve belge aynı sırada okunur. Telefonlarda sütunlar tek sıraya döner. Tarih ve gözlem kontrolleri göğün üzerine binmez. Belge görüntüleyici kapanabilir doğal bir iletişim kutusudur; Escape ile kapanır. Telefonda önce özgün tarama, ardından açıklama gelir. Yakınlaştırma özgün sayfayı incelemek içindir.
+Gökyüzünün konumu hesaplanır. Kuyruk ve gece ışığı temsilîdir. Ana filmde koordinat, ölçüm tablosu, bilimsel sunum şeması veya açıklama paragrafı yoktur. Çok kısa bölüm kartları ritmi böler; plan arası açıklama sayfası yoktur.
 
-Hareket azaltma tercihi uygulanır. Renk tek başına bilgi taşımaz: hesap, belge ve mekân yorumu metinle de adlandırılır.
+Toplam 28 plan, yaklaşık 6 dakika 29 saniye. Süreli kurgu, sürüklenerek okunacak bir sayfanın yerine geçer. Film sonunda ziyaretçi açıklama paneline değil, aynı gökte serbest bakışa bırakılır.
+
+## Ses
+
+Atmosfer, kâğıt, adımlar, matbaa, su, rüzgâr ve kamera sesleri; az ve kısa müzik motifleri. Oyuncu seslendirmesi yapılmış değildir. Diyaloglar altyazıyla verilir. Synth sesler tarihsel alan kaydı olarak etiketlenmez.
+
+## Yazı
+
+Görselin üstünde uzun gövde metni yoktur. Başlıkta EB Garamond, diyalog ve küçük denetimlerde sade sans serif kullanılır. Türkçenin “ı” karakteri için hatalı font aralığı düzeltilir; tarayıcının kullandığı gerçek fontlar kontrol edilir. Metin sadece duygu, yön veya küçük bir eylemi taşır.
+
+## Araştırmaya açılan kapı
+
+İzler düğmesi sahneye ait görselin gerçek tarihini, künyesini, kurmaca/alıntı ayrımını ve gerekiyorsa hesap bilgisini açar; film bu sırada durur, kapanınca kaldığı yerden sürer. Depo, bilimsel belgeleri, ham verileri, kaynakları ve yeniden üretim araçlarını barındırır. Bunlar ana deneyimin yüzeyine dökülmez.
