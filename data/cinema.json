@@ -1,1268 +1,440 @@
 {
-  "duration": 388.5,
+  "duration": 214,
   "shots": [
     {
-      "id": "p1",
-      "chapter": "Açılış",
-      "seconds": 2.5,
-      "visual": "black",
-      "sky": null,
-      "photos": [],
-      "dialogue": [],
-      "research": [],
-      "basis": {
-        "gorunur": "Hiçbir şey; karanlık.",
-        "gok": "—",
-        "nesne": "Gazete kâğıdı ve ahşap masa: 1910’a uygundur.",
-        "soz": "Söz yok.",
-        "neden": "—",
-        "kesme": "Merak: önce ses, sonra görüntü."
-      }
-    },
-    {
-      "id": "p2",
-      "chapter": "Açılış",
-      "seconds": 10,
-      "visual": "photo",
-      "sky": null,
-      "photos": [
-        "assets/img/yeni9-acilis.jpg"
-      ],
-      "dialogue": [],
-      "research": [
-        {
-          "at": 5.6,
-          "dur": 6.5,
-          "kind": "not",
-          "text": "Yeni Gazete · 9 Mayıs 1910 · s. 3 · “Hâle Yıldızı”",
-          "src": {
-            "id": "yeni9",
-            "label": "Yeni Gazete, 9 Mayıs 1910, s. 3"
-          }
-        }
-      ],
-      "basis": {
-        "gorunur": "Lamba ışığında gazete sayfası; üstünden bir elin gölgesi geçer.",
-        "gok": "Kadrajda gök yok.",
-        "nesne": "Özgün tarama (Yeni Gazete, 9 Mayıs 1910, s. 3). El çizilmez; yalnız gölgesi.",
-        "soz": "Gazete başlığı belgedir.",
-        "neden": "Yusuf, sabah görülebilecek gök olayını yazan gazeteyi Rıza’ya getirir (kurgu).",
-        "kesme": "Ayrıntıdan bütüne: okuma isteği."
-      }
-    },
-    {
-      "id": "p3",
-      "chapter": "Açılış",
-      "seconds": 11,
-      "visual": "photo",
-      "sky": null,
-      "photos": [
-        "assets/photo/galata-sokak-1913.jpg"
-      ],
-      "dialogue": [],
-      "research": [],
-      "basis": {
-        "gorunur": "Galata Kulesi’ne çıkan sokak: önce 1913’teki gündüz fotoğrafı, sonra aynı sokak gece tonunda.",
-        "gok": "Gök kadrajın üst köşesinde; 03:06 LMT’de Güneş −17°, gök karanlık.",
-        "nesne": "Fotoğraf 1913 tarihlidir (1910’dan 3 yıl sonra). Bu sokağın 1910’daki görünümü büyük ölçüde aynıdır; kesinlik iddiası yoktur.",
-        "soz": "—",
-        "neden": "Fotoğrafhane bu yokuşta bir binanın son katındadır (kurgu).",
-        "kesme": "Arşivden geceye: belgeyle yeniden kurgunun sınırı görünür kalır."
-      }
-    },
-    {
-      "id": "p4",
-      "chapter": "Açılış",
-      "seconds": 11,
-      "visual": "photo",
-      "sky": null,
-      "photos": [
-        "assets/photo/galata-sokak-1913.jpg"
-      ],
-      "dialogue": [
-        {
-          "at": 1,
-          "dur": 4,
-          "who": "Y",
-          "text": "Yarın da gazete çıkacak mı?",
-          "kind": "senaryo"
-        },
-        {
-          "at": 6,
-          "dur": 4,
-          "who": "R",
-          "text": "Çıkarsa bana bir tane ayır.",
-          "kind": "senaryo"
-        }
-      ],
-      "research": [],
-      "basis": {
-        "gorunur": "Karanlık sokakta Kule’ye ve yandaki cephelere yaklaşan kadraj; içerisi görünmez.",
-        "gok": "—",
-        "nesne": "Fotoğraf 1913; gece tonu düzenlemedir.",
-        "soz": "Özgün senaryo; tarihî alıntı değildir.",
-        "neden": "Yusuf’un geçimi ertesi günün gazetesine bağlıdır (kurgu; çocuk müvezziler belgelidir).",
-        "kesme": "Cevapsızlık: soru odada asılı kalır."
-      }
-    },
-    {
-      "id": "p5",
-      "chapter": "Açılış",
-      "seconds": 12,
-      "visual": "sky",
-      "sky": {
-        "from": "1910-05-10T03:10",
-        "to": "1910-05-10T03:13",
-        "view": [
-          {
-            "t": 0,
-            "az": 104,
-            "alt": 4,
-            "fov": 34
-          },
-          {
-            "t": 1,
-            "az": 92,
-            "alt": 6,
-            "fov": 62
-          }
-        ]
+      "id": "crossing",
+      "name": "Suyun içinden",
+      "dur": 10,
+      "kind": "motion",
+      "source": "bosphore",
+      "offset": 0,
+      "grade": "blue",
+      "mix": {
+        "water": 0.8,
+        "gulls": 0.3,
+        "horn": 0.45,
+        "music": 0.7
       },
-      "photos": [],
-      "dialogue": [],
-      "research": [],
-      "basis": {
-        "gorunur": "Pencereden doğu: Boğaz’ın girişi, Üsküdar kıyısı ve Çamlıca sırtı; uzakta tek tük ışık.",
-        "gok": "Doğu: Halley’in başı 03:10’da ufkun yaklaşık 6–7° üstünde; ufuk yakınında sönük.",
-        "nesne": "Manzara Berggren’in 1880’lerde Galata Kulesi’nden çektiği panoramadır; gök aynı nokta için hesaplanır. 1910’a dek Üsküdar kıyısında büyük değişiklik yoktur; Haydarpaşa Garı (1909) fotoğrafta yoktur.",
-        "soz": "—",
-        "neden": "Rıza cevap vermek yerine pencereye döner.",
-        "kesme": "Şehrin parça parça belirmesi; başlık sessizlikten sonra."
-      }
+      "credit": true,
+      "start": 0,
+      "endTime": 10
     },
     {
-      "id": "p6",
-      "chapter": "Açılış",
-      "seconds": 6,
-      "visual": "title",
-      "sky": {
-        "from": "1910-05-10T03:13",
-        "to": "1910-05-10T03:14",
-        "view": [
-          {
-            "t": 0,
-            "az": 92,
-            "alt": 6,
-            "fov": 62
-          },
-          {
-            "t": 1,
-            "az": 92,
-            "alt": 9,
-            "fov": 58
-          }
-        ]
+      "id": "city",
+      "name": "Halley Geceleri",
+      "dur": 7,
+      "kind": "motion",
+      "source": "halic",
+      "offset": 0,
+      "grade": "blue",
+      "title": true,
+      "mix": {
+        "water": 0.6,
+        "gulls": 0.3,
+        "music": 0.8
       },
-      "photos": [],
-      "dialogue": [],
-      "research": [],
-      "basis": {
-        "gorunur": "Başlık; arkada karanlık doğu göğü.",
-        "gok": "Hesaplanan gök.",
-        "nesne": "—",
-        "soz": "—",
-        "neden": "—",
-        "kesme": "Sessizlikten başlığa."
-      }
+      "start": 10,
+      "endTime": 17
     },
     {
-      "id": "i1",
-      "chapter": "I · Beklemek",
-      "seconds": 16,
-      "visual": "sky",
-      "sky": {
-        "from": "1910-05-10T03:17",
-        "to": "1910-05-10T03:20",
-        "view": [
-          {
-            "t": 0,
-            "az": 160,
-            "alt": 4,
-            "fov": 78
-          },
-          {
-            "t": 0.45,
-            "az": 120,
-            "alt": 4,
-            "fov": 78
-          },
-          {
-            "t": 1,
-            "az": 92,
-            "alt": 7,
-            "fov": 78
-          }
-        ]
+      "id": "press",
+      "name": "Mürekkep çoğalır",
+      "dur": 10,
+      "kind": "paper",
+      "action": "press",
+      "source": "assets/img/arkadas.jpg",
+      "mix": {
+        "press": 0.65,
+        "paper": 0.35,
+        "water": 0.07,
+        "gulls": 0.03,
+        "music": 0.35
       },
-      "photos": [],
-      "dialogue": [
-        {
-          "at": 4,
-          "dur": 3,
-          "who": "N",
-          "text": "Neresi doğu, kızım?",
-          "kind": "senaryo"
-        },
-        {
-          "at": 8,
-          "dur": 3,
-          "who": "M",
-          "text": "Üsküdar’ın üstü, anne.",
-          "kind": "senaryo"
-        }
-      ],
-      "research": [],
-      "basis": {
-        "gorunur": "Damdan güneydoğuya, sonra doğuya dönen bakış: Haliç ağzı, Sarayburnu, Boğaz, Üsküdar, Çamlıca.",
-        "gok": "03:17–03:20 LMT: Güneş −15°, gök hâlâ karanlık; Halley ~83° azimutta, ~8° yükseklikte. Ay yeni (görünmez).",
-        "nesne": "Manzara: Berggren panoraması (1880’ler), 1910’dan ~25–30 yıl önce. Beyoğlu’ndaki Rasathane-i Âmire 31 Mart olaylarında (13 Nisan 1909) tahrip edilmişti (Günergün; Fettahoğlu).",
-        "soz": "Özgün senaryo. Rasathane bilgisi belgeye dayanır.",
-        "neden": "Yeni Gazete yüksek bir yere çıkmayı öğütler; aile ve çırak aynı binanın damındadır (kurgu).",
-        "kesme": "Merdivenden çıkış: bedenin yükselmesiyle görüşün açılması."
-      }
+      "start": 17,
+      "endTime": 27
     },
     {
-      "id": "i2",
-      "chapter": "I · Beklemek",
-      "seconds": 13,
-      "visual": "sky",
-      "sky": {
-        "from": "1910-05-10T03:20",
-        "to": "1910-05-10T03:21",
-        "view": [
-          {
-            "t": 0,
-            "az": 96,
-            "alt": 4,
-            "fov": 50
-          },
-          {
-            "t": 1,
-            "az": 95,
-            "alt": 4.5,
-            "fov": 47
-          }
-        ]
+      "id": "question",
+      "name": "Kıyamet kopacak mı?",
+      "dur": 6,
+      "kind": "paper",
+      "action": "page",
+      "source": "assets/img/arkadas.jpg",
+      "line": "Kıyamet kopacak mı?",
+      "mix": {
+        "paper": 0.5,
+        "water": 0.12,
+        "gulls": 0.12,
+        "music": 0.5
       },
-      "photos": [],
-      "dialogue": [
-        {
-          "at": 1,
-          "dur": 5,
-          "who": "Y",
-          "text": "“Hâle’yi kolayca bulmak için evvelâ Zühre’yi aramalı.”",
-          "kind": "alinti",
-          "src": {
-            "id": "yeni9",
-            "label": "Yeni Gazete · 9 Mayıs 1910"
-          }
-        },
-        {
-          "at": 7,
-          "dur": 2.5,
-          "who": "R",
-          "text": "Zühre nerede peki?",
-          "kind": "senaryo"
-        },
-        {
-          "at": 10,
-          "dur": 2.5,
-          "who": "Y",
-          "text": "Onu yazmamışlar.",
-          "kind": "senaryo"
-        }
-      ],
-      "research": [],
-      "basis": {
-        "gorunur": "Üsküdar kıyısı ve üstündeki gök; Kız Kulesi sağda.",
-        "gok": "Zühre (Venüs) 03:20’de ufka çok yakın, henüz pusun içinde.",
-        "nesne": "—",
-        "soz": "Yusuf’un ezbere söylediği cümle Yeni Gazete’den doğrudan alıntıdır (çevriyazı: bu çalışma).",
-        "neden": "Yusuf gazeteleri satmadan önce okur, sözcükleri ezberler.",
-        "kesme": "Sözün yöne dönüşmesi."
-      }
+      "start": 27,
+      "endTime": 33
     },
     {
-      "id": "i3",
-      "chapter": "I · Beklemek",
-      "seconds": 15,
-      "visual": "sky",
-      "sky": {
-        "from": "1910-05-10T03:23",
-        "to": "1910-05-10T03:30",
-        "view": [
-          {
-            "t": 0,
-            "az": 96,
-            "alt": 6,
-            "fov": 60
-          },
-          {
-            "t": 1,
-            "az": 87,
-            "alt": 10,
-            "fov": 43
-          }
-        ]
+      "id": "waterline",
+      "name": "Bir şehrin uykusu",
+      "dur": 10,
+      "kind": "motion",
+      "source": "bosphore",
+      "offset": 10,
+      "grade": "blue",
+      "mix": {
+        "water": 0.7,
+        "gulls": 0.3,
+        "music": 0.65
       },
-      "photos": [],
-      "dialogue": [
-        {
-          "at": 4,
-          "dur": 5,
-          "who": "Y",
-          "text": "“Hâle, Zühre’nin sol cihetindedir.”",
-          "kind": "alinti",
-          "src": {
-            "id": "yeni9",
-            "label": "Yeni Gazete · 9 Mayıs 1910"
-          }
-        },
-        {
-          "at": 11,
-          "dur": 2.5,
-          "who": "R",
-          "text": "İşte. Orada.",
-          "kind": "senaryo"
-        }
-      ],
-      "research": [],
-      "basis": {
-        "gorunur": "Doğu ufku; ziyaretçi Zühre’yi, sonra Halley’i arar.",
-        "gok": "03:23–03:30 LMT: Zühre 89–94° azimutta, Çamlıca sırtının üstünden yükselir (−4,3 kadir); Halley 85° azimutta, 9–10° yükseklikte, Zühre’nin solunda. Güneş −14,5°…−13,5°.",
-        "nesne": "—",
-        "soz": "Yönerge Yeni Gazete’nin cümlesidir (doğrudan alıntı).",
-        "neden": "Gazete okuru nereye bakacağını bilmez; önce parlak bir işaret arar.",
-        "kesme": "Kamera durur; arama ziyaretçiye bırakılır."
-      }
+      "start": 33,
+      "endTime": 43
     },
     {
-      "id": "i4",
-      "chapter": "I · Beklemek",
-      "seconds": 13,
-      "visual": "sky",
-      "sky": {
-        "from": "1910-05-10T03:30",
-        "to": "1910-05-10T03:32",
-        "view": [
-          {
-            "t": 0,
-            "az": 88,
-            "alt": 9.5,
-            "fov": 28
-          },
-          {
-            "t": 1,
-            "az": 86,
-            "alt": 10,
-            "fov": 9
-          }
+      "id": "east",
+      "name": "Doğuya",
+      "dur": 9,
+      "kind": "sky",
+      "date": "1910-05-10T03:30",
+      "to": "1910-05-10T03:34",
+      "view": [
+        [
+          98,
+          4,
+          70
+        ],
+        [
+          90,
+          10,
+          55
         ]
-      },
-      "photos": [],
-      "dialogue": [
-        {
-          "at": 1,
-          "dur": 2.5,
-          "who": "M",
-          "text": "Bu kadar mı?",
-          "kind": "senaryo"
-        },
-        {
-          "at": 4,
-          "dur": 3,
-          "who": "R",
-          "text": "Bu kadar. Ama yaklaşıyor.",
-          "kind": "senaryo"
-        },
-        {
-          "at": 8,
-          "dur": 3,
-          "who": "Y",
-          "text": "Ya buraya kadar gelirse?",
-          "kind": "senaryo"
-        }
       ],
-      "research": [],
-      "basis": {
-        "gorunur": "Optik bakış: Halley’in başı ve soluk kuyruk başlangıcı.",
-        "gok": "Halley ~10° yükseklikte, Horizons modeline göre toplam ~2,7 kadir; alacakaranlıkta kuyruğun yalnız bir kısmı seçilir.",
-        "nesne": "Dürbün/teleskop görünümü işaretlidir; büyütme gösterilir.",
-        "soz": "Hız cümlesi gazeteden; karşılaştırma notu Horizons hesabındandır.",
-        "neden": "Münevver’in sorusu bilimsel açıklamayı doğal biçimde başlatır.",
-        "kesme": "Yakınlaşma: aranan noktanın bulunması."
-      }
+      "dateCard": "10 Mayıs 1910",
+      "mix": {
+        "water": 0.32,
+        "gulls": 0.26,
+        "music": 0.8
+      },
+      "start": 43,
+      "endTime": 52
     },
     {
-      "id": "i5",
-      "chapter": "I · Beklemek",
-      "seconds": 13,
-      "visual": "sky",
-      "sky": {
-        "from": "1910-05-10T03:32",
-        "to": "1910-05-10T03:33",
-        "view": [
-          {
-            "t": 0,
-            "az": 70,
-            "alt": 4,
-            "fov": 44
-          },
-          {
-            "t": 1,
-            "az": 71,
-            "alt": 4,
-            "fov": 41
-          }
+      "id": "first",
+      "name": "İlk iz",
+      "dur": 12,
+      "kind": "sky",
+      "date": "1910-05-10T03:34",
+      "to": "1910-05-10T03:42",
+      "view": [
+        [
+          90,
+          10,
+          55
+        ],
+        [
+          85,
+          14,
+          36
         ]
-      },
-      "photos": [],
-      "dialogue": [
-        {
-          "at": 1,
-          "dur": 3,
-          "who": "Y",
-          "text": "Gidiyor musunuz?",
-          "kind": "senaryo"
-        },
-        {
-          "at": 5,
-          "dur": 3,
-          "who": "M",
-          "text": "Daha mektubu vermedim.",
-          "kind": "senaryo"
-        },
-        {
-          "at": 9,
-          "dur": 3,
-          "who": "Y",
-          "text": "Nereye?",
-          "kind": "senaryo"
-        }
       ],
-      "research": [],
-      "basis": {
-        "gorunur": "Kuzeydoğu: Boğaz’ın içleri, karşı kıyıda Kuzguncuk ve Beylerbeyi yönü; şafak ışığı başlar.",
-        "gok": "Gök kuzeydoğuda açılmaya başlar (Güneş −13°).",
-        "nesne": "—",
-        "soz": "Ses betimi; Münevver görünmez.",
-        "neden": "Münevver, Maarif’in tayin yazısına vereceği cevabı taşır (kurgu; taşra tayinleri belgelidir).",
-        "kesme": "Gökyüzünden bir kararın eşiğine."
-      }
+      "mix": {
+        "water": 0.3,
+        "gulls": 0.26,
+        "music": 0.8
+      },
+      "start": 52,
+      "endTime": 64
     },
     {
-      "id": "i6",
-      "chapter": "I · Beklemek",
-      "seconds": 14,
-      "visual": "sky",
-      "sky": {
-        "from": "1910-05-10T03:33",
-        "to": "1910-05-10T03:34",
-        "view": [
-          {
-            "t": 0,
-            "az": 89,
-            "alt": 7,
-            "fov": 40
-          },
-          {
-            "t": 1,
-            "az": 89,
-            "alt": 7,
-            "fov": 40
-          }
+      "id": "rumour",
+      "name": "Bu gece",
+      "dur": 7,
+      "kind": "paper",
+      "action": "page",
+      "source": "assets/photo/velid-kapak.jpg",
+      "dateCard": "18 Mayıs · gece",
+      "line": "Bu gece.",
+      "mix": {
+        "paper": 0.5,
+        "press": 0.25,
+        "water": 0.1,
+        "gulls": 0.06,
+        "music": 0.5
+      },
+      "start": 64,
+      "endTime": 71
+    },
+    {
+      "id": "pages",
+      "name": "Kâğıdın telaşı",
+      "dur": 8,
+      "kind": "paper",
+      "action": "storm",
+      "source": "assets/photo/velid-dalga.jpg",
+      "mix": {
+        "paper": 0.9,
+        "press": 0.7,
+        "water": 0.08,
+        "gulls": 0.03,
+        "music": 0.3
+      },
+      "start": 71,
+      "endTime": 79
+    },
+    {
+      "id": "night-water",
+      "name": "Karanlık su",
+      "dur": 8,
+      "kind": "motion",
+      "source": "halic",
+      "offset": 7,
+      "grade": "night",
+      "mix": {
+        "water": 0.8,
+        "gulls": 0.18,
+        "horn": 0.35,
+        "music": 0.45
+      },
+      "start": 79,
+      "endTime": 87
+    },
+    {
+      "id": "night-city",
+      "name": "Geçip giden şehir",
+      "dur": 8,
+      "kind": "motion",
+      "source": "bosphore",
+      "offset": 20,
+      "grade": "night",
+      "mix": {
+        "water": 0.65,
+        "gulls": 0.17,
+        "music": 0.4
+      },
+      "start": 87,
+      "endTime": 95
+    },
+    {
+      "id": "empty",
+      "name": "Bekleyiş",
+      "dur": 14,
+      "kind": "sky",
+      "date": "1910-05-19T03:00",
+      "to": "1910-05-19T03:12",
+      "view": [
+        [
+          91,
+          4,
+          68
+        ],
+        [
+          86,
+          12,
+          61
         ]
-      },
-      "photos": [],
-      "dialogue": [
-        {
-          "at": 1,
-          "dur": 2.5,
-          "who": "R",
-          "text": "Kapağı açıyorum. Kimse kımıldamasın."
-        },
-        {
-          "at": 4,
-          "dur": 6,
-          "who": "R",
-          "text": "Bir… iki… üç…"
-        },
-        {
-          "at": 10.6,
-          "dur": 3,
-          "who": "R",
-          "text": "Otuz."
-        }
       ],
-      "research": [],
-      "basis": {
-        "gorunur": "Kameranın odak camı: doğu göğü ve Üsküdar sırtı, ters ve tepetaklak.",
-        "gok": "Kamera gökyüzünü izlemez: 30 saniyede yıldızlar kısa iz bırakır.",
-        "nesne": "Körüklü kamera ve cam kuru plaka (13×18 cm): 1910 için olağan. Odak camında görüntünün ters düşmesi fiziktir.",
-        "soz": "Özgün senaryo.",
-        "neden": "Rıza “kimsenin çekmediği” bir görüntü ister.",
-        "kesme": "Sayım: zamanın bedende hissedilmesi."
-      }
+      "dateCard": "19 Mayıs · şafaktan önce",
+      "mix": {
+        "water": 0.28,
+        "gulls": 0.16,
+        "music": 0.2
+      },
+      "start": 95,
+      "endTime": 109
     },
     {
-      "id": "i7",
-      "chapter": "I · Beklemek",
-      "seconds": 14,
-      "visual": "sky",
-      "sky": {
-        "from": "1910-05-10T03:34",
-        "to": "1910-05-10T03:58",
-        "view": [
-          {
-            "t": 0,
-            "az": 90,
-            "alt": 6,
-            "fov": 70
-          },
-          {
-            "t": 1,
-            "az": 88,
-            "alt": 7,
-            "fov": 74
-          }
+      "id": "page-turn",
+      "name": "Bir sayfa daha",
+      "dur": 6,
+      "kind": "paper",
+      "action": "turn",
+      "source": "assets/photo/velid-dalga.jpg",
+      "mix": {
+        "paper": 0.5,
+        "water": 0.22,
+        "gulls": 0.14,
+        "music": 0.4
+      },
+      "start": 109,
+      "endTime": 115
+    },
+    {
+      "id": "dawn",
+      "name": "Sabah oldu",
+      "dur": 14,
+      "kind": "sky",
+      "date": "1910-05-19T05:55",
+      "to": "1910-05-19T06:04",
+      "view": [
+        [
+          78,
+          5,
+          66
+        ],
+        [
+          81,
+          7,
+          58
         ]
-      },
-      "photos": [],
-      "dialogue": [
-        {
-          "at": 4,
-          "dur": 2.6,
-          "who": "Y",
-          "text": "Gitti mi?"
-        },
-        {
-          "at": 7,
-          "dur": 3.4,
-          "who": "R",
-          "text": "Gitmedi. Güneş örttü."
-        },
-        {
-          "at": 11,
-          "dur": 2.4,
-          "who": "Y",
-          "text": "Yarın da gelir mi?"
-        },
-        {
-          "at": 13.6,
-          "dur": 2.4,
-          "who": "R",
-          "text": "Gazete öyle yazıyor."
-        }
       ],
-      "research": [],
-      "basis": {
-        "gorunur": "Şafak: gök solgun yeşil-mavi, sonra açılır; Üsküdar’ın silüeti belirginleşir.",
-        "gok": "03:34→03:58: Güneş −13°’ten −9°’a; Halley ufkun üstünde kalır ama gök parlaklığı onu siler. Hesap yerini değiştirmez.",
-        "nesne": "—",
-        "soz": "Özgün senaryo.",
-        "neden": "Bilimsel açıklama tek cümlede: görünmemek yok olmak değildir.",
-        "kesme": "Zaman hızlanır: bekleyişin sonu."
-      }
+      "line": "Sabah oldu.",
+      "mix": {
+        "water": 0.42,
+        "gulls": 0.6,
+        "horn": 0.35,
+        "music": 0.8
+      },
+      "start": 115,
+      "endTime": 129
     },
     {
-      "id": "i8",
-      "chapter": "I · Beklemek",
-      "seconds": 9,
-      "visual": "plate",
-      "sky": {
-        "from": "1910-05-10T03:33",
-        "to": "1910-05-10T03:33",
-        "view": [
-          {
-            "t": 0,
-            "az": 89,
-            "alt": 7,
-            "fov": 40
-          }
+      "id": "morning",
+      "name": "Haliç uyanır",
+      "dur": 12,
+      "kind": "motion",
+      "source": "halic",
+      "offset": 15,
+      "grade": "warm",
+      "mix": {
+        "water": 0.75,
+        "gulls": 0.6,
+        "music": 0.9
+      },
+      "start": 129,
+      "endTime": 141
+    },
+    {
+      "id": "bridge",
+      "name": "Yine karşıya",
+      "dur": 9,
+      "kind": "motion",
+      "source": "bosphore",
+      "offset": 28,
+      "grade": "warm",
+      "mix": {
+        "water": 0.8,
+        "gulls": 0.55,
+        "horn": 0.35,
+        "music": 0.85
+      },
+      "start": 141,
+      "endTime": 150
+    },
+    {
+      "id": "fold",
+      "name": "Kâğıdın başka hayatı",
+      "dur": 10,
+      "kind": "paper",
+      "action": "fold",
+      "source": "assets/img/arkadas.jpg",
+      "mix": {
+        "paper": 0.7,
+        "water": 0.6,
+        "gulls": 0.38,
+        "music": 0.8
+      },
+      "start": 150,
+      "endTime": 160
+    },
+    {
+      "id": "paper-boat",
+      "name": "Suda",
+      "dur": 8,
+      "kind": "boat",
+      "date": "1910-05-19T06:10",
+      "mix": {
+        "water": 0.9,
+        "gulls": 0.4,
+        "music": 0.8
+      },
+      "start": 160,
+      "endTime": 168
+    },
+    {
+      "id": "west",
+      "name": "Başka bir akşam",
+      "dur": 9,
+      "kind": "sky",
+      "date": "1910-05-27T21:30",
+      "to": "1910-05-27T21:34",
+      "view": [
+        [
+          245,
+          6,
+          78
+        ],
+        [
+          257,
+          16,
+          57
         ]
+      ],
+      "dateCard": "27 Mayıs 1910",
+      "mix": {
+        "water": 0.3,
+        "gulls": 0.16,
+        "music": 0.85
       },
-      "photos": [],
-      "dialogue": [
-        {
-          "at": 1,
-          "dur": 3.4,
-          "who": "R",
-          "text": "Zühre çıkmış. Hâle… bir leke."
-        }
-      ],
-      "research": [
-        {
-          "at": 4.8,
-          "dur": 5,
-          "kind": "not",
-          "text": "Kurmaca plaka: görüntü hesaplanan gökten üretildi. 1910’da kuyrukluyıldız fotoğrafları çoğunlukla gökyüzünü izleyen teleskop-kameralarla, dakikalarca poz verilerek çekildi."
-        }
-      ],
-      "basis": {
-        "gorunur": "Kırmızı güvenlik ışığında kontak baskı: Zühre, birkaç yıldız, soluk bir leke ve Üsküdar sırtı.",
-        "gok": "30 saniyelik izlemesiz poz: Zühre ~0,1° iz bırakır; Halley’in başı ancak bir leke.",
-        "nesne": "Baskı, hesaplanan gökten ve panoramadan üretilmiş bir benzetimdir; arşiv fotoğrafı değildir.",
-        "soz": "Özgün senaryo; not bilimsel bağlamdır.",
-        "neden": "Rıza’nın tutkusu ile fiziğin sınırı karşılaşır.",
-        "kesme": "Sonuç: istenen görüntü ile çekilebilen görüntü."
-      }
+      "start": 168,
+      "endTime": 177
     },
     {
-      "id": "m1",
-      "chapter": "II · Söylenti",
-      "seconds": 16,
-      "visual": "photo",
-      "sky": null,
-      "photos": [
-        "assets/img/yeni19.jpg"
-      ],
-      "dialogue": [
-        {
-          "at": 1.5,
-          "dur": 3.4,
-          "who": "MA",
-          "text": "Yarınki sayı çıkıyor. Bak başlığa."
-        },
-        {
-          "at": 5.4,
-          "dur": 4,
-          "who": "Y",
-          "kind": "alinti",
-          "text": "“Arz yıldızın kuyruğundan geçdi…”",
-          "src": {
-            "id": "yeni19",
-            "label": "Yeni Gazete, 19 Mayıs 1910, s. 1–2"
-          }
-        },
-        {
-          "at": 9.8,
-          "dur": 2.6,
-          "who": "Y",
-          "text": "Ama daha geçmedi ki?"
-        },
-        {
-          "at": 12.6,
-          "dur": 3.4,
-          "who": "MU",
-          "text": "Gazete sabah okunur, oğlum. Sabaha geçmiş olur."
-        }
-      ],
-      "research": [],
-      "basis": {
-        "gorunur": "Lamba ışığında asılı bir gazete sayfası; makine sesi.",
-        "gok": "—",
-        "nesne": "Sayfa özgün taramadır (Yeni Gazete, 19 Mayıs 1910). Matbaa görünmez; yalnız sesi duyulur (basım makinesi sesi temsilîdir).",
-        "soz": "Başlık belgeden; diğer sözler özgün senaryo.",
-        "neden": "Yusuf sabah satacağı gazeteleri matbaa önünde bekler (çocuk müvezziler belgeli).",
-        "kesme": "Haber ile gök arasındaki zaman farkı: çocuğun sorusu tutarsızlığı açar."
-      }
-    },
-    {
-      "id": "m2",
-      "chapter": "II · Söylenti",
-      "seconds": 9,
-      "visual": "photo",
-      "sky": null,
-      "photos": [
-        "assets/photo/ebuzziya-matbaasi-1890.jpg"
-      ],
-      "dialogue": [],
-      "research": [
-        {
-          "at": 5.8,
-          "dur": 3,
-          "kind": "not",
-          "text": "Dizgi elle yapılırdı: her harf ayrı bir kurşun döküm."
-        }
-      ],
-      "basis": {
-        "gorunur": "Matbaa-i Ebüzziyâ’nın 1890 tarihli tanıtım sayfası, lamba ışığında.",
-        "gok": "—",
-        "nesne": "Özgün baskı (Library of Congress). Elle dizgi (mürettiplik) 1910 basınında olağandır.",
-        "soz": "Ses betimi ve bilgi notu.",
-        "neden": "Haberin bir el işi olduğu.",
-        "kesme": "Yakın plan: emeğin dokusu."
-      }
-    },
-    {
-      "id": "k1",
-      "chapter": "II · Söylenti",
-      "seconds": 21,
-      "visual": "photo",
-      "sky": null,
-      "photos": [
-        "assets/photo/kahvehane.jpg",
-        "assets/img/hayal18.jpg"
-      ],
-      "dialogue": [
-        {
-          "at": 1.2,
-          "dur": 4,
-          "who": "K1",
-          "text": "“Kıyamet kopacak mı?” diye çocuk mecmuası bile yazmış.",
-          "src": {
-            "id": "arkadas",
-            "label": "Arkadaş, 21 Nisan 1910 — başlık"
-          },
-          "kind": "alinti"
-        },
-        {
-          "at": 5.4,
-          "dur": 2.8,
-          "who": "K2",
-          "text": "Kopsa haber verirler mi?"
-        },
-        {
-          "at": 8.6,
-          "dur": 4,
-          "who": "K3",
-          "text": "Bakın, yıldızın yüzü kime benziyor!"
-        },
-        {
-          "at": 12.8,
-          "dur": 3,
-          "who": "K2",
-          "text": "Fotoğrafçı, söyle: makinen zehri görür mü?"
-        },
-        {
-          "at": 16,
-          "dur": 3,
-          "who": "R",
-          "text": "Makine zehir görmez. Işık görür."
-        }
-      ],
-      "research": [],
-      "basis": {
-        "gorunur": "Önce 19. yüzyıl sonundan bir İstanbul kahvehanesi fotoğrafı; sonra masada açılan mizah gazetesi.",
-        "gok": "—",
-        "nesne": "Kahvehane fotoğrafı tarihsizdir (19. yy sonu); fotoğraftaki kişiler hikâyenin kişileri değildir, ekranda belirtilir. Karikatür özgün taramadır (Hayâl-i Cedid, 18 Mayıs 1910).",
-        "soz": "“Kıyamet kopacak mı?” Arkadaş dergisinin başlığıdır; diğerleri özgün senaryo.",
-        "neden": "Rıza müşterilere teslim ettiği portreler için dolaşır (kurgu).",
-        "kesme": "Korkudan alaya, alaydan soruya."
-      }
-    },
-    {
-      "id": "k2",
-      "chapter": "II · Söylenti",
-      "seconds": 12,
-      "visual": "photo",
-      "sky": null,
-      "photos": [
-        "assets/img/kalem19.jpg"
-      ],
-      "dialogue": [
-        {
-          "at": 0.8,
-          "dur": 5,
-          "who": "K3",
-          "text": "Kalem’de tramvay muhabbeti var: “Hocamız diyor ki kuyruktan geçince insanlar akıllarını kaybedecekmiş.”"
-        },
-        {
-          "at": 6,
-          "dur": 3.4,
-          "who": "K1",
-          "text": "“Öyleyse bizim kaybedecek bir şeyimiz yok.”"
-        }
-      ],
-      "research": [
-        {
-          "at": 9.6,
-          "dur": 2.4,
-          "kind": "not",
-          "text": "Kalem’deki uydurma sohbetin aktarımı (Fettahoğlu, Kadim 10 (2025) özetinden); özgün metnin çevriyazısı değildir.",
-          "src": {
-            "id": "kalem19",
-            "label": "Kalem, 19 Mayıs 1910"
-          }
-        }
-      ],
-      "basis": {
-        "gorunur": "Kalem’in sayfası lamba ışığında.",
-        "gok": "—",
-        "nesne": "Özgün tarama.",
-        "soz": "Fıkra, Kalem’deki kurmaca tramvay sohbetinin Fettahoğlu’nun özetine dayalı aktarımıdır; doğrudan alıntı olarak sunulmaz.",
-        "neden": "Kahvehanede gazete yüksek sesle okunur.",
-        "kesme": "Kahkaha: korkunun dağılması."
-      }
-    },
-    {
-      "id": "h1",
-      "chapter": "II · Söylenti",
-      "seconds": 24,
-      "visual": "photo",
-      "sky": null,
-      "photos": [
-        "assets/photo/velid-kapak.jpg",
-        "assets/photo/velid-yorunge.jpg"
-      ],
-      "dialogue": [
-        {
-          "at": 5.6,
-          "dur": 3.6,
-          "who": "N",
-          "text": "Bu sabahki fırtınada herkes kuyruk çarptı sandı."
-        },
-        {
-          "at": 9.4,
-          "dur": 3,
-          "who": "H",
-          "text": "Dükkânlar kapandı, Galata boşaldı."
-        },
-        {
-          "at": 12.6,
-          "dur": 3.6,
-          "who": "H",
-          "text": "Bak, kitapta çizmiş: yıldızın yolu bu, Güneş burada."
-        },
-        {
-          "at": 16.4,
-          "dur": 3.6,
-          "who": "M",
-          "text": "Sabah biz o kuyruğun içinden mi geçeceğiz?"
-        },
-        {
-          "at": 20.2,
-          "dur": 3.8,
-          "who": "H",
-          "text": "Geçecek diyorlar. Bu odadaki havadan çok daha ince bir şeyden."
-        }
-      ],
-      "research": [
-        {
-          "at": 0.8,
-          "dur": 4.4,
-          "kind": "not",
-          "text": "Kapak: “Kuyruklu Yıldızlar ve Hâle Kuyruklu Yıldızı — Neler olacak?” (çevriyazı: bu çalışma)",
-          "src": {
-            "id": "velid",
-            "label": "Ebüzziyazâde Velid, 1910"
-          }
-        }
-      ],
-      "basis": {
-        "gorunur": "Lamba ışığında Ebüzziyazâde Velid’in Halley kitabının kapağı (İstanbul silüeti üstünde kuyrukluyıldız), sonra kitaptaki yörünge şekli.",
-        "gok": "—",
-        "nesne": "Kitap 1910 baskısıdır (Matbaa-i Ebüzziyâ, 1328 Hicrî); Tasvir-i Efkâr’daki 10 Mayıs ilanı belgelidir. 18 Mayıs sabahı İstanbul’da şafaktan önce çıkan fırtına ve paniği Yeni Gazete 19 Mayıs’ta yazar (Fettahoğlu).",
-        "soz": "Özgün senaryo; fırtına ve dükkânların kapanması belgeye dayanır.",
-        "neden": "Hasan Efendi (posta memuru, kurgu) kızının sorusuna kitaptaki şekille cevap verir.",
-        "kesme": "Ev içi bekleyiş; soru bilgiye dönüşür."
-      }
-    },
-    {
-      "id": "h2",
-      "chapter": "II · Söylenti",
-      "seconds": 13,
-      "visual": "photo",
-      "sky": null,
-      "photos": [
-        "assets/photo/halic-aksam-1913.jpg"
-      ],
-      "dialogue": [
-        {
-          "at": 1,
-          "dur": 3,
-          "who": "N",
-          "text": "Mektubu bu gece mi yazacaksın?",
-          "kind": "senaryo"
-        },
-        {
-          "at": 5,
-          "dur": 3,
-          "who": "M",
-          "text": "Yazdım.",
-          "kind": "senaryo"
-        },
-        {
-          "at": 9,
-          "dur": 3,
-          "who": "N",
-          "text": "O hâlde neden hâlâ cebinde?",
-          "kind": "senaryo"
-        }
-      ],
-      "research": [
-        {
-          "at": 4.4,
-          "dur": 5.6,
-          "kind": "not",
-          "text": "“Maarif Nezâret-i Celîlesine…” — mektup açılır, yeniden katlanır. (Özgün senaryo)"
-        }
-      ],
-      "basis": {
-        "gorunur": "Pencereden Haliç: akşam karanlığında fenerler ve karşı kıyı.",
-        "gok": "Fotoğrafın göğü (1913, alacakaranlık).",
-        "nesne": "Otokrom, Haziran 1913; fenerler fotoğrafın kendisinde yanıyor. Mektup kurgusaldır ve gösterilmez.",
-        "soz": "Özgün senaryo.",
-        "neden": "Darülmuallimat mezunlarının taşraya tayini ve mecburi hizmet belgelidir; Münevver’in kararı kurgudur.",
-        "kesme": "Karar ertelenir: geri alınan bir söz gibi."
-      }
-    },
-    {
-      "id": "ii4",
-      "chapter": "II · Söylenti",
-      "seconds": 19,
-      "visual": "sky",
-      "sky": {
-        "from": "1910-05-19T02:58",
-        "to": "1910-05-19T03:03",
-        "view": [
-          {
-            "t": 0,
-            "az": 92,
-            "alt": 6,
-            "fov": 76
-          },
-          {
-            "t": 1,
-            "az": 84,
-            "alt": 4,
-            "fov": 78
-          }
+      "id": "return",
+      "name": "Batıdaki iz",
+      "dur": 16,
+      "kind": "sky",
+      "date": "1910-05-27T21:34",
+      "to": "1910-05-27T21:43",
+      "view": [
+        [
+          257,
+          16,
+          57
+        ],
+        [
+          260,
+          24,
+          39
         ]
-      },
-      "photos": [],
-      "dialogue": [
-        {
-          "at": 2,
-          "dur": 3,
-          "who": "Y",
-          "text": "Gazete buradaydı diyordu.",
-          "kind": "senaryo"
-        },
-        {
-          "at": 6,
-          "dur": 5,
-          "who": "R",
-          "text": "“…iki gün gözden nihan olacak…” Onu da yazıyordu.",
-          "kind": "alinti",
-          "src": {
-            "id": "yeni9",
-            "label": "Yeni Gazete · 9 Mayıs 1910"
-          }
-        },
-        {
-          "at": 13,
-          "dur": 4,
-          "who": "M",
-          "text": "Görünmemesi de bir şey söylüyor.",
-          "kind": "senaryo"
-        }
       ],
-      "research": [],
-      "basis": {
-        "gorunur": "Doğu; orada bir şey yoktur. Uzaktan alkış sesleri.",
-        "gok": "19 Mayıs 03:00 LMT: Halley’in başı ufkun ~15° altında (Horizons); Zühre ufukta; Ay (%78) batıda yeni batmış. Görmemek hesapla uyumludur.",
-        "nesne": "Alkış sesi The Times muhabirinin aktarımına dayanır; sesin kendisi temsilîdir.",
-        "soz": "Gazetenin “iki gün görünmeyecek” öngörüsü doğrudan alıntıdır; diğerleri özgün senaryo ve bilgi notu.",
-        "neden": "Söylentinin doruğunda gök sessizdir; şehir yine de damlardadır.",
-        "kesme": "Beklenen şeyin yokluğu."
-      }
+      "mix": {
+        "water": 0.3,
+        "gulls": 0.16,
+        "horn": 0.3,
+        "music": 1
+      },
+      "start": 177,
+      "endTime": 193
     },
     {
-      "id": "ii5",
-      "chapter": "II · Söylenti",
-      "seconds": 11,
-      "visual": "sky",
-      "sky": {
-        "from": "1910-05-19T05:55",
-        "to": "1910-05-19T05:56",
-        "view": [
-          {
-            "t": 0,
-            "az": 74.79618135386869,
-            "alt": 12.464684352138386,
-            "fov": 7
-          },
-          {
-            "t": 1,
-            "az": 74.99618135386869,
-            "alt": 12.564684352138386,
-            "fov": 4.8
-          }
-        ]
+      "id": "together",
+      "name": "Şehir kalır",
+      "dur": 12,
+      "kind": "motion",
+      "source": "halic",
+      "offset": 27,
+      "grade": "silver",
+      "mix": {
+        "water": 0.7,
+        "gulls": 0.3,
+        "music": 0.85
       },
-      "photos": [],
-      "dialogue": [],
-      "research": [],
-      "basis": {
-        "gorunur": "Bilimsel çizim: Güneş diski ve hesaplanan merkez yolu.",
-        "gok": "Giriş ~05:35, en yakın 06:04, çıkış ~06:34 LMT (Horizons, 1 dk örnek, kırılmasız).",
-        "nesne": "—",
-        "soz": "Bilgi notu.",
-        "neden": "Görülemeyeni hesapla göstermek.",
-        "kesme": "Anlatıdan çizime: ölçek değişimi."
-      }
+      "start": 193,
+      "endTime": 205
     },
     {
-      "id": "ii6",
-      "chapter": "II · Söylenti",
-      "seconds": 17,
-      "visual": "photo",
-      "sky": null,
-      "photos": [
-        "assets/photo/karakoy-yokus-1913.jpg",
-        "assets/photo/kopru-1910.jpg"
-      ],
-      "dialogue": [
-        {
-          "at": 5,
-          "dur": 5,
-          "who": "Y",
-          "text": "Yeni Gazete! Arz kuyruktan geçti! Herkes sağ!",
-          "kind": "senaryo"
-        }
-      ],
-      "research": [],
-      "basis": {
-        "gorunur": "Önce Karaköy’de yokuşlu bir sokak (1913), sonra Galata Köprüsü’nde kalabalık (1910 öncesi).",
-        "gok": "Sabah: Güneş ~26° yükseklikte; Halley’in başı ufkun üstünde ama gündüz göğünde görünmez.",
-        "nesne": "Köprü fotoğrafı Nisan 1910’dan öncedir (Rijksmuseum); 1875 tarihli duba köprü 1912’de değiştirildi. Fotoğraftaki kişiler hikâyenin kişileri değildir; Yusuf yalnız sesiyle vardır.",
-        "soz": "Satıcı bağırışı özgün senaryo; haber içeriği belgeye dayanır.",
-        "neden": "Yusuf’un işi: kıyamet beklenen sabahın ertesinde gazete satmak.",
-        "kesme": "Gece biter; şehir işine döner."
-      }
-    },
-    {
-      "id": "iii1",
-      "chapter": "III · Bakmak",
-      "seconds": 16,
-      "visual": "sky",
-      "sky": {
-        "from": "1910-05-27T21:26",
-        "to": "1910-05-27T21:29",
-        "view": [
-          {
-            "t": 0,
-            "az": 245,
-            "alt": 30,
-            "fov": 78
-          },
-          {
-            "t": 1,
-            "az": 258,
-            "alt": 12,
-            "fov": 78
-          }
-        ]
+      "id": "continuing",
+      "name": "Halley Geceleri",
+      "dur": 9,
+      "kind": "motion",
+      "source": "bosphore",
+      "offset": 37,
+      "grade": "silver",
+      "end": true,
+      "mix": {
+        "water": 0.7,
+        "gulls": 0.3,
+        "horn": 0.25,
+        "music": 0.75
       },
-      "photos": [],
-      "dialogue": [
-        {
-          "at": 9,
-          "dur": 3.6,
-          "who": "Y",
-          "text": "Bu sefer kendisi geldi. Aramadık."
-        }
-      ],
-      "research": [],
-      "basis": {
-        "gorunur": "Batı: Haliç’in ötesinde tarihî yarımada; Süleymaniye’den Fatih’e ve Yavuz Selim’e uzanan sırt; şehirde dağınık ışıklar.",
-        "gok": "21:30 LMT: Güneş −19° (karanlık); Halley 259° azimutta ~20° yükseklikte, Fatih ile Yavuz Selim arasının üstünde; Merih batıda alçakta, Müşteri güneybatıda yüksekte. Ay henüz doğmadı.",
-        "nesne": "Manzara Berggren panoraması (1880’ler); gece tonu ve pencere ışıkları temsilîdir (konumları fotoğraftaki yapı dokusundan seçildi).",
-        "soz": "Özgün senaryo.",
-        "neden": "Akşam görünürlüğü Yeni Gazete’nin öngördüğü 22–30 Mayıs aralığındadır.",
-        "kesme": "Aramak yerine bakmak."
-      }
-    },
-    {
-      "id": "iii2",
-      "chapter": "III · Bakmak",
-      "seconds": 16,
-      "visual": "sky",
-      "sky": {
-        "from": "1910-05-27T21:29",
-        "to": "1910-05-27T21:31",
-        "view": [
-          {
-            "t": 0,
-            "az": 258,
-            "alt": 14,
-            "fov": 78
-          }
-        ]
-      },
-      "photos": [],
-      "dialogue": [],
-      "research": [],
-      "basis": {
-        "gorunur": "Ziyaretçi göğe bakar.",
-        "gok": "Hesaplanan gök; kuyruk tanımlı modeldir.",
-        "nesne": "—",
-        "soz": "—",
-        "neden": "—",
-        "kesme": "Kamera durur; zaman ziyaretçinin."
-      }
-    },
-    {
-      "id": "iii3",
-      "chapter": "III · Bakmak",
-      "seconds": 15,
-      "visual": "sky",
-      "sky": {
-        "from": "1910-05-27T21:31",
-        "to": "1910-05-27T21:32",
-        "view": [
-          {
-            "t": 0,
-            "az": 238,
-            "alt": 4,
-            "fov": 48
-          },
-          {
-            "t": 1,
-            "az": 240,
-            "alt": 4,
-            "fov": 44
-          }
-        ]
-      },
-      "photos": [],
-      "dialogue": [
-        {
-          "at": 1.5,
-          "dur": 3.4,
-          "who": "M",
-          "text": "Sabah Postane’ye uğrar mısın?"
-        },
-        {
-          "at": 5.3,
-          "dur": 3.2,
-          "who": "Y",
-          "text": "Gazeteleri aldıktan sonra."
-        }
-      ],
-      "research": [],
-      "basis": {
-        "gorunur": "Aşağıda Haliç ve karşı kıyı; Sirkeci yönüne inen ışıklar. Kişiler görünmez.",
-        "gok": "Arkada batı göğü.",
-        "nesne": "Sirkeci’deki Büyük Postane 1909’da tamamlanmıştır.",
-        "soz": "Özgün senaryo.",
-        "neden": "Münevver kararını küçük bir hareketle verir (kurgu). Yusuf ertesi günün işini düşünür.",
-        "kesme": "Karar anı: söz az, görüntü uzak."
-      }
-    },
-    {
-      "id": "iii4",
-      "chapter": "III · Bakmak",
-      "seconds": 15,
-      "visual": "sky",
-      "sky": {
-        "from": "1910-05-27T21:32",
-        "to": "1910-05-27T21:33",
-        "view": [
-          {
-            "t": 0,
-            "az": 259,
-            "alt": 16,
-            "fov": 46
-          },
-          {
-            "t": 1,
-            "az": 262,
-            "alt": 12,
-            "fov": 52
-          }
-        ]
-      },
-      "photos": [],
-      "dialogue": [
-        {
-          "at": 1,
-          "dur": 3,
-          "who": "R",
-          "text": "Bu kez sizi çekeceğim.",
-          "kind": "senaryo"
-        },
-        {
-          "at": 6,
-          "dur": 3,
-          "who": "R",
-          "text": "On saniye. Kımıldamayın.",
-          "kind": "senaryo"
-        },
-        {
-          "at": 11,
-          "dur": 2,
-          "who": "Y",
-          "text": "Ben duramam ki.",
-          "kind": "senaryo"
-        }
-      ],
-      "research": [],
-      "basis": {
-        "gorunur": "Odak camında önce gök; sonra kamera döner ve camda yalnız odak dışı bir lamba ışığı kalır.",
-        "gok": "Lamba ışığında 10 saniyelik poz.",
-        "nesne": "Gaz yağı lambası; cam plaka; poz süresi dönem plakalarının duyarlılığına uygundur (gece, lamba ışığı: saniyeler).",
-        "soz": "Özgün senaryo.",
-        "neden": "Gökyüzünü kaydetme tutkusu, o göğün altındakileri hatırlama isteğine dönüşür.",
-        "kesme": "Kameranın dönüşü: hikâyenin dönüşü."
-      }
-    },
-    {
-      "id": "iii6",
-      "chapter": "Son",
-      "seconds": 25,
-      "visual": "finale",
-      "sky": {
-        "from": "1910-05-27T21:34",
-        "to": "1910-05-27T21:40",
-        "view": [
-          {
-            "t": 0,
-            "az": 250,
-            "alt": 4,
-            "fov": 40
-          },
-          {
-            "t": 0.35,
-            "az": 254,
-            "alt": 4,
-            "fov": 56
-          },
-          {
-            "t": 1,
-            "az": 262,
-            "alt": 16,
-            "fov": 78
-          }
-        ]
-      },
-      "photos": [],
-      "dialogue": [
-        {
-          "at": 8,
-          "dur": 3,
-          "who": "Y",
-          "text": "Yarın…?",
-          "kind": "senaryo"
-        },
-        {
-          "at": 12,
-          "dur": 4,
-          "who": "R",
-          "text": "Bir tane ayır.",
-          "kind": "senaryo"
-        }
-      ],
-      "research": [],
-      "basis": {
-        "gorunur": "Kıyıdan yükselen kamera; şehir, ışıklar ve gök.",
-        "gok": "21:34–21:40: Halley batıda ~19°; hesaplanan yerindedir.",
-        "nesne": "—",
-        "soz": "Son cümle özgün senaryodur.",
-        "neden": "Yusuf yarını sorar; bu kez sessizlik bir cevaptır.",
-        "kesme": "Uzaklaşma; deneyim kapanmaz, gökte kalınır."
-      }
+      "start": 205,
+      "endTime": 214
     }
   ]
 }

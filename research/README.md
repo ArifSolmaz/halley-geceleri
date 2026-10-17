@@ -79,3 +79,8 @@ Bu komut proje kökünde çalıştırılabilir. NumPy/SciPy gerekir. Yeni ham ya
 - **Güneş ve Ay diski:** topo-merkezli uzaklıktan hesaplanan görünür yarıçapla çizilir; küçük ölçekte en az birkaç piksellik bir alt sınır vardır.
 - **Manzara:** Berggren’in 1880’lerde Galata Kulesi’nden çektiği panorama, yapı yönlerine göre yerleştirilmiş (bkz. `docs/03-mekan-kaynaklari.md`).
 - Bulut, gerçek hava kayıtları, ışık kirliliği ve kuyruk fotometrisi modelde yoktur.
+
+
+## Yeni ana film
+
+Yayımlanan tam kurgu `js/film-timeline.js` ve `data/animated-film.json` içindedir. `js/cinema-cut.js` önceki fotoğraf filminin araştırma geçmişidir; ana oynatıcıda kullanılmaz. Hareketli görüntülerin gerçek tarihi 1897, müziğin yaklaşık 1912’dir. Kaynaklar ve kullanım sınırları: `docs/film-sound.md`.

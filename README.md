@@ -1,36 +1,39 @@
 # Halley Geceleri
 
-1910 İstanbul’una ait bir görsel düş. Üç gece; bir gazete, bir mektup, henüz çekilmemiş bir fotoğraf.
+1910 İstanbul’una dair bir sinema düşü: kâğıttaki soru, gökteki bekleyiş, sabah ve Halley’nin batıya dönüşü.
 
-**Deneyim:** https://arifsolmaz.github.io/halley-geceleri/
+**Film:** https://arifsolmaz.github.io/halley-geceleri/
 
-Ana ürün süreli bir film ve aynı gökte serbest bakıştır. Araştırma bir ders olarak görüntünün üstüne yerleştirilmez. Kaynak ve yöntem isteyenler için bu depo, sahne içindeki küçük “İzler” girişi ve ikincil yöntem sayfası vardır.
+Ana deneyim **3 dakika 34 saniyelik tam film**dir. Şehrin hareketi Alexandre Promio’nun 1897 tarihli Haliç ve Boğaziçi filmlerinden gelir; 1910 Halley gecelerinin olay kaydı değildir. Kâğıt sekansları 3D animasyon, gök doğrulanmış astronomi motorunun çizimidir. Müzik, İstanbul’da yaklaşık 1912’de kaydedilmiş *Dil Verme Gönül / Isfahan Gazel*; ses tasarımı gerçek alan kayıtları ve foley kullanır. Kaynakların gerçek tarihleri korunur.
 
-Film 28 plan, 388,5 saniyedir. Atmosfer sesi ve altyazı kullanır; oyuncu seslendirmesi yoktur. Yusuf, Rıza ve Münevver kurmacadır. Görsel fotoğraflar gerçek arşiv görüntüleridir; gök NASA/JPL Horizons ve yardımcı astronomi verileriyle hesaplanır.
+Film, masaüstü ve portre telefon için ayrı hazırlanmış H.264/AAC sürümlerinden oynatılır. Site açılışında uzun bilgi sayfası veya deneysel çalışma seçimi bulunmaz. Araştırma ve hesaplara küçük **İzler** girişinden ulaşılır.
 
 ## İzler
 
+- [Tam senaryo ve plan süreleri](docs/film-senaryo.md)
 - [Film yaklaşımı](docs/film-tretman.md)
-- [Tam süreli senaryo](docs/film-senaryo.md)
+- [Ses ve hareketli görüntü kaynakları](docs/film-sound.md)
 - [Bilimsel yöntem ve sınırlar](docs/05-bilim.md)
-- [Mekân ve görüntü kaynakları](docs/03-mekan-kaynaklari.md)
+- [Mekân kaynakları](docs/03-mekan-kaynaklari.md)
 - [Künyeler ve haklar](CREDITS.md)
-- [Veriyi yeniden üretmek](tools/README.md)
+- [Veri ve filmin yeniden üretimi](tools/README.md)
+- [İsteğe bağlı gözlem defteri](https://arifsolmaz.github.io/halley-geceleri/observatory.html#gok)
 
 ## Yerel çalıştırma
 
 ```sh
-python3 -m http.server 8000
+node tools/serve.cjs
 ```
 
-`index.html` ana film; `film.html` aynı filmin çalışma şablonudur. `#gok` serbest bakış; `#belgeler` isteğe bağlı arşiv.
+`index.html` ve `film.html` yayımlanan tam filmi oynatır. `workbench.html`, aynı kurgunun arşiv video, 3D kâğıt ve hesaplanan gök katmanlarından canlı üretimidir; WebGL ve HTTP gerektirir. `observatory.html#gok` araştırma için serbest gök görünümüdür.
 
-Senaryo kaynağı `js/cinema-cut.js`, sanat yönetimi `css/cinema.css`, düşük profilli arayüz `js/cinema-ui.js` içindedir. Başlangıçtaki film motoru ve hesaplar korunur. Şablonu ve süreli senaryoyu güncellemek için:
+Kurgu `js/film-timeline.js`, birleştirme `js/film-compositor.js`, 3D kâğıt `js/film-stage.js`, yayımlanan oynatıcı `js/film-player.js`, arayüz `css/animated-film.css` içindedir. `js/astro.js`, astronomi verileri ve denetimleri bu film yeniden yapımında değiştirilmedi.
 
 ```sh
 node tools/build_docs.js
-python3 tools/build_yontem.py  # Markdown==3.9
+python3 tools/build_film_sound.py # NumPy, SciPy, ffmpeg
+python3 tools/build_yontem.py    # Markdown==3.9
 node --test tests/ephemeris.test.cjs
 ```
 
-Eski bilgi ağırlıklı okuma prototipinin üreticisi `tools/build_documentary.py` araştırma geçmişi olarak tutulur; ana sayfayı üretmez. GitHub Pages `main` dalının kökünü yayımlar; yollar göreli ve `.nojekyll` dahildir.
+GitHub Pages `main` dalının kökünü yayımlar. Yollar göreli, `.nojekyll` dahildir. Eski fotoğraf filmi ve çalışma dosyaları araştırma geçmişidir; ana ürün olarak sunulmaz.

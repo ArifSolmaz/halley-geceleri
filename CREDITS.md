@@ -64,3 +64,15 @@ Cormorant Garamond, EB Garamond, IBM Plex Mono, Amiri. Fontsource paketlerinden 
 Bunların hiçbiri arşiv belgesi değildir ve ekranda böyle etiketlenir.
 
 Kod ve özgün içerik için lisans seçimi depo sahibine bırakılmıştır. Üçüncü taraf taramalar herhangi bir kod lisansına dahil değildir.
+
+## Tam hareketli film — yeni ana kurgu
+
+22 plan / 214 saniye. Hareketli görüntü ve ses kaynaklarının gerçek tarihleri, hakları, bağlantıları ve yapılan işlemler: [docs/film-sound.md](docs/film-sound.md).
+
+- Alexandre Promio, Haliç ve Boğaziçi filmleri, **1897**, kamu malı; 1910 olay kaydı değildir.
+- Mulla Uthman al-Mawsili / Tanbûrî Cemil Bey, *Dil Verme Gönül / Isfahan Gazel*, İstanbul **yaklaşık 1912**, kamu malı.
+- Félix Blume, İstanbul martıları ve tekne düdüğü, **2012**, CC0.
+- SpliceSound, su; mr101986, baskı makinesi; OozerName, kâğıt — CC0.
+- Three.js **0.170.0**, Water ve su normal haritası, Three.js Authors, **MIT**. Yerel lisans: `js/vendor/LICENSE-three.txt`. Kullanım: 3D kâğıt/kayık sahnelerini üretme; yayımlanan oynatıcı ağır 3D motor gerektirmez.
+
+Önceki AI kıyı görseli yalnız arşivlenen yerel çalışmadadır; yeni ana filmde kullanılmaz.

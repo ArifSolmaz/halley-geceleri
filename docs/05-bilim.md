@@ -86,3 +86,8 @@ Bu sürüm için `tests/` altında yeniden çalıştırılabilen denetimler bulu
 - Manzara, 1880’ler fotoğrafıdır. Önceki kalibrasyonda yönler yaklaşık ±0,5°, ufuk yüksekliği levhaya göre ±0,3–0,7° belirsizlik taşır. Görsel birleşimleri yumuşatmak bu geometrik belirsizliği azaltmaz. 347°–39° arası fotoğrafta yoktur.
 - Gezegen konumları ~1′ doğruluktadır (astronomy-engine). Horizons’la doğrudan karşılaştırma yalnız Güneş ve Ay için yapıldı.
 - Gazete metinlerinin çevriyazısı bu çalışmanın okumasıdır; görüntüyle birlikte verilir ve uzman denetimi önerilir.
+
+
+## Tam hareketli filmde belge tarihleri
+
+Yeni ana filmdeki İstanbul hareketli görüntüleri Alexandre Promio’nun 1897 filmleridir; 1910 Halley gecelerinin çekimi değildir. Müzik, İstanbul’da yaklaşık 1912’de kaydedilmiş Isfahan Gazel’dir. Tarihler kaynak görünümünde ve film künyesinde korunur. Kâğıt/kayık animasyonu şiirsel kurgudur. Gök sekansları mevcut doğrulanmış `Astro` / `Sky` motorundan üretilmiştir. Ana filmde bilimsel ölçüm veya tarihsel gözlem diye yeni bir konum iddiası eklenmemiştir. Tam kaynaklar: [film-sound.md](film-sound.md).

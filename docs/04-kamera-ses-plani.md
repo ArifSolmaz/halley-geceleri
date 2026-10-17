@@ -1,37 +1,23 @@
-# Halley Geceleri — görsel film yaklaşımı
+# Halley Geceleri — sinema yaklaşımı
 
-## Niyet
+Ana deneyim 22 planlık, 214 saniyelik tam filmdir. Bir gazete başlığının sorusu, İstanbul’un gündelik hareketiyle karşılaşır. Tek tek kişilere uydurulmuş konuşmalar ve ilişkiler yüklemek yerine şehir filmin öznesidir.
 
-Bir tarih dersi veya sergi kataloğu değil: 1910 İstanbul’una ait görsel bir düş. Araştırma görüntüyü ayakta tutar; görüntü araştırmayı anlatmak zorunda değildir.
+İlk bölümde gemiler, su, kıyı ve basılı sayfa görülür; 10 Mayıs doğu göğündeki ilk iz bulunur. İkinci bölümde sayfaların hareketi ve baskı ritmi sıklaşır. Gece tonlanmış tarihî filmler bekleyişe bağlanır; 19 Mayıs 03:00 göğünde Halley’nin başı ufkun altındadır. Kuyrukluyıldızı görünür kılmak uğruna göğe sahte bir baş eklenmez.
 
-İlk ekranda yalnız ad, şehir, bir cümle ve izleme eylemi vardır. Ana deneyim, kendi süresinde akan altyazılı kısa filmdir. Arşiv ve yöntem, alçak sesli “İzler” girişiyle ve depo bağlantısıyla açılır. Serbest bakışa geçildiğinde gökyüzünün üstüne ölçüm panelleri çıkmaz. İsteyen küçük menüden zamanla ve bakışla oynar.
+Sabah kesmesi beklenen sona gündelik hayatın devamıyla cevap verir. Kâğıt, felaketin taşıyıcısı olmaktan çıkıp suya bırakılan bir nesneye dönüşür. Son bölüm 27 Mayıs batı göğünde açılır; kuyruk, bilimsel konum açısıyla uzanır. Film yeniden hareket eden kıyıya döner.
 
-## Üç gece, bir soru
+## Hareket
 
-Yusuf’un işi sabah çıkacak gazeteye bağlıdır. Rıza, gökten bir görüntü almak ister. Münevver’in cebindeki mektup henüz postaya verilmemiştir. Bunlar kurmaca kişilerdir; gazetelerdeki kişiler veya fotoğraflardaki insanlar gibi sunulmazlar.
+Şehir sekanslarında gerçek hareketli arşiv kullanılır: Alexandre Promio’nun 1897 Haliç ve Boğaziçi filmleri. Kaynak filmlerin farklı, ardışık bölümleri seçilir; aynı kısa klip film boyunca döngüye alınmaz. 4:3 arşiv kadrajı korunur. Portre sürümde arşiv görüntüsünün kendisi kesilmez; arkasında aynı hareketin bulanık, koyu bir uzantısı vardır.
 
-**Beklemek:** bir kâğıt sesi, lamba ışığı, Galata’ya çıkan sokak, sonra doğu göğü. Yusuf’un sorusu gündeliğin içinden gelir: “Yarın da gazete çıkacak mı?” Rıza cevap yerine bir gazete ister. Venüs’ü ararlar; Halley onun solundadır. İlk fotoğraf bir başarı görüntüsü değil, belirsiz bir iz bırakır. Münevver’in mektubu da henüz bir karara dönüşmemiştir.
-
-**Söylenti:** kâğıt el değiştirir. Matbaa, kahvehane, ev; başlık, şaka, beklenen cevap. Gecenin göğü ise boş görünür: aradıkları baş ufkun altındadır. Teknik bir açıklama levhası açılmaz. Güneşin sessiz yakın planından sabahın sokağına geçilir. Beklenen son gerçekleşmemiştir.
-
-**Bakmak:** yüzler batıya dönmüştür. Rıza’nın aradığı şey artık yalnız gökte değildir. Münevver mektubu Yusuf’a verir; Rıza arkadaşlarını fotoğraflamak ister. O fotoğrafı tarihsel bir kayıt gibi göstermeyiz. Açılıştaki soru döner: “Yarın…?” Cevap küçüktür: “Bir tane ayır.”
-
-## Görüntü ve zaman
-
-Kamera, arşiv fotoğrafının yüzeyinde ağır hareket eder; bir sayfadan sokağa, sokaktan göğe çıkar. Belge taramaları okunacak uzun metin blokları değil, kâğıt, mürekkep ve ışık olarak kadrajda bulunur. Gündüz fotoğraflarının geceye dönüşmesi sanatsal bir renk düzenlemesidir. Tarih ve künye isteyen için saklanır; gerçek tarih sessizce değiştirilmez.
-
-Gökyüzünün konumu hesaplanır. Kuyruk ve gece ışığı temsilîdir. Ana filmde koordinat, ölçüm tablosu, bilimsel sunum şeması veya açıklama paragrafı yoktur. Çok kısa bölüm kartları ritmi böler; plan arası açıklama sayfası yoktur.
-
-Toplam 28 plan, yaklaşık 6 dakika 29 saniye. Süreli kurgu, sürüklenerek okunacak bir sayfanın yerine geçer. Film sonunda ziyaretçi açıklama paneline değil, aynı gökte serbest bakışa bırakılır.
+Kâğıtlar 3D uzayda bükülür, döner ve yer değiştirir. Kayık ve su ayrı hareket eder. Bunlar belirli bir kişinin belgelenmiş eylemleri olarak sunulmaz. Gökyüzünün zamanı ve kamera bakışı ilerler; gök konumları hesaplanır. Çıktılar masaüstü ve portre için ayrı masterlanır; ziyaretçinin cihazında ağır 3D sahneleri gerçek zamanda çalıştırma zorunluluğu yoktur.
 
 ## Ses
 
-Atmosfer, kâğıt, adımlar, matbaa, su, rüzgâr ve kamera sesleri; az ve kısa müzik motifleri. Oyuncu seslendirmesi yapılmış değildir. Diyaloglar altyazıyla verilir. Synth sesler tarihsel alan kaydı olarak etiketlenmez.
+İstanbul’da yaklaşık 1912’de kaydedilmiş *Isfahan Gazel*, filmin müzikal sürekliliğini taşır. Ayrı İstanbul martı ve tekne düdüğü kayıtları, su, kâğıt ve baskı makinesi sesleri mekânlara göre düzey değiştirir. Sayfa ve baskı bölümünde ritim sıklaşır; bekleyişte geri çekilir, sabahla birlikte dışarısı açılır. Sürekli üretilmiş rüzgâr veya gürültü tabanı kullanılmaz. Tarihî müziğe hafif gürültü azaltma uygulanır; kayıt yaşı gizlenmez. Kaynakların hiçbiri 1910 Halley gecesinin ses kaydı olarak sunulmaz.
 
-## Yazı
+## Yüzey
 
-Görselin üstünde uzun gövde metni yoktur. Başlıkta EB Garamond, diyalog ve küçük denetimlerde sade sans serif kullanılır. Türkçenin “ı” karakteri için hatalı font aralığı düzeltilir; tarayıcının kullandığı gerçek fontlar kontrol edilir. Metin sadece duygu, yön veya küçük bir eylemi taşır.
+Başlık, üç kısa tarih, bir tarihî soru ve birkaç kurgu sözcüğü dışında bilgi görüntüye dökülmez. Ana sayfada yalnız film, oynatma denetimleri ve düşük profilli İzler bulunur. Bilim, kaynak ve gözlem defteri bu girişin ardındadır.
 
-## Araştırmaya açılan kapı
-
-İzler düğmesi sahneye ait görselin gerçek tarihini, künyesini, kurmaca/alıntı ayrımını ve gerekiyorsa hesap bilgisini açar; film bu sırada durur, kapanınca kaldığı yerden sürer. Depo, bilimsel belgeleri, ham verileri, kaynakları ve yeniden üretim araçlarını barındırır. Bunlar ana deneyimin yüzeyine dökülmez.
+Arşiv görüntülerinin 1897, müziğin yaklaşık 1912 olduğu açıkça yazılır. 1910, anlatının zamanı ve hesaplanan göğün tarihidir; farklı tarihlerdeki belgeleri aynı gecenin kaydıymış gibi göstermeyiz.

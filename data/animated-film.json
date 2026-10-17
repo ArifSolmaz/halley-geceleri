@@ -1,0 +1,440 @@
+{
+  "duration": 214,
+  "shots": [
+    {
+      "id": "crossing",
+      "name": "Suyun içinden",
+      "dur": 10,
+      "kind": "motion",
+      "source": "bosphore",
+      "offset": 0,
+      "grade": "blue",
+      "mix": {
+        "water": 0.8,
+        "gulls": 0.3,
+        "horn": 0.45,
+        "music": 0.7
+      },
+      "credit": true,
+      "start": 0,
+      "endTime": 10
+    },
+    {
+      "id": "city",
+      "name": "Halley Geceleri",
+      "dur": 7,
+      "kind": "motion",
+      "source": "halic",
+      "offset": 0,
+      "grade": "blue",
+      "title": true,
+      "mix": {
+        "water": 0.6,
+        "gulls": 0.3,
+        "music": 0.8
+      },
+      "start": 10,
+      "endTime": 17
+    },
+    {
+      "id": "press",
+      "name": "Mürekkep çoğalır",
+      "dur": 10,
+      "kind": "paper",
+      "action": "press",
+      "source": "assets/img/arkadas.jpg",
+      "mix": {
+        "press": 0.65,
+        "paper": 0.35,
+        "water": 0.07,
+        "gulls": 0.03,
+        "music": 0.35
+      },
+      "start": 17,
+      "endTime": 27
+    },
+    {
+      "id": "question",
+      "name": "Kıyamet kopacak mı?",
+      "dur": 6,
+      "kind": "paper",
+      "action": "page",
+      "source": "assets/img/arkadas.jpg",
+      "line": "Kıyamet kopacak mı?",
+      "mix": {
+        "paper": 0.5,
+        "water": 0.12,
+        "gulls": 0.12,
+        "music": 0.5
+      },
+      "start": 27,
+      "endTime": 33
+    },
+    {
+      "id": "waterline",
+      "name": "Bir şehrin uykusu",
+      "dur": 10,
+      "kind": "motion",
+      "source": "bosphore",
+      "offset": 10,
+      "grade": "blue",
+      "mix": {
+        "water": 0.7,
+        "gulls": 0.3,
+        "music": 0.65
+      },
+      "start": 33,
+      "endTime": 43
+    },
+    {
+      "id": "east",
+      "name": "Doğuya",
+      "dur": 9,
+      "kind": "sky",
+      "date": "1910-05-10T03:30",
+      "to": "1910-05-10T03:34",
+      "view": [
+        [
+          98,
+          4,
+          70
+        ],
+        [
+          90,
+          10,
+          55
+        ]
+      ],
+      "dateCard": "10 Mayıs 1910",
+      "mix": {
+        "water": 0.32,
+        "gulls": 0.26,
+        "music": 0.8
+      },
+      "start": 43,
+      "endTime": 52
+    },
+    {
+      "id": "first",
+      "name": "İlk iz",
+      "dur": 12,
+      "kind": "sky",
+      "date": "1910-05-10T03:34",
+      "to": "1910-05-10T03:42",
+      "view": [
+        [
+          90,
+          10,
+          55
+        ],
+        [
+          85,
+          14,
+          36
+        ]
+      ],
+      "mix": {
+        "water": 0.3,
+        "gulls": 0.26,
+        "music": 0.8
+      },
+      "start": 52,
+      "endTime": 64
+    },
+    {
+      "id": "rumour",
+      "name": "Bu gece",
+      "dur": 7,
+      "kind": "paper",
+      "action": "page",
+      "source": "assets/photo/velid-kapak.jpg",
+      "dateCard": "18 Mayıs · gece",
+      "line": "Bu gece.",
+      "mix": {
+        "paper": 0.5,
+        "press": 0.25,
+        "water": 0.1,
+        "gulls": 0.06,
+        "music": 0.5
+      },
+      "start": 64,
+      "endTime": 71
+    },
+    {
+      "id": "pages",
+      "name": "Kâğıdın telaşı",
+      "dur": 8,
+      "kind": "paper",
+      "action": "storm",
+      "source": "assets/photo/velid-dalga.jpg",
+      "mix": {
+        "paper": 0.9,
+        "press": 0.7,
+        "water": 0.08,
+        "gulls": 0.03,
+        "music": 0.3
+      },
+      "start": 71,
+      "endTime": 79
+    },
+    {
+      "id": "night-water",
+      "name": "Karanlık su",
+      "dur": 8,
+      "kind": "motion",
+      "source": "halic",
+      "offset": 7,
+      "grade": "night",
+      "mix": {
+        "water": 0.8,
+        "gulls": 0.18,
+        "horn": 0.35,
+        "music": 0.45
+      },
+      "start": 79,
+      "endTime": 87
+    },
+    {
+      "id": "night-city",
+      "name": "Geçip giden şehir",
+      "dur": 8,
+      "kind": "motion",
+      "source": "bosphore",
+      "offset": 20,
+      "grade": "night",
+      "mix": {
+        "water": 0.65,
+        "gulls": 0.17,
+        "music": 0.4
+      },
+      "start": 87,
+      "endTime": 95
+    },
+    {
+      "id": "empty",
+      "name": "Bekleyiş",
+      "dur": 14,
+      "kind": "sky",
+      "date": "1910-05-19T03:00",
+      "to": "1910-05-19T03:12",
+      "view": [
+        [
+          91,
+          4,
+          68
+        ],
+        [
+          86,
+          12,
+          61
+        ]
+      ],
+      "dateCard": "19 Mayıs · şafaktan önce",
+      "mix": {
+        "water": 0.28,
+        "gulls": 0.16,
+        "music": 0.2
+      },
+      "start": 95,
+      "endTime": 109
+    },
+    {
+      "id": "page-turn",
+      "name": "Bir sayfa daha",
+      "dur": 6,
+      "kind": "paper",
+      "action": "turn",
+      "source": "assets/photo/velid-dalga.jpg",
+      "mix": {
+        "paper": 0.5,
+        "water": 0.22,
+        "gulls": 0.14,
+        "music": 0.4
+      },
+      "start": 109,
+      "endTime": 115
+    },
+    {
+      "id": "dawn",
+      "name": "Sabah oldu",
+      "dur": 14,
+      "kind": "sky",
+      "date": "1910-05-19T05:55",
+      "to": "1910-05-19T06:04",
+      "view": [
+        [
+          78,
+          5,
+          66
+        ],
+        [
+          81,
+          7,
+          58
+        ]
+      ],
+      "line": "Sabah oldu.",
+      "mix": {
+        "water": 0.42,
+        "gulls": 0.6,
+        "horn": 0.35,
+        "music": 0.8
+      },
+      "start": 115,
+      "endTime": 129
+    },
+    {
+      "id": "morning",
+      "name": "Haliç uyanır",
+      "dur": 12,
+      "kind": "motion",
+      "source": "halic",
+      "offset": 15,
+      "grade": "warm",
+      "mix": {
+        "water": 0.75,
+        "gulls": 0.6,
+        "music": 0.9
+      },
+      "start": 129,
+      "endTime": 141
+    },
+    {
+      "id": "bridge",
+      "name": "Yine karşıya",
+      "dur": 9,
+      "kind": "motion",
+      "source": "bosphore",
+      "offset": 28,
+      "grade": "warm",
+      "mix": {
+        "water": 0.8,
+        "gulls": 0.55,
+        "horn": 0.35,
+        "music": 0.85
+      },
+      "start": 141,
+      "endTime": 150
+    },
+    {
+      "id": "fold",
+      "name": "Kâğıdın başka hayatı",
+      "dur": 10,
+      "kind": "paper",
+      "action": "fold",
+      "source": "assets/img/arkadas.jpg",
+      "mix": {
+        "paper": 0.7,
+        "water": 0.6,
+        "gulls": 0.38,
+        "music": 0.8
+      },
+      "start": 150,
+      "endTime": 160
+    },
+    {
+      "id": "paper-boat",
+      "name": "Suda",
+      "dur": 8,
+      "kind": "boat",
+      "date": "1910-05-19T06:10",
+      "mix": {
+        "water": 0.9,
+        "gulls": 0.4,
+        "music": 0.8
+      },
+      "start": 160,
+      "endTime": 168
+    },
+    {
+      "id": "west",
+      "name": "Başka bir akşam",
+      "dur": 9,
+      "kind": "sky",
+      "date": "1910-05-27T21:30",
+      "to": "1910-05-27T21:34",
+      "view": [
+        [
+          245,
+          6,
+          78
+        ],
+        [
+          257,
+          16,
+          57
+        ]
+      ],
+      "dateCard": "27 Mayıs 1910",
+      "mix": {
+        "water": 0.3,
+        "gulls": 0.16,
+        "music": 0.85
+      },
+      "start": 168,
+      "endTime": 177
+    },
+    {
+      "id": "return",
+      "name": "Batıdaki iz",
+      "dur": 16,
+      "kind": "sky",
+      "date": "1910-05-27T21:34",
+      "to": "1910-05-27T21:43",
+      "view": [
+        [
+          257,
+          16,
+          57
+        ],
+        [
+          260,
+          24,
+          39
+        ]
+      ],
+      "mix": {
+        "water": 0.3,
+        "gulls": 0.16,
+        "horn": 0.3,
+        "music": 1
+      },
+      "start": 177,
+      "endTime": 193
+    },
+    {
+      "id": "together",
+      "name": "Şehir kalır",
+      "dur": 12,
+      "kind": "motion",
+      "source": "halic",
+      "offset": 27,
+      "grade": "silver",
+      "mix": {
+        "water": 0.7,
+        "gulls": 0.3,
+        "music": 0.85
+      },
+      "start": 193,
+      "endTime": 205
+    },
+    {
+      "id": "continuing",
+      "name": "Halley Geceleri",
+      "dur": 9,
+      "kind": "motion",
+      "source": "bosphore",
+      "offset": 37,
+      "grade": "silver",
+      "end": true,
+      "mix": {
+        "water": 0.7,
+        "gulls": 0.3,
+        "horn": 0.25,
+        "music": 0.75
+      },
+      "start": 205,
+      "endTime": 214
+    }
+  ]
+}

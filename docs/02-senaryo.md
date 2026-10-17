@@ -1,198 +1,102 @@
-# Halley Geceleri — süreli film senaryosu
+# Halley Geceleri — tam film senaryosu
 
-Kaynak: `js/cinema-cut.js`. 28 plan; 388.5 saniye. Konuşmalar, belgeden alıntı diye açıkça belirtilmedikçe özgün kurmacadır. Atmosfer sesi ve altyazı; oyuncu seslendirmesi yoktur.
+22 plan · 214 saniye (3:34). Ana kurgu: `js/film-timeline.js`.
 
-## p1 · Açılış · 0.0–2.5 sn
+Şehir, filmin öznesidir. Kâğıttaki soru, gecenin bekleyişine dönüşür; sabahın gelişinden sonra kuyrukluyıldız batıda geri döner. Film kurmaca kişiler, uydurulmuş konuşmalar veya mektup alt öyküsü kullanmaz. Kâğıt ve kayık, korkunun gündelik bir nesneye dönüşmesini taşıyan görsel bir motiftir; belirli bir tarihsel kişinin eylemi gibi sunulmaz.
 
-Görüntü: black.
+Promio’nun iki şehir filmi 1897 tarihlidir. Bunlar 1910 gecelerinin olay kaydı değildir. Gece renk düzenlemesi sanatsaldır. Sesler ve yaklaşık 1912 tarihli müzik, ayrı kayıtlardan kurgulanmıştır.
 
+## crossing · 0–10 sn · Suyun içinden
 
-## p2 · Açılış · 2.5–12.5 sn
+Hareketli arşiv: Alexandre Promio, Boğaziçi, 1897. Kaynak film: 0–10 sn; ton: blue.
 
-Görüntü: photo · assets/img/yeni9-acilis.jpg.
+## city · 10–17 sn · Halley Geceleri
 
+Hareketli arşiv: Alexandre Promio, Haliç, 1897. Kaynak film: 0–7 sn; ton: blue.
 
-## p3 · Açılış · 12.5–23.5 sn
+## press · 17–27 sn · Mürekkep çoğalır
 
-Görüntü: photo · assets/photo/galata-sokak-1913.jpg.
+3D animasyon: press; belge: assets/img/arkadas.jpg.
 
+## question · 27–33 sn · Kıyamet kopacak mı?
 
-## p4 · Açılış · 23.5–34.5 sn
+3D animasyon: page; belge: assets/img/arkadas.jpg.
 
-Görüntü: photo · assets/photo/galata-sokak-1913.jpg.
+Görüntü yazısı: “Kıyamet kopacak mı?” (Arkadaş başlığının çevriyazısı).
 
-- 1–5 sn: Yusuf: Yarın da gazete çıkacak mı?
-- 6–10 sn: Rıza: Çıkarsa bana bir tane ayır.
+## waterline · 33–43 sn · Bir şehrin uykusu
 
-## p5 · Açılış · 34.5–46.5 sn
+Hareketli arşiv: Alexandre Promio, Boğaziçi, 1897. Kaynak film: 10–20 sn; ton: blue.
 
-Görüntü: sky · 1910-05-10T03:10 LMT.
+## east · 43–52 sn · Doğuya
 
+Hesaplanan gök: 1910-05-10T03:30 – 1910-05-10T03:34 LMT. Kamera: [[98,4,70],[90,10,55]] (azimut, yükseklik, görüş açısı).
 
-## p6 · Açılış · 46.5–52.5 sn
+## first · 52–64 sn · İlk iz
 
-Görüntü: title · 1910-05-10T03:13 LMT.
+Hesaplanan gök: 1910-05-10T03:34 – 1910-05-10T03:42 LMT. Kamera: [[90,10,55],[85,14,36]] (azimut, yükseklik, görüş açısı).
 
+## rumour · 64–71 sn · Bu gece
 
-## i1 · I · Beklemek · 52.5–68.5 sn
+3D animasyon: page; belge: assets/photo/velid-kapak.jpg.
 
-Görüntü: sky · 1910-05-10T03:17 LMT.
+Görüntü yazısı: “Bu gece.” (özgün kurgu yazısı).
 
-- 4–7 sn: Nazife Hanım: Neresi doğu, kızım?
-- 8–11 sn: Münevver: Üsküdar’ın üstü, anne.
+## pages · 71–79 sn · Kâğıdın telaşı
 
-## i2 · I · Beklemek · 68.5–81.5 sn
+3D animasyon: storm; belge: assets/photo/velid-dalga.jpg.
 
-Görüntü: sky · 1910-05-10T03:20 LMT.
+## night-water · 79–87 sn · Karanlık su
 
-- 1–6 sn: Yusuf: “Hâle’yi kolayca bulmak için evvelâ Zühre’yi aramalı.” _(belgeden alıntı; çevriyazı)_
-- 7–9.5 sn: Rıza: Zühre nerede peki?
-- 10–12.5 sn: Yusuf: Onu yazmamışlar.
+Hareketli arşiv: Alexandre Promio, Haliç, 1897. Kaynak film: 7–15 sn; ton: night.
 
-## i3 · I · Beklemek · 81.5–96.5 sn
+## night-city · 87–95 sn · Geçip giden şehir
 
-Görüntü: sky · 1910-05-10T03:23 LMT.
+Hareketli arşiv: Alexandre Promio, Boğaziçi, 1897. Kaynak film: 20–28 sn; ton: night.
 
-- 4–9 sn: Yusuf: “Hâle, Zühre’nin sol cihetindedir.” _(belgeden alıntı; çevriyazı)_
-- 11–13.5 sn: Rıza: İşte. Orada.
+## empty · 95–109 sn · Bekleyiş
 
-## i4 · I · Beklemek · 96.5–109.5 sn
+Hesaplanan gök: 1910-05-19T03:00 – 1910-05-19T03:12 LMT. Kamera: [[91,4,68],[86,12,61]] (azimut, yükseklik, görüş açısı).
 
-Görüntü: sky · 1910-05-10T03:30 LMT.
+## page-turn · 109–115 sn · Bir sayfa daha
 
-- 1–3.5 sn: Münevver: Bu kadar mı?
-- 4–7 sn: Rıza: Bu kadar. Ama yaklaşıyor.
-- 8–11 sn: Yusuf: Ya buraya kadar gelirse?
+3D animasyon: turn; belge: assets/photo/velid-dalga.jpg.
 
-## i5 · I · Beklemek · 109.5–122.5 sn
+## dawn · 115–129 sn · Sabah oldu
 
-Görüntü: sky · 1910-05-10T03:32 LMT.
+Hesaplanan gök: 1910-05-19T05:55 – 1910-05-19T06:04 LMT. Kamera: [[78,5,66],[81,7,58]] (azimut, yükseklik, görüş açısı).
 
-- 1–4 sn: Yusuf: Gidiyor musunuz?
-- 5–8 sn: Münevver: Daha mektubu vermedim.
-- 9–12 sn: Yusuf: Nereye?
+Görüntü yazısı: “Sabah oldu.” (özgün kurgu yazısı).
 
-## i6 · I · Beklemek · 122.5–136.5 sn
+## morning · 129–141 sn · Haliç uyanır
 
-Görüntü: sky · 1910-05-10T03:33 LMT.
+Hareketli arşiv: Alexandre Promio, Haliç, 1897. Kaynak film: 15–27 sn; ton: warm.
 
-- 1–3.5 sn: Rıza: Kapağı açıyorum. Kimse kımıldamasın.
-- 4–10 sn: Rıza: Bir… iki… üç…
-- 10.6–13.6 sn: Rıza: Otuz.
+## bridge · 141–150 sn · Yine karşıya
 
-## i7 · I · Beklemek · 136.5–150.5 sn
+Hareketli arşiv: Alexandre Promio, Boğaziçi, 1897. Kaynak film: 28–37 sn; ton: warm.
 
-Görüntü: sky · 1910-05-10T03:34 LMT.
+## fold · 150–160 sn · Kâğıdın başka hayatı
 
-- 4–6.6 sn: Yusuf: Gitti mi?
-- 7–10.4 sn: Rıza: Gitmedi. Güneş örttü.
-- 11–13.4 sn: Yusuf: Yarın da gelir mi?
-- 13.6–16 sn: Rıza: Gazete öyle yazıyor.
+3D animasyon: fold; belge: assets/img/arkadas.jpg.
 
-## i8 · I · Beklemek · 150.5–159.5 sn
+## paper-boat · 160–168 sn · Suda
 
-Görüntü: plate · 1910-05-10T03:33 LMT.
+3D animasyon: suda kâğıt kayık.
 
-- 1–4.4 sn: Rıza: Zühre çıkmış. Hâle… bir leke.
+## west · 168–177 sn · Başka bir akşam
 
-## m1 · II · Söylenti · 159.5–175.5 sn
+Hesaplanan gök: 1910-05-27T21:30 – 1910-05-27T21:34 LMT. Kamera: [[245,6,78],[257,16,57]] (azimut, yükseklik, görüş açısı).
 
-Görüntü: photo · assets/img/yeni19.jpg.
+## return · 177–193 sn · Batıdaki iz
 
-- 1.5–4.9 sn: Makineci: Yarınki sayı çıkıyor. Bak başlığa.
-- 5.4–9.4 sn: Yusuf: “Arz yıldızın kuyruğundan geçdi…” _(belgeden alıntı; çevriyazı)_
-- 9.8–12.4 sn: Yusuf: Ama daha geçmedi ki?
-- 12.6–16 sn: Mürettip: Gazete sabah okunur, oğlum. Sabaha geçmiş olur.
+Hesaplanan gök: 1910-05-27T21:34 – 1910-05-27T21:43 LMT. Kamera: [[257,16,57],[260,24,39]] (azimut, yükseklik, görüş açısı).
 
-## m2 · II · Söylenti · 175.5–184.5 sn
+## together · 193–205 sn · Şehir kalır
 
-Görüntü: photo · assets/photo/ebuzziya-matbaasi-1890.jpg.
+Hareketli arşiv: Alexandre Promio, Haliç, 1897. Kaynak film: 27–39 sn; ton: silver.
 
+## continuing · 205–214 sn · Halley Geceleri
 
-## k1 · II · Söylenti · 184.5–205.5 sn
-
-Görüntü: photo · assets/photo/kahvehane.jpg, assets/img/hayal18.jpg.
-
-- 1.2–5.2 sn: Kahvehanede biri: “Kıyamet kopacak mı?” diye çocuk mecmuası bile yazmış. _(belgeden alıntı; çevriyazı)_
-- 5.4–8.2 sn: Yaşlı bir müşteri: Kopsa haber verirler mi?
-- 8.6–12.6 sn: Bir başkası: Bakın, yıldızın yüzü kime benziyor!
-- 12.8–15.8 sn: Yaşlı bir müşteri: Fotoğrafçı, söyle: makinen zehri görür mü?
-- 16–19 sn: Rıza: Makine zehir görmez. Işık görür.
-
-## k2 · II · Söylenti · 205.5–217.5 sn
-
-Görüntü: photo · assets/img/kalem19.jpg.
-
-- 0.8–5.8 sn: Bir başkası: Kalem’de tramvay muhabbeti var: “Hocamız diyor ki kuyruktan geçince insanlar akıllarını kaybedecekmiş.”
-- 6–9.4 sn: Kahvehanede biri: “Öyleyse bizim kaybedecek bir şeyimiz yok.”
-
-## h1 · II · Söylenti · 217.5–241.5 sn
-
-Görüntü: photo · assets/photo/velid-kapak.jpg, assets/photo/velid-yorunge.jpg.
-
-- 5.6–9.2 sn: Nazife Hanım: Bu sabahki fırtınada herkes kuyruk çarptı sandı.
-- 9.4–12.4 sn: Hasan Efendi: Dükkânlar kapandı, Galata boşaldı.
-- 12.6–16.2 sn: Hasan Efendi: Bak, kitapta çizmiş: yıldızın yolu bu, Güneş burada.
-- 16.4–20 sn: Münevver: Sabah biz o kuyruğun içinden mi geçeceğiz?
-- 20.2–24 sn: Hasan Efendi: Geçecek diyorlar. Bu odadaki havadan çok daha ince bir şeyden.
-
-## h2 · II · Söylenti · 241.5–254.5 sn
-
-Görüntü: photo · assets/photo/halic-aksam-1913.jpg.
-
-- 1–4 sn: Nazife Hanım: Mektubu bu gece mi yazacaksın?
-- 5–8 sn: Münevver: Yazdım.
-- 9–12 sn: Nazife Hanım: O hâlde neden hâlâ cebinde?
-
-## ii4 · II · Söylenti · 254.5–273.5 sn
-
-Görüntü: sky · 1910-05-19T02:58 LMT.
-
-- 2–5 sn: Yusuf: Gazete buradaydı diyordu.
-- 6–11 sn: Rıza: “…iki gün gözden nihan olacak…” Onu da yazıyordu. _(belgeden alıntı; çevriyazı)_
-- 13–17 sn: Münevver: Görünmemesi de bir şey söylüyor.
-
-## ii5 · II · Söylenti · 273.5–284.5 sn
-
-Görüntü: sky · 1910-05-19T05:55 LMT.
-
-
-## ii6 · II · Söylenti · 284.5–301.5 sn
-
-Görüntü: photo · assets/photo/karakoy-yokus-1913.jpg, assets/photo/kopru-1910.jpg.
-
-- 5–10 sn: Yusuf: Yeni Gazete! Arz kuyruktan geçti! Herkes sağ!
-
-## iii1 · III · Bakmak · 301.5–317.5 sn
-
-Görüntü: sky · 1910-05-27T21:26 LMT.
-
-- 9–12.6 sn: Yusuf: Bu sefer kendisi geldi. Aramadık.
-
-## iii2 · III · Bakmak · 317.5–333.5 sn
-
-Görüntü: sky · 1910-05-27T21:29 LMT.
-
-
-## iii3 · III · Bakmak · 333.5–348.5 sn
-
-Görüntü: sky · 1910-05-27T21:31 LMT.
-
-- 1.5–4.9 sn: Münevver: Sabah Postane’ye uğrar mısın?
-- 5.3–8.5 sn: Yusuf: Gazeteleri aldıktan sonra.
-
-## iii4 · III · Bakmak · 348.5–363.5 sn
-
-Görüntü: sky · 1910-05-27T21:32 LMT.
-
-- 1–4 sn: Rıza: Bu kez sizi çekeceğim.
-- 6–9 sn: Rıza: On saniye. Kımıldamayın.
-- 11–13 sn: Yusuf: Ben duramam ki.
-
-## iii6 · Son · 363.5–388.5 sn
-
-Görüntü: finale · 1910-05-27T21:34 LMT.
-
-- 8–11 sn: Yusuf: Yarın…?
-- 12–16 sn: Rıza: Bir tane ayır.
+Hareketli arşiv: Alexandre Promio, Boğaziçi, 1897. Kaynak film: 37–46 sn; ton: silver.
 

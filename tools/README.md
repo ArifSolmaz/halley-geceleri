@@ -9,7 +9,7 @@ Site derleme gerektirmez; bu araçlar veri, senaryo ve yöntem sayfalarını yen
 | `data/milkyway.js` | `python3 tools/mw_tex.py` (önce `build_sky.js`) | Python 3, NumPy, Pillow |
 | `data/transit.js` | `python3 tools/build_transit.py` | Python 3, NumPy, SciPy, `research/raw/audit_transit_*.txt` |
 | `assets/pano/*`, `data/pano.js` | `BERGGREN=… python3 tools/pano/build_pano.py` | Python 3, NumPy, SciPy, Pillow; Berggren panoramasının 16000 px genişliğe küçültülmüş JPEG’i |
-| `index.html`, `docs/02-senaryo.md`, `docs/film-senaryo.md`, `data/cinema.json` | `node tools/build_docs.js` | Node; şablon: `film.html`, kurgu: `js/cinema-cut.js` |
+| `index.html`, `docs/02-senaryo.md`, `docs/film-senaryo.md`, `data/cinema.json` | `node tools/build_docs.js` | Node; şablon: `film.html`, kurgu: `js/film-timeline.js` |
 | `yontem.html` | `python3 tools/build_yontem.py` | Python 3, `markdown` |
 
 ## Sabitlenmiş dış bağımlılıklar
@@ -40,8 +40,25 @@ Yayın adresi: **https://arifsolmaz.github.io/halley-geceleri/**; depo adı `hal
 Sekiz astronomi testi ve 1440 / 390 / 320 px tarayıcı denetimleri geçti. `/halley-geceleri/` alt yolunda ana sayfa ve yöntem sayfası yerel HTTP sunucusunda denetlendi; eksik yerel kaynak veya JavaScript hatası görülmedi. Sabitlenmiş bağımlılıklarla yeniden üretilen `data/sky.js` ve `tests/horizons_azel.json` bayt bayt aynı çıktı. Güneş geçişi yeniden üretiminde olay zaman damgaları aynı kaldı; sayısal zaman alanındaki en büyük fark yaklaşık 2,82 × 10⁻⁸ saniyeydi. NumPy/SciPy ve platform farkları son basamaklarda değişiklik yaratabilir; geçiş çıktısı için bayt eşitliği yerine sayısal tolerans kullanılmalıdır. Bu denetim yereldir. Site GitHub Pages üzerinde yayımlanır; `main` dalındaki değişikliklerin dağıtımı tamamlandıktan sonra canlı sürüm ayrıca denetlenir.
 
 
-## Film ve tipografi denetimi
+## Tam filmin üretimi ve denetimi
 
-Ana ürün süreli film ve serbest bakıştır. `tests/browser.cjs` oynatma, kaynak çekmecesi, sessiz serbest bakış ve Türkçe font kullanımını; `tests/layout.cjs` her planın üç anını farklı ekran boyutlarında kontrol eder. Astronomi denetimi `tests/ephemeris.test.cjs` içindedir.
+`node tools/build_docs.js`, gerçek kurgu kaynağı `js/film-timeline.js` içinden manifest ve süreli senaryo üretir; `film.html` şablonunu ana sayfaya kopyalar. `python3 tools/build_film_sound.py` (NumPy, SciPy, ffmpeg) kaynak dosyalardan 214 saniyelik ses masterını üretir. Görüntü üretimi `workbench.html`, `js/film-compositor.js` ve `js/film-stage.js` içindedir. Three.js 0.170.0 yerel ve MIT lisanslıdır.
 
-`tools/build_documentary.py`, önceki okuma prototipinin araştırma aracı olarak tutulur; `index.html` dosyasını üretmez. Panorama kalibrasyonu eski araçlarla aynı veri tabanına dayanır. Yeni filmde levha bindirmeleri ve alt sınır yumuşatılır; bu görsel işlem geometrik doğruluk iddiasını artırmaz.
+Çalışma tezgâhındaki tam kurgu 24 fps tuval videosuna kaydedilir; H.264 masaüstü / portre masterlar hazırlanır ve AAC sesle birleştirilir. Yayımlanan filmde bu masterlar kullanılır. Arşiv filmleri, son MP4 ve ses kaynakları yeniden üretilmez; lisans/künye için `docs/film-sound.md`.
+
+`tests/browser.cjs`, masaüstü ve telefon oynatımı, ses kod çözme, duraklatma/arama, kaynak diyaloğu ve Türkçe font kullanımını sınar. `tests/layout.cjs` tüm kurgu planlarının masaüstü / portre yerleşimini kontrol eder. Astronomi denetimi `tests/ephemeris.test.cjs` içindedir. Bu testler görsel beğeninin yerine geçmez.
+
+Eski `js/cinema-cut.js` ve fotoğraf filmi geçmiş çalışma dosyalarıdır; yeni ana oynatıcı bunları yüklemez. Araştırma için serbest gök `observatory.html#gok` üzerinden korunur.
+
+### Video dışa aktarımı
+
+Video araması için byte-range destekli yerel sunucu kullanın; sıradan `http.server` bazı tarayıcılarda medya aramasını sıfırlayabilir.
+
+```sh
+node tools/serve.cjs
+# Ayrı terminalde, Playwright ve Chrome erişilebilirken:
+node tools/render_film.cjs --out .film-render/desktop
+node tools/render_film.cjs --portrait --out .film-render/portrait
+```
+
+Bu araç tüm 214 saniyeyi gerçek zamanlı kaydeder; sonra ffmpeg ile 24 fps H.264 ve mevcut AAC masterı birleştirir. Varsayılan Chrome yolu macOS içindir; başka kurulumlarda `CHROMIUM_PATH` ayarlayın. Üretilen masaüstü ve portre MP4’leri `assets/motion/halley-geceleri-film.mp4` ve `assets/motion/halley-geceleri-portrait.mp4` olarak yerleştirilir. İki master birlikte yayımlanmalıdır.
