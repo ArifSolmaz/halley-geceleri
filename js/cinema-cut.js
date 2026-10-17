@@ -38,6 +38,8 @@
  cut.find(s=>s.id==='i1').slate=['I · Beklemek','Mayıs 1910 · şafak'];
  cut.find(s=>s.id==='m1').slate=['II · Söylenti','Galata · bir gece'];
  cut.find(s=>s.id==='iii1').slate=['III · Bakmak','Aynı şehir · başka bir akşam'];
+ // Silence is the baseline. Keep only brief, motivated paper/camera cues.
+ for(const s of cut){s.sound={at:(s.sound?.at||[]).filter(c=>['paperDrop','rustle','shutter'].includes(c[1]))};}
  // Ensure the first act is tight and the ending pays off the opening question.
  original.splice(0);Film.SHOTS.splice(0,Film.SHOTS.length,...cut);
  // Opt-in panorama preparation: soften photographic joins and the plate's lower edge.
