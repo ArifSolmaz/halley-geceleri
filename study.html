@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Halley Geceleri — İstanbul, 1910</title>
+<meta name="description" content="Son sabahı beklemek. İstanbul, 1910.">
+<meta name="theme-color" content="#070b11">
+<meta property="og:title" content="Halley Geceleri — İstanbul, 1910">
+<meta property="og:description" content="Son sabahı beklemek.">
+<meta property="og:image" content="docs/preview.jpg">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css?v=cinema2"><link rel="stylesheet" href="css/cinema.css?v=cinema2">
+</head>
+<body class="mode-gate">
+<a class="skip" href="#sky-panel">Doğrudan gökyüzü gözlemine geç</a>
+
+<main id="stage" aria-label="Halley Geceleri sahnesi">
+  <canvas id="sky" tabindex="0" aria-label="Hesaplanan gökyüzü"></canvas>
+  <canvas id="set" aria-hidden="true"></canvas>
+  <div id="grain" aria-hidden="true"></div>
+  <div id="vignette" aria-hidden="true"></div>
+  <div class="bar top" aria-hidden="true"></div><div class="bar bottom" aria-hidden="true"></div>
+  <div id="hotspots"></div>
+  <button id="film-proof" type="button">İzler ↗</button><div id="scene-meta">
+    <div id="slate" aria-live="polite"></div>
+    <div id="photo-cap"></div>
+  </div>
+  <div id="title-card" aria-hidden="true">
+    <h1><span>Halley Geceleri</span><small>İstanbul, 1910</small></h1>
+  </div>
+  <div id="subs" aria-live="polite" aria-atomic="true"></div>
+  <div id="final-line" aria-live="polite"></div>
+</main>
+
+<!-- Başlangıç -->
+<section id="gate" aria-labelledby="gate-h">
+  <div class="gate-inner">
+    <p class="kicker">SESSİZ KURGU ÇALIŞMASI · 1910</p>
+    <h2 id="gate-h" class="gate-title">Halley<br><i>Geceleri</i><small>İstanbul, 1910</small></h2>
+    <p class="gate-q">Son sabahı beklemek.</p>
+    <div class="gate-actions">
+      <button id="start-sound" class="btn primary" type="button"><span aria-hidden="true">◐</span> Filmi başlat</button>
+      <button id="start-silent" class="btn" type="button">Sessiz izle</button>
+    </div>
+    <div class="gate-links" hidden>
+      <button id="go-sky" class="link" type="button">Doğrudan gökyüzüne in</button>
+      <button id="go-archive" class="link" type="button">Gazete masası</button>
+      <a class="link" href="yontem.html">Yöntem ve kaynaklar</a>
+    </div>
+    <details class="cinema-preferences"><summary>Görüntü tercihleri</summary><div class="gate-prefs" role="group" aria-label="Görüntü tercihleri">
+      <label><input type="checkbox" id="pref-motion"> Hareketi azalt</label>
+      <label><input type="checkbox" id="pref-large"> Büyük yazı</label>
+      <label><input type="checkbox" id="pref-lite"> Hafif çizim (düşük donanım)</label>
+    </div></details>
+    <p class="gate-note"><span id="film-runtime"></span> · Altyazılı görsel film<br><a href="https://github.com/ArifSolmaz/halley-geceleri" target="_blank" rel="noopener">İzler ve kayıtlar ↗</a></p>
+  </div>
+</section>
+
+<!-- Film denetimleri -->
+<nav id="player" aria-label="Anlatı denetimleri">
+  <button id="p-prev" class="icon" type="button" aria-label="Önceki plan" title="Önceki plan (←)">⟨</button>
+  <button id="p-play" class="icon" type="button" aria-label="Duraklat" title="Duraklat / sürdür (boşluk)">❚❚</button>
+  <button id="p-next" class="icon" type="button" aria-label="Sonraki plan" title="Sonraki plan (→)">⟩</button>
+  <div id="p-progress" role="progressbar" aria-label="Anlatıdaki ilerleme" aria-valuemin="0" aria-valuemax="100"><span></span></div>
+  <label class="p-chapter"><span class="sr">Bölüm</span><select id="p-chapters"></select></label>
+  <button id="p-sound" class="icon" type="button" aria-pressed="false" title="Ses">♪</button>
+  <button id="p-docs" class="txt" type="button">İzler</button>
+  <button id="p-sky" class="txt" type="button" title="Bu anın gökyüzüne in">Serbest bakış</button>
+</nav>
+
+<!-- Serbest gözlem paneli -->
+<button id="wander-menu" type="button" aria-expanded="false" aria-controls="sky-panel" aria-label="Zaman ve bakış ayarları">•••</button><button id="wander-back" type="button">← Filme dön</button><aside id="sky-panel" aria-label="Gökyüzü gözlem defteri" tabindex="-1">
+  <header class="sp-head">
+    <div>
+      <p class="kicker">Gözlem defteri</p>
+      <p id="sp-date" class="sp-date">10 Mayıs 1910</p>
+      <p id="sp-time" class="sp-time"><span id="sp-lmt">03:30</span> <abbr title="Yerel ortalama güneş saati: UT + 1 sa 55 dk 54,816 sn">LMT</abbr> <span class="dim" id="sp-ut">· 01:34 UT</span></p>
+    </div>
+    <button id="sp-collapse" class="icon" type="button" aria-expanded="true" aria-controls="sp-body" aria-label="Gözlem ayarlarını daralt" title="Paneli daralt">–</button>
+  </header>
+  <div id="sp-body">
+    <div class="sp-row presets" role="group" aria-label="Üç gece">
+      <button type="button" data-preset="1910-05-10T03:30" data-az="88" data-alt="10">10 Mayıs · 03:30</button>
+      <button type="button" data-preset="1910-05-19T03:00" data-az="70" data-alt="8">19 Mayıs · 03:00</button>
+      <button type="button" data-preset="1910-05-27T21:30" data-az="262" data-alt="16">27 Mayıs · 21:30</button>
+    </div>
+    <label class="sp-field">Tarih (Gregoryen)
+      <input type="date" id="sp-dateinput" min="1910-04-20" max="1910-06-10" value="1910-05-10">
+    </label>
+    <label class="sp-field">Saat (LMT) <output id="sp-timeout">03:30</output>
+      <input type="range" id="sp-timeinput" min="0" max="1439" step="1" value="210">
+    </label>
+    <div class="sp-row">
+      <button id="sp-play" type="button" class="btn small" aria-pressed="false">▷ Zamanı akıt</button>
+      <label class="sp-inline">Hız <select id="sp-speed"><option value="60">1 dk/sn</option><option value="300" selected>5 dk/sn</option><option value="1800">30 dk/sn</option><option value="14400">4 sa/sn</option></select></label>
+    </div>
+    <label class="sp-field">Bakış noktası
+      <select id="sp-vp"></select>
+    </label>
+    <p id="sp-vpnote" class="sp-note"></p>
+    <div class="sp-row find" role="group" aria-label="Gökte bul">
+      <span class="dim">Bul:</span>
+      <button type="button" data-find="Halley">Halley</button><button type="button" data-find="Venus">Zühre</button><button type="button" data-find="Moon">Ay</button><button type="button" data-find="Jupiter">Müşteri</button><button type="button" data-find="Mars">Merih</button>
+    </div>
+    <fieldset class="sp-layers"><legend>Katmanlar</legend>
+      <label><input type="checkbox" data-opt="lines"> Takımyıldız çizgileri</label>
+      <label><input type="checkbox" data-opt="labels"> Adlar</label>
+      <label><input type="checkbox" data-opt="landmarks"> Yapı adları</label>
+      <label><input type="checkbox" data-opt="grid"> Yükseklik–azimut ızgarası</label>
+      <label><input type="checkbox" data-opt="refraction" checked> Atmosferik kırılma</label>
+      <label><input type="checkbox" data-opt="mw" checked> Samanyolu</label>
+      <label><input type="checkbox" data-opt="tail" checked> Kuyruk modeli <span class="tag model">model</span></label>
+    </fieldset>
+    <label class="sp-field">Kuyruğun fiziksel uzunluk varsayımı <output id="sp-tailout">0,30 AU</output>
+      <input type="range" id="sp-tail" min="0.05" max="0.6" step="0.01" value="0.3">
+    </label>
+    <p class="sp-note">Kuyruk, Güneş’ten dışa doğru düz bir çizgi olarak modellenir; görünür uzunluk bu varsayım, Halley–Dünya uzaklığı ve faz açısından hesaplanır. Parlaklık ve genişlik sanatsal temsildir.</p>
+    <div class="sp-row">
+      <button id="sp-transit" type="button" class="btn small">19 Mayıs Güneş geçişi</button>
+      <button id="sp-story" type="button" class="btn small">Anlatıya dön</button>
+    </div>
+  </div>
+  <div id="sp-info" aria-live="polite"></div>
+  <p class="sp-foot">Sürükle: bak · Tekerlek/iki parmak: yakınlaş · Ok tuşları ve + / − · Bir cisme dokun: bilgi</p>
+</aside>
+<div id="sky-readout" aria-live="off"></div>
+
+<!-- Belge görüntüleyici -->
+<dialog id="doc-dialog" aria-labelledby="doc-title">
+  <div class="dialog-toolbar">
+    <button id="doc-back" type="button" class="link" hidden>← Gazete masası</button>
+    <form method="dialog" class="dlg-close"><button class="icon" aria-label="Belgeyi kapat">×</button></form>
+  </div>
+  <header class="doc-heading">
+    <p class="kicker" id="doc-kicker"></p>
+    <h2 id="doc-title"></h2>
+    <p id="doc-issue" class="mono"></p>
+  </header>
+  <div class="doc-grid">
+    <figure class="doc-figure"><div class="doc-zoom" id="doc-zoom"><img id="doc-img" alt=""></div><figcaption id="doc-cap"></figcaption></figure>
+    <div class="doc-meta">
+      <div id="doc-body"></div>
+      <p id="doc-links"></p>
+    </div>
+  </div>
+</dialog>
+
+<!-- Gazete masası -->
+<dialog id="archive-dialog" aria-labelledby="archive-h" class="wide">
+  <form method="dialog" class="dlg-close"><button class="icon" aria-label="Kapat">×</button></form>
+  <header class="arch-head">
+    <p class="kicker">Hakkı Tarık Us Koleksiyonu · özgün taramalar</p>
+    <h2 id="archive-h">Gazete masası</h2>
+    <p>Aynı gök olayının farklı seslerle yazılışı. Bir belgeye dokunun: özgün görüntü, yayın, tarih, sayfa, bugünkü Türkçe açıklama ve kaynağı birlikte açılır.</p>
+    <div class="arch-filter" role="group" aria-label="Konuya göre süz">
+      <button type="button" data-cat="" aria-pressed="true">Tümü</button><button type="button" data-cat="Gözlem" aria-pressed="false">Gözlem</button><button type="button" data-cat="Bilim" aria-pressed="false">Bilim</button><button type="button" data-cat="Mizah" aria-pressed="false">Mizah</button><button type="button" data-cat="Gündelik hayat" aria-pressed="false">Gündelik hayat</button><button type="button" data-cat="Edebiyat" aria-pressed="false">Edebiyat</button>
+    </div>
+  </header>
+  <div id="arch-desk"></div>
+  <p class="arch-legend"><span class="tag quote">Doğrudan alıntı</span> özgün metnin bu çalışmadaki çevriyazısı · <span class="tag simple">Sadeleştirme</span> anlamın bugünkü Türkçesi · <span class="tag fiction">Özgün senaryo</span> bu deneyim için yazıldı</p>
+</dialog>
+
+<!-- Güneş geçişi -->
+<dialog id="transit-dialog" aria-labelledby="transit-h" class="wide">
+  <form method="dialog" class="dlg-close"><button class="icon" aria-label="Kapat">×</button></form>
+  <p class="kicker">Bilimsel çizim · İstanbul için hesap</p>
+  <h2 id="transit-h">19 Mayıs 1910: Halley Güneş diskinin önünden geçiyor</h2>
+  <div class="transit-wrap"><canvas id="transit-canvas" width="720" height="720" aria-label="Güneş diski ve Halley merkezinin hesaplanan yolu"></canvas>
+    <div class="transit-side">
+      <p id="transit-clock" class="mono big">05:34 LMT</p>
+      <input type="range" id="transit-range" min="0" max="5400" step="10" value="1100" aria-label="Geçiş zamanı">
+      <div class="transit-events" id="transit-events"></div>
+      <p class="sp-note">Eşit açısal ölçekli teğet düzlem; gök kuzeyi yukarı, doğu soldadır. Halley’in konum işareti <strong>büyütülmüştür</strong>; görülebilir bir çekirdek silueti değildir. Bu geçişin İstanbul’dan gözlendiğine dair bir kayıt bilinmiyor; Helwan’dan da çekirdek görülmediği bildirilmiştir (Nature 83, 1910). Hesap: NASA/JPL Horizons, 1 dakikalık örnekler, kırılma kapalı.</p>
+    </div>
+  </div>
+</dialog>
+
+<div id="toast" role="status" aria-live="polite"></div>
+
+<dialog id="film-proof-dialog"><form method="dialog"><button class="btn">Filme dön ×</button></form><div id="film-proof-content"></div></dialog>
+<noscript><div class="noscript"><h1>Halley Geceleri — İstanbul, 1910</h1><p>Bu deneyim JavaScript gerektirir. Yöntem ve kaynaklar için <a href="yontem.html">yontem.html</a>.</p></div></noscript>
+
+<script src="data/sky.js"></script>
+<script src="data/milkyway.js"></script>
+<script src="data/archive.js"></script>
+<script src="data/transit.js"></script>
+<script src="data/pano.js"></script>
+<script src="data/photos.js"></script>
+<script src="js/astro.js"></script>
+<script src="js/landscape.js"></script>
+<script src="js/sky.js?v=cinema2"></script>
+<script src="js/audio.js"></script>
+<script src="js/sets.js"></script>
+<script src="js/film.js"></script>
+<script src="js/study-cut.js?v=1"></script><script src="js/app.js"></script><script src="js/cinema-ui.js?v=cinema2"></script>
+</body>
+</html>
